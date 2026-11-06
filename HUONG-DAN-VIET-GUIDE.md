@@ -127,6 +127,16 @@ Bỏ ảnh vào `public/img/...` rồi dùng đường dẫn tính từ `public/
 2. Sửa `meta` và nội dung.
 3. Chạy `npm run dev` để xem. Xong thì commit — GitHub Actions sẽ tự build và deploy.
 
+## Song ngữ Việt / Anh
+
+- Web có nút gạt **VI / EN** trên thanh menu. Lần đầu vào: máy để múi giờ Việt Nam hoặc trình duyệt tiếng Việt
+  thì hiện tiếng Việt, còn lại hiện tiếng Anh. Lựa chọn của người xem được nhớ lại.
+- Link ép tiếng Anh khi chia sẻ cho người nước ngoài: `https://horizonsxs.io.vn/?lang=en`.
+- Bài tiếng Anh nằm ở `src/guides/en/<cùng tên file>.jsx` (chỉ có `export default function Page`, import từ
+  `'../../components/guide'`). Tiêu đề / mô tả tiếng Anh nằm trong `src/guides/en/_meta.js`.
+  **Sửa bài tiếng Việt thì nhớ sửa luôn bản tiếng Anh.** Bài chưa có bản tiếng Anh sẽ hiện bản tiếng Việt kèm dòng báo.
+- Chữ trên giao diện (menu, nút…) nằm trong `src/i18n/ui.js`, có khoá cho cả `vi` và `en`.
+
 ## Build class lấy từ dữ liệu
 
 ```jsx
