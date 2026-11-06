@@ -1,8 +1,8 @@
 // Sinh dữ liệu đã dịch cho từng ngôn ngữ từ bản gốc tiếng Anh.
 //   npm run translate
 // - src/data/en/*.json        : bản gốc tiếng Anh (npm run sync:compass ghi vào đây). Sửa dữ liệu thì sửa ở đây.
-// - src/data/<lang>/*.json    : được SINH RA từ bản gốc, đừng sửa tay (sẽ bị ghi đè).
-// - scripts/i18n/<lang>.json  : từ điển { "câu tiếng Anh": "bản dịch" } cho vi, th, id
+// - src/data/vi/*.json         : được SINH RA từ bản gốc, đừng sửa tay (sẽ bị ghi đè).
+// - scripts/i18n/<lang>.json  : từ điển { "câu tiếng Anh": "bản dịch" } cho vi
 // - scripts/i18n/rules.mjs    : quy tắc cho các câu theo khuôn mẫu (theo từng ngôn ngữ)
 // - scripts/i18n/maps.mjs     : bản dịch cho thẻ (tag), hệ, loại quà, vai trò
 // - scripts/i18n/todo.<lang>.json : các câu CHƯA có bản dịch. Điền bản dịch vào rồi chạy lại lệnh,
@@ -16,7 +16,7 @@ import { MAPS } from './i18n/maps.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = path.join(ROOT, 'src/data');
 const I18N = path.join(ROOT, 'scripts/i18n');
-const LANGS = ['vi', 'th', 'id'];
+const LANGS = ['vi'];
 const readJson = (p, d) => (fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : d);
 const sorted = (o) => Object.fromEntries(Object.keys(o).sort().map((k) => [k, o[k]]));
 

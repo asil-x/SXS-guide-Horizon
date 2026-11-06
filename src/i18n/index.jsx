@@ -1,17 +1,22 @@
-// Đa ngôn ngữ: vi (mặc định), en, th, id.
-// - Ngôn ngữ được nhớ trong trình duyệt. Link chia sẻ có thể ép ngôn ngữ bằng ?lang=en (vd. https://horizonsxs.io.vn/?lang=th).
-// - Lần đầu vào web: trình duyệt tiếng Thái/Indonesia tự chọn ngôn ngữ đó, còn lại là tiếng Việt.
+// Đa ngôn ngữ: vi (mặc định) và en.
+// - Lựa chọn của người xem được nhớ trong trình duyệt. Link chia sẻ có thể ép ngôn ngữ bằng ?lang=en.
+// - Lần đầu vào web: người ở Việt Nam (múi giờ máy là giờ Việt Nam) hoặc trình duyệt tiếng Việt
+//   thấy tiếng Việt, còn lại thấy tiếng Anh. Web tĩnh không đọc được IP, múi giờ là cách thay thế
+//   không cần gửi dữ liệu người xem đi đâu.
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { UI } from './ui.js';
 
 export const LANGS = [
   { code: 'vi', label: 'Tiếng Việt', short: 'VI' },
   { code: 'en', label: 'English', short: 'EN' },
-  { code: 'th', label: 'ไทย', short: 'TH' },
-  { code: 'id', label: 'Bahasa Indonesia', short: 'ID' },
 ];
 const CODES = LANGS.map((l) => l.code);
 const KEY = 'sxs-lang';
+const VN_ZONES = ['Asia/Ho_Chi_Minh', 'Asia/Saigon'];
+
+function inVietnam() {
+  try { return VN_ZONES.includes(Intl.DateTimeFormat().resolvedOptions().timeZone); } catch { return false; }
+}
 
 function detect() {
   try {
@@ -22,13 +27,10 @@ function detect() {
     const saved = localStorage.getItem(KEY);
     if (CODES.includes(saved)) return saved;
   } catch {}
+  if (inVietnam()) return 'vi';
   const nav = typeof navigator === 'undefined' ? [] : navigator.languages || [navigator.language];
-  for (const l of nav) {
-    const c = String(l || '').slice(0, 2).toLowerCase();
-    if (c === 'vi') return 'vi';
-    if (c === 'th' || c === 'id' || c === 'ms') return c === 'ms' ? 'id' : c;
-  }
-  return 'vi';
+  if (String(nav[0] || '').toLowerCase().startsWith('vi')) return 'vi';
+  return 'en';
 }
 
 export function translate(lang, key, vars) {
@@ -58,16 +60,15 @@ export function LangProvider({ children }) {
 export const useLang = () => useContext(Ctx);
 export const useT = () => useContext(Ctx).t;
 
-/** Nút chọn ngôn ngữ. */
+/** Nút gạt chuyển ngôn ngữ VI / EN. */
 export function LangSwitch() {
   const { lang, setLang, t } = useLang();
   return (
-    <label className='lang-pick' title={t('lang.label')}>
-      <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='1.8' aria-hidden='true'><circle cx='12' cy='12' r='9' /><path d='M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z' /></svg>
-      <span className='lang-short' aria-hidden='true'>{LANGS.find((l) => l.code === lang)?.short}</span>
-      <select value={lang} onChange={(e) => setLang(e.target.value)} aria-label={t('lang.label')}>
-        {LANGS.map((l) => <option key={l.code} value={l.code}>{l.label}</option>)}
-      </select>
-    </label>
+    <div className={'lang-switch ' + lang} role='radiogroup' aria-label={t('lang.label')}>
+      <span className='ls-thumb' aria-hidden='true' />
+      {LANGS.map((l) => (
+        <button key={l.code} type='button' role='radio' aria-checked={lang === l.code} title={l.label} onClick={() => setLang(l.code)}>{l.short}</button>
+      ))}
+    </div>
   );
 }

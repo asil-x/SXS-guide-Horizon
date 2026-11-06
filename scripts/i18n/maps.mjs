@@ -13,6 +13,4 @@ export const MAPS = {
     GIFT: { Flower: 'Hoa', Jewelry: 'Trang sức', Book: 'Sách', Furniture: 'Nội thất', Valuables: 'Đồ quý', Commodity: 'Hàng hoá' },
     ROLE: { Melee: 'Cận chiến', Caster: 'Pháp sư', Ranged: 'Tầm xa', Tank: 'Tank', Support: 'Hỗ trợ', Healer: 'Hồi máu', Attacker: 'Tấn công' },
   },
-  th: {},
-  id: {},
 };

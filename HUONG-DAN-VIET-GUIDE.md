@@ -135,7 +135,7 @@ Bỏ ảnh vào `public/img/...` rồi dùng đường dẫn tính từ `public/
 </Tab>
 ```
 
-`ClassBuild` hiện mô tả class và bộ skill đề xuất, đọc từ `src/data/classes.json`. Bạn có thể viết thêm
+`ClassBuild` hiện mô tả class và bộ skill đề xuất, đọc từ `src/data/en/classes.json`. Bạn có thể viết thêm
 nội dung riêng ngay dưới nó, trong cùng `<Tab>`.
 
 ## Tra cứu đổi class
@@ -156,11 +156,12 @@ Thêm `className="num"` cho ô số để căn phải.
 
 ```bash
 npm run sync:compass   # lấy skill / Fantomon / companion / build class mới từ Sword x Staff Compass
-npm run translate      # áp bản dịch tiếng Việt lên dữ liệu
+npm run translate      # sinh dữ liệu tiếng Việt (src/data/vi) từ bản gốc tiếng Anh (src/data/en)
 ```
 
 - `sync:compass` chỉ **thêm** mục mới và trường còn thiếu, không ghi đè dữ liệu hay bản dịch đang có. Icon còn thiếu
   được tải về `public/img/.../compass/`. Xong việc, script tự chạy `translate`.
-- Câu nào chưa có bản dịch sẽ được ghi vào `scripts/i18n/todo.json` theo dạng `"câu tiếng Anh": ""`.
+- Dữ liệu gốc là `src/data/en/*.json`; muốn sửa dữ liệu thì sửa ở đó rồi chạy `npm run translate`. Đừng sửa tay `src/data/vi`.
+- Câu nào chưa có bản dịch sẽ được ghi vào `scripts/i18n/todo.vi.json` theo dạng `"câu tiếng Anh": ""`.
   Điền bản dịch vào rồi chạy `npm run translate`, các câu đó sẽ được chuyển vào từ điển `scripts/i18n/vi.json`.
 - Câu theo khuôn mẫu (ví dụ "Obtain X's Journal…") nằm trong `scripts/i18n/rules.mjs`.

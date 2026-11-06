@@ -31,7 +31,7 @@ export const RULES_VI = [
   [/^The 8th job of the (.+) line, arriving with Season (\d+)\. Its in-game name is not out yet, so it is shown as (.+) for now\.$/, 'Nghề thứ 8 của nhánh $1, ra mắt cùng Season $2. Tên trong game chưa được công bố nên tạm gọi là $3.'],
 ];
 
-export const RULES = { vi: RULES_VI, en: [], th: [], id: [] };
+export const RULES = { vi: RULES_VI, en: [] };
 
 export function applyRules(s, lang = "vi") {
   for (const [re, rep] of RULES[lang] || []) if (re.test(s)) return s.replace(re, rep);
