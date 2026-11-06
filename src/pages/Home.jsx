@@ -15,6 +15,7 @@ export default function Home() {
 
   return (
     <>
+      <div className='hero-wrap'>
       <section className='hero'>
         <img className='hero-img' src='./img/sword-x-staff-cover.webp' alt='' fetchpriority='high' />
         <div className='hero-text'>
@@ -36,6 +37,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </div>
 
       {t ? (
         <section className='block'>
