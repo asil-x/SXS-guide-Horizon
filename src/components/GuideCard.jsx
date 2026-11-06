@@ -25,8 +25,8 @@ export default function GuideCard({ g, variant = 'cover', feature = false, wide 
         <div className='ccard-text'>
           <h3>{g.short || g.title.replace('Hướng dẫn chơi ', '')}</h3>
           {g.desc && <p>{g.desc}</p>}
-          <span className='ccard-more'>{t('card.build')}</span>
         </div>
+        <span className='ccard-more' aria-hidden='true'>→</span>
       </Link>
     );
   }

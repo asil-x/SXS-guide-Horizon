@@ -203,7 +203,8 @@ button { font: inherit; cursor: pointer; color: inherit; }
 .ccard-text { display: flex; flex: 1; flex-direction: column; }
 .class-card h3 { margin: .2rem 0 .15rem; font-size: 1.5rem; color: #fff; }
 .class-card p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.45; }
-.ccard-more { margin-top: auto; padding-top: .7rem; color: var(--c); font-size: .82rem; font-weight: 700; }
+.ccard-more { position: absolute; right: 1rem; bottom: 1rem; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); background: color-mix(in srgb, var(--c) 14%, var(--bg2)); color: var(--c); font-size: 1rem; opacity: 0; transform: translate(-6px, 6px) scale(.8); transition: opacity .3s, transform .35s cubic-bezier(.3, 1.4, .5, 1), background .3s, color .3s; }
+.class-card:hover .ccard-more, .class-card:focus-visible .ccard-more { opacity: 1; transform: none; background: var(--c); color: #10131a; }
 .class-card:hover { transform: translateY(-5px); border-color: var(--c); box-shadow: 0 18px 40px rgba(0, 0, 0, .45), 0 0 34px color-mix(in srgb, var(--c) 28%, transparent); text-decoration: none; }
 .class-card:hover .ccard-glow { opacity: 1; transform: scale(1.15); }
 .class-card:hover::before { opacity: .2; transform: rotate(-4deg) scale(1.08); }
