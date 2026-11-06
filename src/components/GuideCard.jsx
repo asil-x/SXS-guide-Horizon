@@ -64,7 +64,7 @@ export default function GuideCard({ g, variant = 'cover', feature = false, wide 
         </div>
         <h3>{g.title}</h3>
         {g.desc && <p>{g.desc}</p>}
-        <span className='q-go'><span>{t('card.read')}</span><i aria-hidden='true'>→</i></span>
+        <span className='q-go' aria-hidden='true'>→</span>
       </div>
     </Link>
   );
