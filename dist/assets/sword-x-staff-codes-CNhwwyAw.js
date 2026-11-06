@@ -1,0 +1,13 @@
+var e=`sword-x-staff-codes`,t=`Sword x Staff free codes`,n=`Sefhi`,r=`Apr 08, 2026`,i=`Jul 15, 2026`,a=` <!-- Author --> <h2 id="where-to-claim-codes">Where to claim codes</h2>
+<ol>
+<li>Open the main menu</li>
+<li>Click on User Center</li>
+<li>Enter the “Gift Code” screen</li>
+<li>Redeem your codes</li>
+</ol>
+<hr>
+<h2 id="working-codes">Working codes</h2>
+<div class="code-grid"><button class="code" data-code="SS000">SS000</button><button class="code" data-code="ZJ777">ZJ777</button><button class="code" data-code="ZJ888">ZJ888</button><button class="code" data-code="SS777">SS777</button><button class="code" data-code="5MZ41Q9C">5MZ41Q9C</button><button class="code" data-code="SXSFBTHANKS">SXSFBTHANKS</button><button class="code" data-code="SXSDCTHANKS">SXSDCTHANKS</button></div> <p>If any of the codes stop working, please DM me on discord (<em>sefhi</em>) and I’ll update it.</p>
+<hr>
+<h2 id="old-codes">Old codes</h2>
+<div class="code-grid"><button class="code" data-code="SXSREDDIT">SXSREDDIT</button><button class="code" data-code="SXSCREATOR">SXSCREATOR</button><button class="code" data-code="Chomusuke">Chomusuke</button><button class="code" data-code="SXSPARTNER">SXSPARTNER</button><button class="code" data-code="VANOSSTEAM">VANOSSTEAM</button><button class="code" data-code="CARBOTANIMATIONS">CARBOTANIMATIONS</button><button class="code" data-code="SXSAMBASSADOR">SXSAMBASSADOR</button><button class="code" data-code="THEGAMETHEORIST">THEGAMETHEORIST</button><button class="code" data-code="7U9S2K5G">7U9S2K5G</button><button class="code" data-code="SS888">SS888</button><button class="code" data-code="ZJ999">ZJ999</button><button class="code" data-code="SS999">SS999</button><button class="code" data-code="D38N7P2X">D38N7P2X</button></div> `,o={slug:e,title:t,author:n,published:r,updated:i,html:a};export{n as author,o as default,a as html,r as published,e as slug,t as title,i as updated};
