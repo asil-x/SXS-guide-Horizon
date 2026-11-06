@@ -33,3 +33,11 @@ export function petUrl(name, evo) {
   const slug = String(name).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   return './img/pets/' + slug + (evo ? '-evo' : '') + '.png';
 }
+
+// Giá trị url(...) cho biến CSS (vd. style={{ '--img': cssUrl(...) }}).
+// Phải là đường dẫn tuyệt đối: url() trong biến CSS được tính theo file CSS (/assets/...), không theo trang.
+export function cssUrl(p) {
+  const u = asset(p);
+  const abs = typeof document === 'undefined' || /^data:/.test(u) ? u : new URL(u, document.baseURI).href;
+  return 'url("' + abs + '")';
+}

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import GuideCard from '../components/GuideCard.jsx';
 import { categoryOf, getGuide, guidesIn } from '../lib/site.js';
-import { asset, onImgError } from '../lib/img.js';
+import { asset, cssUrl, onImgError } from '../lib/img.js';
 import NotFound from './NotFound.jsx';
 
 const slugify = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -78,7 +78,7 @@ export default function Guide() {
 
   return (
     <div className={'guide-page cat-' + g.category}>
-      <header className={'guide-hero' + (emblem ? ' emblem' : '')} style={emblem ? null : { '--cover': 'url(' + asset(g.cover) + ')' }}>
+      <header className={'guide-hero' + (emblem ? ' emblem' : '')} style={{ '--cover': cssUrl(g.cover) }}>
         <div className='guide-hero-text'>
           <nav className='crumbs'>
             <Link to='/'>Trang chủ</Link><span>/</span><span>{cat.label}</span>
