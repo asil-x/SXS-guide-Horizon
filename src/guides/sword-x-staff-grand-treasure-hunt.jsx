@@ -2,6 +2,8 @@ import { Alert, Img, Tab, Tabs, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Sự kiện Grand Treasure Hunt',
+  desc: 'Cách chơi sự kiện và phần thưởng đáng lấy.',
+  order: 11,
   category: 'guide',
   cover: 'guides/grand-treasure-guide.webp',
 };

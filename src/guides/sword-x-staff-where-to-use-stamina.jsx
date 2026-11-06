@@ -2,6 +2,8 @@ import { Alert, Img, Tab, Tabs, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Cách dùng Stamina',
+  desc: 'Thứ tự dùng Stamina để lên đồ nhanh nhất.',
+  order: 7,
   category: 'guide',
   cover: 'guides/stamina-usage.webp',
 };

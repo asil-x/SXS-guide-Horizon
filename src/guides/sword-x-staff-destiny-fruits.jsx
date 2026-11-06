@@ -2,6 +2,8 @@ import { Alert, Img, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Cách dùng Destiny Fruit',
+  desc: 'Destiny Fruit dùng vào đâu cho đáng.',
+  order: 10,
   category: 'guide',
   cover: 'guides/destiny-exploration.webp',
 };

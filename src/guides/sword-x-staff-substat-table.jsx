@@ -2,6 +2,8 @@ import { Alert } from '../components/guide';
 
 export const meta = {
   title: 'Bảng chỉ số phụ trang bị',
+  desc: 'Giá trị chỉ số phụ theo độ hiếm.',
+  order: 2,
   category: 'tool',
   cover: 'skills/monsterskill_14006.png',
 };

@@ -2,6 +2,8 @@ import { Alert, ClassChange, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Đổi class: skill của bạn sẽ đi đâu?',
+  desc: 'Quy tắc ghép skill khi đổi class, kèm công cụ tra cứu.',
+  order: 5,
   short: 'Đổi class',
   category: 'guide',
   cover: 'skills/classes/warrior.png',

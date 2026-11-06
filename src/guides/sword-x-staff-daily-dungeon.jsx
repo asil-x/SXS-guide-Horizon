@@ -2,6 +2,8 @@ import { Alert, Img, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Daily Dungeon (hầm ngục hằng ngày)',
+  desc: 'Hạng S, rương xếp hạng và vì sao 2× Rating Reward thắng Ascension.',
+  order: 3,
   category: 'guide',
   cover: 'guides/dungeon-guide.webp',
 };

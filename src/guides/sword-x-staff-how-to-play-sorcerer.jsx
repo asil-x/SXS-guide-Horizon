@@ -2,6 +2,8 @@ import { Alert, Build, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/
 
 export const meta = {
   title: 'Hướng dẫn chơi Sorcerer',
+  desc: 'Phép diện rộng và khống chế.',
+  order: 4,
   short: 'Sorcerer',
   category: 'class',
   cover: 'skills/classes/sorcerer.png',

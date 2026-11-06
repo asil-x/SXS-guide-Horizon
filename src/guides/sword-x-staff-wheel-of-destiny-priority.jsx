@@ -2,6 +2,8 @@ import { Alert, Img, Tab, Tabs, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Ưu tiên Wheel of Destiny',
+  desc: 'Nên ưu tiên ô nào khi quay Wheel of Destiny.',
+  order: 9,
   category: 'guide',
   cover: 'guides/destiny-event-saving.webp',
 };

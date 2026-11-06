@@ -1,5 +1,7 @@
 export const meta = {
   title: 'Bảng bonus Style',
+  desc: 'Bonus nhận được ở mỗi Style Level.',
+  order: 3,
   category: 'tool',
   cover: 'guides/style-level.webp',
 };

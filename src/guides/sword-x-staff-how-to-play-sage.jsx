@@ -2,6 +2,8 @@ import { Alert, Build, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/
 
 export const meta = {
   title: 'Hướng dẫn chơi Sage',
+  desc: 'Hồi máu, triệu hồi và hỗ trợ.',
+  order: 3,
   short: 'Sage',
   category: 'class',
   cover: 'skills/classes/arcanist.png',

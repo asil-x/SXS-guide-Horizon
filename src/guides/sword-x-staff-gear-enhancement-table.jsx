@@ -1,5 +1,7 @@
 export const meta = {
   title: 'Bảng cường hoá trang bị',
+  desc: 'Chi phí cường hoá theo từng cấp.',
+  order: 1,
   category: 'tool',
   cover: 'guides/gear-enhancement.webp',
 };

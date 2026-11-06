@@ -2,6 +2,8 @@ import { Alert, Img, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Tầm quan trọng của thức ăn',
+  desc: 'Món ăn tăng chỉ số tạm thời và vĩnh viễn.',
+  order: 12,
   category: 'guide',
   cover: 'guides/food-guide.webp',
 };

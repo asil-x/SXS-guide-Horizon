@@ -2,6 +2,8 @@ import { Alert, Build, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/
 
 export const meta = {
   title: 'Hướng dẫn chơi Knight',
+  desc: 'Tank tuyến đầu, bảo vệ cả đội.',
+  order: 2,
   short: 'Knight',
   category: 'class',
   cover: 'skills/classes/knight.png',

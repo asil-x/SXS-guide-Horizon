@@ -2,6 +2,8 @@ import { Alert, Img, Tab, Tabs, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Season, Primostar & Astral Pact: giữ được gì sau mỗi mùa',
+  desc: 'Primostar, Astral Pact, Kingdom Shop và checklist cuối mùa.',
+  order: 2,
   short: 'Season & Primostar',
   category: 'guide',
   cover: 'guides/season-upgrade.webp',

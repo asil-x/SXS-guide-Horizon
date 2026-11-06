@@ -2,6 +2,8 @@ import { Alert, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Gem: loại nào, lắp ở đâu, ghép thế nào',
+  desc: '8 loại gem, ô lắp, bảng ghép T1 → T15 cho tiết kiệm.',
+  order: 4,
   short: 'Gem',
   category: 'guide',
   cover: 'tooltips/item_529.png',

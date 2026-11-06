@@ -3,6 +3,8 @@ import { Alert, Img, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Hướng dẫn Fantomon',
+  desc: 'Chọn, nuôi và nâng cấp Fantomon cho từng vai trò.',
+  order: 8,
   category: 'guide',
   cover: 'guides/fantomon-guide.webp',
 };

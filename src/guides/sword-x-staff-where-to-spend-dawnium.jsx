@@ -2,6 +2,8 @@ import { Alert, Img, Tab, Tabs, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Các shop và nên tiêu Dawnium vào đâu',
+  desc: 'Shop nào đáng mua, Dawnium nên tiêu vào đâu trước.',
+  order: 6,
   category: 'guide',
   cover: 'guides/where-to-spend-dawnium.webp',
 };

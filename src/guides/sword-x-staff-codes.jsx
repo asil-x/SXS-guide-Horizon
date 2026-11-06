@@ -2,6 +2,8 @@ import { Codes } from '../components/guide';
 
 export const meta = {
   title: 'Code miễn phí Sword x Staff',
+  desc: 'Tổng hợp gift code còn hạn, bấm để chép nhanh.',
+  order: 1,
   category: 'guide',
   cover: 'guides/codes.webp',
 };

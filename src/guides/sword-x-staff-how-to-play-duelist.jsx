@@ -2,6 +2,8 @@ import { Alert, Build, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/
 
 export const meta = {
   title: 'Hướng dẫn chơi Duelist',
+  desc: 'Sát thương cận chiến, crit và tốc độ cao.',
+  order: 1,
   short: 'Duelist',
   category: 'class',
   cover: 'skills/classes/duelist.png',
