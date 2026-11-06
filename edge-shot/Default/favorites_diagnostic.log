@@ -1,0 +1,39 @@
+2026-11-06 15:51:23.851: [INFO] CurrentProfilePath: C:\Users\X\Downloads\SXS-guide-Horizon\edge-shot\Default
+2026-11-06 15:51:23.851: [INFO] Profiles total count: 1
+2026-11-06 15:51:23.851: [INFO] Profile: name=Profile 1 path=C:\Users\X\Downloads\SXS-guide-Horizon\edge-shot\Default lastActive=null
+2026-11-06 15:51:23.851: [INFO] LastUsedProfileDir: C:\Users\X\Downloads\SXS-guide-Horizon\edge-shot\Default
+2026-11-06 15:51:23.851: [INFO] VisibilityChanged: 0
+2026-11-06 15:51:23.877: [INFO] OnDoneLoading sync enabled: 0
+2026-11-06 15:51:23.877: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-11-06 15:51:23.877: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-11-06 15:51:23.877: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-11-06 15:51:23.938: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-11-06 15:51:25.638: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-11-06 15:51:25.641: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-11-06 15:51:25.644: [INFO] Primary account changed.
+2026-11-06 15:51:25.644: [INFO] OnPrimaryAccountChanged PrimaryAccountChangeEvent::Type::kSet
+2026-11-06 15:51:25.659: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-11-06 15:51:25.669: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-11-06 15:51:29.068: [INFO] CurrentProfilePath: C:\Users\X\Downloads\SXS-guide-Horizon\edge-shot\Default
+2026-11-06 15:51:29.068: [INFO] Profiles total count: 1
+2026-11-06 15:51:29.068: [INFO] Profile: name=Profile 1 path=C:\Users\X\Downloads\SXS-guide-Horizon\edge-shot\Default lastActive=null
+2026-11-06 15:51:29.068: [INFO] LastUsedProfileDir: C:\Users\X\Downloads\SXS-guide-Horizon\edge-shot\Default
+2026-11-06 15:51:29.068: [INFO] VisibilityChanged: 0
+2026-11-06 15:51:29.090: [INFO] OnDoneLoading sync enabled: 0
+2026-11-06 15:51:29.090: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-11-06 15:51:29.090: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-11-06 15:51:29.090: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-11-06 15:51:29.093: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-11-06 15:51:29.110: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-11-06 15:51:29.163: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-11-06 15:51:30.853: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-11-06 15:51:30.854: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-11-06 15:51:30.855: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-11-06 15:51:30.861: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-11-06 15:51:30.862: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-11-06 15:51:30.863: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-11-06 15:51:30.865: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 5
+2026-11-06 15:51:30.867: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 5
+2026-11-06 15:51:31.808: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 5
+2026-11-06 15:51:31.812: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 5
+2026-11-06 15:51:32.937: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 5

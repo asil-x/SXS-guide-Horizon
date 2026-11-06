@@ -1,6 +1,6 @@
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import GuideCard from '../components/GuideCard.jsx';
+import GuideCard, { classColor } from '../components/GuideCard.jsx';
 import { useGuides } from '../lib/site.js';
 import { asset, cssUrl, onImgError } from '../lib/img.js';
 import { useLang } from '../i18n/index.jsx';
@@ -15,7 +15,7 @@ function useToc(ref, key) {
   useEffect(() => {
     const root = ref.current;
     if (!root) return;
-    const heads = [...root.querySelectorAll('h2, h3')].filter((h) => !h.closest('.tabs, details, .tip-card'));
+    const heads = [...root.querySelectorAll('h2, h3')].filter((h) => !h.closest('.tabs, .tiers, details, .tip-card'));
     const used = new Set();
     heads.forEach((h, i) => {
       // Tiêu đề tiếng Thái không có chữ Latin nên slug rỗng: dùng số thứ tự.
@@ -93,7 +93,7 @@ export default function Guide() {
   const Page = g.Page;
 
   return (
-    <div className={'guide-page cat-' + g.category}>
+    <div className={'guide-page cat-' + g.category} style={classColor(g) ? { '--accent': classColor(g) } : undefined}>
       <header className={'guide-hero' + (emblem ? ' emblem' : '')} style={{ '--cover': cssUrl(g.cover) }}>
         <div className='guide-hero-text'>
           <nav className='crumbs'>

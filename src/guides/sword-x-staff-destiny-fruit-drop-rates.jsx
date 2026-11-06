@@ -6,6 +6,8 @@ export const meta = {
   order: 4,
   category: 'tool',
   cover: 'tooltips/Npc_8416.png',
+  icon: 'tooltips/item_115.png',
+  topic: 'data',
 };
 
 export default function Page() {

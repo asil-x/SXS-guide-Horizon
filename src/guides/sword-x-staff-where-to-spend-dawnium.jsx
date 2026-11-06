@@ -6,6 +6,8 @@ export const meta = {
   order: 6,
   category: 'guide',
   cover: 'guides/where-to-spend-dawnium.webp',
+  icon: 'tooltips/Money_2.png',
+  topic: 'economy',
 };
 
 export default function Page() {

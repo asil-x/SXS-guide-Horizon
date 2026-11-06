@@ -6,6 +6,8 @@ export const meta = {
   order: 1,
   category: 'guide',
   cover: 'guides/codes.webp',
+  icon: 'tooltips/item_303.png',
+  topic: 'event',
 };
 
 export default function Page() {

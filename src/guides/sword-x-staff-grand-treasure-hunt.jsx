@@ -6,6 +6,8 @@ export const meta = {
   order: 11,
   category: 'guide',
   cover: 'guides/grand-treasure-guide.webp',
+  icon: 'treasures/treasure_61008.png',
+  topic: 'event',
 };
 
 export default function Page() {

@@ -4,6 +4,8 @@ export const meta = {
   order: 3,
   category: 'tool',
   cover: 'guides/style-level.webp',
+  icon: 'tooltips/Money_31.png',
+  topic: 'data',
 };
 
 export default function Page() {

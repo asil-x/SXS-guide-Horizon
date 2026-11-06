@@ -6,6 +6,8 @@ export const meta = {
   order: 12,
   category: 'guide',
   cover: 'guides/food-guide.webp',
+  icon: 'tooltips/item_7000.png',
+  topic: 'stats',
 };
 
 export default function Page() {

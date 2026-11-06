@@ -15,7 +15,11 @@ export default function Home() {
   const classRef = useRef(null);
   const nq = norm(q.trim());
   const results = nq ? GUIDES.filter((g) => norm(g.title + ' ' + (g.short || '') + ' ' + (g.desc || '') + ' ' + g.slug.replace(/-/g, ' ')).includes(nq)) : [];
-  const [classes, guides, tools] = CATEGORIES.map((c) => guidesIn(c.key));
+  const [classes, allGuides, tools] = CATEGORIES.map((c) => guidesIn(c.key));
+  // Gift Code đã có nút riêng ở banner và menu nên không lặp lại trong lưới.
+  const guides = allGuides.filter((g) => g.slug !== 'sword-x-staff-codes');
+  // Lưới 4 cột: thẻ đầu chiếm 2×2, vài thẻ cuối kéo rộng 2 cột để hàng cuối không bị hở.
+  const wideCount = (4 - ((guides.length - 1) % 4)) % 4;
 
   return (
     <>
@@ -57,7 +61,7 @@ export default function Home() {
 
           <section className='block'>
             <div className='block-head'><h2>{t('cat.' + CATEGORIES[1].key)}</h2><span className='muted'>{t('cat.' + CATEGORIES[1].key + '.desc')}</span></div>
-            <div className='grid'>{guides.map((g, i) => <GuideCard key={g.slug} g={g} feature={i === 0} />)}</div>
+            <div className='quest-grid'>{guides.map((g, i) => <GuideCard key={g.slug} g={g} index={i + 1} feature={i === 0} wide={i >= guides.length - wideCount} />)}</div>
           </section>
 
           <div className='two-col'>

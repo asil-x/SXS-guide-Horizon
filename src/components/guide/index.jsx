@@ -163,6 +163,7 @@ export function Tabs({ children, big }) {
   const tabs = Children.toArray(children).filter(isValidElement);
   const [i, setI] = useState(0);
   const cur = Math.min(i, tabs.length - 1);
+  if (big) return <TierTabs tabs={tabs} cur={cur} setCur={setI} />;
   return (
     <div className={'tabs' + (big ? ' big' : '')}>
       <div className='tab-list' role='tablist'>
@@ -174,6 +175,58 @@ export function Tabs({ children, big }) {
         ))}
       </div>
       <div className='tab-panel' role='tabpanel'>{tabs[cur]}</div>
+    </div>
+  );
+}
+
+/** <Tabs big>: thanh tiến trình class theo tier + phần chi tiết có tiêu đề lớn và nút chuyển tier. */
+function TierTabs({ tabs, cur, setCur }) {
+  const t = useT();
+  const track = useRef(null);
+  const panel = useRef(null);
+  // Giữ tier đang chọn luôn nằm trong vùng nhìn thấy của thanh cuộn ngang (điện thoại).
+  useEffect(() => {
+    const el = track.current?.children[cur];
+    if (el) track.current.scrollTo({ left: el.offsetLeft - track.current.clientWidth / 2 + el.clientWidth / 2, behavior: 'smooth' });
+  }, [cur]);
+  const go = (k, scroll) => {
+    setCur(k);
+    if (scroll && panel.current && panel.current.getBoundingClientRect().top < 0) panel.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  const tab = tabs[cur];
+  const prev = tabs[cur - 1];
+  const next = tabs[cur + 1];
+  return (
+    <div className='tiers'>
+      <div className='tier-track' role='tablist' ref={track}>
+        {tabs.map((x, k) => (
+          <button key={k} type='button' role='tab' aria-selected={k === cur} className={'tier-step' + (k === cur ? ' on' : '') + (k < cur ? ' done' : '')} onClick={() => go(k)}>
+            <span className='ts-icon'>{x.props.icon && <img src={asset(x.props.icon)} alt='' onError={onImgError} />}</span>
+            <span className='ts-text'><small>Tier {k + 1}</small><span>{x.props.label}</span></span>
+          </button>
+        ))}
+      </div>
+      <div className='tier-panel' role='tabpanel' ref={panel} key={cur}>
+        <div className='tier-head'>
+          {tab.props.icon && <img src={asset(tab.props.icon)} alt='' onError={onImgError} />}
+          <div className='th-text'>
+            <span className='th-tier'>Tier {cur + 1} <em>/ {tabs.length}</em></span>
+            <h3>{tab.props.label}</h3>
+          </div>
+          <div className='th-nav'>
+            <button type='button' disabled={!prev} onClick={() => go(cur - 1)} aria-label={t('guide.prevTier')}>‹</button>
+            <button type='button' disabled={!next} onClick={() => go(cur + 1)} aria-label={t('guide.nextTier')}>›</button>
+          </div>
+        </div>
+        <div className='tier-body'>{tab}</div>
+        {next && (
+          <button type='button' className='tier-next' onClick={() => go(cur + 1, true)}>
+            {next.props.icon && <img src={asset(next.props.icon)} alt='' onError={onImgError} />}
+            <span><small>{t('guide.nextTier')}</small>{next.props.label}</span>
+            <i aria-hidden='true'>→</i>
+          </button>
+        )}
+      </div>
     </div>
   );
 }

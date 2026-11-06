@@ -7,6 +7,8 @@ export const meta = {
   order: 8,
   category: 'guide',
   cover: 'guides/fantomon-guide.webp',
+  icon: 'pets/aegiswing.png',
+  topic: 'pet',
 };
 
 export default function Page() {

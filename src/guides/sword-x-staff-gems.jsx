@@ -7,6 +7,8 @@ export const meta = {
   short: 'Gem',
   category: 'guide',
   cover: 'tooltips/item_529.png',
+  icon: 'tooltips/item_529.png',
+  topic: 'gear',
 };
 
 const Y = () => <td style={{ textAlign: 'center', color: 'var(--green)' }}>✓</td>;

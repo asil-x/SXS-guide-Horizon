@@ -4,6 +4,8 @@ export const meta = {
   order: 1,
   category: 'tool',
   cover: 'guides/gear-enhancement.webp',
+  icon: 'tooltips/item_41301.png',
+  topic: 'data',
 };
 
 export default function Page() {

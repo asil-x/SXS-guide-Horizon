@@ -6,6 +6,8 @@ export const meta = {
   order: 2,
   category: 'tool',
   cover: 'skills/monsterskill_14006.png',
+  icon: 'tooltips/item_110.png',
+  topic: 'data',
 };
 
 export default function Page() {

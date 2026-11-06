@@ -6,6 +6,8 @@ export const meta = {
   order: 7,
   category: 'guide',
   cover: 'guides/stamina-usage.webp',
+  icon: 'tooltips/Money_57_Tili.png',
+  topic: 'economy',
 };
 
 export default function Page() {

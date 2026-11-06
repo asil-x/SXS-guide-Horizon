@@ -6,6 +6,8 @@ export const meta = {
   order: 10,
   category: 'guide',
   cover: 'guides/destiny-exploration.webp',
+  icon: 'tooltips/item_115.png',
+  topic: 'explore',
 };
 
 export default function Page() {

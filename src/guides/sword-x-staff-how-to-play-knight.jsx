@@ -7,6 +7,7 @@ export const meta = {
   short: 'Knight',
   category: 'class',
   cover: 'skills/classes/knight.png',
+  topic: 'class',
 };
 
 export default function Page() {

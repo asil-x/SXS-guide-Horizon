@@ -6,6 +6,8 @@ export const meta = {
   order: 3,
   category: 'guide',
   cover: 'guides/dungeon-guide.webp',
+  icon: 'treasures/treasure_61003.png',
+  topic: 'farm',
 };
 
 export default function Page() {

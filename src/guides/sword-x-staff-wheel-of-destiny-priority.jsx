@@ -6,6 +6,8 @@ export const meta = {
   order: 9,
   category: 'guide',
   cover: 'guides/destiny-event-saving.webp',
+  icon: 'tooltips/item_112.png',
+  topic: 'event',
 };
 
 export default function Page() {

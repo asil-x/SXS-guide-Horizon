@@ -7,6 +7,8 @@ export const meta = {
   short: 'Đổi class',
   category: 'guide',
   cover: 'skills/classes/warrior.png',
+  icon: 'treasures/treasure_61001.png',
+  topic: 'class',
 };
 
 export default function Page() {

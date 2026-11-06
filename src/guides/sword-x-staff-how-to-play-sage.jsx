@@ -7,6 +7,7 @@ export const meta = {
   short: 'Sage',
   category: 'class',
   cover: 'skills/classes/arcanist.png',
+  topic: 'class',
 };
 
 export default function Page() {

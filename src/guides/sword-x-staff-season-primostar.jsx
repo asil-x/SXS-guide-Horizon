@@ -7,6 +7,8 @@ export const meta = {
   short: 'Season & Primostar',
   category: 'guide',
   cover: 'guides/season-upgrade.webp',
+  icon: 'tooltips/Money_61.png',
+  topic: 'season',
 };
 
 const PACT = [

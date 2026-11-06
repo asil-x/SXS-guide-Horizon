@@ -1,0 +1,5 @@
+2026/11/06-22:51:26.113 386c Creating DB C:\Users\X\Downloads\SXS-guide-Horizon\edge-shot\Default\EdgeCoupons/coupons_data.db since it was missing.
+2026/11/06-22:51:26.153 386c Reusing MANIFEST C:\Users\X\Downloads\SXS-guide-Horizon\edge-shot\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/11/06-22:51:26.482 6630 Level-0 table #5: started
+2026/11/06-22:51:26.489 6630 Level-0 table #5: 683273 bytes OK
+2026/11/06-22:51:26.491 6630 Delete type=0 #3

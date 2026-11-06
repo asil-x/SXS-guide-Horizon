@@ -7,6 +7,7 @@ export const meta = {
   short: 'Duelist',
   category: 'class',
   cover: 'skills/classes/duelist.png',
+  topic: 'class',
 };
 
 export default function Page() {
