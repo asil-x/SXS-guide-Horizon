@@ -2,14 +2,15 @@
 // Quy tắc (theo dữ liệu game): ở từng tier, skill được chia nhóm theo loại (Technique/Charm)
 // và độ hiếm khởi điểm; một skill chỉ có thể thành skill cùng nhóm ở cùng tier.
 import { useState } from 'react';
-import CLASSES from '../../data/classes.json';
+import { useData } from '../../lib/data.js';
+import { useT } from '../../i18n/index.jsx';
 import { fallbackImg, onImgError, skillIcon } from '../../lib/img.js';
 import { useSkills } from '../../lib/skills.js';
 import SkillPopup from '../SkillPopup.jsx';
 
 const QUALITY = { Orange: 'Legendary', Purple: 'Epic', Blue: 'Rare' };
 const ORDER = ['Technique|Orange', 'Technique|Purple', 'Technique|Blue', 'Charm|Orange', 'Charm|Purple', 'Charm|Blue'];
-const byName = Object.fromEntries(CLASSES.map((c) => [c.name, c]));
+
 
 function groups(cls, skills) {
   const g = {};
@@ -31,14 +32,22 @@ function Chip({ name, skills, onOpen }) {
   );
 }
 
-function odds(n) {
-  if (n <= 1) return 'Cố định';
+function odds(n, t) {
+  if (n <= 1) return t('cc.fixed');
   if (n === 2) return '50/50';
-  return '1/' + n + ' mỗi skill';
+  return t('cc.oneOf', { n });
 }
 
 /** Chọn class hiện tại và class muốn đổi để xem skill nào thành skill nào. */
-export function ClassChange({ from = 'Knight', to = 'Duelist' }) {
+export function ClassChange(props) {
+  const CLASSES = useData('classes');
+  if (!CLASSES) return null;
+  return <ClassChangeInner {...props} CLASSES={CLASSES} />;
+}
+
+function ClassChangeInner({ from = 'Knight', to = 'Duelist', CLASSES }) {
+  const t = useT();
+  const byName = Object.fromEntries(CLASSES.map((c) => [c.name, c]));
   const skills = useSkills(true);
   const [a, setA] = useState(from);
   const [b, setB] = useState(to);
@@ -57,7 +66,7 @@ export function ClassChange({ from = 'Knight', to = 'Duelist' }) {
     <div className='cc'>
       <div className='cc-pick'>
         <label>
-          <span>Class hiện tại</span>
+          <span>{t('cc.from')}</span>
           <select className='select' value={a} onChange={(e) => pickA(e.target.value)}>
             {[...new Set(CLASSES.map((c) => c.rank))].map((r) => (
               <optgroup key={r} label={'Tier ' + r}>
@@ -68,20 +77,20 @@ export function ClassChange({ from = 'Knight', to = 'Duelist' }) {
         </label>
         <span className='cc-arrow' aria-hidden='true'>→</span>
         <label>
-          <span>Đổi sang (cùng tier)</span>
+          <span>{t('cc.to')}</span>
           <select className='select' value={B?.name} onChange={(e) => setB(e.target.value)}>
             {sameRank.map((c) => <option key={c.name}>{c.name}</option>)}
           </select>
         </label>
       </div>
 
-      {!skills ? <p className='muted'>Đang tải dữ liệu skill…</p> : B && A.chain.map((fromName, i) => {
+      {!skills ? <p className='muted'>{t('cc.loading')}</p> : B && A.chain.map((fromName, i) => {
         const toName = B.chain[i];
         if (fromName === toName) {
           return (
             <div className='cc-tier same' key={i}>
-              <div className='cc-tier-head'><strong>Tier {i + 1}: {fromName}</strong><span className='tag gold'>Giữ nguyên</span></div>
-              <p className='muted'>Cùng gốc nên skill tier này không đổi.</p>
+              <div className='cc-tier-head'><strong>Tier {i + 1}: {fromName}</strong><span className='tag gold'>{t('cc.same')}</span></div>
+              <p className='muted'>{t('cc.sameText')}</p>
             </div>
           );
         }
@@ -93,7 +102,7 @@ export function ClassChange({ from = 'Knight', to = 'Duelist' }) {
             <div className='cc-tier-head'><strong>Tier {i + 1}: {fromName} → {toName}</strong></div>
             <div className='table-wrap'>
               <table className='data-table cc-table'>
-                <thead><tr><th>Nhóm</th><th>Skill của {fromName}</th><th>Có thể thành ({toName})</th><th>Tỉ lệ</th></tr></thead>
+                <thead><tr><th>{t('cc.group')}</th><th>{t('cc.skillsOf', { x: fromName })}</th><th>{t('cc.canBe', { x: toName })}</th><th>{t('cc.odds')}</th></tr></thead>
                 <tbody>
                   {keys.map((k) => {
                     const [type, q] = k.split('|');
@@ -103,7 +112,7 @@ export function ClassChange({ from = 'Knight', to = 'Duelist' }) {
                         <td><span className={'cc-q q-' + q}>{QUALITY[q] || q}</span><br /><small className='muted'>{type}</small></td>
                         <td>{(ga[k] || []).map((s) => <Chip key={s} name={s} skills={skills} onOpen={setSel} />)}</td>
                         <td>{(gb[k] || []).map((s) => <Chip key={s} name={s} skills={skills} onOpen={setSel} />)}</td>
-                        <td className='cc-odds'>{odds(n)}</td>
+                        <td className='cc-odds'>{odds(n, t)}</td>
                       </tr>
                     );
                   })}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { onImgError, skillIcon } from '../lib/img.js';
+import { useT } from '../i18n/index.jsx';
 
 const RARITIES = [
   { label: 'Rare', idx: 1, color: '#5f9aff' },
@@ -12,6 +13,7 @@ const RARITIES = [
 ];
 
 export default function SkillPopup({ skill, onClose }) {
+  const t = useT();
   const [rar, setRar] = useState(RARITIES.length - 1);
   useEffect(() => {
     const onKey = (e) => e.key === 'Escape' && onClose();
@@ -22,7 +24,7 @@ export default function SkillPopup({ skill, onClose }) {
   return createPortal(
     <div className='overlay' onClick={onClose}>
       <div className='modal' role='dialog' aria-label={skill.name} onClick={(e) => e.stopPropagation()}>
-        <button className='close' onClick={onClose} aria-label='Đóng'>✕</button>
+        <button className='close' onClick={onClose} aria-label={t('close')}>✕</button>
         <div className='modal-head'>
           <img src={skillIcon(skill)} alt='' onError={onImgError} />
           <div>
@@ -30,8 +32,8 @@ export default function SkillPopup({ skill, onClose }) {
             <div>
               {skill.class && <span className='tag gold'>{skill.class}</span>}
               {skill.type && <span className='tag'>{skill.type}</span>}
-              {skill.cooldown != null && skill.cooldown !== '' && <span className='tag'>Hồi chiêu {skill.cooldown} lượt</span>}
-              {(skill.tags || []).map((t) => <span className='tag' key={t}>{t}</span>)}
+              {skill.cooldown != null && skill.cooldown !== '' && <span className='tag'>{t('cooldown', { n: skill.cooldown })}</span>}
+              {(skill.tags || []).map((x) => <span className='tag' key={x}>{x}</span>)}
             </div>
           </div>
         </div>

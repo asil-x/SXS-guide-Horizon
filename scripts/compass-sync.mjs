@@ -11,7 +11,7 @@ import { extractLiterals, findArray } from './lib/literals.mjs';
 const SITE = 'https://swordxstaff-compass.com';
 const UA = 'SXS-guide-Horizon data sync (fan site)';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA = path.join(ROOT, 'src/data');
+const DATA = path.join(ROOT, 'src/data/en'); // bản gốc tiếng Anh; translate.mjs sinh ra vi/th/id
 const IMG = path.join(ROOT, 'public/img');
 const RAW = path.join(ROOT, 'scripts/compass/raw');
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

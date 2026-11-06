@@ -3,15 +3,15 @@
 import { Children, isValidElement, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
-import TIPS from '../../data/tooltips.json';
-import CLASSES from '../../data/classes.json';
+import { useData } from '../../lib/data.js';
+import { useT } from '../../i18n/index.jsx';
 import { asset, fallbackImg, onImgError, skillIcon } from '../../lib/img.js';
 import { useSkills } from '../../lib/skills.js';
 import SkillPopup from '../SkillPopup.jsx';
 
 const textOf = (node) => Children.toArray(node).map((c) => (typeof c === 'string' || typeof c === 'number' ? c : textOf(c?.props?.children))).join('');
 
-const KIND = { skill: 'Kỹ năng', item: 'Vật phẩm', pet: 'Fantomon', companion: 'Đồng hành' };
+const KIND = { skill: 'kind.skill', item: 'kind.item', pet: 'kind.pet', companion: 'kind.companion' };
 const DB_LINK = { pet: '/db/fantomons', companion: '/db/companions' };
 
 function fromSkill(s) {
@@ -22,6 +22,7 @@ function fromSkill(s) {
 /* ---------- Tooltip ---------- */
 
 function TipCard({ name, t, anchor, onEnter, onLeave }) {
+  const tr = useT();
   const ref = useRef(null);
   const [pos, setPos] = useState({ left: -9999, top: 0 });
   useLayoutEffect(() => {
@@ -38,18 +39,18 @@ function TipCard({ name, t, anchor, onEnter, onLeave }) {
         <img src={asset(t.icon)} alt='' onError={onImgError} />
         <div>
           <strong>{name}</strong>
-          <small>{KIND[t.kind] || ''}{t.rarity && t.rarity !== 'rainbow' ? ' · ' + t.rarity : ''}</small>
+          <small>{KIND[t.kind] ? tr(KIND[t.kind]) : ''}{t.rarity && t.rarity !== 'rainbow' ? ' · ' + t.rarity : ''}</small>
         </div>
       </div>
       {t.tags && <div className='tip-tags'>{t.tags.map((x) => <span className='tag' key={x}>{x}</span>)}</div>}
       {t.description && <p>{t.description}</p>}
       {t.sources && (
         <div className='tip-sources'>
-          <span className='label'>Nguồn</span>
+          <span className='label'>{tr('source')}</span>
           {t.sources.map((s) => <span className='src' key={s}>{s}</span>)}
         </div>
       )}
-      {!t.description && DB_LINK[t.kind] && <Link className='tip-more' to={DB_LINK[t.kind]}>Xem trong dữ liệu →</Link>}
+      {!t.description && DB_LINK[t.kind] && <Link className='tip-more' to={DB_LINK[t.kind]}>{tr('tip.more')}</Link>}
     </div>,
     document.body
   );
@@ -59,8 +60,9 @@ function TipCard({ name, t, anchor, onEnter, onLeave }) {
 export function Tip({ children, name }) {
   const label = textOf(children).trim();
   const key = name || label;
-  const known = TIPS[key];
-  const skills = useSkills(!known);
+  const TIPS = useData('tooltips');
+  const known = TIPS?.[key];
+  const skills = useSkills(!!TIPS && !known);
   const t = known || fromSkill(skills?.[key]);
   const ref = useRef(null);
   const timer = useRef(0);
@@ -77,7 +79,8 @@ export function Tip({ children, name }) {
   }, [open]);
 
   if (!t) {
-    if (import.meta.env.DEV && skills) console.warn('[Tip] Không tìm thấy "' + key + '" trong tooltips.json / skills.json');
+    if (!TIPS || !skills) return <strong>{children}</strong>; // đang tải dữ liệu
+    if (import.meta.env.DEV) console.warn('[Tip] Không tìm thấy "' + key + '" trong tooltips.json / skills.json');
     return <strong className='tip missing' title={import.meta.env.DEV ? 'Không tìm thấy dữ liệu tooltip' : undefined}>{children}</strong>;
   }
   const enter = () => { clearTimeout(timer.current); setOpen(true); };
@@ -136,6 +139,8 @@ export function Build({ techniques = [], charms = [] }) {
 
 /** Build đề xuất của một class, lấy tự động từ classes.json (đồng bộ bằng npm run sync:compass). */
 export function ClassBuild({ name }) {
+  const CLASSES = useData('classes');
+  if (!CLASSES) return null;
   const c = CLASSES.find((x) => x.name === name);
   if (!c) return <p className='tip missing'>Không tìm thấy class “{name}” trong classes.json</p>;
   return (
@@ -194,8 +199,9 @@ export function Alert({ type = 'gold', title, children }) {
 
 /** Danh sách gift code, bấm để sao chép. */
 export function Codes({ codes = [], expired }) {
+  const t = useT();
   const [copied, setCopied] = useState(null);
-  if (!codes.length) return <p className='muted'>Hiện chưa có code nào.</p>;
+  if (!codes.length) return <p className='muted'>{t('codes.none')}</p>;
   const copy = (c) => {
     navigator.clipboard?.writeText(c);
     setCopied(c);
@@ -206,7 +212,7 @@ export function Codes({ codes = [], expired }) {
       {codes.map((c) => (
         <button key={c} type='button' className={'code' + (copied === c ? ' copied' : '')} onClick={() => copy(c)}>
           <span>{c}</span>
-          <small>{copied === c ? 'Đã chép!' : 'Chép'}</small>
+          <small>{copied === c ? t('codes.copied') : t('codes.copy')}</small>
         </button>
       ))}
     </div>
@@ -224,6 +230,7 @@ export function Con({ children }) {
 
 /** Bảng điểm mạnh / điểm yếu. Bên trong dùng <Pro> và <Con>. */
 export function ProsCons({ id, title, children }) {
+  const t = useT();
   const items = Children.toArray(children).filter(isValidElement);
   const pros = items.filter((c) => c.type === Pro);
   const cons = items.filter((c) => c.type === Con);
@@ -231,8 +238,8 @@ export function ProsCons({ id, title, children }) {
     <section className='pros-cons' id={id}>
       {title && <h2>{title}</h2>}
       <div className='pc-grid'>
-        <div className='pc pros'><div className='pc-head'>Điểm mạnh</div><ul>{pros}</ul></div>
-        <div className='pc cons'><div className='pc-head'>Điểm yếu</div><ul>{cons}</ul></div>
+        <div className='pc pros'><div className='pc-head'>{t('pros')}</div><ul>{pros}</ul></div>
+        <div className='pc cons'><div className='pc-head'>{t('cons')}</div><ul>{cons}</ul></div>
       </div>
     </section>
   );

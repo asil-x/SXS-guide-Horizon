@@ -24,7 +24,7 @@
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--top) + 16px); }
 body {
   margin: 0;
-  font-family: 'Inter Variable', system-ui, sans-serif;
+  font-family: 'Inter Variable', system-ui, 'Leelawadee UI', 'Noto Sans Thai', Thonburi, sans-serif;
   background: radial-gradient(1200px 600px at 50% -250px, #1d2a46 0%, transparent 70%), var(--bg);
   color: var(--text);
   line-height: 1.7;
@@ -33,7 +33,7 @@ body {
 }
 a { color: var(--gold2); text-decoration: none; }
 a:hover { text-decoration: underline; }
-h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; color: var(--gold2); line-height: 1.25; letter-spacing: .02em; }
+h1, h2, h3 { font-family: 'Playfair Display', Georgia, 'Leelawadee UI', 'Noto Serif Thai', Thonburi, serif; color: var(--gold2); line-height: 1.25; letter-spacing: .02em; }
 h1 { font-size: clamp(1.6rem, 4vw, 2.3rem); margin: 0 0 .5rem; }
 h2 { font-size: 1.4rem; margin: 2.2rem 0 .9rem; }
 h3 { font-size: 1.12rem; margin: 1.6rem 0 .6rem; }
@@ -53,7 +53,7 @@ button { font: inherit; cursor: pointer; color: inherit; }
 /* ---------- topbar ---------- */
 .topbar { position: sticky; top: 0; z-index: 50; background: rgba(10, 14, 22, .86); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .topbar-inner { display: flex; align-items: center; gap: 1.5rem; max-width: 1240px; height: var(--top); margin: 0 auto; padding: 0 1.2rem; }
-.brand { display: flex; align-items: center; gap: .6rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 1.15rem; color: var(--gold2); white-space: nowrap; }
+.brand { display: flex; align-items: center; gap: .6rem; font-family: 'Playfair Display', Georgia, 'Leelawadee UI', 'Noto Serif Thai', Thonburi, serif; font-weight: 700; font-size: 1.15rem; color: var(--gold2); white-space: nowrap; }
 .brand:hover { text-decoration: none; }
 .brand img { width: 36px; height: 36px; border-radius: 9px; object-fit: cover; }
 .brand em { color: var(--violet2); font-style: normal; }
@@ -215,7 +215,7 @@ button { font: inherit; cursor: pointer; color: inherit; }
 .guide-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.5rem; max-width: 880px; margin: 1.5rem auto 0; }
 .guide-layout.with-toc { max-width: none; }
 .toc details { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); }
-.toc summary { padding: .7rem 1rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; color: var(--gold2); cursor: pointer; list-style: none; }
+.toc summary { padding: .7rem 1rem; font-family: 'Playfair Display', Georgia, 'Leelawadee UI', 'Noto Serif Thai', Thonburi, serif; font-weight: 700; color: var(--gold2); cursor: pointer; list-style: none; }
 .toc summary::-webkit-details-marker { display: none; }
 .toc summary::after { content: '▾'; float: right; color: var(--muted); }
 .toc details[open] summary::after { content: '▴'; }
@@ -325,14 +325,14 @@ button { font: inherit; cursor: pointer; color: inherit; }
 .tab-list img { width: 22px; height: 22px; }
 .tab-panel { padding-top: .2rem; }
 .tabs.big > .tab-list { gap: .6rem; padding-bottom: .9rem; border-bottom: 1px solid var(--line); }
-.tabs.big > .tab-list button { padding: .55rem 1.1rem .55rem .7rem; border-radius: 12px; font-size: 1rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
+.tabs.big > .tab-list button { padding: .55rem 1.1rem .55rem .7rem; border-radius: 12px; font-size: 1rem; font-family: 'Playfair Display', Georgia, 'Leelawadee UI', 'Noto Serif Thai', Thonburi, serif; font-weight: 600; }
 .tabs.big > .tab-list img { width: 30px; height: 30px; }
 .tabs .tabs { padding: .2rem 1rem .6rem; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(19, 28, 42, .5); }
 .tabs .tabs > .tab-list { padding-top: .9rem; }
 
 /* build */
 .build { margin: .9rem 0 1.1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.build-label { margin-bottom: .45rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; color: var(--gold); font-size: .85rem; letter-spacing: .06em; }
+.build-label { margin-bottom: .45rem; font-family: 'Playfair Display', Georgia, 'Leelawadee UI', 'Noto Serif Thai', Thonburi, serif; font-weight: 700; color: var(--gold); font-size: .85rem; letter-spacing: .06em; }
 .build-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .45rem; }
 .build-card { display: flex; flex-direction: column; align-items: center; gap: .3rem; padding: .55rem .3rem; text-align: center; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); transition: border-color .15s, transform .15s; }
 .build-card:hover { border-color: var(--violet); transform: translateY(-2px); }
@@ -431,7 +431,7 @@ button { font: inherit; cursor: pointer; color: inherit; }
 
 /* logo "by Guild Horizon" */
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
-.brand-by { font-family: 'Inter Variable', system-ui, sans-serif; font-size: .64rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.brand-by { font-family: 'Inter Variable', system-ui, 'Leelawadee UI', 'Noto Sans Thai', Thonburi, sans-serif; font-size: .64rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .footer p { margin: .2rem 0; }
 .footer b { color: var(--gold2); }
 
@@ -450,4 +450,19 @@ button { font: inherit; cursor: pointer; color: inherit; }
   .class-card::before { width: 110px; height: 110px; }
   .hero::after { background: linear-gradient(180deg, rgba(10, 14, 22, .72) 0%, rgba(10, 14, 22, .88) 60%, rgba(10, 14, 22, .95) 100%); }
   .hero-cta .btn { flex: 1 1 auto; justify-content: center; }
+}
+
+/* chọn ngôn ngữ */
+.lang-pick { position: relative; display: inline-flex; align-items: center; gap: .35rem; height: 36px; padding: 0 .6rem; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); color: var(--text); font-size: .78rem; font-weight: 700; letter-spacing: .04em; flex-shrink: 0; order: 3; cursor: pointer; }
+.lang-pick:hover, .lang-pick:focus-within { border-color: var(--gold); color: var(--gold2); }
+.lang-pick svg { width: 16px; height: 16px; }
+.lang-pick select { position: absolute; inset: 0; width: 100%; opacity: 0; cursor: pointer; font-size: 16px; }
+.lang-pick select option { color: #111; }
+/* chữ Thái: dòng cao hơn cho dấu trên/dưới, không giãn chữ */
+html[lang='th'] body { line-height: 1.75; }
+html[lang='th'] h1, html[lang='th'] h2, html[lang='th'] h3 { letter-spacing: 0; line-height: 1.4; }
+@media (max-width: 960px) {
+  .topbar-inner { gap: .7rem; }
+  .lang-pick { order: 0; margin-left: auto; }
+  .menu-toggle { margin-left: 0; }
 }

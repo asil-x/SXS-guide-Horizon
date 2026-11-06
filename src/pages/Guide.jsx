@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import GuideCard from '../components/GuideCard.jsx';
-import { categoryOf, getGuide, guidesIn } from '../lib/site.js';
+import { useGuides } from '../lib/site.js';
 import { asset, cssUrl, onImgError } from '../lib/img.js';
+import { useLang } from '../i18n/index.jsx';
 import NotFound from './NotFound.jsx';
 
 const slugify = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -15,7 +16,13 @@ function useToc(ref, key) {
     const root = ref.current;
     if (!root) return;
     const heads = [...root.querySelectorAll('h2, h3')].filter((h) => !h.closest('.tabs, details, .tip-card'));
-    heads.forEach((h) => { if (!h.id) h.id = slugify(h.textContent) || 'muc'; });
+    const used = new Set();
+    heads.forEach((h, i) => {
+      // Tiêu đề tiếng Thái không có chữ Latin nên slug rỗng: dùng số thứ tự.
+      if (!h.id) h.id = slugify(h.textContent) || 'muc-' + (i + 1);
+      if (used.has(h.id)) h.id += '-' + (i + 1);
+      used.add(h.id);
+    });
     setToc(heads.map((h) => ({ id: h.id, text: h.textContent, level: h.tagName === 'H3' ? 3 : 2 })));
     setActive(heads[0]?.id || null);
     const io = new IntersectionObserver((entries) => {
@@ -29,7 +36,7 @@ function useToc(ref, key) {
   return { toc, active };
 }
 
-function Toc({ toc, active }) {
+function Toc({ toc, active, label }) {
   const [open, setOpen] = useState(() => window.matchMedia('(min-width: 1100px)').matches);
   const go = (e, id) => {
     e.preventDefault();
@@ -39,7 +46,7 @@ function Toc({ toc, active }) {
   return (
     <aside className='toc'>
       <details open={open} onToggle={(e) => setOpen(e.currentTarget.open)}>
-        <summary>Mục lục</summary>
+        <summary>{label}</summary>
         <ol>
           {toc.map((h) => (
             <li key={h.id} className={'lv' + h.level + (active === h.id ? ' on' : '')}>
@@ -52,11 +59,21 @@ function Toc({ toc, active }) {
   );
 }
 
+// Báo lại khi nội dung (tải lười với bản dịch) đã hiện ra để dựng mục lục.
+function Ready({ onReady }) {
+  useEffect(() => { onReady(); }, [onReady]);
+  return null;
+}
+
 export default function Guide() {
   const { slug } = useParams();
+  const { lang, t } = useLang();
+  const { getGuide, guidesIn } = useGuides();
   const g = getGuide(slug);
   const ref = useRef(null);
-  const { toc, active } = useToc(ref, slug);
+  const [ready, setReady] = useState('');
+  const key = lang + '/' + slug;
+  const { toc, active } = useToc(ref, ready === key ? key : '');
 
   // Tiêu đề tab riêng cho từng bài.
   useEffect(() => {
@@ -67,7 +84,6 @@ export default function Guide() {
   }, [g]);
 
   if (!g) return <NotFound />;
-  const cat = categoryOf(g);
   const siblings = guidesIn(g.category);
   const idx = siblings.findIndex((x) => x.slug === g.slug);
   const prev = siblings[idx - 1];
@@ -81,31 +97,35 @@ export default function Guide() {
       <header className={'guide-hero' + (emblem ? ' emblem' : '')} style={{ '--cover': cssUrl(g.cover) }}>
         <div className='guide-hero-text'>
           <nav className='crumbs'>
-            <Link to='/'>Trang chủ</Link><span>/</span><span>{cat.label}</span>
+            <Link to='/'>{t('guide.home')}</Link><span>/</span><span>{t('cat.' + g.category)}</span>
           </nav>
           <h1>{g.title}</h1>
-          <div className='guide-credit'>Guide được tạo bởi <b>Guild Horizon</b>, <span className='steal-warn'>trộm làm chó</span></div>
+          <div className='guide-credit'>{t('credit.by')} <b>Guild Horizon</b>, <span className='steal-warn'>{t('credit.steal')}</span></div>
         </div>
         {emblem && <img className='guide-emblem' src={asset(g.cover)} alt='' onError={onImgError} />}
       </header>
 
       <div className={'guide-layout' + (toc.length > 2 ? ' with-toc' : '')}>
-        {toc.length > 2 && <Toc toc={toc} active={active} />}
-        <article className='guide-body' ref={ref} key={slug}>
-          <Page />
+        {toc.length > 2 && <Toc toc={toc} active={active} label={t('guide.toc')} />}
+        <article className='guide-body' ref={ref} key={key}>
+          {!g.translated && <div className='alert blue'>{t('guide.untranslated')}</div>}
+          <Suspense fallback={<div className='loading'>{t('loading')}</div>}>
+            <Page />
+            <Ready onReady={() => setReady(key)} />
+          </Suspense>
         </article>
       </div>
 
       {(prev || next) && (
         <nav className='pager'>
-          {prev ? <Link to={'/guides/' + prev.slug}><small>← Bài trước</small><span>{prev.title}</span></Link> : <span />}
-          {next ? <Link className='next' to={'/guides/' + next.slug}><small>Bài tiếp →</small><span>{next.title}</span></Link> : <span />}
+          {prev ? <Link to={'/guides/' + prev.slug}><small>{t('guide.prev')}</small><span>{prev.title}</span></Link> : <span />}
+          {next ? <Link className='next' to={'/guides/' + next.slug}><small>{t('guide.next')}</small><span>{next.title}</span></Link> : <span />}
         </nav>
       )}
 
       {related.length > 0 && (
         <section className='block related'>
-          <div className='block-head'><h2>Cùng chủ đề</h2></div>
+          <div className='block-head'><h2>{t('guide.related')}</h2></div>
           <div className='grid'>{related.map((x) => <GuideCard key={x.slug} g={x} />)}</div>
         </section>
       )}

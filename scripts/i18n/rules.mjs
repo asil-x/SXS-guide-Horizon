@@ -1,5 +1,5 @@
 // Pattern-based translations for templated strings.
-export const RULES = [
+export const RULES_VI = [
   [/^A gift to acquaint yourself with (?:the )?(.+)\. Gift it after acquaintance to increase Affinity\.$/, 'Quà làm quen với $1. Sau khi đã quen, tặng tiếp để tăng Affinity.'],
   [/^A material dropped by (.+?) from (.+)\.$/, 'Nguyên liệu rơi từ $1 ở $2.'],
   [/^A material dropped by (.+)\.$/, 'Nguyên liệu rơi từ $1.'],
@@ -31,7 +31,9 @@ export const RULES = [
   [/^The 8th job of the (.+) line, arriving with Season (\d+)\. Its in-game name is not out yet, so it is shown as (.+) for now\.$/, 'Nghề thứ 8 của nhánh $1, ra mắt cùng Season $2. Tên trong game chưa được công bố nên tạm gọi là $3.'],
 ];
 
-export function applyRules(s) {
-  for (const [re, rep] of RULES) if (re.test(s)) return s.replace(re, rep);
+export const RULES = { vi: RULES_VI, en: [], th: [], id: [] };
+
+export function applyRules(s, lang = "vi") {
+  for (const [re, rep] of RULES[lang] || []) if (re.test(s)) return s.replace(re, rep);
   return null;
 }

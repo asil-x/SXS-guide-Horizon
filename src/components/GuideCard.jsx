@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { asset, cssUrl, onImgError } from '../lib/img.js';
+import { useT } from '../i18n/index.jsx';
 
 // Ảnh bìa .png là icon nhỏ (class, vật phẩm): hiển thị icon rõ nét trên nền là chính nó làm mờ.
 const isEmblem = (g) => /\.png$/.test(g.cover || '');
@@ -9,6 +10,7 @@ const CLASS_COLOR = { duelist: '#f0635a', knight: '#f2b33d', sage: '#4fd1a5', so
 const classKey = (g) => Object.keys(CLASS_COLOR).find((k) => g.slug.endsWith(k));
 
 export default function GuideCard({ g, variant = 'cover', feature = false }) {
+  const t = useT();
   const bg = { '--img': cssUrl(g.cover) };
 
   if (variant === 'class') {
@@ -20,7 +22,7 @@ export default function GuideCard({ g, variant = 'cover', feature = false }) {
         <div className='ccard-text'>
           <h3>{g.short || g.title.replace('Hướng dẫn chơi ', '')}</h3>
           {g.desc && <p>{g.desc}</p>}
-          <span className='ccard-more'>Xem build →</span>
+          <span className='ccard-more'>{t('card.build')}</span>
         </div>
       </Link>
     );
@@ -47,7 +49,7 @@ export default function GuideCard({ g, variant = 'cover', feature = false }) {
       <div className='gc-body'>
         <h3>{g.title}</h3>
         {g.desc && <p>{g.desc}</p>}
-        <span className='gc-more'>Đọc ngay →</span>
+        <span className='gc-more'>{t('card.read')}</span>
       </div>
     </Link>
   );
