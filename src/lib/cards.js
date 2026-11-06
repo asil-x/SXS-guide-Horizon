@@ -19,5 +19,5 @@ const BG = {
 };
 
 export const bgPath = (slug) => BG[slug] || 'sword-x-staff-cover.webp';
-export const bgUrl = (slug) => 'url(./img/' + bgPath(slug) + ')';
+export const bgUrl = (slug) => 'url(' + new URL('./img/' + bgPath(slug), document.baseURI).href + ')';
 export const isIcon = (slug) => bgPath(slug).endsWith('.png');
