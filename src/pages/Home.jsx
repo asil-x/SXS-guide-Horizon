@@ -18,7 +18,7 @@ export default function Home() {
         <div className='hero-text'>
           <span className='eyebrow'>Guild Horizon</span>
           <h1>Sword x Staff Guide</h1>
-          <p>Build class, hướng dẫn hệ thống và dữ liệu tra cứu cho Sword x Staff — gom về một chỗ, viết bằng tiếng Việt.</p>
+          <p>Build class, hướng dẫn hệ thống và dữ liệu tra cứu cho Sword x Staff viết bởi Horizon.</p>
           <div className='search'>
             <input className='input' placeholder='Tìm hướng dẫn... (vd: knight, stamina, fantomon)' value={q} onChange={(e) => setQ(e.target.value)} />
           </div>

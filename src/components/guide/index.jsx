@@ -261,3 +261,5 @@ export function Img({ src, alt = '' }) {
     </>
   );
 }
+
+export { ClassChange } from './ClassChange.jsx';

@@ -58,6 +58,14 @@ export default function Guide() {
   const ref = useRef(null);
   const { toc, active } = useToc(ref, slug);
 
+  // Tiêu đề tab riêng cho từng bài.
+  useEffect(() => {
+    if (!g) return;
+    const prev = document.title;
+    document.title = g.title + ' | Sword x Staff Guide - Guild Horizon';
+    return () => { document.title = prev; };
+  }, [g]);
+
   if (!g) return <NotFound />;
   const cat = categoryOf(g);
   const siblings = guidesIn(g.category);
@@ -76,7 +84,7 @@ export default function Guide() {
             <Link to='/'>Trang chủ</Link><span>/</span><span>{cat.label}</span>
           </nav>
           <h1>{g.title}</h1>
-          <div className='guide-credit'>Guide được tạo bởi <b>Guild Horizon</b>, trộm làm chó</div>
+          <div className='guide-credit'>Guide được tạo bởi <b>Guild Horizon</b>, <span className='steal-warn'>trộm làm chó</span></div>
         </div>
         {emblem && <img className='guide-emblem' src={asset(g.cover)} alt='' onError={onImgError} />}
       </header>

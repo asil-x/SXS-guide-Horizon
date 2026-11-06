@@ -55,7 +55,7 @@ button { font: inherit; cursor: pointer; color: inherit; }
 .topbar-inner { display: flex; align-items: center; gap: 1.5rem; max-width: 1240px; height: var(--top); margin: 0 auto; padding: 0 1.2rem; }
 .brand { display: flex; align-items: center; gap: .6rem; font-family: 'Cinzel', serif; font-weight: 700; font-size: 1.15rem; color: var(--gold2); white-space: nowrap; }
 .brand:hover { text-decoration: none; }
-.brand img { width: 34px; height: 34px; border-radius: 8px; object-fit: cover; }
+.brand img { width: 36px; height: 36px; border-radius: 9px; object-fit: cover; }
 .brand em { color: var(--violet2); font-style: normal; }
 .nav { display: flex; align-items: center; gap: .3rem; margin-left: auto; }
 .nav-drop { position: relative; }
@@ -338,3 +338,38 @@ button { font: inherit; cursor: pointer; color: inherit; }
 .class-build-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .6rem; margin-top: .6rem; font-size: .85rem; }
 .class-build-meta .tag { margin: 0; }
 .source { color: var(--muted); font-size: .8rem; }
+
+/* bảng rộng: cuộn ngang trên điện thoại */
+.table-wrap { overflow-x: auto; margin: 1rem 0; -webkit-overflow-scrolling: touch; }
+.table-wrap > table { margin: 0; min-width: 520px; }
+.guide-body td.num, .guide-body th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* tra cứu đổi class */
+.cc { margin: 1.2rem 0; padding: 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg2); }
+.cc-pick { display: flex; flex-wrap: wrap; align-items: flex-end; gap: .6rem 1rem; }
+.cc-pick label { display: flex; flex-direction: column; gap: .25rem; font-size: .8rem; color: var(--muted); flex: 1 1 180px; }
+.cc-arrow { color: var(--gold); font-size: 1.3rem; padding-bottom: .4rem; }
+.cc-tier { margin-top: 1.1rem; }
+.cc-tier-head { display: flex; align-items: center; gap: .6rem; color: var(--gold2); }
+.cc-tier-head .tag { margin: 0; }
+.cc-tier.same p { margin: .2rem 0 0; font-size: .88rem; }
+.cc-table td { vertical-align: top !important; }
+.cc-chip { display: flex; align-items: center; gap: .4rem; width: 100%; margin: .15rem 0; padding: .2rem .4rem; border: 1px solid transparent; border-radius: 8px; background: none; color: var(--text); font: inherit; font-size: .85rem; text-align: left; cursor: pointer; }
+.cc-chip:hover { border-color: var(--violet); background: var(--panel); }
+.cc-chip img { width: 28px; height: 28px; border-radius: 6px; flex: none; }
+.cc-q { font-weight: 700; font-size: .82rem; }
+.cc-q.q-Orange { color: #e68a23; }
+.cc-q.q-Purple { color: #b07ad8; }
+.cc-q.q-Blue { color: #5f9aff; }
+.cc-odds { white-space: nowrap; font-weight: 600; color: var(--gold2); }
+
+/* logo "by Guild Horizon" */
+.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+.brand-by { font-family: 'Inter Variable', system-ui, sans-serif; font-size: .64rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.footer p { margin: .2rem 0; }
+.footer b { color: var(--gold2); }
+
+/* cảnh báo "trộm làm chó": đỏ, nhấp nháy */
+.steal-warn { color: #ff4d4d; font-weight: 800; text-shadow: 0 0 8px rgba(255, 77, 77, .6); animation: steal-blink 1s steps(2, start) infinite; }
+@keyframes steal-blink { to { visibility: hidden; } }
+@media (prefers-reduced-motion: reduce) { .steal-warn { animation: none; } }

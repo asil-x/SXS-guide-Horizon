@@ -64,10 +64,12 @@ const stats = {};
 
 // Kỹ năng
 const skills = readJson('skills.json');
-const byName = new Map(skills.map((s) => [s.name, s]));
+const byName = new Map(skills.filter((s) => s.class !== 'Monster').map((s) => [s.name, s]));
+const byId = new Map(skills.map((s) => [s.id, s]));
 let added = 0;
 for (const t of theirSkills) {
-  const mine = byName.get(t.name);
+  // Ưu tiên khớp theo id: có skill quái trùng tên với skill class (vd. Riptide).
+  const mine = byId.get(t.id) || byName.get(t.name);
   if (mine) { mine.quality ??= t.quality; mine.rankTier ??= t.rankTier; continue; }
   const local = 'skills/skill_' + t.id + '.png';
   const s = {

@@ -138,6 +138,20 @@ Bỏ ảnh vào `public/img/...` rồi dùng đường dẫn tính từ `public/
 `ClassBuild` hiện mô tả class và bộ skill đề xuất, đọc từ `src/data/classes.json`. Bạn có thể viết thêm
 nội dung riêng ngay dưới nó, trong cùng `<Tab>`.
 
+## Tra cứu đổi class
+
+```jsx
+<ClassChange from="Knight" to="Duelist" />
+```
+
+Hiện 2 ô chọn class và bảng “skill nào có thể thành skill nào” theo từng tier. Dữ liệu lấy từ `pool` trong
+`classes.json` và độ hiếm (`quality`) trong `skills.json`, nên chỉ cần sync dữ liệu là bảng tự cập nhật.
+
+## Bảng rộng trên điện thoại
+
+Bọc bảng nhiều cột trong `<div className="table-wrap">…</div>` để cuộn ngang được trên điện thoại.
+Thêm `className="num"` cho ô số để căn phải.
+
 ## Cập nhật dữ liệu và bản dịch
 
 ```bash

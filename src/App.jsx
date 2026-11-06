@@ -41,8 +41,8 @@ export default function App() {
       <header className='topbar'>
         <div className='topbar-inner'>
           <Link to='/' className='brand'>
-            <img src='./img/lost-sword.webp' alt='' />
-            <span>Sword <em>x</em> Staff</span>
+            <img src='./img/logo.webp' alt='Sword x Staff Guide' />
+            <span className='brand-text'><span>Sword <em>x</em> Staff</span><small className='brand-by'>by Guild Horizon</small></span>
           </Link>
           <button className='menu-toggle' onClick={() => setOpen(!open)} aria-expanded={open} aria-label='Menu'>
             <span /><span /><span />
@@ -74,7 +74,8 @@ export default function App() {
       </main>
       <BackToTop />
       <footer className='footer'>
-        Trang tổng hợp guide Sword x Staff do fan thực hiện. Sword x Staff và mọi tài nguyên liên quan thuộc về chủ sở hữu.
+        <p>Guide được tổng hợp bởi <b>Guild Horizon</b>, <span className='steal-warn'>trộm làm chó</span>.</p>
+        <p>Trang tổng hợp guide Sword x Staff do fan thực hiện. Sword x Staff và mọi tài nguyên liên quan thuộc về chủ sở hữu.</p>
       </footer>
     </div>
   );
