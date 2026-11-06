@@ -11,7 +11,7 @@ const GROUPS = [
 
 function GuideCard({ g }) {
   return (
-    <Link className={'card' + (isIcon(g.slug) ? ' icon' : '')} style={{ '--bg': bgUrl(g.slug) }} to={'/guides/' + g.slug}>
+    <Link className={'card' + (isIcon(g.slug) ? ' icon' : '')} style={{ '--card-bg': bgUrl(g.slug) }} to={'/guides/' + g.slug}>
       <h3>{g.title}</h3>
       <small>Guild Horizon</small>
     </Link>

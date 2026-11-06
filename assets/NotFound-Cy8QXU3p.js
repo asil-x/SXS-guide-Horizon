@@ -1,1 +1,0 @@
-import{i as e,r as t}from"./index-BuhiWUbY.js";var n=t();function r(){return(0,n.jsxs)(`div`,{className:`guide`,children:[(0,n.jsx)(`h1`,{children:`Page not found`}),(0,n.jsx)(`p`,{className:`muted`,children:`This page does not exist in the archive.`}),(0,n.jsx)(e,{className:`btn`,to:`/`,children:`Back to home`})]})}export{r as default};
