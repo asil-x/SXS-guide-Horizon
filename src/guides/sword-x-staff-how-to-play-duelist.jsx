@@ -1,4 +1,4 @@
-import { Alert, Build, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
+import { Alert, Build, ClassBuild, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Hướng dẫn chơi Duelist',
@@ -366,6 +366,18 @@ export default function Page() {
               <p><strong>Pet đề xuất cho build này: <Tip>Pandarial</Tip></strong></p>
             </Tab>
           </Tabs>
+        </Tab>
+        <Tab label="Ravager" icon="skills/classes/ravager.png">
+          <ClassBuild name="Ravager" />
+        </Tab>
+        <Tab label="Marauder" icon="skills/classes/marauder.png">
+          <ClassBuild name="Marauder" />
+        </Tab>
+        <Tab label="Doomreaver" icon="skills/classes/compass/class-24.webp">
+          <ClassBuild name="Doomreaver" />
+        </Tab>
+        <Tab label="Doomreaver VIII" icon="skills/classes/compass/class-28.webp">
+          <ClassBuild name="Doomreaver VIII" />
         </Tab>
       </Tabs>
     </>

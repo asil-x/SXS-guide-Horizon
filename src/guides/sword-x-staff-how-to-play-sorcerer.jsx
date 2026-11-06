@@ -1,4 +1,4 @@
-import { Alert, Build, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
+import { Alert, Build, ClassBuild, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Hướng dẫn chơi Sorcerer',
@@ -456,6 +456,18 @@ export default function Page() {
               <p>Về charm, mình dùng ba charm tấn công, bạn có thể thay một cái bằng <Tip>Wind's Shadow</Tip> để tăng ái lực gió, hoặc bỏ <Tip>Repelling Wind</Tip> nếu boss miễn nhiễm đẩy lùi để lấy <Tip>Radiant Sear</Tip> hoặc một công cụ phòng thủ khác.</p>
             </Tab>
           </Tabs>
+        </Tab>
+        <Tab label="Magister" icon="skills/classes/magister.png">
+          <ClassBuild name="Magister" />
+        </Tab>
+        <Tab label="Arcanarch" icon="skills/classes/arcanarch.png">
+          <ClassBuild name="Arcanarch" />
+        </Tab>
+        <Tab label="Thaumaturge" icon="skills/classes/compass/class-25.webp">
+          <ClassBuild name="Thaumaturge" />
+        </Tab>
+        <Tab label="Thaumaturge VIII" icon="skills/classes/compass/class-29.webp">
+          <ClassBuild name="Thaumaturge VIII" />
         </Tab>
       </Tabs>
     </>

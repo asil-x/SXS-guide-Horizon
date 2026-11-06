@@ -126,3 +126,27 @@ Bỏ ảnh vào `public/img/...` rồi dùng đường dẫn tính từ `public/
 1. Copy một file có sẵn trong `src/guides/` (vd. `sword-x-staff-food-guide.jsx`) và đổi tên.
 2. Sửa `meta` và nội dung.
 3. Chạy `npm run dev` để xem. Xong thì commit — GitHub Actions sẽ tự build và deploy.
+
+## Build class lấy từ dữ liệu
+
+```jsx
+<Tab label="Guardian" icon="skills/classes/guardian.png">
+  <ClassBuild name="Guardian" />
+</Tab>
+```
+
+`ClassBuild` hiện mô tả class và bộ skill đề xuất, đọc từ `src/data/classes.json`. Bạn có thể viết thêm
+nội dung riêng ngay dưới nó, trong cùng `<Tab>`.
+
+## Cập nhật dữ liệu và bản dịch
+
+```bash
+npm run sync:compass   # lấy skill / Fantomon / companion / build class mới từ Sword x Staff Compass
+npm run translate      # áp bản dịch tiếng Việt lên dữ liệu
+```
+
+- `sync:compass` chỉ **thêm** mục mới và trường còn thiếu, không ghi đè dữ liệu hay bản dịch đang có. Icon còn thiếu
+  được tải về `public/img/.../compass/`. Xong việc, script tự chạy `translate`.
+- Câu nào chưa có bản dịch sẽ được ghi vào `scripts/i18n/todo.json` theo dạng `"câu tiếng Anh": ""`.
+  Điền bản dịch vào rồi chạy `npm run translate`, các câu đó sẽ được chuyển vào từ điển `scripts/i18n/vi.json`.
+- Câu theo khuôn mẫu (ví dụ "Obtain X's Journal…") nằm trong `scripts/i18n/rules.mjs`.

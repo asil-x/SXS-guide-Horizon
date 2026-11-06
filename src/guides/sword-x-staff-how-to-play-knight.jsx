@@ -1,4 +1,4 @@
-import { Alert, Build, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
+import { Alert, Build, ClassBuild, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Hướng dẫn chơi Knight',
@@ -216,6 +216,21 @@ export default function Page() {
               </ul>
             </Tab>
           </Tabs>
+        </Tab>
+        <Tab label="Guardian" icon="skills/classes/guardian.png">
+          <ClassBuild name="Guardian" />
+        </Tab>
+        <Tab label="Templar" icon="skills/classes/templar.png">
+          <ClassBuild name="Templar" />
+        </Tab>
+        <Tab label="Justicar" icon="skills/classes/justicar.png">
+          <ClassBuild name="Justicar" />
+        </Tab>
+        <Tab label="Vindicator" icon="skills/classes/compass/class-23.webp">
+          <ClassBuild name="Vindicator" />
+        </Tab>
+        <Tab label="Vindicator VIII" icon="skills/classes/compass/class-27.webp">
+          <ClassBuild name="Vindicator VIII" />
         </Tab>
       </Tabs>
     </>

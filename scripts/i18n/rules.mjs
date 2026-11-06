@@ -24,6 +24,11 @@ export const RULES = [
   [/^For every (\d+) level\(s\) up for the highest skill quality, (\+[\d,.%]+)$/, 'Mỗi $1 cấp tăng của chất lượng skill cao nhất, $2'],
   [/^For every (\d+) exploration\(s\) completed, (\+[\d,.%]+)$/, 'Mỗi $1 lần khám phá hoàn thành, $2'],
   [/^For every (\d+) skill ascension \(s\) completed, (\+[\d,.%]+)$/, 'Mỗi $1 lần thăng cấp skill hoàn thành, $2'],
+  [/^Obtain (.+)'s Journal \((\d+) Journals? required\)\.$/, 'Nhận Journal của $1 (cần $2 Journal).'],
+  [/^Reach player level (\d+)\.$/, 'Đạt cấp người chơi $1.'],
+  [/^Obtain from (?:the )?(.+?)( collaboration)? event wheel(?: \((.+)\))?\.$/, (m, ev, collab, note) => 'Nhận từ vòng quay sự kiện ' + (collab ? 'collab ' : '') + ev + (note ? ' (' + note + ')' : '') + '.'],
+  [/^Receive for free during (?:the )?(.+?) collaboration event\.$/, 'Nhận miễn phí trong sự kiện collab $1.'],
+  [/^The 8th job of the (.+) line, arriving with Season (\d+)\. Its in-game name is not out yet, so it is shown as (.+) for now\.$/, 'Nghề thứ 8 của nhánh $1, ra mắt cùng Season $2. Tên trong game chưa được công bố nên tạm gọi là $3.'],
 ];
 
 export function applyRules(s) {

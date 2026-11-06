@@ -4,6 +4,7 @@ import { Children, isValidElement, useEffect, useLayoutEffect, useRef, useState 
 import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 import TIPS from '../../data/tooltips.json';
+import CLASSES from '../../data/classes.json';
 import { asset, fallbackImg, onImgError, skillIcon } from '../../lib/img.js';
 import { useSkills } from '../../lib/skills.js';
 import SkillPopup from '../SkillPopup.jsx';
@@ -127,6 +128,26 @@ export function Build({ techniques = [], charms = [] }) {
         </div>
       ))}
       {sel && <SkillPopup skill={sel} onClose={() => setSel(null)} />}
+    </div>
+  );
+}
+
+/* ---------- Class build (dữ liệu từ src/data/classes.json) ---------- */
+
+/** Build đề xuất của một class, lấy tự động từ classes.json (đồng bộ bằng npm run sync:compass). */
+export function ClassBuild({ name }) {
+  const c = CLASSES.find((x) => x.name === name);
+  if (!c) return <p className='tip missing'>Không tìm thấy class “{name}” trong classes.json</p>;
+  return (
+    <div className='class-build'>
+      <div className='class-build-meta'>
+        <span className='tag gold'>Rank {c.rank}</span>
+        {c.role && <span className='tag'>{c.role}</span>}
+        {c.chain?.length > 1 && <span className='muted'>{c.chain.join(' → ')}</span>}
+      </div>
+      {c.description && <p><em>{c.description}</em></p>}
+      <Build techniques={c.techniques} charms={c.charms} />
+      <p className='source'>Build đề xuất theo dữ liệu của <a href='https://swordxstaff-compass.com/' target='_blank' rel='noreferrer'>Sword x Staff Compass</a>.</p>
     </div>
   );
 }

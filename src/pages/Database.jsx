@@ -12,6 +12,7 @@ const loaders = {
 };
 
 const PAGE = 120;
+const ROLE = { Attacker: 'Tấn công', Tank: 'Tank', Support: 'Hỗ trợ' };
 const FILTER_LABEL = { Class: 'Class', Type: 'Loại', Rarity: 'Độ hiếm', 'Gift type': 'Loại quà', Tag: 'Thẻ', Region: 'Khu vực', Element: 'Hệ' };
 
 function norm(kind, e, skillsById, gifts) {
@@ -55,6 +56,7 @@ function Detail({ kind, item, skillsById, gifts, onClose }) {
             {(e.keywords || []).map((k) => <div className='kw' key={k.name}><b>{k.name}</b>: {k.description}</div>)}
           </>
         )}
+        {kind === 'fantomons' && e.role && <p className='muted'>Vai trò: {ROLE[e.role] || e.role}</p>}
         {kind === 'fantomons' && (e.skills || []).map((s) => (
           <div className='kw' key={s.id}>
             <b>{s.name}</b> <span className='tag'>{s.type}</span>
@@ -64,7 +66,8 @@ function Detail({ kind, item, skillsById, gifts, onClose }) {
         ))}
         {kind === 'companions' && (
           <>
-            <p className='muted'>Loại quà yêu thích: {e.gift_type}</p>
+            <p className='muted'>Loại quà yêu thích: {e.gift_type}{e.class ? ' · Class: ' + e.class : ''}</p>
+            {e.unlock && <div className='kw'><b>Cách mở khoá</b>: {e.unlock}</div>}
             {(e.ranks || []).map((r) => (
               <div className='kw' key={r.rank}>
                 <b>{r.rank}</b> · {r.class}
@@ -142,6 +145,9 @@ export default function Database() {
         ))}
       </div>
       {shown < list.length && <p style={{ textAlign: 'center' }}><button className='btn' onClick={() => setShown(shown + PAGE)}>Xem thêm</button></p>}
+      {['skills', 'fantomons', 'companions'].includes(kind) && (
+        <p className='source'>Một phần dữ liệu được tổng hợp từ <a href='https://swordxstaff-compass.com/' target='_blank' rel='noreferrer'>Sword x Staff Compass</a>.</p>
+      )}
       {sel && <Detail kind={kind} item={sel} skillsById={skillsById} onClose={() => setSel(null)} />}
     </>
   );

@@ -1,4 +1,4 @@
-import { Alert, Build, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
+import { Alert, Build, ClassBuild, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Hướng dẫn chơi Sage',
@@ -423,6 +423,18 @@ export default function Page() {
               <p>Cũng phải nhắc tới sự đa dạng: chưa có đủ triệu hồi để lấp đầy thanh skill (nếu tính riêng sát thương), và với cách cân bằng của SxS thì tới lúc có đủ, những con cũ nhất đã bị lỗi thời hoàn toàn.</p>
             </Tab>
           </Tabs>
+        </Tab>
+        <Tab label="Prophet" icon="skills/classes/prophet.png">
+          <ClassBuild name="Prophet" />
+        </Tab>
+        <Tab label="Hierarch" icon="skills/classes/hierarch.png">
+          <ClassBuild name="Hierarch" />
+        </Tab>
+        <Tab label="Demiurge" icon="skills/classes/compass/class-26.webp">
+          <ClassBuild name="Demiurge" />
+        </Tab>
+        <Tab label="Demiurge VIII" icon="skills/classes/compass/class-30.webp">
+          <ClassBuild name="Demiurge VIII" />
         </Tab>
       </Tabs>
     </>
