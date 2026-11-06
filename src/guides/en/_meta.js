@@ -1,0 +1,23 @@
+// Tiêu đề / mô tả tiếng Anh của từng bài (thứ tự, ảnh bìa, nhóm lấy từ bản tiếng Việt).
+export default {
+  'sword-x-staff-class-change': { title: 'Class change: where do your skills go?', desc: 'How skills are matched when you change class, plus a lookup tool.', short: 'Class change' },
+  'sword-x-staff-codes': { title: 'Sword x Staff free codes', desc: 'All working gift codes, tap to copy.' },
+  'sword-x-staff-daily-dungeon': { title: 'Daily Dungeon', desc: 'S rank, rating chests and why 2× Rating Reward beats Ascension.' },
+  'sword-x-staff-destiny-fruit-drop-rates': { title: 'Destiny Fruit drop rates', desc: 'Destiny Fruit drop rates by source.' },
+  'sword-x-staff-destiny-fruits': { title: 'How to use Destiny Fruit', desc: 'Where Destiny Fruit is worth spending.' },
+  'sword-x-staff-fantomon-guide': { title: 'Fantomon guide', desc: 'Picking, raising and upgrading Fantomons for each role.' },
+  'sword-x-staff-food-guide': { title: 'Why food matters', desc: 'Dishes that give temporary and permanent stats.' },
+  'sword-x-staff-gear-enhancement-table': { title: 'Gear enhancement table', desc: 'Enhancement cost for every level.' },
+  'sword-x-staff-gems': { title: 'Gems: which ones, where to socket, how to merge', desc: '8 gem types, socket slots and a T1 → T15 merge table to save resources.', short: 'Gems' },
+  'sword-x-staff-grand-treasure-hunt': { title: 'Grand Treasure Hunt event', desc: 'How the event works and which rewards are worth it.' },
+  'sword-x-staff-how-to-play-duelist': { title: 'How to play Duelist', desc: 'Melee damage, crit and high speed.', short: 'Duelist' },
+  'sword-x-staff-how-to-play-knight': { title: 'How to play Knight', desc: 'Frontline tank that protects the whole team.', short: 'Knight' },
+  'sword-x-staff-how-to-play-sage': { title: 'How to play Sage', desc: 'Healing, summons and support.', short: 'Sage' },
+  'sword-x-staff-how-to-play-sorcerer': { title: 'How to play Sorcerer', desc: 'Area magic and crowd control.', short: 'Sorcerer' },
+  'sword-x-staff-season-primostar': { title: 'Season, Primostar & Astral Pact: what you keep each season', desc: 'Primostar, Astral Pact, Kingdom Shop and an end-of-season checklist.', short: 'Season & Primostar' },
+  'sword-x-staff-style-level-bonuses': { title: 'Style bonus table', desc: 'Bonuses you get at every Style Level.' },
+  'sword-x-staff-substat-table': { title: 'Gear substat table', desc: 'Substat values by rarity.' },
+  'sword-x-staff-wheel-of-destiny-priority': { title: 'Wheel of Destiny priority', desc: 'Which slots to prioritize on the Wheel of Destiny.' },
+  'sword-x-staff-where-to-spend-dawnium': { title: 'Shops and where to spend Dawnium', desc: 'Which shops are worth it and what to spend Dawnium on first.' },
+  'sword-x-staff-where-to-use-stamina': { title: 'How to use Stamina', desc: 'The order to spend Stamina for the fastest progress.' },
+};
