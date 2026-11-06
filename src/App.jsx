@@ -7,20 +7,20 @@ const Database = lazy(() => import('./pages/Database.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 
 export const DB_KINDS = [
-  { key: 'skills', label: 'Skills' },
-  { key: 'fantomons', label: 'Fantomons' },
-  { key: 'companions', label: 'Companions' },
-  { key: 'items', label: 'Items' },
-  { key: 'food', label: 'Food' },
-  { key: 'ingredients', label: 'Ingredients' },
-  { key: 'relics', label: 'Relics' },
+  { key: 'skills', label: 'Kỹ năng' },
+  { key: 'fantomons', label: 'Fantomon' },
+  { key: 'companions', label: 'Đồng hành' },
+  { key: 'items', label: 'Vật phẩm' },
+  { key: 'food', label: 'Món ăn' },
+  { key: 'ingredients', label: 'Nguyên liệu' },
+  { key: 'relics', label: 'Di vật' },
 ];
 
 export const TOOLS = [
-  { slug: 'sword-x-staff-gear-enhancement-table', label: 'Gear enhancement table' },
-  { slug: 'sword-x-staff-style-level-bonuses', label: 'Style bonuses table' },
-  { slug: 'sword-x-staff-substat-table', label: 'Gear substat table' },
-  { slug: 'sword-x-staff-destiny-fruit-drop-rates', label: 'Destiny Fruit drop rates' },
+  { slug: 'sword-x-staff-gear-enhancement-table', label: 'Bảng cường hoá trang bị' },
+  { slug: 'sword-x-staff-style-level-bonuses', label: 'Bảng bonus Style' },
+  { slug: 'sword-x-staff-substat-table', label: 'Bảng chỉ số phụ trang bị' },
+  { slug: 'sword-x-staff-destiny-fruit-drop-rates', label: 'Tỉ lệ rơi Destiny Fruit' },
 ];
 
 function ScrollTop() {
@@ -38,9 +38,9 @@ export default function App() {
           <span>Sword <em>x</em> Staff</span>
         </Link>
         <nav className='nav'>
-          <NavLink to='/guides/sword-x-staff-codes'>Codes</NavLink>
+          <NavLink to='/guides/sword-x-staff-codes'>Code</NavLink>
           <div className='nav-drop'>
-            <span className='nav-drop-label'>Databases</span>
+            <span className='nav-drop-label'>Dữ liệu</span>
             <div className='nav-drop-menu'>
               {DB_KINDS.map((d) => (
                 <NavLink key={d.key} to={'/db/' + d.key}>{d.label}</NavLink>
@@ -48,7 +48,7 @@ export default function App() {
             </div>
           </div>
           <div className='nav-drop'>
-            <span className='nav-drop-label'>Tools</span>
+            <span className='nav-drop-label'>Công cụ</span>
             <div className='nav-drop-menu'>
               {TOOLS.map((t) => (
                 <NavLink key={t.slug} to={'/guides/' + t.slug}>{t.label}</NavLink>
@@ -59,7 +59,7 @@ export default function App() {
       </header>
       <ScrollTop />
       <main className='page'>
-        <Suspense fallback={<div className='loading'>Loading...</div>}>
+        <Suspense fallback={<div className='loading'>Đang tải...</div>}>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/guides' element={<Navigate to='/' replace />} />
@@ -70,7 +70,7 @@ export default function App() {
         </Suspense>
       </main>
       <footer className='footer'>
-        Fan-made archive of the Sword x Staff guides. Sword x Staff and all related assets belong to their owners.
+        Trang tổng hợp guide Sword x Staff do fan thực hiện. Sword x Staff và mọi tài nguyên liên quan thuộc về chủ sở hữu.
       </footer>
     </div>
   );

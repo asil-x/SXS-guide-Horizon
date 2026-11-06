@@ -5,8 +5,8 @@ import { bgUrl, isIcon } from '../lib/cards.js';
 
 const HIDDEN = /table|bonuses|drop-rates/;
 const GROUPS = [
-  { name: 'Class builds', test: (s) => s.includes('how-to-play') },
-  { name: 'Guides', test: () => true },
+  { name: 'Build theo Class', test: (s) => s.includes('how-to-play') },
+  { name: 'Hướng dẫn', test: () => true },
 ];
 
 function GuideCard({ g }) {
@@ -27,12 +27,12 @@ export default function Home() {
       <section className='hero'>
         <div>
           <h1>Sword x Staff Guide</h1>
-          <p>Builds, free codes and guides for Sword x Staff. Databases and tables are in the top menu.</p>
+          <p>Hướng dẫn chơi Sword x Staff cơ bản. Dữ liệu và các bảng tra cứu nằm ở menu phía trên.</p>
         </div>
         <img src='./img/sword-x-staff-cover.webp' alt='Sword x Staff' />
       </section>
       <div className='toolbar'>
-        <input className='input' placeholder='Search guides...' value={q} onChange={(e) => setQ(e.target.value)} />
+        <input className='input' placeholder='Tìm hướng dẫn...' value={q} onChange={(e) => setQ(e.target.value)} />
       </div>
       {GROUPS.map((grp) => {
         const items = list.filter((g) => !used.has(g.slug) && grp.test(g.slug));

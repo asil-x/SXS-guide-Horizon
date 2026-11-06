@@ -21,14 +21,14 @@ function SkillPopup({ skill, icon, onClose }) {
   return (
     <div className='overlay' onClick={onClose}>
       <div className='modal' onClick={(e) => e.stopPropagation()}>
-        <button className='close' onClick={onClose} aria-label='Close'>x</button>
+        <button className='close' onClick={onClose} aria-label='Đóng'>x</button>
         <div className='modal-head'>
           <img src={icon} alt='' onError={onImgError} />
           <div>
             <h2>{skill.name}</h2>
             <div>
               {skill.type && <span className='tag'>{skill.type}</span>}
-              {skill.cooldown != null && skill.cooldown !== '' && <span className='tag'>{skill.cooldown} turn(s)</span>}
+              {skill.cooldown != null && skill.cooldown !== '' && <span className='tag'>{skill.cooldown} lượt</span>}
               {(skill.tags || []).map((t) => <span className='tag' key={t}>{t}</span>)}
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function Guide() {
       navigator.clipboard?.writeText(code.dataset.code);
       code.classList.add('copied');
       const old = code.textContent;
-      code.textContent = 'Copied!';
+      code.textContent = 'Đã chép!';
       setTimeout(() => { code.classList.remove('copied'); code.textContent = old; }, 1200);
       return;
     }
@@ -129,11 +129,11 @@ export default function Guide() {
     }
   }
 
-  if (data === false) return <div className='guide'><h1>Guide not found</h1><Link className='btn' to='/'>Home</Link></div>;
-  if (!data) return <div className='loading'>Loading...</div>;
+  if (data === false) return <div className='guide'><h1>Không tìm thấy hướng dẫn</h1><Link className='btn' to='/'>Trang chủ</Link></div>;
+  if (!data) return <div className='loading'>Đang tải...</div>;
   return (
     <article className='guide'>
-      <Link to='/' className='muted'>Home</Link>
+      <Link to='/' className='muted'>Trang chủ</Link>
       <h1>{data.title}</h1>
       <div className='guide-meta'>Guide được tạo bởi <b>Guild Horizon</b>, trộm làm chó</div>
       <div className='guide-body' ref={ref} onClick={onClick} dangerouslySetInnerHTML={{ __html: html }} />

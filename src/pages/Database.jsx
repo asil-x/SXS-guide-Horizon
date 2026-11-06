@@ -14,6 +14,7 @@ const loaders = {
 };
 
 const PAGE = 120;
+const FILTER_LABEL = { Class: 'Class', Type: 'Loại', Rarity: 'Độ hiếm', 'Gift type': 'Loại quà', Tag: 'Thẻ', Region: 'Khu vực', Element: 'Hệ' };
 
 function norm(kind, e, skillsById, gifts) {
   switch (kind) {
@@ -41,7 +42,7 @@ function Detail({ kind, item, skillsById, gifts, onClose }) {
   return (
     <div className='overlay' onClick={onClose}>
       <div className='modal' onClick={(ev) => ev.stopPropagation()}>
-        <button className='close' onClick={onClose} aria-label='Close'>x</button>
+        <button className='close' onClick={onClose} aria-label='Đóng'>x</button>
         <div className='modal-head'>
           <img src={item.icon} alt='' onError={onImgError} />
           <div>
@@ -55,7 +56,7 @@ function Detail({ kind, item, skillsById, gifts, onClose }) {
         {e.description && <p>{e.description}</p>}
         {kind === 'skills' && (
           <>
-            {e.cooldown != null && <p className='muted'>Cooldown: {e.cooldown} turn(s)</p>}
+            {e.cooldown != null && <p className='muted'>Hồi chiêu: {e.cooldown} lượt</p>}
             {(e.keywords || []).map((k) => <div className='kw' key={k.name}><b>{k.name}</b>: {k.description}</div>)}
           </>
         )}
@@ -68,20 +69,20 @@ function Detail({ kind, item, skillsById, gifts, onClose }) {
         ))}
         {kind === 'companions' && (
           <>
-            <p className='muted'>Favorite gift type: {e.gift_type}</p>
+            <p className='muted'>Loại quà yêu thích: {e.gift_type}</p>
             {(e.ranks || []).map((r) => (
               <div className='kw' key={r.rank}>
                 <b>{r.rank}</b> · {r.class}
-                <div>Skills: {(r.skills || []).map(name).join(', ')}</div>
-                <div>Charms: {(r.charms || []).map(name).join(', ')}</div>
+                <div>Kỹ năng: {(r.skills || []).map(name).join(', ')}</div>
+                <div>Charm: {(r.charms || []).map(name).join(', ')}</div>
               </div>
             ))}
           </>
         )}
         {(kind === 'items' || kind === 'food') && (
           <>
-            {e.effects && <div className='kw'><b>In battle</b>: {e.effects.battle} ({e.effects.fights} fight(s))<br /><b>Permanent</b>: {e.effects.permanent}</div>}
-            {e.sources && e.sources.length > 0 && <div className='kw'><b>Sources</b>: {e.sources.join(', ')}</div>}
+            {e.effects && <div className='kw'><b>Trong trận</b>: {e.effects.battle} ({e.effects.fights} trận)<br /><b>Vĩnh viễn</b>: {e.effects.permanent}</div>}
+            {e.sources && e.sources.length > 0 && <div className='kw'><b>Nguồn</b>: {e.sources.join(', ')}</div>}
           </>
         )}
         {kind === 'ingredients' && (e.sources || []).map((s, i) => (
@@ -90,7 +91,7 @@ function Detail({ kind, item, skillsById, gifts, onClose }) {
         {kind === 'relics' && (
           <>
             <p className='muted'>{e.element} · {e.region}</p>
-            {e.set_bonus && e.set_bonus.length > 0 && <div className='kw'><b>Set bonus</b>: {e.set_bonus.map((b) => b.join(' + ')).join(' | ')}</div>}
+            {e.set_bonus && e.set_bonus.length > 0 && <div className='kw'><b>Bonus bộ</b>: {e.set_bonus.map((b) => b.join(' + ')).join(' | ')}</div>}
           </>
         )}
       </div>
@@ -126,24 +127,24 @@ export default function Database() {
     return items.filter((it) => (!t || it.name.toLowerCase().includes(t)) && Object.entries(filters).every(([k, v]) => !v || it.filters[k] === v));
   }, [items, q, filters]);
 
-  if (!meta) return <div className='guide'><h1>Database not found</h1></div>;
-  if (!rows) return <div className='loading'>Loading...</div>;
+  if (!meta) return <div className='guide'><h1>Không tìm thấy dữ liệu</h1></div>;
+  if (!rows) return <div className='loading'>Đang tải...</div>;
   return (
     <>
-      <h1>{meta.label} database</h1>
+      <h1>Dữ liệu {meta.label}</h1>
       <div className='chips'>
         {DB_KINDS.map((d) => <Link key={d.key} to={'/db/' + d.key} className={'chip' + (d.key === kind ? ' on' : '')}>{d.label}</Link>)}
       </div>
       <div className='toolbar'>
-        <input className='input' placeholder={'Search ' + meta.label.toLowerCase() + '...'} value={q} onChange={(e) => { setQ(e.target.value); setShown(PAGE); }} />
+        <input className='input' placeholder={'Tìm ' + meta.label.toLowerCase() + '...'} value={q} onChange={(e) => { setQ(e.target.value); setShown(PAGE); }} />
         {Object.entries(options).map(([k, vals]) => (
           <select key={k} className='select' value={filters[k] || ''} onChange={(e) => { setFilters({ ...filters, [k]: e.target.value }); setShown(PAGE); }}>
-            <option value=''>{k}: all</option>
+            <option value=''>{FILTER_LABEL[k] || k}: tất cả</option>
             {vals.map((v) => <option key={v} value={v}>{v}</option>)}
           </select>
         ))}
       </div>
-      <p className='muted'>{list.length} of {items.length} entries</p>
+      <p className='muted'>{list.length} / {items.length} mục</p>
       <div className='db-grid'>
         {list.slice(0, shown).map((it) => (
           <button key={it.id} className='db-card' onClick={() => setSel(it)}>
@@ -153,7 +154,7 @@ export default function Database() {
           </button>
         ))}
       </div>
-      {shown < list.length && <p style={{ textAlign: 'center' }}><button className='btn' onClick={() => setShown(shown + PAGE)}>Show more</button></p>}
+      {shown < list.length && <p style={{ textAlign: 'center' }}><button className='btn' onClick={() => setShown(shown + PAGE)}>Xem thêm</button></p>}
       {sel && <Detail kind={kind} item={sel} skillsById={skillsById} onClose={() => setSel(null)} />}
     </>
   );
