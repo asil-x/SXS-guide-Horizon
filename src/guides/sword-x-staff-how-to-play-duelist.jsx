@@ -1,4 +1,4 @@
-import { Alert, Build, ClassBuild, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
+import { Alert, Build, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Hướng dẫn chơi Duelist',
@@ -368,16 +368,122 @@ export default function Page() {
           </Tabs>
         </Tab>
         <Tab label="Ravager" icon="skills/classes/ravager.png">
-          <ClassBuild name="Ravager" />
+          <p>Ravager mở ra hai hướng chơi mới cho nhánh Duelist: <strong>sát thương Lửa diện rộng</strong> với <Tip>Solaris Storm</Tip> và <strong>combo hất tung</strong> với <Tip>Tempest Edge</Tip>.</p>
+          <p><Tip>Solaris Storm</Tip> đánh 3 hit Lửa quanh bản thân rồi thêm 1 hit vùng tròn 2 ô, lại có Zero Initial CD nên dùng được ngay lượt đầu. Đây là skill dọn quái mạnh nhất mà Ravager có thêm.</p>
+          <p><Tip>Shadow End</Tip> rất đáng chú ý ở nội dung nhiều quái yếu: dịch chuyển tới kẻ địch, và mỗi lần hạ được mục tiêu sẽ tự thi triển lại, tối đa thêm 4 lần mỗi lượt.</p>
+          <p><Tip>Night Curse</Tip> gây Blood Source lên mọi kẻ địch trong 2 ô. Kẻ địch dính Blood Source sẽ trả lại 3% sát thương nhận vào thành HP cho <strong>người tấn công</strong>, nên cả đội đều được hút máu.</p>
+          <Alert type="red" title="Lưu ý quan trọng">
+            <p><strong>Đa số build vẫn xoay quanh nhiều hit</strong>: <Tip>Blade of Judgment</Tip> gắn Mark theo từng lần gây sát thương, nên các technique nhiều hit như <Tip>Whirlwind Slash</Tip>, <Tip>Sunset Sword</Tip> và <Tip>Solaris Storm</Tip> kích hoạt nó rất nhanh.</p>
+            <p><Tip>Tempest Edge</Tip> chỉ kích hoạt khi hất kẻ địch <strong>từ trạng thái bình thường</strong> lên Airborne, nên cần có <Tip>Hunter's Judgment</Tip> trong bộ skill.</p>
+            <p><Tip>Tactical Adaptation</Tip> có lợi trong cả hai trường hợp: ít kẻ địch quanh mình thì tăng sát thương, bị vây thì giảm sát thương nhận vào.</p>
+          </Alert>
+          <Tabs>
+            <Tab label="Đi màn">
+              <Build
+                techniques={['Hunter\'s Judgment', 'Solaris Storm', 'Whirlwind Slash', 'Sunset Sword']}
+                charms={['Tactical Adaptation', 'Blazing Momentum', 'Tempest Edge', 'Blade of Judgment']}
+              />
+              <p><strong>Build đi màn chính của Ravager.</strong> <Tip>Hunter's Judgment</Tip> kéo kẻ địch về trước mặt và hất tung chúng, kích hoạt <Tip>Tempest Edge</Tip>, sau đó <Tip>Whirlwind Slash</Tip>, <Tip>Sunset Sword</Tip> và <Tip>Solaris Storm</Tip> đánh trúng cả cụm.</p>
+              <p><Tip>Blazing Momentum</Tip> biến mỗi đòn chí mạng thành thêm 1 lần sát thương Lửa lan 1 ô, nên build này cần <strong>Crit Rate cao</strong>.</p>
+              <p>Nếu bạn hay chết ở các màn khó, đổi <Tip>Tactical Adaptation</Tip> sang <Tip>Indomitable Will</Tip> để có thêm một mạng.</p>
+            </Tab>
+            <Tab label="Đơn mục tiêu">
+              <Build
+                techniques={['Air Break', 'Shattering Dance', 'Eclipse Slash', 'Hunter\'s Judgment']}
+                charms={['Dominant Gaze', 'Scarlet Zeal', 'Blade of Judgment', 'Indomitable Will']}
+              />
+              <p><strong>Dùng cho boss và miniboss.</strong> <Tip>Air Break</Tip> mở đầu bằng Armor Break 2 (giảm 30% DEF), sau đó <Tip>Eclipse Slash</Tip> (6 hit) và <Tip>Shattering Dance</Tip> (3 hit, cộng dồn Riven Heart) dồn sát thương vào một mục tiêu.</p>
+              <p><Tip>Dominant Gaze</Tip> tăng sát thương lên mục tiêu còn trên 70% HP, rất hợp với boss máu dày ở đầu trận. <Tip>Scarlet Zeal</Tip> cộng ATK sau mỗi technique, đạt 6 tầng sẽ tăng mạnh ATK trong 2 lượt.</p>
+              <p>Có thể đổi <Tip>Hunter's Judgment</Tip> sang <Tip>Night Curse</Tip> nếu đội cần hồi máu nhờ Blood Source.</p>
+            </Tab>
+          </Tabs>
         </Tab>
         <Tab label="Marauder" icon="skills/classes/marauder.png">
-          <ClassBuild name="Marauder" />
+          <p>Marauder là bậc mà <strong>SPD và sát thương Vật lý nhiều hit</strong> trở thành trọng tâm.</p>
+          <p><Tip>Raining Blades</Tip> đánh 4 hit lên vùng 3×2, và mỗi 5% SPD bạn vượt mục tiêu sẽ tăng thêm 5% sát thương (tối đa 50%). <Tip>Shadowflash Dance</Tip> tung 6 đòn, mỗi đòn dịch chuyển tới một kẻ địch ngẫu nhiên, rất mạnh khi kẻ địch phân tán.</p>
+          <p><Tip>Sinseal</Tip> là công cụ đánh boss mới: gắn Hex Mark 1 lượt, khi hết hạn mục tiêu nhận thêm True DMG bằng 30% sát thương đã nhận trong thời gian bị đánh dấu.</p>
+          <p>Về charm, <Tip>Razor Momentum</Tip> và <Tip>Grim Pursuit</Tip> đều kích hoạt theo từng hit Vật lý, nên càng nhiều hit thì càng có lợi.</p>
+          <Alert type="red" title="Lưu ý quan trọng">
+            <p><strong>Ưu tiên SPD</strong>: ngoài việc hành động sớm hơn, SPD còn trực tiếp tăng sát thương của <Tip>Raining Blades</Tip>.</p>
+            <p><Tip>Razor Momentum</Tip> cộng tối đa 20 tầng Razor trong lượt, mỗi hit Vật lý có 80% cơ hội nhận 1 tầng. Build toàn technique nhiều hit sẽ đạt tối đa rất nhanh.</p>
+            <p><Tip>Hellblood Frenzy</Tip> tăng sát thương 3 lượt đầu, nhưng sau đó bạn nhận <strong>thêm 100% sát thương</strong> trong 3 lượt. Chỉ dùng cho trận ngắn mà bạn chắc chắn kết thúc nhanh.</p>
+          </Alert>
+          <Tabs>
+            <Tab label="Đi màn">
+              <Build
+                techniques={['Raining Blades', 'Shattering Dance', 'Eclipse Slash', 'Shadowflash Dance']}
+                charms={['Indomitable Will', 'Blade of Judgment', 'Grim Pursuit', 'Razor Momentum']}
+              />
+              <p><strong>Toàn bộ technique đều là sát thương Vật lý nhiều hit</strong>: tổng cộng 4 + 3 + 6 + 6 hit mỗi vòng. Mỗi hit đều có thể kích hoạt <Tip>Grim Pursuit</Tip> (40% gây thêm 1 lần sát thương), cộng tầng <Tip>Razor Momentum</Tip> và gắn Mark của <Tip>Blade of Judgment</Tip>.</p>
+              <p><Tip>Grim Pursuit</Tip> còn mạnh dần khi kẻ địch mất máu (tối đa +50%), nên build kết liễu rất tốt.</p>
+              <p><Tip>Indomitable Will</Tip> giữ lại cho an toàn. Nếu đã đủ trâu, có thể đổi sang <Tip>Piercing Assault</Tip> để bỏ qua DEF.</p>
+            </Tab>
+            <Tab label="Boss">
+              <Build
+                techniques={['Sinseal', 'Eclipse Slash', 'Shattering Dance', 'Air Break']}
+                charms={['Razor Momentum', 'Grim Pursuit', 'Blade of Judgment', 'Ruinblight']}
+              />
+              <p><strong>Mở bằng <Tip>Sinseal</Tip> rồi dồn toàn bộ sát thương trong lượt bị đánh dấu</strong>, vì phần True DMG cuối cùng tính theo lượng sát thương mục tiêu nhận trong thời gian đó.</p>
+              <p><Tip>Air Break</Tip> gây Armor Break 2 và cũng là technique 1 hit, nên được <Tip>Ruinblight</Tip> tăng sát thương. <Tip>Ruinblight</Tip> còn mạnh hơn 10% cho mỗi loại Ailment/Debuff trên mục tiêu (Armor Break, Riven Heart…).</p>
+              <p>Lưu ý <Tip>Sinseal</Tip> có hồi chiêu 3 lượt, hãy để nó đầu thứ tự skill.</p>
+            </Tab>
+          </Tabs>
         </Tab>
         <Tab label="Doomreaver" icon="skills/classes/compass/class-24.webp">
-          <ClassBuild name="Doomreaver" />
+          <p>Doomreaver chuyển trọng tâm sang <strong>kết liễu bằng Lửa</strong>: dịch chuyển tới mục tiêu yếu nhất và kết thúc nó.</p>
+          <p><Tip>Ignition Strike</Tip> dịch chuyển tới cạnh kẻ địch trong 5 ô, ưu tiên mục tiêu có % HP thấp nhất. <Tip>Starfire Annihilation</Tip> gây thêm 20% sát thương cho mỗi 10% HP mục tiêu đã mất, tối đa +200%, cũng ưu tiên mục tiêu yếu nhất.</p>
+          <p>Với lối Vật lý, <Tip>Void Slash</Tip> đánh 6 hit lên mọi kẻ địch trong 2 ô quanh bản thân, là technique diện rộng nhiều hit mạnh nhất của nhánh.</p>
+          <p>Charm mới thiên về sống sót: <Tip>Ironclad</Tip> giảm mạnh sát thương nhận vào trong 2 lượt đầu, <Tip>Shadow Stealth</Tip> hồi máu và tàng hình 2 lượt.</p>
+          <Alert type="red" title="Lưu ý quan trọng">
+            <p><strong>Thứ tự skill rất quan trọng</strong>: dùng technique diện rộng làm giảm máu trước, rồi mới tới <Tip>Starfire Annihilation</Tip> và <Tip>Ignition Strike</Tip> để chúng kết liễu.</p>
+            <p><Tip>Ironclad</Tip> giúp sống qua đợt dồn sát thương đầu trận, giai đoạn nguy hiểm nhất với một class cận chiến phải lao vào giữa kẻ địch.</p>
+            <p><Tip>Piercing Assault</Tip> bỏ qua thêm 10% DEF cho mỗi buff bạn đang có (tối đa 3), nên càng giữ nhiều buff trên người thì nó càng mạnh.</p>
+          </Alert>
+          <Tabs>
+            <Tab label="Lửa kết liễu">
+              <Build
+                techniques={['Sinseal', 'Hellfire Fist', 'Ignition Strike', 'Starfire Annihilation']}
+                charms={['Indomitable Will', 'Piercing Assault', 'Starfire Edge', 'Ironclad']}
+              />
+              <p><Tip>Hellfire Fist</Tip> làm giảm máu cả hàng kẻ địch phía trước, sau đó <Tip>Starfire Annihilation</Tip> và <Tip>Ignition Strike</Tip> tự tìm mục tiêu yếu nhất để kết liễu. <Tip>Sinseal</Tip> dùng lên mục tiêu lớn để thêm True DMG.</p>
+              <p>Build này cần <strong>Elemental Mastery</strong> thay vì Physical Mastery, vì 3/4 technique là sát thương Lửa.</p>
+              <p>Nếu thiếu tốc độ, đổi <Tip>Starfire Edge</Tip> sang <Tip>Temporal Swiftness</Tip> để tăng SPD và có cơ hội giảm hồi chiêu.</p>
+            </Tab>
+            <Tab label="Vật lý diện rộng">
+              <Build
+                techniques={['Void Slash', 'Whirling Blades', 'Raining Blades', 'Shadowflash Dance']}
+                charms={['Razor Momentum', 'Grim Pursuit', 'Blade of Judgment', 'Ironclad']}
+              />
+              <p><strong>Nếu bạn đã xây trang bị Vật lý từ Marauder</strong>, build này giữ nguyên chỉ số mà vẫn mạnh ở nội dung nhiều quái: <Tip>Void Slash</Tip> (6 hit quanh bản thân) và <Tip>Whirling Blades</Tip> (4 hit vùng vuông) thay cho các technique đơn mục tiêu.</p>
+              <p>Có thể đổi <Tip>Blade of Judgment</Tip> sang <Tip>Shadow Stealth</Tip> nếu cần thêm hồi máu và khả năng tránh bị nhắm vào.</p>
+            </Tab>
+          </Tabs>
         </Tab>
-        <Tab label="Doomreaver VIII" icon="skills/classes/compass/class-28.webp">
-          <ClassBuild name="Doomreaver VIII" />
+        <Tab label="Infernifer" icon="skills/classes/compass/class-28.webp">
+          <Alert type="red" title="Class chưa ra mắt">
+            <p>Infernifer là class bậc 8 của nhánh này và <strong>chưa có ở bản hiện tại</strong>. Dữ liệu skill lấy từ file game nên có thể thay đổi khi ra mắt. Build dưới đây chỉ để tham khảo trước.</p>
+          </Alert>
+          <p>Infernifer có hai bộ công cụ rõ ràng: <strong>Wind Orb</strong> và <strong>Reaper Bóng tối</strong>.</p>
+          <p>Hướng Wind Orb: <Tip>Tempest Call</Tip> tạo 4 Wind Orb, <Tip>Bladegale Conflux</Tip> có 50% cơ hội tạo thêm 3 quả mỗi khi gây sát thương Gió, và <Tip>Zephyr Cascade</Tip> làm mỗi đòn của Wind Orb nảy thêm sang một kẻ địch khác.</p>
+          <p>Hướng Reaper: <Tip>Nethercrown</Tip> đưa bạn vào trạng thái Reaper 4 lượt (mỗi kẻ địch bị hạ giúp kích hoạt sớm hơn), trong đó <Tip>Crimson Harvest</Tip> được thêm 50% Lifesteal và <Tip>Wraith Strike</Tip> gây thêm 50% sát thương.</p>
+          <Tabs>
+            <Tab label="Wind Orb">
+              <Build
+                techniques={['Sinseal', 'Tempest Call', 'Skyfall Gale', 'Phantom Blitz']}
+                charms={['Indomitable Will', 'Windless Lord', 'Bladegale Conflux', 'Zephyr Cascade']}
+              />
+              <p><Tip>Phantom Blitz</Tip> có 60% cơ hội thi triển lại nếu SPD của bạn cao hơn mục tiêu, mỗi lần trúng lại có thể tạo thêm Wind Orb qua <Tip>Bladegale Conflux</Tip>, rồi <Tip>Windless Lord</Tip> nhân số orb lên thêm.</p>
+              <p>Có thể đổi <Tip>Indomitable Will</Tip> sang <Tip>Zephyr Battle Zeal</Tip> (mỗi Wind Orb tăng sát thương Technique, tối đa 10 tầng) nếu bạn không cần mạng thứ hai.</p>
+            </Tab>
+            <Tab label="Reaper">
+              <Build
+                techniques={['Crimson Harvest', 'Wraith Strike', 'Shadow Devour', 'Sinseal']}
+                charms={['Nethercrown', 'Abyssal Shadowmark', 'Shadow Stealth', 'Shadowward']}
+              />
+              <p>Mọi technique sát thương đều là Bóng tối để tận dụng Reaper và <Tip>Abyssal Shadowmark</Tip> (đạt 2 tầng sẽ nổ lan ra vùng 1 ô).</p>
+              <p><Tip>Shadow Stealth</Tip> đưa bạn vào Stealth cuối lượt, và <Tip>Shadowward</Tip> giảm sát thương nhận vào cùng xoá Debuff khi đang Stealth, giúp build trụ được dù lao vào giữa kẻ địch.</p>
+            </Tab>
+          </Tabs>
         </Tab>
       </Tabs>
     </>

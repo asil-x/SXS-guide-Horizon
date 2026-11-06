@@ -117,11 +117,16 @@ stats.companions = added;
 
 // Class + build đề xuất
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-const codeToName = Object.fromEntries(theirClasses.map((c) => [c.code, c.name]));
+// Giữ các trường đã chỉnh tay trong classes.json: tên thật (class bậc 8), mô tả đã sửa, bộ skill (pool).
+const oldClasses = Object.fromEntries((fs.existsSync(path.join(DATA, 'classes.json')) ? readJson('classes.json') : []).map((c) => [c.id, c]));
+const nameOf = (c) => (oldClasses[c.id]?.placeholder ? oldClasses[c.id].name : c.name);
+const codeToName = Object.fromEntries(theirClasses.map((c) => [c.code, nameOf(c)]));
 const classes = theirClasses.map((c) => {
-  const local = 'skills/classes/' + slug(c.name) + '.png';
+  const old = oldClasses[c.id] || {};
+  const local = 'skills/classes/' + slug(nameOf(c)) + '.png';
   return {
-    id: c.id, name: c.name, rank: c.rank, role: c.role, description: c.description,
+    ...old,
+    id: c.id, name: nameOf(c), rank: c.rank, role: c.role, description: old.placeholder ? old.description : c.description,
     chain: (c.chain || []).map((k) => codeToName[k] || k),
     techniques: (c.recommendedActiveIds || []).map((i) => skillById[i]?.name).filter(Boolean),
     charms: (c.recommendedCharmIds || []).map((i) => skillById[i]?.name).filter(Boolean),

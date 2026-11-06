@@ -1,4 +1,4 @@
-import { Alert, Build, ClassBuild, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
+import { Alert, Build, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Hướng dẫn chơi Sorcerer',
@@ -15,8 +15,10 @@ export default function Page() {
       <ProsCons id="pros-cons" title="Điểm mạnh & điểm yếu của Sorcerer">
         <Pro>Trần sát thương rất cao nhờ có Technique ở gần như mọi nguyên tố trừ Dark. Bạn sẽ không bao giờ thiếu sát thương để hạ kẻ địch</Pro>
         <Pro>Càng mở nhiều tier, build AoE càng hoành tráng và vui. Nếu bạn thích vậy thì class này dành cho bạn</Pro>
+        <Pro>Khống chế diện rộng tốt: skill Nước gây Frozen/Wet, skill Gió hất tung hoặc đẩy lùi, giúp kiểm soát cả đám quái</Pro>
         <Con>Class mỏng manh. Thậm chí có thể nói là mỏng nhất game vì gần như không có lớp phòng thủ nào</Con>
         <Con>Nếu không có Mana Surge hoặc trang bị tốt, đầu game rất khó kiếm nguồn crit rate</Con>
+        <Con>Nhiều build cần đủ technique cùng hệ mới phát huy (Electro cần skill Ánh sáng, Tideform cần 5 lần dùng skill Nước), nên đổi lối chơi tốn nhiều skill và tài nguyên hơn</Con>
       </ProsCons>
       <Alert title="Hãy thử nghiệm build!">
         <p><strong>Hãy nhớ đây chỉ là khung mẫu</strong> để bạn điều chỉnh theo trang bị, lối chơi, skill và Fantomon của mình.</p>
@@ -458,16 +460,114 @@ export default function Page() {
           </Tabs>
         </Tab>
         <Tab label="Magister" icon="skills/classes/magister.png">
-          <ClassBuild name="Magister" />
+          <p>Magister xây hẳn một lối chơi quanh <strong>Electro và Thunder Strike</strong>, đồng thời mở thêm skill cho cả bốn nguyên tố.</p>
+          <p><Tip>Thunderbolt Mark</Tip> có 65% Base Chance gây Electro mỗi khi technique Ánh sáng trúng đích. Khi mục tiêu đang có Electro trúng thêm sát thương Ánh sáng, Electro bị xoá để gây thêm một lần sát thương Ánh sáng và lan sang kẻ địch gần đó.</p>
+          <p><Tip>Thunder Judgment</Tip> còn đánh trả cả lượt của kẻ địch: mỗi khi kẻ địch trong 5 ô dùng technique, có 30% cơ hội gây Thunder Strike, tăng lên <strong>90%</strong> nếu chúng đang bị Electro hoặc Wet.</p>
+          <p><Tip>Light Burst</Tip> là technique mới chính cho lối này: đánh 1 mục tiêu rồi lan sang tối đa 2 kẻ địch khác, mỗi kẻ địch bị trúng 1 lần.</p>
+          <Alert type="red" title="Lưu ý quan trọng">
+            <p><strong>Chỉ dùng technique Ánh sáng</strong> trong build chính: <Tip>Thunderbolt Mark</Tip> chỉ gây Electro từ sát thương Ánh sáng.</p>
+            <p><Tip>Divine Wrath</Tip> đánh tới 16 hit ngẫu nhiên, nên dù sát thương mỗi hit giảm dần, nó là skill rải Electro lên nhiều kẻ địch tốt nhất.</p>
+            <p><Tip>Frostsoul Ward</Tip> gây Wet lên kẻ tấn công bạn, cũng nâng cơ hội của <Tip>Thunder Judgment</Tip> lên 90%. Hãy cân nhắc nó nếu bạn hay bị đánh.</p>
+          </Alert>
+          <Tabs>
+            <Tab label="Sét Ánh sáng">
+              <Build
+                techniques={['Light Burst', 'Starlight Burst', 'Thunder of Judgment', 'Divine Wrath']}
+                charms={['Thunderbolt Mark', 'Thunder Judgment', 'Radiant Sear', 'Rapid Cast']}
+              />
+              <p><strong>Build chính của Magister.</strong> Cả 4 technique đều là Ánh sáng: <Tip>Divine Wrath</Tip> và <Tip>Starlight Burst</Tip> rải Electro diện rộng, <Tip>Light Burst</Tip> và <Tip>Thunder of Judgment</Tip> kích nổ Electro.</p>
+              <p><Tip>Radiant Sear</Tip> có 50% cơ hội gây thêm 1 hit Ánh sáng mỗi lần trúng (lại thêm cơ hội gây Electro), còn <Tip>Rapid Cast</Tip> giảm hồi chiêu trước trận để vòng skill đầu tiên tới nhanh hơn.</p>
+            </Tab>
+            <Tab label="Nước + Sét">
+              <Build
+                techniques={['Frost Thorn', 'Light Burst', 'Thunder of Judgment', 'Divine Wrath']}
+                charms={['Frostsoul Ward', 'Thunder Judgment', 'Thunderbolt Mark', 'Radiant Warp']}
+              />
+              <p><strong>Phiên bản an toàn hơn cho nội dung khó.</strong> <Tip>Frost Thorn</Tip> đánh 2 hit Nước vùng 3×3 và có thể gây Frozen, <Tip>Frostsoul Ward</Tip> gây Wet lên kẻ tấn công, giúp <Tip>Thunder Judgment</Tip> gần như luôn kích hoạt.</p>
+              <p><Tip>Radiant Warp</Tip> tăng DMG RES và có 50% cơ hội dịch chuyển đi khi bị đánh, rất hợp với pháp sư tầm xa.</p>
+            </Tab>
+          </Tabs>
         </Tab>
         <Tab label="Arcanarch" icon="skills/classes/arcanarch.png">
-          <ClassBuild name="Arcanarch" />
+          <p>Arcanarch có ba hướng rõ ràng: <strong>Nước Tideform</strong>, <strong>Lửa Burn</strong> và <strong>Gió hất tung</strong>.</p>
+          <p>Điểm nổi bật là charm <Tip>Riptide</Tip>: sau 5 lần dùng technique Nước, bạn vào Tideform 2 lượt, tăng sát thương và mỗi lần thi triển có 30% cơ hội làm mới hồi chiêu để dùng lại (tối đa 2 lần mỗi lượt).</p>
+          <p>Ở hướng Lửa, <Tip>Blackflame Scorch</Tip> đốt các ô trong vùng, rồi <Tip>Flare Eruption</Tip> hấp thụ mọi Burn trong 3 ô, mỗi Burn tăng 10% sát thương (tối đa 100%). Hướng Gió có <Tip>Riftwind Wheel</Tip> (4 hit, hất tung) kết hợp <Tip>Rupture Storm</Tip>.</p>
+          <Alert type="red" title="Lưu ý quan trọng">
+            <p><Tip>Surging Tide</Tip> bắt đầu từ 0% và chỉ tăng 5% cho mỗi skill Nước bạn trang bị, nên chỉ đáng dùng khi build có nhiều skill Nước.</p>
+            <p><Tip>Frigid Spike</Tip> có Zero Initial CD và có thể gây Frozen, nên để đầu thứ tự skill để khống chế ngay lượt đầu.</p>
+            <p><Tip>Overload Protection</Tip> tạo khiên mỗi khi bạn mất hơn 15% Max HP trong một lượt, rất hợp với pháp sư máu giấy.</p>
+          </Alert>
+          <Tabs>
+            <Tab label="Nước Tideform">
+              <Build
+                techniques={['Tideburst', 'Frost Thorn', 'Frigid Spike', 'Judgment Thunder']}
+                charms={['Radiant Warp', 'Overload Protection', 'Surging Tide', 'Riptide']}
+              />
+              <p>Ba technique Nước để nhanh chóng đạt 5 lần thi triển cho <Tip>Riptide</Tip>, còn <Tip>Judgment Thunder</Tip> (9 hit Ánh sáng ngẫu nhiên) bổ sung sát thương diện rộng.</p>
+              <p><Tip>Tideburst</Tip> gây Wet, <Tip>Frost Thorn</Tip> và <Tip>Frigid Spike</Tip> có thể gây Frozen, nên build vừa gây sát thương vừa khống chế tốt.</p>
+            </Tab>
+            <Tab label="Lửa Burn">
+              <Build
+                techniques={['Blackflame Scorch', 'Flare Eruption', 'Crimson Whirl', 'Blast Spirit']}
+                charms={['Pyre of Souls', 'Ember Flare', 'Omnirune Sigil', 'Rapid Cast']}
+              />
+              <p><Tip>Blackflame Scorch</Tip> đốt đất trước, rồi <Tip>Flare Eruption</Tip> hấp thụ Burn để gây Doom DMG. <Tip>Pyre of Souls</Tip> tăng sát thương Blast Spirit theo thời gian, còn <Tip>Ember Flare</Tip> có thể đặt thêm Blast Spirit mỗi khi hạ kẻ địch.</p>
+              <p><Tip>Omnirune Sigil</Tip> tạo Rune theo hệ của technique, với Rune Lửa tăng Crit DMG.</p>
+            </Tab>
+          </Tabs>
         </Tab>
         <Tab label="Thaumaturge" icon="skills/classes/compass/class-25.webp">
-          <ClassBuild name="Thaumaturge" />
+          <p>Thaumaturge là bậc của <strong>Ánh sáng diện rộng nhiều hit</strong>, đồng thời làm Lửa Burn mạnh và bền hơn.</p>
+          <p><Tip>Lightning Grid</Tip> thả 8 quả cầu sét trong vùng 3×5, mỗi quả lan sang thêm một kẻ địch. <Tip>Void Lightwave</Tip> quét cả hàng 1×7 ô. Cùng <Tip>Judgment Thunder</Tip>, mỗi vòng skill có rất nhiều hit, rất hợp với các charm kích hoạt theo từng hit.</p>
+          <p>Ở hướng Lửa, <Tip>Ravaging Flame</Tip> có 40% cơ hội đốt đất vùng 3 ô quanh bản thân, <Tip>Scorching Resonance</Tip> tăng Affinity Lửa theo số ô đang cháy, còn <Tip>Phoenix Rise</Tip> giúp sống sót và biến Burn thành khiên.</p>
+          <Alert type="red" title="Lưu ý quan trọng">
+            <p><Tip>Formation Breaker</Tip> không gây sát thương mà tăng ATK cho đồng minh trong 3 ô và có thể đẩy nhanh lượt của họ. Đây là skill mạnh khi đi đội.</p>
+            <p><Tip>Glare Fusion</Tip> tích Energy từ technique Ánh sáng và xả ra ở lần thứ 4, nên build càng nhiều technique Ánh sáng thì càng hiệu quả.</p>
+            <p><Tip>Gale Scar</Tip> có 50% cơ hội gây thêm 1 hit Gió <strong>mỗi lần</strong> technique trúng đích, bất kể hệ, nên rất mạnh với các technique nhiều hit.</p>
+          </Alert>
+          <Tabs>
+            <Tab label="Ánh sáng">
+              <Build
+                techniques={['Formation Breaker', 'Judgment Thunder', 'Void Lightwave', 'Lightning Grid']}
+                charms={['Radiant Sear', 'Thunderbolt Mark', 'Glare Fusion', 'Gale Scar']}
+              />
+              <p><Tip>Radiant Sear</Tip> và <Tip>Gale Scar</Tip> đều có 50% gây thêm sát thương mỗi lần trúng, nhân lên theo số hit rất lớn của <Tip>Lightning Grid</Tip> và <Tip>Judgment Thunder</Tip>.</p>
+              <p>Nếu chơi một mình, có thể đổi <Tip>Formation Breaker</Tip> sang <Tip>Divine Wrath</Tip> để thêm sát thương.</p>
+            </Tab>
+            <Tab label="Lửa Burn">
+              <Build
+                techniques={['Ravaging Flame', 'Blackflame Scorch', 'Flare Eruption', 'Blast Spirit']}
+                charms={['Scorching Resonance', 'Phoenix Rise', 'Ember Flare', 'Pyre of Souls']}
+              />
+              <p>Giữ thật nhiều ô đang cháy quanh bạn để <Tip>Scorching Resonance</Tip> đạt tối đa, rồi dùng <Tip>Flare Eruption</Tip> làm đòn kết.</p>
+              <p>Lưu ý <Tip>Flare Eruption</Tip> hấp thụ (xoá) Burn, nên dùng nó sau khi đã tận dụng Burn cho <Tip>Scorching Resonance</Tip>.</p>
+            </Tab>
+          </Tabs>
         </Tab>
-        <Tab label="Thaumaturge VIII" icon="skills/classes/compass/class-29.webp">
-          <ClassBuild name="Thaumaturge VIII" />
+        <Tab label="Entropist" icon="skills/classes/compass/class-29.webp">
+          <Alert type="red" title="Class chưa ra mắt">
+            <p>Entropist là class bậc 8 của nhánh này và <strong>chưa có ở bản hiện tại</strong>. Dữ liệu skill lấy từ file game nên có thể thay đổi khi ra mắt. Build dưới đây chỉ để tham khảo trước.</p>
+          </Alert>
+          <p>Entropist tập trung vào <strong>Nước khống chế với Rimebound</strong> và <strong>Lửa Burn kéo dài</strong>.</p>
+          <p><Tip>Frostflow Pact</Tip> gây 1 tầng Rime Mark mỗi lần technique Nước trúng đích, đạt 4 tầng sẽ chắc chắn gây Rimebound. <Tip>Rime Shackle</Tip> và <Tip>Frost Undertow</Tip> cũng có cơ hội gây Rimebound trực tiếp.</p>
+          <p><Tip>Fluidshift</Tip> vừa giảm sát thương nhận vào, vừa tích lại một phần sát thương kẻ địch gây ra để chuyển thành Mark, mạnh hơn khi bạn trang bị nhiều technique Nước.</p>
+          <p>Ở hướng Lửa, <Tip>Cinder Dominion</Tip> kéo dài Burn thêm 2 lượt và gây nổ khi Burn hết hạn, <Tip>Flameward</Tip> giảm sát thương nhận vào theo số ô đang cháy quanh bạn.</p>
+          <Tabs>
+            <Tab label="Nước Rimebound">
+              <Build
+                techniques={['Tideburst', 'Frostfall Assault', 'Rime Shackle', 'Frost Shatter']}
+                charms={['Riptide', 'Frost Undertow', 'Fluidshift', 'Frostflow Pact']}
+              />
+              <p>Toàn bộ technique là Nước, nên <Tip>Riptide</Tip> vào Tideform rất nhanh và <Tip>Fluidshift</Tip> có tỉ lệ tích trữ cao nhất.</p>
+            </Tab>
+            <Tab label="Lửa Burn">
+              <Build
+                techniques={['Emberfall Inferno', 'Ashfall Inferno', 'Blackflame Scorch', 'Flare Eruption']}
+                charms={['Cinder Dominion', 'Flameward', 'Scorching Resonance', 'Phoenix Rise']}
+              />
+              <p><Tip>Emberfall Inferno</Tip> gây thêm sát thương cho mỗi ô đang cháy trong tầm đánh, <Tip>Ashfall Inferno</Tip> mạnh hơn 5% cho mỗi ô cháy quanh mục tiêu. Hãy đốt đất bằng <Tip>Blackflame Scorch</Tip> trước.</p>
+            </Tab>
+          </Tabs>
         </Tab>
       </Tabs>
     </>

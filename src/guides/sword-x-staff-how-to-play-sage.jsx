@@ -1,4 +1,4 @@
-import { Alert, Build, ClassBuild, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
+import { Alert, Build, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Hướng dẫn chơi Sage',
@@ -15,8 +15,10 @@ export default function Page() {
       <ProsCons id="pros-cons" title="Điểm mạnh & điểm yếu của Sage">
         <Pro>Class linh hoạt nhất nhờ có rất nhiều lối chơi khác nhau</Pro>
         <Pro>Class duy nhất có nhiều nguồn hồi máu và hồi sinh, rất hữu ích khi mở các tầng dungeon khó hơn</Pro>
+        <Pro>Lối triệu hồi ở tier cao cho phép vật triệu hồi vừa gánh đòn vừa gây sát thương thay bạn, rất an toàn khi đi một mình</Pro>
         <Con>Dù tăng theo HP, đây vẫn là class mỏng manh giống Sorcerer thường và không thể làm tank ở nội dung co-op cấp cao</Con>
         <Con>Một số lối chơi mất hơn một tháng mới mở, vì build Summoner và Erosion phải tới T3 mới mở đầy đủ</Con>
+        <Con>Build triệu hồi rất phụ thuộc thứ tự skill: nhiều skill triệu hồi chỉ dùng được 1 lần mỗi trận, xếp sai là mất nhịp cả trận</Con>
       </ProsCons>
       <Alert title="Hãy thử nghiệm build!">
         <p><strong>Hãy nhớ đây chỉ là khung mẫu</strong> để bạn điều chỉnh theo trang bị, lối chơi, skill và Fantomon của mình.</p>
@@ -425,16 +427,109 @@ export default function Page() {
           </Tabs>
         </Tab>
         <Tab label="Prophet" icon="skills/classes/prophet.png">
-          <ClassBuild name="Prophet" />
+          <p>Prophet là bậc mà Sage trở thành <strong>healer thật sự</strong>, đồng thời có thêm một lối Bóng tối dựa trên debuff.</p>
+          <p><Tip>Radiant Rhythm</Tip> hồi máu cho một đồng minh rồi lan sang tối đa 5 lần (hồi lặp lại lên cùng người giảm 35%). <Tip>Rejuvenating Elixir</Tip> mang theo 3 bình thuốc, tự động dùng khi đồng minh xuống dưới 50% HP, cứ 3 lượt tạo thêm 1 bình.</p>
+          <p>Ở hướng tấn công, <Tip>Hexed Blast</Tip> gây thêm 1 hit Bóng tối cho mỗi loại debuff trên mục tiêu (tối đa 3), còn <Tip>Desperate Shadow</Tip> có 70% gây ngẫu nhiên Weakened 2, Armor Break 2 hoặc Slow 2, đúng thứ <Tip>Hexed Blast</Tip> cần.</p>
+          <Alert type="red" title="Lưu ý quan trọng">
+            <p><Tip>Phantom Light</Tip> chuyển 100% lượng hồi dư thành khiên, nên hồi máu dư thừa không bị lãng phí.</p>
+            <p><Tip>Resurrection</Tip> chỉ kích hoạt 1 lần mỗi trận, nhưng có thể quyết định thắng thua ở nội dung khó.</p>
+            <p><Tip>Ring of Omen</Tip> giảm Effect RES của kẻ địch mỗi lượt, giúp debuff của cả đội trúng dễ hơn.</p>
+          </Alert>
+          <Tabs>
+            <Tab label="Hồi máu">
+              <Build
+                techniques={['Rejuvenating Rain', 'Healing Touch', 'Radiant Rhythm', 'Radiant Restoration']}
+                charms={['Phantom Light', 'Overhealing', 'Rejuvenating Elixir', 'Resurrection']}
+              />
+              <p><strong>Build healer chính.</strong> <Tip>Radiant Restoration</Tip> hồi cả đội, <Tip>Radiant Rhythm</Tip> hồi lan, <Tip>Rejuvenating Rain</Tip> hồi mạnh hơn cho người dưới 50% HP, và <Tip>Healing Touch</Tip> giải Ailment/Debuff.</p>
+              <p><Tip>Overhealing</Tip> có 30% hồi thêm cho mọi đồng minh trong 1 ô quanh mục tiêu, rất hợp khi đội đứng gần nhau.</p>
+            </Tab>
+            <Tab label="Bóng tối debuff">
+              <Build
+                techniques={['Desperate Shadow', 'Hexed Blast', 'Soul Reap', 'Void Chant']}
+                charms={['Ring of Omen', 'Shadowy Current', 'Shadow Erosion', 'Cursed Armor']}
+              />
+              <p><Tip>Desperate Shadow</Tip> gây debuff trước để <Tip>Hexed Blast</Tip> đánh thêm hit; <Tip>Shadow Erosion</Tip> và <Tip>Cursed Armor</Tip> còn gây thêm Erosion, cũng tính là một loại debuff.</p>
+              <p><Tip>Soul Reap</Tip> mạnh dần khi mục tiêu mất máu, dùng để kết liễu. <Tip>Void Chant</Tip> phạt kẻ địch mỗi lần chúng dùng technique.</p>
+            </Tab>
+          </Tabs>
         </Tab>
         <Tab label="Hierarch" icon="skills/classes/hierarch.png">
-          <ClassBuild name="Hierarch" />
+          <p>Hierarch là bậc mà <strong>triệu hồi</strong> trở thành lối chơi chính của nhánh Sage.</p>
+          <p>Bạn có bốn skill triệu hồi: <Tip>Rock Rex Summon</Tip>, <Tip>Thalasson Summon</Tip> và <Tip>Phantom Summon</Tip> chỉ dùng được 1 lần mỗi trận, còn <Tip>Flamewyrm Summon</Tip> có Zero Initial CD, tồn tại 3 lượt và dùng lại được.</p>
+          <p><Tip>Pact Hex</Tip> giúp mọi vật triệu hồi gây thêm sát thương Bóng tối quanh chúng ở cuối mỗi lượt của chúng. Ngoài ra Hierarch có lối Erosion với <Tip>Darkveil Formation</Tip>, <Tip>Hex Edict</Tip> và <Tip>Veritas Pact</Tip>.</p>
+          <Alert type="red" title="Lưu ý quan trọng">
+            <p><strong>Thứ tự skill rất quan trọng</strong>: các skill triệu hồi 1 lần mỗi trận nên đặt đầu để quân triệu hồi ra sân sớm nhất.</p>
+            <p><Tip>Soulweave</Tip> triệu hồi Infernal Fiend khi 3 vật triệu hồi của bạn chết hoặc biến mất. <Tip>Flamewyrm Summon</Tip> tự biến mất sau 3 lượt nên giúp kích hoạt nó nhanh hơn.</p>
+            <p><Tip>Eidolon Whisper</Tip> vừa tăng ATK cho vật triệu hồi, vừa đẩy nhanh lượt của một con mỗi lượt.</p>
+          </Alert>
+          <Tabs>
+            <Tab label="Triệu hồi">
+              <Build
+                techniques={['Rock Rex Summon', 'Thalasson Summon', 'Phantom Summon', 'Flamewyrm Summon']}
+                charms={['Summoner\'s Frenzy', 'Summoning Pact', 'Soulweave', 'Eidolon Whisper']}
+              />
+              <p><strong>Build triệu hồi chính.</strong> Ba vật triệu hồi mạnh ra sân trong vài lượt đầu, <Tip>Flamewyrm Summon</Tip> liên tục được gọi lại, và <Tip>Soulweave</Tip> mang thêm Infernal Fiend về sau.</p>
+              <p><Tip>Summoning Pact</Tip> tiêu 2% Max HP để tăng HP cho vật triệu hồi, phần HP này được hồi lại nếu bạn sống tới khi thắng. Có thể đổi nó sang <Tip>Pact Hex</Tip> nếu muốn thêm sát thương.</p>
+            </Tab>
+            <Tab label="Erosion">
+              <Build
+                techniques={['Darkveil Formation', 'Void Assault', 'Judgment Word', 'Shadow of Termination']}
+                charms={['Hex Edict', 'Nightshade Soulplate', 'Veritas Pact', 'Linked Misfortune']}
+              />
+              <p><Tip>Darkveil Formation</Tip> và <Tip>Void Assault</Tip> gây Erosion trực tiếp, <Tip>Judgment Word</Tip> gây Weakened và qua <Tip>Hex Edict</Tip> có thêm cơ hội gây Erosion. <Tip>Shadow of Termination</Tip> kích nổ mọi tầng Erosion trên mục tiêu.</p>
+              <p><Tip>Nightshade Soulplate</Tip> giảm sát thương nhận vào và tự kích hoạt Erosion mỗi cuối lượt. Toàn bộ technique là Bóng tối nên <Tip>Veritas Pact</Tip> vào Nether Pact sau 8 lần thi triển.</p>
+            </Tab>
+          </Tabs>
         </Tab>
         <Tab label="Demiurge" icon="skills/classes/compass/class-26.webp">
-          <ClassBuild name="Demiurge" />
+          <p>Demiurge hoàn thiện lối triệu hồi với <strong>vật triệu hồi không giới hạn thời gian</strong> được bảo vệ, cùng một skill kích nổ Erosion cực mạnh.</p>
+          <p><Tip>Soulbinder</Tip> giúp vật triệu hồi không giới hạn thời gian đầu tiên nhận ít sát thương và gây thêm sát thương. <Tip>Deathrattle</Tip> tạo khiên dựa trên Max HP của bạn cho một vật triệu hồi không giới hạn thời gian mỗi khi vật triệu hồi có giới hạn (như Flora, Flamewyrm) chết hoặc hết hạn.</p>
+          <p><Tip>Eclipse Burst</Tip> lập tức kích hoạt Erosion <strong>12 lần</strong> nếu mục tiêu đang có Erosion, là đòn kết của lối Erosion. Ngoài ra Demiurge có thêm skill hỗ trợ: <Tip>Merciful Wish</Tip> giảm sát thương cho đồng minh, <Tip>Guardian Totem</Tip> triệu hồi totem không thể bị đánh.</p>
+          <Alert type="red" title="Lưu ý quan trọng">
+            <p><Tip>Flora Summon</Tip> và <Tip>Flamewyrm Summon</Tip> chỉ tồn tại 3 lượt, nên mỗi lần chúng biến mất lại kích hoạt <Tip>Deathrattle</Tip> và tính vào <Tip>Soulweave</Tip>.</p>
+            <p><Tip>Wraithguard Summon</Tip> xuất hiện cạnh kẻ địch trong 4 ô, không phải cạnh bạn. Hãy để ý vị trí trước khi dùng.</p>
+          </Alert>
+          <Tabs>
+            <Tab label="Triệu hồi">
+              <Build
+                techniques={['Thalasson Summon', 'Flamewyrm Summon', 'Flora Summon', 'Wraithguard Summon']}
+                charms={['Soulweave', 'Eidolon Whisper', 'Deathrattle', 'Soulbinder']}
+              />
+              <p>Thalasson và Wraithguard là quân chủ lực, Flora và Flamewyrm liên tục được gọi lại và mỗi lần biến mất lại tạo khiên cho quân chủ lực qua <Tip>Deathrattle</Tip>.</p>
+            </Tab>
+            <Tab label="Erosion">
+              <Build
+                techniques={['Darkveil Formation', 'Ravenous Curse', 'Shadow Wraith', 'Eclipse Burst']}
+                charms={['Soul Corrosion', 'Shadow Erosion', 'Linked Misfortune', 'Cursed Link']}
+              />
+              <p>Rải Erosion bằng <Tip>Darkveil Formation</Tip>, <Tip>Shadow Erosion</Tip> và <Tip>Linked Misfortune</Tip>, rồi dùng <Tip>Eclipse Burst</Tip> để kích hoạt 12 lần. <Tip>Soul Corrosion</Tip> tăng sát thương Erosion và kích hoạt thêm mỗi khi technique Bóng tối trúng mục tiêu đang bị Erosion.</p>
+            </Tab>
+          </Tabs>
         </Tab>
-        <Tab label="Demiurge VIII" icon="skills/classes/compass/class-30.webp">
-          <ClassBuild name="Demiurge VIII" />
+        <Tab label="Omnifex" icon="skills/classes/compass/class-30.webp">
+          <Alert type="red" title="Class chưa ra mắt">
+            <p>Omnifex là class bậc 8 của nhánh này và <strong>chưa có ở bản hiện tại</strong>. Dữ liệu skill lấy từ file game nên có thể thay đổi khi ra mắt; hai skill <Tip>Starlight Descent</Tip> và <Tip>Shadow Undertow</Tip> còn chưa có mô tả. Build dưới đây chỉ để tham khảo trước.</p>
+          </Alert>
+          <p>Omnifex có hai hướng: <strong>Bóng tối gây debuff</strong> và <strong>triệu hồi sinh sôi</strong>.</p>
+          <p><Tip>Triune Salvo</Tip> ném 3 Arcanebolt, lần lượt gây Weakened 1, Armor Break 1 và Slow 1. Mỗi debuff gây thành công lại kích hoạt <Tip>Cursed Link</Tip> (50% gây thêm sát thương Bóng tối) và cộng ATK qua <Tip>Hexecho</Tip>.</p>
+          <p>Ở hướng triệu hồi, <Tip>Phantomcraft</Tip> sinh thêm Shadeborn mỗi khi vật triệu hồi hoặc Fantomon của bạn hạ kẻ địch (tối đa 5), còn <Tip>Spiritune</Tip> tăng Elemental Mastery cho vật triệu hồi.</p>
+          <Tabs>
+            <Tab label="Debuff">
+              <Build
+                techniques={['Decoy Clone', 'Ravenous Curse', 'Darkveil Formation', 'Triune Salvo']}
+                charms={['Shadow Vengeance', 'Mantra of Blessings', 'Cursed Link', 'Hexecho']}
+              />
+              <p><Tip>Decoy Clone</Tip> kết nối với một kẻ địch, mọi HP phân thân mất đi đều được chuyển thành True DMG lên mục tiêu. <Tip>Mantra of Blessings</Tip> tăng sát thương cho đồng minh có ATK cao nhất, hợp khi đi đội.</p>
+            </Tab>
+            <Tab label="Triệu hồi">
+              <Build
+                techniques={['Tideguard Summon', 'Thalasson Summon', 'Flora Summon', 'Flamewyrm Summon']}
+                charms={['Phantomcraft', 'Spiritune', 'Soulbinder', 'Eidolon Whisper']}
+              />
+              <p>Càng nhiều vật triệu hồi hạ được kẻ địch, <Tip>Phantomcraft</Tip> càng sinh thêm Shadeborn, nên build mạnh nhất ở nội dung nhiều quái.</p>
+            </Tab>
+          </Tabs>
         </Tab>
       </Tabs>
     </>

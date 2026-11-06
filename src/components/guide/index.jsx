@@ -147,7 +147,6 @@ export function ClassBuild({ name }) {
       </div>
       {c.description && <p><em>{c.description}</em></p>}
       <Build techniques={c.techniques} charms={c.charms} />
-      <p className='source'>Build đề xuất theo dữ liệu của <a href='https://swordxstaff-compass.com/' target='_blank' rel='noreferrer'>Sword x Staff Compass</a>.</p>
     </div>
   );
 }

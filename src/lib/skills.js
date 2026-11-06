@@ -6,7 +6,12 @@ let pending = null;
 
 export function loadSkills() {
   if (cache) return Promise.resolve(cache);
-  pending ||= import('../data/skills.json').then((m) => (cache = Object.fromEntries(m.default.map((s) => [s.name, s]))));
+  pending ||= import('../data/skills.json').then((m) => {
+    // Một số skill quái trùng tên với skill class (vd. Riptide): ưu tiên skill của class.
+    const map = {};
+    for (const s of m.default) if (!map[s.name] || map[s.name].class === 'Monster') map[s.name] = s;
+    return (cache = map);
+  });
   return pending;
 }
 

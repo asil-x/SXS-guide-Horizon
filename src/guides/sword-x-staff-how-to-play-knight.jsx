@@ -1,4 +1,4 @@
-import { Alert, Build, ClassBuild, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
+import { Alert, Build, Con, Pro, ProsCons, Tab, Tabs, Tip } from '../components/guide';
 
 export const meta = {
   title: 'Hướng dẫn chơi Knight',
@@ -15,7 +15,9 @@ export default function Page() {
         <Pro>Rebound cực kỳ hiệu quả trước kẻ địch đánh nhiều hit và các bầy quái AoE</Pro>
         <Pro>Một trong những class an toàn nhất để vượt màn chênh lệch lực chiến lớn, nhờ đỡ đòn ổn định và nhiều lớp phòng thủ</Pro>
         <Pro>Lựa chọn Glass Cannon cho phép chuyển sang build DPS ở những nội dung đã có người tank</Pro>
+        <Pro>Ở các tier cao có rất nhiều cách bảo vệ cả đội: Taunt, khiên cho đồng minh yếu máu, giảm sát thương diện rộng và gánh đòn thay đồng minh</Pro>
         <Con>Thứ tự ưu tiên chỉ số rắc rối hơn so với các class DPS thuần</Con>
+        <Con>Build tank thuần gây sát thương chậm, vì phần lớn sát thương đến từ phản đòn nên phụ thuộc vào việc kẻ địch có đánh bạn hay không</Con>
         <Con>Glass Cannon cần điều kiện thuận lợi mới dùng an toàn: phải có tank riêng hoặc quái gây áp lực thấp</Con>
       </ProsCons>
       <Alert title="Hãy thử nghiệm build!">
@@ -218,19 +220,146 @@ export default function Page() {
           </Tabs>
         </Tab>
         <Tab label="Guardian" icon="skills/classes/guardian.png">
-          <ClassBuild name="Guardian" />
+          <p>Guardian là bậc Knight bắt đầu có <strong>sát thương Nước và vòng lặp khiên</strong>: vừa giữ khiên để tăng sát thương, vừa biến lúc khiên vỡ thành một đợt phản công.</p>
+          <p><Tip>Swirling Blade</Tip> chuyển 20% sát thương gây ra thành khiên (tối đa 50% Max HP), còn <Tip>Seismic Tide</Tip> là đòn Nước diện rộng 2 ô quanh bản thân. Cùng <Tip>Guardian Ring</Tip>, bạn gần như lúc nào cũng có khiên trên người.</p>
+          <p>Ở hướng tank thuần, <Tip>Hamper Strike</Tip> gây Taunt từ xa (vùng 2 ô quanh ô chọn) và <Tip>Oath of Vigil</Tip> gánh 50% sát thương cho adventurer đồng minh yếu máu nhất.</p>
+          <Alert type="red" title="Lưu ý quan trọng">
+            <p><Tip>Defensive Assault</Tip> chỉ tăng ATK <strong>khi đang có khiên</strong>, nên hãy giữ <Tip>Guardian Ring</Tip> và <Tip>Swirling Blade</Tip> trong bộ skill nếu dùng nó.</p>
+            <p><Tip>Ripple Impact</Tip> kích hoạt khi khiên bị phá hoàn toàn: gây sát thương Nước quanh bản thân và 100% gây 3 tầng Cold. Khiên vỡ không còn là thiệt hại mà thành một đòn đánh.</p>
+            <p><Tip>Holy Aegis</Tip> tăng cả DEF lẫn độ dày của khiên dựa trên DEF, rất đáng cân nhắc nếu bạn thiên về phòng thủ.</p>
+          </Alert>
+          <Tabs>
+            <Tab label="Khiên tấn công">
+              <Build
+                techniques={['Guardian Ring', 'Swirling Blade', 'Seismic Tide', 'Star Shattering Slash']}
+                charms={['Block Awareness', 'Defensive Assault', 'Ripple Impact', 'Pursuit of Victory']}
+              />
+              <p><strong>Build chính của Guardian.</strong> <Tip>Guardian Ring</Tip> và <Tip>Swirling Blade</Tip> duy trì khiên để <Tip>Defensive Assault</Tip> luôn có hiệu lực; khi khiên vỡ thì <Tip>Ripple Impact</Tip> phản công và gây Cold.</p>
+              <p><Tip>Pursuit of Victory</Tip> tăng sát thương lên kẻ địch đang dính Ailment/Debuff, và <Tip>Block Awareness</Tip> giữ Block Rate cao để đỡ đòn ổn định như các bậc trước.</p>
+            </Tab>
+            <Tab label="Tank đội">
+              <Build
+                techniques={['Hamper Strike', 'Guardian Ring', 'Light Sword Array', 'Raging Maelstrom']}
+                charms={['Soul Protection', 'Oath of Vigil', 'Iron Will', 'Holy Aegis']}
+              />
+              <p><strong>Dùng khi đi cùng đội và bạn là người hứng đòn.</strong> <Tip>Hamper Strike</Tip> Taunt cả cụm kẻ địch, <Tip>Iron Will</Tip> giảm sát thương từ những kẻ đang bị Taunt, còn <Tip>Raging Maelstrom</Tip> kéo kẻ địch lại gần.</p>
+              <p><Tip>Light Sword Array</Tip> được thi triển trước trận và phản đòn mỗi lần bạn bị đánh. <Tip>Soul Protection</Tip> biến 50% HP thành khiên ngay đầu trận.</p>
+            </Tab>
+          </Tabs>
         </Tab>
         <Tab label="Templar" icon="skills/classes/templar.png">
-          <ClassBuild name="Templar" />
+          <p>Templar đẩy Knight thành <strong>tank bảo vệ đội</strong> đúng nghĩa: thêm cách gây Taunt, giảm sát thương cho cả đội và biến hồi máu thành khiên.</p>
+          <p><Tip>Last Stand</Tip> di chuyển tới mục tiêu trong 4 ô và gây Taunt (ưu tiên mục tiêu lớn). <Tip>Sanctified Soul</Tip> giảm sát thương nhận vào cho bản thân và mọi đồng minh trong 4 ô suốt 2 lượt, dùng được ngay từ lượt đầu.</p>
+          <p>Ở hướng tấn công, <Tip>Dawnburst</Tip> là đòn Ánh sáng diện rộng 3 ô, còn <Tip>First Light</Tip> tiêu hết khiên đang có để gây sát thương Ánh sáng theo lượng khiên đã tiêu.</p>
+          <Alert type="red" title="Lưu ý quan trọng">
+            <p><Tip>Healing Shift</Tip> chuyển <strong>mọi lượng hồi máu</strong> bạn nhận thành khiên trong 2 lượt, phần còn dư sẽ quay lại thành HP. Rất mạnh khi đội có healer.</p>
+            <p><Tip>Heart of Challenge</Tip> thi triển trước trận, nên kẻ địch bị Taunt ngay từ đầu. Kết hợp với <Tip>Iron Will</Tip> để giảm sát thương từ chúng.</p>
+            <p><Tip>Holy Recuperation</Tip> chỉ kích hoạt ở lượt bạn <strong>không</strong> dùng technique nào, nên nó không hợp với build tank cần dùng skill mỗi lượt.</p>
+          </Alert>
+          <Tabs>
+            <Tab label="Tank đội">
+              <Build
+                techniques={['Guardian Ring', 'Desperate Protection', 'Heart of Challenge', 'Last Stand']}
+                charms={['Healing Shift', 'Soul Protection', 'Iron Will', 'Holy Aegis']}
+              />
+              <p><strong>Build tank chính.</strong> <Tip>Heart of Challenge</Tip> và <Tip>Last Stand</Tip> giữ kẻ địch nhắm vào bạn, <Tip>Guardian Ring</Tip> bảo vệ bản thân, còn <Tip>Desperate Protection</Tip> tạo khiên cho đồng minh yếu máu nhất.</p>
+              <p>Charm tập trung hoàn toàn vào sống sót. Nếu đội đã đủ an toàn, có thể đổi <Tip>Soul Protection</Tip> sang <Tip>Sanctified Soul</Tip> ở ô technique để giảm sát thương cho cả đội.</p>
+            </Tab>
+            <Tab label="Ánh sáng phản đòn">
+              <Build
+                techniques={['Dawnburst', 'Sanctified Soul', 'Guardian Ring', 'First Light']}
+                charms={['Rebound', 'Holy Bulwark', 'Holy Restoration', 'Holy Aegis']}
+              />
+              <p><strong>Dùng khi chơi một mình hoặc đội đã có tank khác.</strong> <Tip>Guardian Ring</Tip> tạo khiên, rồi <Tip>First Light</Tip> tiêu khiên đó thành sát thương Ánh sáng. <Tip>Holy Aegis</Tip> làm khiên dày hơn, nghĩa là <Tip>First Light</Tip> cũng mạnh hơn.</p>
+              <p><Tip>Holy Bulwark</Tip> tăng sát thương các skill phản đòn như <Tip>Rebound</Tip>. <Tip>Holy Restoration</Tip> hồi máu sau mỗi 6 technique Ánh sáng.</p>
+            </Tab>
+          </Tabs>
         </Tab>
         <Tab label="Justicar" icon="skills/classes/justicar.png">
-          <ClassBuild name="Justicar" />
+          <p>Justicar mở rộng bộ công cụ theo hai hướng: <strong>Ánh sáng tích Charge</strong> và <strong>Băng giảm sát thương cho đội</strong>.</p>
+          <p><Tip>Radiant Spiritblade</Tip> nảy giữa tối đa 5 kẻ địch và được thêm 50% sát thương nếu tiêu 5 tầng Charge; <Tip>Skyglow</Tip> cho 2 tầng Charge mỗi cuối lượt, vừa đủ để duy trì. <Tip>Prism Aegis</Tip> phản đòn bằng sát thương Ánh sáng dựa trên DEF mỗi khi bạn trúng technique.</p>
+          <p>Ở hướng Băng, <Tip>Ice Shackles</Tip> giảm sát thương bạn và đồng minh trong 5 ô nhận từ kẻ địch đang bị Cold, mỗi tầng Cold tăng thêm 20%. <Tip>Phantom Current</Tip> gây Cold và kéo kẻ địch trong 4 ô lại gần.</p>
+          <p><Tip>Aether Rush</Tip> có 150% Base Chance gây Stun, gần như chắc chắn khống chế được một mục tiêu lớn.</p>
+          <Alert type="red" title="Lưu ý quan trọng">
+            <p><Tip>Twin Radiance Shield</Tip> là bản nâng cấp của <Tip>Desperate Protection</Tip>: tầm 5 ô thay vì 3, nhưng chỉ kéo dài 2 lượt.</p>
+            <p><Tip>Sacred Blessing</Tip> giảm sát thương nhận vào theo số technique Ánh sáng bạn trang bị (tối đa 3). Chỉ nên dùng khi build có ít nhất 2–3 technique Ánh sáng.</p>
+            <p><Tip>Tide Sigil</Tip> cần 15 lần trúng technique mới phản đòn một lần, nên chỉ hiệu quả ở trận dài và đông kẻ địch.</p>
+          </Alert>
+          <Tabs>
+            <Tab label="Tank đội">
+              <Build
+                techniques={['Twin Radiance Shield', 'Desperate Protection', 'Heart of Challenge', 'Last Stand']}
+                charms={['Healing Shift', 'Soul Protection', 'Iron Will', 'Holy Aegis']}
+              />
+              <p><strong>Giữ nguyên lối tank của Templar</strong>, chỉ thêm <Tip>Twin Radiance Shield</Tip> để có hai skill tạo khiên cho đồng minh. Hai khiên có tầm khác nhau nên phủ được cả đồng minh ở xa.</p>
+            </Tab>
+            <Tab label="Ánh sáng">
+              <Build
+                techniques={['Radiant Spiritblade', 'Prism Aegis', 'Dawnburst', 'Guardian Ring']}
+                charms={['Skyglow', 'Sacred Blessing', 'Holy Aegis', 'Soul Protection']}
+              />
+              <p><Tip>Skyglow</Tip> tăng sát thương Ánh sáng và cho Charge để <Tip>Radiant Spiritblade</Tip> luôn có thêm 50% sát thương. <Tip>Prism Aegis</Tip> và <Tip>Holy Aegis</Tip> đều dựa trên DEF, nên build vẫn trâu dù thiên về tấn công.</p>
+            </Tab>
+            <Tab label="Băng">
+              <Build
+                techniques={['Phantom Current', 'Tidal Whirl', 'Swirling Blade', 'Guardian Ring']}
+                charms={['Ice Shackles', 'Frigid Glint', 'Ripple Impact', 'Holy Aegis']}
+              />
+              <p><Tip>Frigid Glint</Tip> 100% gây 1 tầng Cold mỗi lần technique Nước trúng đích, nên Cold cộng dồn rất nhanh, và mỗi tầng lại tăng hiệu quả giảm sát thương của <Tip>Ice Shackles</Tip> cho cả đội.</p>
+            </Tab>
+          </Tabs>
         </Tab>
         <Tab label="Vindicator" icon="skills/classes/compass/class-23.webp">
-          <ClassBuild name="Vindicator" />
+          <p>Vindicator biến Knight thành <strong>tank gây sát thương theo DEF</strong>: càng trâu, đòn đánh càng đau.</p>
+          <p><Tip>Flurry Strike</Tip> đánh 3 hit vùng 3×1, mỗi 5% DEF bạn vượt mục tiêu tăng thêm 5% sát thương (tối đa 50%). <Tip>Warforged Edge</Tip> mạnh dần qua mỗi lần dùng trong trận, tối đa +100%. <Tip>Frost Protection</Tip> tạo khiên và gây Cold lên kẻ tấn công.</p>
+          <p>Charm mới có hai lựa chọn bảo vệ đội đáng chú ý: <Tip>Covenant Aegis</Tip> gánh thay sát thương cho adventurer đồng minh khi họ lần đầu xuống dưới 40% HP, và <Tip>Iron Solidarity</Tip> ban Solidarity cho đồng minh quanh bạn trước trận.</p>
+          <Alert type="red" title="Lưu ý quan trọng">
+            <p><strong>DEF là chỉ số tấn công</strong> của build chính: nó vừa tăng sát thương <Tip>Flurry Strike</Tip>, vừa làm dày khiên qua <Tip>Holy Aegis</Tip>, vừa tăng sống sót.</p>
+            <p><Tip>Fortified Shell</Tip> tăng DEF theo mỗi 10% HP đã mất (tối đa 5 tầng), nên càng bị đánh, <Tip>Flurry Strike</Tip> càng mạnh.</p>
+            <p><Tip>Warforged Edge</Tip> cần thời gian để đạt tối đa, nên nó mạnh nhất ở trận dài như boss.</p>
+          </Alert>
+          <Tabs>
+            <Tab label="DEF tấn công">
+              <Build
+                techniques={['Aether Rush', 'Warforged Edge', 'Flurry Strike', 'Frost Protection']}
+                charms={['Soul Protection', 'Holy Aegis', 'Power of Retribution', 'Fortified Shell']}
+              />
+              <p><Tip>Aether Rush</Tip> khống chế mục tiêu lớn, <Tip>Flurry Strike</Tip> và <Tip>Warforged Edge</Tip> gây sát thương chính, <Tip>Frost Protection</Tip> giữ khiên.</p>
+              <p><Tip>Power of Retribution</Tip> tăng Physical Mastery và có thể gây Cripple qua mỗi đòn Vật lý.</p>
+            </Tab>
+            <Tab label="Charge Ánh sáng">
+              <Build
+                techniques={['Charged Slash', 'Radiant Roar', 'Radiant Spiritblade', 'Prism Aegis']}
+                charms={['Energy Flux', 'Skyglow', 'Sacred Blessing', 'Holy Aegis']}
+              />
+              <p><Tip>Energy Flux</Tip> cho 14 tầng Charge ngay đầu trận, và mỗi lần tiêu 2 tầng sẽ tăng ATK. <Tip>Radiant Roar</Tip> tiêu 10 tầng để thi triển lại, <Tip>Radiant Spiritblade</Tip> tiêu 5 tầng để thêm 50% sát thương, còn <Tip>Charged Slash</Tip> và <Tip>Skyglow</Tip> nạp lại Charge.</p>
+              <p>Có 3 technique Ánh sáng nên <Tip>Sacred Blessing</Tip> đạt tối đa.</p>
+            </Tab>
+          </Tabs>
         </Tab>
-        <Tab label="Vindicator VIII" icon="skills/classes/compass/class-27.webp">
-          <ClassBuild name="Vindicator VIII" />
+        <Tab label="Caelifer" icon="skills/classes/compass/class-27.webp">
+          <Alert type="red" title="Class chưa ra mắt">
+            <p>Caelifer là class bậc 8 của nhánh này và <strong>chưa có ở bản hiện tại</strong>. Dữ liệu skill lấy từ file game nên có thể thay đổi khi ra mắt. Build dưới đây chỉ để tham khảo trước.</p>
+          </Alert>
+          <p>Caelifer hoàn thiện lối <strong>Charge Ánh sáng</strong> của Vindicator: <Tip>Lucent Edge</Tip> nhận 1 tầng Charge mỗi lần gây sát thương (đánh trúng càng nhiều kẻ địch càng nạp nhanh), và <Tip>Lumen Nova</Tip> tiêu toàn bộ Charge để tăng 7% sát thương cho mỗi tầng.</p>
+          <p><Tip>Luminous Restoration</Tip> hồi máu mỗi khi bạn tiêu từ 5 tầng Charge trở lên cùng lúc, nên vòng nạp rồi tiêu Charge cũng là nguồn hồi máu.</p>
+          <p>Ngoài ra có hướng Băng với <Tip>Vapor Bloom</Tip>, <Tip>Frostcast</Tip> và <Tip>Skyrider Rimefield</Tip>, cùng <Tip>Stoneward Prayer</Tip> tạo khiên cho mọi đồng minh trong 5 ô trước trận.</p>
+          <Tabs>
+            <Tab label="Charge Ánh sáng">
+              <Build
+                techniques={['Lucent Edge', 'Charged Slash', 'Radiant Roar', 'Lumen Nova']}
+                charms={['Skyglow', 'Fortified Shell', 'Energy Flux', 'Luminous Restoration']}
+              />
+              <p>Nạp Charge bằng <Tip>Lucent Edge</Tip>, <Tip>Charged Slash</Tip>, <Tip>Skyglow</Tip> và <Tip>Energy Flux</Tip>, rồi xả bằng <Tip>Radiant Roar</Tip> và <Tip>Lumen Nova</Tip>. Nên để <Tip>Lumen Nova</Tip> cuối thứ tự để tiêu được nhiều tầng nhất.</p>
+            </Tab>
+            <Tab label="Băng">
+              <Build
+                techniques={['Vapor Bloom', 'Frostcast', 'Phantom Current', 'Frost Protection']}
+                charms={['Skyrider Rimefield', 'Frost Domain', 'Ice Shackles', 'Stoneward Prayer']}
+              />
+              <p><Tip>Frost Domain</Tip> và <Tip>Skyrider Rimefield</Tip> liên tục cộng Cold cho kẻ địch quanh bạn, <Tip>Ice Shackles</Tip> biến số tầng Cold đó thành giảm sát thương cho cả đội.</p>
+            </Tab>
+          </Tabs>
         </Tab>
       </Tabs>
     </>
