@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { DB_KINDS } from '../App.jsx';
+import { DB_KINDS } from '../lib/site.js';
 import { iconUrl, petUrl, onImgError } from '../lib/img.js';
 
 const loaders = {
@@ -8,8 +8,6 @@ const loaders = {
   fantomons: () => import('../data/fantomons.json'),
   companions: () => import('../data/companions.json'),
   items: () => import('../data/items.json'),
-  food: () => import('../data/food.json'),
-  ingredients: () => import('../data/ingredients.json'),
   relics: () => import('../data/relics.json'),
 };
 
@@ -25,10 +23,7 @@ function norm(kind, e, skillsById, gifts) {
     case 'companions':
       return { id: e.id, name: e.name, icon: iconUrl(e.icon), sub: e.gift_type, rarity: '', filters: { 'Gift type': e.gift_type }, raw: e };
     case 'items':
-    case 'food':
       return { id: e.id, name: e.name, icon: iconUrl(e.icon), sub: (e.tags || []).join(', '), rarity: e.rarity, filters: { Rarity: e.rarity, Tag: (e.tags || [])[0] }, raw: e };
-    case 'ingredients':
-      return { id: e.id, name: e.name, icon: iconUrl(e.icon), sub: (e.regions || []).join(', '), rarity: e.rarity, filters: { Rarity: e.rarity, Region: (e.regions || [])[0] }, raw: e };
     case 'relics':
       return { id: e.id, name: e.name, icon: iconUrl(e.icon), sub: e.element + ' · ' + e.region, rarity: e.rarity, filters: { Rarity: e.rarity, Element: e.element, Region: e.region }, raw: e };
     default:
@@ -79,15 +74,7 @@ function Detail({ kind, item, skillsById, gifts, onClose }) {
             ))}
           </>
         )}
-        {(kind === 'items' || kind === 'food') && (
-          <>
-            {e.effects && <div className='kw'><b>Trong trận</b>: {e.effects.battle} ({e.effects.fights} trận)<br /><b>Vĩnh viễn</b>: {e.effects.permanent}</div>}
-            {e.sources && e.sources.length > 0 && <div className='kw'><b>Nguồn</b>: {e.sources.join(', ')}</div>}
-          </>
-        )}
-        {kind === 'ingredients' && (e.sources || []).map((s, i) => (
-          <div className='kw' key={i}>{s.type} · {s.node} · {s.chance}% · x{s.amount}</div>
-        ))}
+        {kind === 'items' && e.sources && e.sources.length > 0 && <div className='kw'><b>Nguồn</b>: {e.sources.join(', ')}</div>}
         {kind === 'relics' && (
           <>
             <p className='muted'>{e.element} · {e.region}</p>
@@ -127,11 +114,11 @@ export default function Database() {
     return items.filter((it) => (!t || it.name.toLowerCase().includes(t)) && Object.entries(filters).every(([k, v]) => !v || it.filters[k] === v));
   }, [items, q, filters]);
 
-  if (!meta) return <div className='guide'><h1>Không tìm thấy dữ liệu</h1></div>;
+  if (!meta) return <div className='empty'><h1>Không tìm thấy dữ liệu</h1></div>;
   if (!rows) return <div className='loading'>Đang tải...</div>;
   return (
     <>
-      <h1>Dữ liệu {meta.label}</h1>
+      <h1 className='page-title'>Dữ liệu {meta.label}</h1>
       <div className='chips'>
         {DB_KINDS.map((d) => <Link key={d.key} to={'/db/' + d.key} className={'chip' + (d.key === kind ? ' on' : '')}>{d.label}</Link>)}
       </div>

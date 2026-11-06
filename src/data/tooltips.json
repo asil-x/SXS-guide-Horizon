@@ -1,0 +1,1080 @@
+{
+  "Aberrancy": {
+    "kind": "skill",
+    "icon": "skills/skill_10579.png",
+    "rarity": "SSR",
+    "tags": ["Dominator", "Charm"],
+    "description": "Khi nhận sát thương, nếu kẻ tấn công đang bị Ailment hoặc Debuff, giảm sát thương bản thân phải nhận."
+  },
+  "Aegiswing": {
+    "kind": "pet",
+    "icon": "pets/aegiswing.png",
+    "rarity": "rainbow"
+  },
+  "Akane": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_8402.png"
+  },
+  "Aqua": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_11002.png"
+  },
+  "Aqua Vortex": {
+    "kind": "skill",
+    "icon": "skills/skill_10062.png",
+    "rarity": "SSR",
+    "tags": ["Archmage", "Technique", "Hỗ trợ", "Debuff"],
+    "description": "Tạo một xoáy nước tại ô được chọn trong phạm vi 4 ô. Xoáy nước gây sát thương Nước 1 lần lên mọi kẻ địch trong phạm vi 2 ô và kéo chúng vào tâm, với 40% Base Chance gây Wet trong 2 lượt."
+  },
+  "Armopi": {
+    "kind": "pet",
+    "icon": "pets/armopi.png",
+    "rarity": "SSR"
+  },
+  "Auroradrasil Energy": {
+    "kind": "item",
+    "icon": "tooltips/Money_17.png",
+    "rarity": "SR",
+    "description": "Dùng để phá phong ấn kho báu trong sự kiện Grand Treasure Hunt. Năng lượng chưa dùng được giữ lại sang mùa sau."
+  },
+  "Auroral Elemental Badge": {
+    "kind": "item",
+    "icon": "tooltips/item_311.png",
+    "rarity": "SSR",
+    "description": "Dùng 10 cái để nhận 1 capsule thuộc hệ bạn chọn từ Aeonic Gacha."
+  },
+  "Basic Treats": {
+    "kind": "item",
+    "icon": "tooltips/item_1500.png",
+    "rarity": "W",
+    "description": "Cho Fantomon ăn để nhận 50 EXP.",
+    "sources": ["Legion Farming", "Legion Fishing", "Legion Breeding"]
+  },
+  "Blade of Judgment": {
+    "kind": "skill",
+    "icon": "skills/skill_10574.png",
+    "rarity": "SSR",
+    "tags": ["Berserker", "Charm", "Debuff", "Tấn công"],
+    "description": "Mỗi lần Technique của bản thân gây sát thương lên kẻ địch, gắn 1 tầng Mark lên chúng. Khi Mark đạt 10 tầng, gây sát thương Vật lý 1 lần lên mục tiêu."
+  },
+  "Blade of Lament": {
+    "kind": "skill",
+    "icon": "skills/skill_10544.png",
+    "rarity": "SSR",
+    "tags": ["Warrior", "Charm", "Hồi máu"],
+    "description": "Mỗi lần Technique gây sát thương lên kẻ địch, kích hoạt hiệu ứng Lifesteal, tối đa 50% Max HP của bản thân."
+  },
+  "Blade Siphon": {
+    "kind": "skill",
+    "icon": "skills/skill_10519.png",
+    "rarity": "SSR",
+    "tags": ["Berserker", "Charm", "Hồi máu"],
+    "description": "Hồi máu cho bản thân 1 lần mỗi khi Technique của bản thân gây sát thương chí mạng lên kẻ địch."
+  },
+  "Blade Tempest": {
+    "kind": "skill",
+    "icon": "skills/skill_10562.png",
+    "rarity": "SSR",
+    "tags": ["Warrior", "Charm", "Tấn công"],
+    "description": "Mỗi lần Technique của bản thân gây sát thương lên kẻ địch, có 40% cơ hội kích hoạt Sword Gale, gây thêm sát thương Gió 1 lần."
+  },
+  "Blazing Fire Ring": {
+    "kind": "skill",
+    "icon": "skills/skill_10031.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Technique", "Tấn công"],
+    "description": "Gây sát thương Lửa 1 lần lên mọi kẻ địch trong phạm vi 2 ô quanh bản thân."
+  },
+  "Block Awareness": {
+    "kind": "skill",
+    "icon": "skills/skill_10507.png",
+    "rarity": "SSR",
+    "tags": ["Warrior", "Charm", "Vật thể"],
+    "description": "Tăng Block Rate của bản thân."
+  },
+  "Boaro": {
+    "kind": "pet",
+    "icon": "pets/boaro.png",
+    "rarity": "SR"
+  },
+  "Boiling Bloodlust": {
+    "kind": "skill",
+    "icon": "skills/skill_10051.png",
+    "rarity": "SSR",
+    "tags": ["Warrior", "Technique", "Bản thân", "Buff"],
+    "description": "Tăng Crit Rate và Crit DMG của bản thân trong 4 lượt. (Zero Initial CD)"
+  },
+  "Bond Trinket": {
+    "kind": "item",
+    "icon": "tooltips/item_107.png",
+    "rarity": "SSR",
+    "description": "Dùng tại Arborisfatum để triệu hồi Fantomon.",
+    "sources": ["Delegate Tasks"]
+  },
+  "Braulio": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_8427.png"
+  },
+  "Chomusuke": {
+    "kind": "pet",
+    "icon": "pets/chomusuke.png",
+    "rarity": "SR"
+  },
+  "Chrono Sand": {
+    "kind": "item",
+    "icon": "tooltips/item_41400.png",
+    "rarity": "W",
+    "description": "Dùng để cường hoá Relic.",
+    "sources": ["Furniture Hang-Up", "Gameplay", "Delegate Tasks"]
+  },
+  "Cotton Sheep": {
+    "kind": "item",
+    "icon": "tooltips/item_421.png",
+    "rarity": "SR",
+    "description": "Nuôi trong Guild Sheepfold để sản xuất len dùng kích hoạt Aptitude của Fantomon.",
+    "sources": ["Legion Shop"]
+  },
+  "Counter Blade": {
+    "kind": "skill",
+    "icon": "skills/skill_10537.png",
+    "rarity": "SSR",
+    "tags": ["Warrior", "Charm", "Phản đòn"],
+    "description": "Khi bị Technique của kẻ địch trong phạm vi 2 ô gây sát thương, có 50% cơ hội phản đòn, gây sát thương Vật lý 1 lần lên kẻ tấn công."
+  },
+  "Crit Mastery": {
+    "kind": "skill",
+    "icon": "skills/skill_10588.png",
+    "rarity": "SSR",
+    "tags": ["Duelist", "Charm", "Vật thể"],
+    "description": "Tăng Crit DMG của bản thân."
+  },
+  "Dark Bullet": {
+    "kind": "skill",
+    "icon": "skills/skill_10081.png",
+    "rarity": "SSR",
+    "tags": ["Sage", "Technique", "Tấn công", "Debuff"],
+    "description": "Tấn công 1 kẻ địch trong phạm vi 4 ô, gây sát thương Bóng tối 1 lần, với 50% Base Chance gây Erosion."
+  },
+  "Darkness": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_11003.png"
+  },
+  "Dawn Chicken": {
+    "kind": "item",
+    "icon": "tooltips/item_431.png",
+    "rarity": "SR",
+    "description": "Nuôi trong Guild Roost để sản xuất trứng dùng kích hoạt Aptitude của Fantomon.",
+    "sources": ["Legion Shop"]
+  },
+  "Dawnium": {
+    "kind": "item",
+    "icon": "tooltips/Money_2.png",
+    "rarity": "SR",
+    "description": "Tiền tệ dùng để mua trong shop, đổi từ Luminium theo tỉ lệ 1:1."
+  },
+  "Defensive Assault": {
+    "kind": "skill",
+    "icon": "skills/skill_10540.png",
+    "rarity": "SSR",
+    "tags": ["Knight", "Charm", "Buff"],
+    "description": "Tăng ATK khi bản thân đang có khiên."
+  },
+  "Desperate Protection": {
+    "kind": "skill",
+    "icon": "skills/skill_10032.png",
+    "rarity": "SSR",
+    "tags": ["Paladin", "Technique", "Đồng minh", "Khiên"],
+    "description": "Tạo khiên dựa trên DEF của bản thân cho đồng minh có HP thấp nhất trong phạm vi 3 ô, kéo dài 3 lượt."
+  },
+  "Desperate Valor": {
+    "kind": "skill",
+    "icon": "skills/skill_10547.png",
+    "rarity": "SSR",
+    "tags": ["Berserker", "Charm", "Buff"],
+    "description": "Mỗi 15% HP đã mất tăng sát thương gây ra của bản thân. Hiệu ứng cộng dồn tối đa 5 lần và không thể xoá."
+  },
+  "Destiny Fruit": {
+    "kind": "item",
+    "icon": "tooltips/item_115.png",
+    "rarity": "SR",
+    "description": "Tìm kiếm phần thưởng bí ẩn trên bản đồ thế giới. Lưu ý: tài nguyên định mệnh chưa thu thập sẽ biến mất sau một thời gian.",
+    "sources": ["Delegate Tasks"]
+  },
+  "Divine Wrath": {
+    "kind": "skill",
+    "icon": "skills/skill_10037.png",
+    "rarity": "SSR",
+    "tags": ["Archmage", "Technique", "Tấn công"],
+    "description": "Chọn 1 mục tiêu trong phạm vi 4 ô. Gây ngẫu nhiên 16 lần sát thương Ánh sáng trong phạm vi 3 ô quanh mục tiêu, trúng ít nhất 3 lần. Mỗi lần trúng tiếp theo lên cùng mục tiêu, sát thương giảm 40%. (Ưu tiên vùng skill có mục tiêu lớn.)"
+  },
+  "Eiichi": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_8438.png"
+  },
+  "Elemental Harmony": {
+    "kind": "skill",
+    "icon": "skills/skill_10602.png",
+    "rarity": "SSR",
+    "tags": ["Sorcerer", "Charm", "Buff"],
+    "description": "Mỗi hệ khác nhau trong các Technique gây sát thương đang trang bị tăng Elemental Mastery của bản thân. Cộng dồn tối đa 4 lần."
+  },
+  "Elemental Mystery": {
+    "kind": "skill",
+    "icon": "skills/skill_10555.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Charm", "Vật thể"],
+    "description": "Tăng Elemental Mastery của bản thân."
+  },
+  "Energy Burst": {
+    "kind": "skill",
+    "icon": "skills/skill_10041.png",
+    "rarity": "SSR",
+    "tags": ["Sorcerer", "Technique", "Bản thân", "Buff"],
+    "description": "Technique gây sát thương kế tiếp của bạn được tăng Accuracy và gây thêm 50% sát thương."
+  },
+  "Epic Auroral Badge": {
+    "kind": "item",
+    "icon": "tooltips/item_302.png",
+    "rarity": "SR",
+    "description": "Dùng 10 cái để nhận 1 capsule từ Epic Aeonic Gacha."
+  },
+  "Explosive Spirit": {
+    "kind": "skill",
+    "icon": "skills/skill_10599.png",
+    "rarity": "SSR",
+    "tags": ["Destroyer", "Charm", "Buff"],
+    "description": "Mỗi lần thi triển Technique hệ Lửa, tăng Crit Rate của bản thân trong 2 lượt. Cộng dồn tối đa 8 lần."
+  },
+  "Falling Dark Star": {
+    "kind": "skill",
+    "icon": "skills/skill_10611.png",
+    "rarity": "SSR",
+    "tags": ["Dominator", "Charm", "Buff"],
+    "description": "Đầu lượt của bản thân, nhận 1 buff ngẫu nhiên kéo dài tới đầu lượt kế tiếp."
+  },
+  "Feline Dance": {
+    "kind": "skill",
+    "icon": "skills/skill_10510.png",
+    "rarity": "SSR",
+    "tags": ["Warrior", "Charm", "Vật thể"],
+    "description": "Tăng SPD của bản thân."
+  },
+  "Fiery Burst": {
+    "kind": "skill",
+    "icon": "skills/skill_10503.png",
+    "rarity": "SSR",
+    "tags": ["Destroyer", "Charm", "Tấn công"],
+    "description": "Mỗi lần Technique của bản thân gây sát thương chí mạng Lửa lên kẻ địch, gây thêm sát thương Lửa 1 lần lên mọi kẻ địch trong phạm vi 2 ô quanh mục tiêu."
+  },
+  "Fire Blast": {
+    "kind": "skill",
+    "icon": "skills/skill_10098.png",
+    "rarity": "SSR",
+    "tags": ["Archmage", "Technique", "Tấn công"],
+    "description": "Gây sát thương Lửa 1 lần lên 1 kẻ địch trong phạm vi 5 ô."
+  },
+  "Fireball": {
+    "kind": "skill",
+    "icon": "skills/skill_10028.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Technique", "Tấn công"],
+    "description": "Chọn 1 ô trong phạm vi 5 ô. Gây sát thương Lửa 1 lần lên mọi kẻ địch trong vùng vuông 1 ô quanh ô đó."
+  },
+  "Flame Aura": {
+    "kind": "skill",
+    "icon": "skills/skill_10061.png",
+    "rarity": "SSR",
+    "tags": ["Duelist", "Technique", "Đồng minh", "Tấn công"],
+    "description": "Ban Flame cho bản thân và 3 đồng minh ngẫu nhiên trong phạm vi 3 ô trong 2 lượt. Hiệu ứng không thể xoá."
+  },
+  "Flame Jet": {
+    "kind": "skill",
+    "icon": "skills/skill_10072.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Technique", "Tấn công"],
+    "description": "Gây sát thương Lửa 3 lần lên mọi kẻ địch trong vùng 1×3 ô phía trước."
+  },
+  "Flame Wolf Summon": {
+    "kind": "skill",
+    "icon": "skills/skill_10058.png",
+    "rarity": "SSR",
+    "tags": ["Sage", "Technique", "Triệu hồi", "Tấn công"],
+    "description": "Triệu hồi 2 Flame Wolf phía trước bản thân, hành động ngay. Vật triệu hồi kế thừa một phần chỉ số của bản thân, bắt đầu ở trạng thái Stealth, tồn tại tối đa 2 lượt. (Zero Initial CD)"
+  },
+  "Flaming Path": {
+    "kind": "skill",
+    "icon": "skills/skill_10561.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Charm", "Ô lửa"],
+    "description": "Khi bản thân bắt đầu di chuyển trong lượt, có 30% cơ hội gây Burn lên các ô trong phạm vi 1 ô quanh bản thân."
+  },
+  "Flash Dash": {
+    "kind": "skill",
+    "icon": "skills/skill_10016.png",
+    "rarity": "SSR",
+    "tags": ["Duelist", "Technique", "Di chuyển", "Tấn công"],
+    "description": "Lướt thẳng 5 ô, gây Doom DMG Vật lý 1 lần lên mọi kẻ địch trong vùng 1×4 ô dọc đường đi. (Không xuyên qua được kẻ địch lớn hơn 4 ô)"
+  },
+  "Flowing Doom": {
+    "kind": "skill",
+    "icon": "skills/skill_10056.png",
+    "rarity": "SSR",
+    "tags": ["Destroyer", "Technique", "Tấn công", "Đẩy lùi"],
+    "description": "Gây sát thương Nước 3 lần lên mọi kẻ địch trong vùng 3×5 ô phía trước, với 50% Base Chance đẩy lùi 1 ô."
+  },
+  "Formation Breaker": {
+    "kind": "skill",
+    "icon": "skills/skill_10092.png",
+    "rarity": "SSR",
+    "tags": ["Destroyer", "Technique", "Đồng minh", "Buff"],
+    "description": "Tăng ATK cho mọi nhân vật đồng minh trong phạm vi 3 ô theo tỉ lệ ATK của bản thân trong 2 lượt. Hiệu ứng là duy nhất. Đồng thời có 50% cơ hội đẩy nhanh thanh hành động của nhân vật đồng minh 20%. (Zero Initial CD)"
+  },
+  "Frame of Battles": {
+    "kind": "skill",
+    "icon": "skills/skill_10582.png",
+    "rarity": "SSR",
+    "tags": ["Duelist", "Charm", "Buff"],
+    "description": "Mỗi 15% HP đã mất giảm sát thương nhận vào của bản thân. Hiệu ứng cộng dồn tối đa 5 lần và không thể xoá."
+  },
+  "Frenzy Totem": {
+    "kind": "skill",
+    "icon": "skills/skill_10080.png",
+    "rarity": "SSR",
+    "tags": ["Arcanist", "Technique", "Triệu hồi", "Buff"],
+    "description": "Triệu hồi 1 Totem phía trước bản thân, hành động ngay. Vật triệu hồi kế thừa một phần chỉ số của bản thân, bắt đầu ở trạng thái Stealth, tồn tại tối đa 5 lượt. (Zero Initial CD)"
+  },
+  "Freya": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_10505.png"
+  },
+  "Frost Guard": {
+    "kind": "skill",
+    "icon": "skills/skill_10605.png",
+    "rarity": "SSR",
+    "tags": ["Archmage", "Charm", "Buff", "Hồi máu"],
+    "description": "Cuối lượt của bản thân, nếu lượt này không thi triển Technique nào, bản thân vào trạng thái Icebound, giảm sát thương nhận vào, kéo dài tới đầu lượt kế tiếp. Trạng thái này hồi máu cho bản thân 1 lần trước khi hết hạn."
+  },
+  "Gale Shield": {
+    "kind": "skill",
+    "icon": "skills/skill_10513.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Charm", "Khiên", "Đẩy lùi"],
+    "description": "Trước khi trận bắt đầu, tạo khiên dựa trên Max HP của bản thân. Khi khiên biến mất, gây sát thương Gió 1 lần lên mọi kẻ địch trong vùng vuông 1 ô quanh bản thân, với 100% Base Chance đẩy lùi 1 ô."
+  },
+  "Gateway Key": {
+    "kind": "item",
+    "icon": "tooltips/item_320.png",
+    "rarity": "SSR",
+    "description": "Dùng để mở khoá một cột phong ấn trên bản đồ thế giới."
+  },
+  "Gold Pickaxe": {
+    "kind": "item",
+    "icon": "tooltips/item_101.png",
+    "rarity": "R",
+    "description": "Dùng để đào quặng vàng trong Realm: Gilded Depths.",
+    "sources": ["Delegate Tasks"]
+  },
+  "Gravity Pull": {
+    "kind": "skill",
+    "icon": "skills/skill_10018.png",
+    "rarity": "SSR",
+    "tags": ["Warrior", "Technique", "Hỗ trợ"],
+    "description": "Chọn 1 ô trong phạm vi 7 ô. Gây sát thương Gió 1 lần lên mọi kẻ địch trong vùng vuông 1 ô quanh ô đó và kéo chúng về vị trí của bản thân."
+  },
+  "Guardian Ring": {
+    "kind": "skill",
+    "icon": "skills/skill_10046.png",
+    "rarity": "SSR",
+    "tags": ["Knight", "Technique", "Bản thân", "Khiên"],
+    "description": "Tạo khiên dựa trên DEF cho bản thân trong 2 lượt. (Zero Initial CD)"
+  },
+  "Healing Mastery": {
+    "kind": "skill",
+    "icon": "skills/skill_10514.png",
+    "rarity": "SSR",
+    "tags": ["Sage", "Charm", "Vật thể"],
+    "description": "Tăng hiệu quả hồi máu của bản thân."
+  },
+  "Healing Touch": {
+    "kind": "skill",
+    "icon": "skills/skill_10020.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Technique", "Đồng minh", "Hồi máu", "Xoá hiệu ứng"],
+    "description": "Hồi máu 1 lần cho 1 đồng minh trong phạm vi 5 ô và xoá ngẫu nhiên 1 Ailment hoặc Debuff của họ."
+  },
+  "Heart of Challenge": {
+    "kind": "skill",
+    "icon": "skills/skill_10049.png",
+    "rarity": "SSR",
+    "tags": ["Knight", "Technique", "Tấn công", "Debuff"],
+    "description": "Gây sát thương Vật lý 1 lần lên mọi kẻ địch trong phạm vi 3 ô quanh bản thân, với 85% cơ hội gây Taunt trong 1 lượt. 100% gây Taunt lên Non-Character Units. (Thi triển 1 lần trước khi trận bắt đầu.)"
+  },
+  "Heavy Impact": {
+    "kind": "skill",
+    "icon": "skills/skill_10009.png",
+    "rarity": "SSR",
+    "tags": ["Warrior", "Technique", "Tấn công"],
+    "description": "Tấn công 1 kẻ địch trong phạm vi 1 ô, gây sát thương Vật lý 1 lần và hất tung lên không (Airborne). (Ưu tiên mục tiêu lớn)"
+  },
+  "Hermes": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_8406.png"
+  },
+  "Hopeful Bud": {
+    "kind": "item",
+    "icon": "tooltips/item_411.png",
+    "rarity": "SR",
+    "description": "Trồng trong Guild Garden để sản xuất dầu dùng kích hoạt Aptitude của Fantomon.",
+    "sources": ["Legion Shop"]
+  },
+  "Howling Hurricane": {
+    "kind": "skill",
+    "icon": "skills/skill_10057.png",
+    "rarity": "SSR",
+    "tags": ["Archmage", "Technique", "Tấn công"],
+    "description": "Chọn 1 ô trong phạm vi 5 ô. Gây sát thương Gió 5 lần lên mọi kẻ địch trong phạm vi 2 ô quanh ô đó, hất tung chúng (Airborne)."
+  },
+  "Hunter's Judgment": {
+    "kind": "skill",
+    "icon": "skills/skill_10074.png",
+    "rarity": "SSR",
+    "tags": ["Berserker", "Technique", "Hỗ trợ", "Tấn công"],
+    "description": "Chọn 1 ô trong phạm vi 4 ô. Kéo mọi kẻ địch trong vùng vuông 1 ô quanh ô đó về ô phía trước bản thân, sau đó gây sát thương Vật lý 3 lần lên mọi kẻ địch trong vùng 3×3 ô phía trước và hất tung chúng (Airborne)."
+  },
+  "Ice Spike": {
+    "kind": "skill",
+    "icon": "skills/skill_10035.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Technique", "Tấn công", "Hiệu ứng xấu"],
+    "description": "Gây sát thương Nước 1 lần lên mọi kẻ địch trong vùng 1×5 ô phía trước, với 40% Base Chance gây Frozen trong 1 lượt."
+  },
+  "Indomitable Will": {
+    "kind": "skill",
+    "icon": "skills/skill_10518.png",
+    "rarity": "SSR",
+    "tags": ["Duelist", "Charm", "Buff", "Hồi máu"],
+    "description": "Lần đầu nhận sát thương chí tử, sống sót với 1 HP, vào trạng thái Indomitable trong 2 lượt (không thể xoá) và hồi máu cho bản thân 1 lần."
+  },
+  "Insight": {
+    "kind": "skill",
+    "icon": "skills/skill_10559.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Charm", "Vật thể"],
+    "description": "Tăng Effect Hit Rate của bản thân."
+  },
+  "Insightful Eye": {
+    "kind": "skill",
+    "icon": "skills/skill_10500.png",
+    "rarity": "SSR",
+    "tags": ["Warrior", "Charm", "Vật thể"],
+    "description": "Tăng Crit Rate của bản thân."
+  },
+  "Iron Fortress": {
+    "kind": "skill",
+    "icon": "skills/skill_10571.png",
+    "rarity": "SSR",
+    "tags": ["Warrior", "Charm", "Đồng minh", "Buff"],
+    "description": "Trước khi trận bắt đầu, tăng DEF của mọi nhân vật đồng minh trong vùng vuông 3 ô quanh bản thân theo một tỉ lệ DEF của bản thân. Hiệu ứng này là duy nhất và không thể xoá."
+  },
+  "Iron Hammer": {
+    "kind": "item",
+    "icon": "tooltips/item_100.png",
+    "rarity": "R",
+    "description": "Dùng để đào quặng sắt trong Realm: Ironvein Pit.",
+    "sources": ["Delegate Tasks"]
+  },
+  "Iron Thorn": {
+    "kind": "skill",
+    "icon": "skills/skill_10005.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Technique", "Tấn công", "Hiệu ứng xấu"],
+    "description": "Chọn 1 ô trong phạm vi 3 ô. Gây sát thương Gió 1 lần lên mọi kẻ địch trong phạm vi 1 ô quanh ô đó, với 30% Base Chance gây Immobilize trong 1 lượt."
+  },
+  "Jiangwang": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_8455.png"
+  },
+  "Kazuma": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_11001.png"
+  },
+  "Kels": {
+    "kind": "pet",
+    "icon": "pets/kels.png",
+    "rarity": "SSR"
+  },
+  "Legendary Auroral Badge": {
+    "kind": "item",
+    "icon": "tooltips/item_303.png",
+    "rarity": "SSR",
+    "description": "Dùng 10 cái để nhận 1 capsule từ Legendary Aeonic Gacha."
+  },
+  "Light of Dawn": {
+    "kind": "skill",
+    "icon": "skills/skill_10075.png",
+    "rarity": "SSR",
+    "tags": ["Sorcerer", "Technique", "Tấn công"],
+    "description": "Gây Doom DMG Ánh sáng 2 lần lên mọi kẻ địch trong vùng 1×8 ô phía trước."
+  },
+  "Lightning Chain": {
+    "kind": "skill",
+    "icon": "skills/skill_10030.png",
+    "rarity": "SSR",
+    "tags": ["Sorcerer", "Technique", "Tấn công"],
+    "description": "Gây sát thương Ánh sáng 1 lần lên 1 kẻ địch trong phạm vi 4 ô. Hiệu ứng sau đó lan sang 1 kẻ địch ngẫu nhiên trong phạm vi 4 ô quanh mục tiêu, tối đa 8 lần. Mỗi kẻ địch chỉ bị trúng 1 lần bởi chuỗi lan."
+  },
+  "Lightning Mystery": {
+    "kind": "skill",
+    "icon": "skills/skill_10502.png",
+    "rarity": "SSR",
+    "tags": ["Sorcerer", "Charm", "Tấn công"],
+    "description": "Mỗi lần Technique của bản thân gây sát thương lên kẻ địch, có 30% cơ hội kích hoạt Thunder Strike, gây thêm sát thương Ánh sáng 1 lần."
+  },
+  "Linked Misfortune": {
+    "kind": "skill",
+    "icon": "skills/skill_10585.png",
+    "rarity": "SSR",
+    "tags": ["Arcanist", "Charm", "Debuff", "Tấn công"],
+    "description": "Mỗi lần bản thân gây Erosion lên kẻ địch, có 60% cơ hội gây Erosion thêm lần nữa."
+  },
+  "Lucky Ticket": {
+    "kind": "item",
+    "icon": "tooltips/item_112.png",
+    "rarity": "SSR",
+    "description": "Dùng để quay Wheel of Destiny nhận thưởng."
+  },
+  "Luminium": {
+    "kind": "item",
+    "icon": "tooltips/Money_15.png",
+    "rarity": "SSR",
+    "description": "Dùng để đổi lấy Dawnium hoặc mua vật phẩm."
+  },
+  "Lunar Chicken": {
+    "kind": "item",
+    "icon": "tooltips/item_432.png",
+    "rarity": "SSR",
+    "description": "Nuôi trong Guild Roost để sản xuất trứng dùng kích hoạt Aptitude của Fantomon.",
+    "sources": ["Legion Shop"]
+  },
+  "Lunar Heart": {
+    "kind": "item",
+    "icon": "tooltips/item_412.png",
+    "rarity": "SSR",
+    "description": "Trồng trong Guild Garden để sản xuất dầu dùng kích hoạt Aptitude của Fantomon.",
+    "sources": ["Legion Shop"]
+  },
+  "Lunar Sheep": {
+    "kind": "item",
+    "icon": "tooltips/item_422.png",
+    "rarity": "SSR",
+    "description": "Nuôi trong Guild Sheepfold để sản xuất len dùng kích hoạt Aptitude của Fantomon.",
+    "sources": ["Legion Shop"]
+  },
+  "Lunarwater Threads": {
+    "kind": "skill",
+    "icon": "skills/skill_10017.png",
+    "rarity": "SSR",
+    "tags": ["Paladin", "Technique", "Hỗ trợ", "Debuff"],
+    "description": "Gây sát thương Nước 1 lần lên mọi kẻ địch trong phạm vi 5 ô quanh bản thân, với 50% Base Chance gây 1 tầng Cold trong 2 lượt và kéo chúng về vị trí của bản thân."
+  },
+  "Mana Surge": {
+    "kind": "skill",
+    "icon": "skills/skill_10554.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Charm", "Vật thể"],
+    "description": "Tăng Crit Rate của bản thân."
+  },
+  "Mandragora": {
+    "kind": "pet",
+    "icon": "pets/mandragora.png",
+    "rarity": "SR"
+  },
+  "Mantra of Blessings": {
+    "kind": "skill",
+    "icon": "skills/skill_10610.png",
+    "rarity": "SSR",
+    "tags": ["Dominator", "Charm", "Đồng minh", "Buff"],
+    "description": "Đầu lượt của bản thân, ban Blessing cho nhân vật đồng minh có ATK cao nhất, tăng sát thương của họ. Hiệu ứng kéo dài tới đầu lượt kế tiếp của bản thân và không thể xoá."
+  },
+  "Mayoi": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_8442.png"
+  },
+  "Meteoric Flames": {
+    "kind": "skill",
+    "icon": "skills/skill_10070.png",
+    "rarity": "SSR",
+    "tags": ["Archmage", "Technique", "Tấn công", "Ô lửa"],
+    "description": "Chọn 1 ô trong phạm vi 5 ô. Gây sát thương Lửa 1 lần lên mọi kẻ địch trong vùng vuông 1 ô quanh ô đó, với 60% cơ hội gây Burn lên các ô trong vùng. (Ưu tiên mục tiêu lớn)"
+  },
+  "Mountain Collapse": {
+    "kind": "skill",
+    "icon": "skills/skill_10052.png",
+    "rarity": "SSR",
+    "tags": ["Warrior", "Technique", "Tấn công", "Đẩy lùi"],
+    "description": "Gây sát thương Vật lý 1 lần lên mọi kẻ địch trong phạm vi 2 ô quanh bản thân, hất tung chúng (Airborne), với 60% Base Chance đẩy lùi 1 ô."
+  },
+  "Mysterious Merchant": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_8416.png"
+  },
+  "Mythic Auroral Badge": {
+    "kind": "item",
+    "icon": "tooltips/item_304.png",
+    "rarity": "SSR",
+    "description": "Dùng 10 cái để nhận 1 capsule từ Mythic Aeonic Gacha."
+  },
+  "Naira": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_8423.png"
+  },
+  "Night's Blessing": {
+    "kind": "skill",
+    "icon": "skills/skill_10528.png",
+    "rarity": "SSR",
+    "tags": ["Arcanist", "Charm", "Vật thể"],
+    "description": "Tăng sát thương Bóng tối của bản thân."
+  },
+  "Nyxarchon": {
+    "kind": "pet",
+    "icon": "pets/nyxarchon.png",
+    "rarity": "rainbow"
+  },
+  "Ophelia": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_10506.png"
+  },
+  "Overhealing": {
+    "kind": "skill",
+    "icon": "skills/skill_10570.png",
+    "rarity": "SSR",
+    "tags": ["Arcanist", "Charm", "Hồi máu"],
+    "description": "Mỗi lần bản thân hồi máu cho đồng minh bằng Technique, có 30% cơ hội hồi thêm cho mọi đồng minh trong phạm vi 1 ô quanh mục tiêu."
+  },
+  "Overload Protection": {
+    "kind": "skill",
+    "icon": "skills/skill_10573.png",
+    "rarity": "SSR",
+    "tags": ["Destroyer", "Charm", "Khiên"],
+    "description": "Trong một lượt, mỗi lần bản thân mất hơn 15% Max HP, nhận khiên dựa trên Max HP trong 2 lượt."
+  },
+  "Pandarial": {
+    "kind": "pet",
+    "icon": "pets/pandarial.png",
+    "rarity": "rainbow"
+  },
+  "Piercing Assault": {
+    "kind": "skill",
+    "icon": "skills/skill_10568.png",
+    "rarity": "SSR",
+    "tags": ["Conqueror", "Charm"],
+    "description": "Mỗi lần Technique của bản thân gây sát thương lên kẻ địch, bỏ qua một phần DEF của mục tiêu. Mức bỏ qua DEF tăng thêm 10% cho mỗi buff bản thân đang có, cộng dồn tối đa 3 lần."
+  },
+  "Prismora": {
+    "kind": "pet",
+    "icon": "pets/prismora.png"
+  },
+  "Qin": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_8408.png"
+  },
+  "Radiant Restoration": {
+    "kind": "skill",
+    "icon": "skills/skill_10021.png",
+    "rarity": "SSR",
+    "tags": ["Sage", "Technique", "Đồng minh", "Hồi máu"],
+    "description": "Hồi máu 1 lần cho mọi đồng minh trong phạm vi 4 ô."
+  },
+  "Radiant Sear": {
+    "kind": "skill",
+    "icon": "skills/skill_10577.png",
+    "rarity": "SSR",
+    "tags": ["Archmage", "Charm", "Tấn công", "Debuff"],
+    "description": "Mỗi lần Technique của bản thân gây sát thương lên kẻ địch, có 50% cơ hội gây thêm sát thương Ánh sáng 1 lần, với 30% Base Chance gây Blind."
+  },
+  "Raging Wildfire": {
+    "kind": "skill",
+    "icon": "skills/skill_10576.png",
+    "rarity": "SSR",
+    "tags": ["Sorcerer", "Charm", "Ô lửa"],
+    "description": "Có 20% cơ hội gây Burn lên các ô trong phạm vi khi thi triển Technique hệ Lửa."
+  },
+  "Rapid Cast": {
+    "kind": "skill",
+    "icon": "skills/skill_10604.png",
+    "rarity": "SSR",
+    "tags": ["Archmage", "Charm", "Vật thể"],
+    "description": "Tăng Elemental Mastery của bản thân. Trước khi trận bắt đầu, giảm 1 lượt hồi chiêu của mọi Technique. (Technique đã hồi xong không bị ảnh hưởng.)"
+  },
+  "Raw Ore": {
+    "kind": "item",
+    "icon": "tooltips/item_41300.png",
+    "rarity": "W",
+    "description": "Dùng để cường hoá trang bị.",
+    "sources": ["Fantasy Ladder", "Gameplay", "Delegate Tasks"]
+  },
+  "Rebound": {
+    "kind": "skill",
+    "icon": "skills/skill_10541.png",
+    "rarity": "SSR",
+    "tags": ["Knight", "Charm", "Phản đòn"],
+    "description": "Mỗi lần bản thân đỡ được đòn Technique của kẻ địch, gây sát thương Vật lý 1 lần lên kẻ tấn công dựa trên DEF của bản thân."
+  },
+  "Refined Ore": {
+    "kind": "item",
+    "icon": "tooltips/item_41301.png",
+    "rarity": "R",
+    "description": "Dùng để cường hoá trang bị.",
+    "sources": ["Fantasy Ladder"]
+  },
+  "Reina": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_8401.png"
+  },
+  "Repelling Wind": {
+    "kind": "skill",
+    "icon": "skills/skill_10566.png",
+    "rarity": "SSR",
+    "tags": ["Archmage", "Charm", "Tấn công", "Đẩy lùi"],
+    "description": "Có 75% cơ hội kích hoạt Repelling Wind khi kẻ địch chủ động tiến vào phạm vi 2 ô quanh bản thân, gây sát thương Gió 1 lần, với 100% Base Chance đẩy lùi 2 ô. (Kích hoạt lại nếu chúng tiếp cận nhiều lần)"
+  },
+  "Resilient Sprout": {
+    "kind": "item",
+    "icon": "tooltips/item_410.png",
+    "rarity": "R",
+    "description": "Trồng trong Guild Garden để sản xuất dầu dùng kích hoạt Aptitude của Fantomon.",
+    "sources": ["Legion Shop"]
+  },
+  "Resurrection": {
+    "kind": "skill",
+    "icon": "skills/skill_10531.png",
+    "rarity": "SSR",
+    "tags": ["Sage", "Charm", "Đồng minh", "Hồi sinh", "Buff", "Hồi máu"],
+    "description": "Khi một adventurer đồng minh chết, lập tức hồi sinh và hồi máu cho họ 1 lần, ban Revitalization trong 2 lượt (không thể xoá). Charm này chỉ kích hoạt 1 lần mỗi trận. Trước khi trận bắt đầu, nếu có nhiều adventurer đồng minh đã chết, ưu tiên hồi sinh người có lực chiến cao nhất."
+  },
+  "Rolla": {
+    "kind": "item",
+    "icon": "tooltips/Money_1.png",
+    "rarity": "W",
+    "description": "Dùng để cường hoá, thăng cấp trang bị và mua vật phẩm trong shop.",
+    "sources": ["Furniture Hang-Up", "Gameplay", "Delegate Tasks"]
+  },
+  "Sand Shovel": {
+    "kind": "item",
+    "icon": "tooltips/item_103.png",
+    "rarity": "R",
+    "description": "Dùng để đào cát trong Realm: Dustfall Dune.",
+    "sources": ["Delegate Tasks"]
+  },
+  "Shadow Erosion": {
+    "kind": "skill",
+    "icon": "skills/skill_10565.png",
+    "rarity": "SSR",
+    "tags": ["Sage", "Charm", "Debuff", "Tấn công"],
+    "description": "Mỗi lần Technique của bản thân gây sát thương Bóng tối lên kẻ địch, có 40% Base Chance gây Erosion."
+  },
+  "Shadow Impact": {
+    "kind": "skill",
+    "icon": "skills/skill_10076.png",
+    "rarity": "SSR",
+    "tags": ["Sage", "Technique", "Tấn công"],
+    "description": "Chọn 1 ô trong phạm vi 3 ô. Gây sát thương Bóng tối 1 lần lên mọi kẻ địch trong phạm vi 2 ô quanh ô đó. Nếu kẻ địch đang có Erosion, lập tức kích hoạt hiệu ứng Erosion 2 lần."
+  },
+  "Shadow of Termination": {
+    "kind": "skill",
+    "icon": "skills/skill_10078.png",
+    "rarity": "SSR",
+    "tags": ["Arcanist", "Technique", "Tấn công"],
+    "description": "Gây sát thương Bóng tối 1 lần lên 1 kẻ địch trong phạm vi 3 ô. Nếu mục tiêu đang có Erosion, lập tức kích hoạt mọi tầng Erosion. (Ưu tiên mục tiêu lớn)"
+  },
+  "Shadow Vengeance": {
+    "kind": "skill",
+    "icon": "skills/skill_10586.png",
+    "rarity": "SSR",
+    "tags": ["Arcanist", "Charm", "Hồi sinh", "Buff"],
+    "description": "Lần đầu nhận sát thương chí tử, bản thân sống sót với 1 HP và vào Shadow Form, kéo dài tới hết lượt của bản thân (tối đa 4 lượt toàn trận). Hiệu ứng không thể xoá. Trong trạng thái này, bản thân miễn nhiễm mọi sát thương, không thể được hồi máu, không bị chọn làm mục tiêu tấn công chính, gây thêm sát thương và giảm 2 lượt hồi chiêu Technique. (Nếu chưa thắng khi Shadow Form kết thúc, bản thân chết ngay, bỏ qua mọi hiệu ứng giữ HP.)"
+  },
+  "Shattering Ice": {
+    "kind": "skill",
+    "icon": "skills/skill_10557.png",
+    "rarity": "SSR",
+    "tags": ["Destroyer", "Charm", "Tấn công"],
+    "description": "Khi mục tiêu bị bản thân gây Frozen thoát khỏi trạng thái Frozen, gây thêm sát thương Nước 1 lần."
+  },
+  "Skill Shard Voucher": {
+    "kind": "item",
+    "icon": "tooltips/Money_4.png",
+    "rarity": "SSR",
+    "description": "Đổi lấy mảnh skill tại Goddess Statue."
+  },
+  "Soul Breaker": {
+    "kind": "skill",
+    "icon": "skills/skill_10594.png",
+    "rarity": "SSR",
+    "tags": ["Conqueror", "Charm"],
+    "description": "Mỗi 15% HP mục tiêu đã mất tăng sát thương gây ra của bản thân. Cộng dồn tối đa 5 lần."
+  },
+  "Soul Impact": {
+    "kind": "skill",
+    "icon": "skills/skill_10530.png",
+    "rarity": "SSR",
+    "tags": ["Sage", "Charm", "Tấn công"],
+    "description": "Khi vật triệu hồi của bản thân chết hoặc hết hạn, gây sát thương Bóng tối 1 lần lên mọi kẻ địch trong phạm vi 2 ô quanh nó."
+  },
+  "Soul Pact Resonance": {
+    "kind": "skill",
+    "icon": "skills/skill_10591.png",
+    "rarity": "SSR",
+    "tags": ["Dominator", "Charm", "Triệu hồi", "Buff"],
+    "description": "Tăng ATK khi bản thân có vật triệu hồi trên chiến trường."
+  },
+  "Soul Splash": {
+    "kind": "skill",
+    "icon": "skills/skill_10545.png",
+    "rarity": "SSR",
+    "tags": ["Berserker", "Charm", "Tấn công"],
+    "description": "Single-Hit Technique của bản thân gây thêm sát thương. Hạ một kẻ địch sẽ gây thêm True DMG Lửa 1 lần lên mọi kẻ địch trong phạm vi 2 ô quanh mục tiêu, bằng 60% sát thương dư."
+  },
+  "Soulfire Protection": {
+    "kind": "skill",
+    "icon": "skills/skill_10590.png",
+    "rarity": "SSR",
+    "tags": ["Berserker", "Charm", "Buff"],
+    "description": "Trước khi trận bắt đầu, tiêu 50% HP hiện tại của bản thân để nhận hiệu ứng DMG Reduction. Hiệu ứng không thể xoá."
+  },
+  "Stamina": {
+    "kind": "item",
+    "icon": "tooltips/Money_57_Tili.png",
+    "rarity": "R",
+    "description": "Cần để thu thập ở Blessed Lands và đánh quái trên bản đồ thế giới. Hồi 5 Stamina mỗi giờ, tối đa 300."
+  },
+  "Star Shattering Slash": {
+    "kind": "skill",
+    "icon": "skills/skill_10039.png",
+    "rarity": "SSR",
+    "tags": ["Paladin", "Technique", "Tấn công"],
+    "description": "Gây sát thương Vật lý 1 lần lên 1 kẻ địch trong phạm vi 1 ô. (Ưu tiên mục tiêu lớn)"
+  },
+  "Starlight Burst": {
+    "kind": "skill",
+    "icon": "skills/skill_10002.png",
+    "rarity": "SSR",
+    "tags": ["Destroyer", "Technique", "Tấn công", "Debuff"],
+    "description": "Chọn 1 ô trong phạm vi 5 ô. Gây sát thương Ánh sáng 1 lần lên mọi kẻ địch trong phạm vi 2 ô quanh ô đó, với 30% Base Chance gây Blind."
+  },
+  "Steely Chicken": {
+    "kind": "item",
+    "icon": "tooltips/item_430.png",
+    "rarity": "R",
+    "description": "Nuôi trong Guild Roost để sản xuất trứng dùng kích hoạt Aptitude của Fantomon.",
+    "sources": ["Legion Shop"]
+  },
+  "Stellatie": {
+    "kind": "item",
+    "icon": "tooltips/item_110.png",
+    "rarity": "SSR",
+    "description": "Dùng cho Goddess Prayer để nhận skill.",
+    "sources": ["Delegate Tasks"]
+  },
+  "Stone Sheep": {
+    "kind": "item",
+    "icon": "tooltips/item_420.png",
+    "rarity": "R",
+    "description": "Nuôi trong Guild Sheepfold để sản xuất len dùng kích hoạt Aptitude của Fantomon.",
+    "sources": ["Legion Shop"]
+  },
+  "Strength Rules": {
+    "kind": "skill",
+    "icon": "skills/skill_10535.png",
+    "rarity": "SSR",
+    "tags": ["Warrior", "Charm", "Vật thể"],
+    "description": "Tăng Physical Mastery của bản thân."
+  },
+  "Suimo": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_8453.png"
+  },
+  "Summon Crystal": {
+    "kind": "item",
+    "icon": "tooltips/Money_25.png",
+    "rarity": "SSR",
+    "description": "Đổi lấy vật phẩm tại Arborisfatum's Summon Shop!",
+    "sources": ["Pet Gacha"]
+  },
+  "Sunset Sword": {
+    "kind": "skill",
+    "icon": "skills/skill_10053.png",
+    "rarity": "SSR",
+    "tags": ["Duelist", "Technique", "Tấn công"],
+    "description": "Gây sát thương Vật lý 5 lần lên mọi kẻ địch trong vùng 3×2 ô phía trước."
+  },
+  "Suzu": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_8439.png"
+  },
+  "Sylvaerie": {
+    "kind": "pet",
+    "icon": "pets/sylvaerie.png",
+    "rarity": "SSR"
+  },
+  "Sylvia": {
+    "kind": "companion",
+    "icon": "companions/npc_icon_10503.png"
+  },
+  "T10 Amber": {
+    "kind": "item",
+    "icon": "tooltips/item_649.png",
+    "rarity": "SSR",
+    "description": "Khảm vào trang bị để tăng HP và Healing Boost."
+  },
+  "T10 Amethyst": {
+    "kind": "item",
+    "icon": "tooltips/item_549.png",
+    "rarity": "SSR",
+    "description": "Khảm vào trang bị để tăng SPD và Crit Rate."
+  },
+  "T10 Beryl": {
+    "kind": "item",
+    "icon": "tooltips/item_569.png",
+    "rarity": "SSR",
+    "description": "Khảm vào trang bị để tăng HP."
+  },
+  "T10 Citrine": {
+    "kind": "item",
+    "icon": "tooltips/item_629.png",
+    "rarity": "SSR",
+    "description": "Khảm vào trang bị để tăng SPD."
+  },
+  "T10 Moonstone": {
+    "kind": "item",
+    "icon": "tooltips/item_609.png",
+    "rarity": "SSR",
+    "description": "Khảm vào trang bị để tăng DEF và DMG RES."
+  },
+  "T10 Obsidian": {
+    "kind": "item",
+    "icon": "tooltips/item_529.png",
+    "rarity": "SSR",
+    "description": "Khảm vào trang bị để tăng ATK và DMG Boost."
+  },
+  "T10 Ruby": {
+    "kind": "item",
+    "icon": "tooltips/item_509.png",
+    "rarity": "SSR",
+    "description": "Khảm vào trang bị để tăng ATK."
+  },
+  "T10 Sapphire": {
+    "kind": "item",
+    "icon": "tooltips/item_589.png",
+    "rarity": "SSR",
+    "description": "Khảm vào trang bị để tăng DEF."
+  },
+  "Tactical Adaptation": {
+    "kind": "skill",
+    "icon": "skills/skill_10609.png",
+    "rarity": "SSR",
+    "tags": ["Conqueror", "Charm", "Buff"],
+    "description": "Khi có từ 3 kẻ địch trở xuống trong phạm vi 2 ô, tăng sát thương gây ra của bản thân. Khi có nhiều hơn 3 kẻ địch trong phạm vi 2 ô, giảm sát thương nhận vào của bản thân."
+  },
+  "Tempest Sphere": {
+    "kind": "skill",
+    "icon": "skills/skill_10001.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Technique", "Tấn công"],
+    "description": "Gây sát thương Gió 5 lần lên 1 kẻ địch cách bản thân 3 tới 5 ô."
+  },
+  "Terragon": {
+    "kind": "pet",
+    "icon": "pets/terragon.png",
+    "rarity": "SSR"
+  },
+  "Thunder of Judgment": {
+    "kind": "skill",
+    "icon": "skills/skill_10093.png",
+    "rarity": "SSR",
+    "tags": ["Destroyer", "Technique", "Tấn công"],
+    "description": "Gây sát thương Ánh sáng 3 lần lên 1 kẻ địch trong phạm vi 5 ô. (Ưu tiên mục tiêu lớn)"
+  },
+  "Unstable Aura": {
+    "kind": "skill",
+    "icon": "skills/skill_10512.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Charm", "Tấn công", "Đẩy lùi"],
+    "description": "Khi Technique của bản thân gây sát thương lên kẻ địch, có 25% cơ hội kích hoạt Aura, gây thêm sát thương Gió 1 lần, với 60% Base Chance đẩy lùi 1 ô."
+  },
+  "Valor Surge": {
+    "kind": "skill",
+    "icon": "skills/skill_10066.png",
+    "rarity": "SSR",
+    "tags": ["Knight", "Technique", "Đồng minh", "Buff", "Xoá hiệu ứng"],
+    "description": "Ban DMG Boost cho mọi nhân vật đồng minh trong phạm vi 5 ô trong 2 lượt và xoá ngẫu nhiên 1 Ailment hoặc Debuff. (Thi triển 1 lần trước khi trận bắt đầu.)"
+  },
+  "Void Bubble": {
+    "kind": "skill",
+    "icon": "skills/skill_10556.png",
+    "rarity": "SSR",
+    "tags": ["Sorcerer", "Charm", "Khiên", "Buff"],
+    "description": "Lần đầu HP của bản thân xuống dưới 50% trong trận, nhận khiên dựa trên Max HP trong 2 lượt và Dodge trong 2 lượt (không thể xoá)."
+  },
+  "Water Assault": {
+    "kind": "skill",
+    "icon": "skills/skill_10003.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Technique", "Tấn công"],
+    "description": "Gây sát thương Nước 1 lần lên mọi kẻ địch trong vùng 3×4 ô phía trước. Mỗi lần trúng tiếp theo lên cùng mục tiêu, sát thương giảm 25%. (Mục tiêu lớn có thể trúng nhiều lần.)"
+  },
+  "Water Shot": {
+    "kind": "skill",
+    "icon": "skills/skill_10000.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Technique", "Tấn công"],
+    "description": "Gây sát thương Nước 1 lần lên 1 kẻ địch trong phạm vi 4 ô."
+  },
+  "Water to Ice": {
+    "kind": "skill",
+    "icon": "skills/skill_10560.png",
+    "rarity": "SSR",
+    "tags": ["Mage", "Charm", "Tấn công", "Hiệu ứng xấu"],
+    "description": "Khi Technique của bản thân gây sát thương Nước lên kẻ địch, có 50% cơ hội kích hoạt Condensation, gây thêm sát thương Nước 1 lần, với 30% Base Chance gây Frozen trong 1 lượt."
+  },
+  "Waterling Summon": {
+    "kind": "skill",
+    "icon": "skills/skill_10071.png",
+    "rarity": "SSR",
+    "tags": ["Arcanist", "Technique", "Triệu hồi", "Hồi máu", "Xoá hiệu ứng"],
+    "description": "Triệu hồi 1 Waterling phía sau bản thân, hành động ngay. Vật triệu hồi kế thừa một phần chỉ số của bản thân, bắt đầu ở trạng thái Stealth, tồn tại tối đa 5 lượt. (Zero Initial CD)"
+  },
+  "Weakening Hex": {
+    "kind": "skill",
+    "icon": "skills/skill_10029.png",
+    "rarity": "SSR",
+    "tags": ["Sage", "Technique", "Tấn công", "Debuff"],
+    "description": "Chọn 1 ô trong phạm vi 3 ô. Gây sát thương Bóng tối 1 lần lên mọi kẻ địch trong phạm vi 2 ô quanh ô đó, với 50% Base Chance gây Weakened 1 trong 2 lượt."
+  },
+  "Whirlwind Slash": {
+    "kind": "skill",
+    "icon": "skills/skill_10014.png",
+    "rarity": "SSR",
+    "tags": ["Warrior", "Technique", "Tấn công"],
+    "description": "Gây sát thương Vật lý 4 lần lên mọi kẻ địch trong vùng vuông 1 ô quanh bản thân."
+  },
+  "Wind's Shadow": {
+    "kind": "skill",
+    "icon": "skills/skill_10569.png",
+    "rarity": "SSR",
+    "tags": ["Sorcerer", "Charm", "Tấn công", "Debuff"],
+    "description": "Sau khi dùng Technique gây sát thương Gió 3 lần lên kẻ địch, có 30% cơ hội gây thêm sát thương Gió 1 lần và 50% Base Chance làm chậm hành động của mục tiêu 20%."
+  },
+  "Worn Knuckles": {
+    "kind": "item",
+    "icon": "tooltips/item_102.png",
+    "rarity": "R",
+    "description": "Dùng để đánh quái trong Realm: Dread Hollow.",
+    "sources": ["Delegate Tasks"]
+  },
+  "Zeioletus": {
+    "kind": "pet",
+    "icon": "pets/zeioletus.png",
+    "rarity": "SSR"
+  }
+}

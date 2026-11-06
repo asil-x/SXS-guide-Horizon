@@ -6,6 +6,13 @@ export function onImgError(e) {
   if (e.currentTarget.src !== FALLBACK) e.currentTarget.src = FALLBACK;
 }
 
+// Path inside public/img -> URL. Accepts "guides/a.webp", "/img/guides/a.webp" or full URLs.
+export function asset(p) {
+  if (!p) return FALLBACK;
+  if (/^(https?:|data:)/.test(p)) return p;
+  return './img/' + String(p).replace(/^\.?\/?(img\/)?/, '');
+}
+
 export function iconUrl(icon) {
   if (!icon) return FALLBACK;
   let p = String(icon).replace(/ /g, '-');
@@ -20,11 +27,9 @@ export function iconUrl(icon) {
   return './img/tooltips/' + p;
 }
 
+export const skillIcon = (s) => iconUrl(s.icon || 'skill_' + s.id);
+
 export function petUrl(name, evo) {
   const slug = String(name).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   return './img/pets/' + slug + (evo ? '-evo' : '') + '.png';
-}
-
-export function fixGuideHtml(html) {
-  return html.replace(/src="\/img\//g, 'src="./img/');
 }
