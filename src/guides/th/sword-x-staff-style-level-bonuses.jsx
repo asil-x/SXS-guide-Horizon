@@ -1,0 +1,265 @@
+export default function Page() {
+  return (
+    <>
+      <table className="data-table">
+        <thead>
+          <tr><th>ระดับ</th><th>สเตตัส</th><th>โบนัส</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>HP</td><td>+1% (+1%)</td></tr>
+          <tr><td>2</td><td>ATK</td><td>+1% (+1%)</td></tr>
+          <tr><td>3</td><td>DEF</td><td>+1% (+1%)</td></tr>
+          <tr><td>4</td><td>SPD</td><td>+1% (+1%)</td></tr>
+          <tr><td>5</td><td>PvE DMG Boost</td><td>+1% (+1%)</td></tr>
+          <tr><td>6</td><td>HP</td><td>+1% (+2%)</td></tr>
+          <tr><td>7</td><td>ATK</td><td>+1% (+2%)</td></tr>
+          <tr><td>8</td><td>DEF</td><td>+1% (+2%)</td></tr>
+          <tr><td>9</td><td>SPD</td><td>+1% (+2%)</td></tr>
+          <tr><td>10</td><td>PvE DMG RES</td><td>+1% (+1%)</td></tr>
+          <tr><td>11</td><td>HP</td><td>+1% (+3%)</td></tr>
+          <tr><td>12</td><td>ATK</td><td>+1% (+3%)</td></tr>
+          <tr><td>13</td><td>DEF</td><td>+1% (+3%)</td></tr>
+          <tr><td>14</td><td>SPD</td><td>+1% (+3%)</td></tr>
+          <tr><td>15</td><td>PvE DMG Boost</td><td>+1% (+2%)</td></tr>
+          <tr><td>16</td><td>HP</td><td>+1% (+4%)</td></tr>
+          <tr><td>17</td><td>ATK</td><td>+1% (+4%)</td></tr>
+          <tr><td>18</td><td>DEF</td><td>+1% (+4%)</td></tr>
+          <tr><td>19</td><td>SPD</td><td>+1% (+4%)</td></tr>
+          <tr><td>20</td><td>PvE DMG RES</td><td>+1% (+2%)</td></tr>
+          <tr><td>21</td><td>HP</td><td>+1% (+5%)</td></tr>
+          <tr><td>22</td><td>ATK</td><td>+1% (+5%)</td></tr>
+          <tr><td>23</td><td>DEF</td><td>+1% (+5%)</td></tr>
+          <tr><td>24</td><td>SPD</td><td>+1% (+5%)</td></tr>
+          <tr><td>25</td><td>PvE DMG Boost</td><td>+1% (+3%)</td></tr>
+          <tr><td>26</td><td>HP</td><td>+1% (+6%)</td></tr>
+          <tr><td>27</td><td>ATK</td><td>+1% (+6%)</td></tr>
+          <tr><td>28</td><td>DEF</td><td>+1% (+6%)</td></tr>
+          <tr><td>29</td><td>SPD</td><td>+1% (+6%)</td></tr>
+          <tr><td>30</td><td>PvE DMG RES</td><td>+1% (+3%)</td></tr>
+          <tr><td>31</td><td>HP</td><td>+1% (+7%)</td></tr>
+          <tr><td>32</td><td>ATK</td><td>+1% (+7%)</td></tr>
+          <tr><td>33</td><td>DEF</td><td>+1% (+7%)</td></tr>
+          <tr><td>34</td><td>SPD</td><td>+1% (+7%)</td></tr>
+          <tr><td>35</td><td>PvE DMG Boost</td><td>+1% (+4%)</td></tr>
+          <tr><td>36</td><td>HP</td><td>+1% (+8%)</td></tr>
+          <tr><td>37</td><td>ATK</td><td>+1% (+8%)</td></tr>
+          <tr><td>38</td><td>DEF</td><td>+1% (+8%)</td></tr>
+          <tr><td>39</td><td>SPD</td><td>+1% (+8%)</td></tr>
+          <tr><td>40</td><td>PvE DMG RES</td><td>+1% (+4%)</td></tr>
+          <tr><td>41</td><td>HP</td><td>+1% (+9%)</td></tr>
+          <tr><td>42</td><td>ATK</td><td>+1% (+9%)</td></tr>
+          <tr><td>43</td><td>DEF</td><td>+1% (+9%)</td></tr>
+          <tr><td>44</td><td>SPD</td><td>+1% (+9%)</td></tr>
+          <tr><td>45</td><td>PvE DMG Boost</td><td>+1% (+5%)</td></tr>
+          <tr><td>46</td><td>HP</td><td>+1% (+10%)</td></tr>
+          <tr><td>47</td><td>ATK</td><td>+1% (+10%)</td></tr>
+          <tr><td>48</td><td>DEF</td><td>+1% (+10%)</td></tr>
+          <tr><td>49</td><td>SPD</td><td>+1% (+10%)</td></tr>
+          <tr><td>50</td><td>PvE DMG RES</td><td>+1% (+5%)</td></tr>
+          <tr><td>51</td><td>HP</td><td>+1% (+11%)</td></tr>
+          <tr><td>52</td><td>ATK</td><td>+1% (+11%)</td></tr>
+          <tr><td>53</td><td>DEF</td><td>+1% (+11%)</td></tr>
+          <tr><td>54</td><td>SPD</td><td>+1% (+11%)</td></tr>
+          <tr><td>55</td><td>PvE DMG Boost</td><td>+1% (+6%)</td></tr>
+          <tr><td>56</td><td>HP</td><td>+1% (+12%)</td></tr>
+          <tr><td>57</td><td>ATK</td><td>+1% (+12%)</td></tr>
+          <tr><td>58</td><td>DEF</td><td>+1% (+12%)</td></tr>
+          <tr><td>59</td><td>SPD</td><td>+1% (+12%)</td></tr>
+          <tr><td>60</td><td>PvE DMG RES</td><td>+1% (+6%)</td></tr>
+          <tr><td>61</td><td>HP</td><td>+1% (+13%)</td></tr>
+          <tr><td>62</td><td>ATK</td><td>+1% (+13%)</td></tr>
+          <tr><td>63</td><td>DEF</td><td>+1% (+13%)</td></tr>
+          <tr><td>64</td><td>SPD</td><td>+1% (+13%)</td></tr>
+          <tr><td>65</td><td>PvE DMG Boost</td><td>+1% (+7%)</td></tr>
+          <tr><td>66</td><td>HP</td><td>+1% (+14%)</td></tr>
+          <tr><td>67</td><td>ATK</td><td>+1% (+14%)</td></tr>
+          <tr><td>68</td><td>DEF</td><td>+1% (+14%)</td></tr>
+          <tr><td>69</td><td>SPD</td><td>+1% (+14%)</td></tr>
+          <tr><td>70</td><td>PvE DMG RES</td><td>+1% (+7%)</td></tr>
+          <tr><td>71</td><td>HP</td><td>+1% (+15%)</td></tr>
+          <tr><td>72</td><td>ATK</td><td>+1% (+15%)</td></tr>
+          <tr><td>73</td><td>DEF</td><td>+1% (+15%)</td></tr>
+          <tr><td>74</td><td>SPD</td><td>+1% (+15%)</td></tr>
+          <tr><td>75</td><td>PvE DMG Boost</td><td>+1% (+8%)</td></tr>
+          <tr><td>76</td><td>HP</td><td>+1% (+16%)</td></tr>
+          <tr><td>77</td><td>ATK</td><td>+1% (+16%)</td></tr>
+          <tr><td>78</td><td>DEF</td><td>+1% (+16%)</td></tr>
+          <tr><td>79</td><td>SPD</td><td>+1% (+16%)</td></tr>
+          <tr><td>80</td><td>PvE DMG RES</td><td>+1% (+8%)</td></tr>
+          <tr><td>81</td><td>HP</td><td>+1% (+17%)</td></tr>
+          <tr><td>82</td><td>ATK</td><td>+1% (+17%)</td></tr>
+          <tr><td>83</td><td>DEF</td><td>+1% (+17%)</td></tr>
+          <tr><td>84</td><td>SPD</td><td>+1% (+17%)</td></tr>
+          <tr><td>85</td><td>PvE DMG Boost</td><td>+1% (+9%)</td></tr>
+          <tr><td>86</td><td>HP</td><td>+1% (+18%)</td></tr>
+          <tr><td>87</td><td>ATK</td><td>+1% (+18%)</td></tr>
+          <tr><td>88</td><td>DEF</td><td>+1% (+18%)</td></tr>
+          <tr><td>89</td><td>SPD</td><td>+1% (+18%)</td></tr>
+          <tr><td>90</td><td>PvE DMG RES</td><td>+1% (+9%)</td></tr>
+          <tr><td>91</td><td>HP</td><td>+1% (+19%)</td></tr>
+          <tr><td>92</td><td>ATK</td><td>+1% (+19%)</td></tr>
+          <tr><td>93</td><td>DEF</td><td>+1% (+19%)</td></tr>
+          <tr><td>94</td><td>SPD</td><td>+1% (+19%)</td></tr>
+          <tr><td>95</td><td>PvE DMG Boost</td><td>+1% (+10%)</td></tr>
+          <tr><td>96</td><td>HP</td><td>+1% (+20%)</td></tr>
+          <tr><td>97</td><td>ATK</td><td>+1% (+20%)</td></tr>
+          <tr><td>98</td><td>DEF</td><td>+1% (+20%)</td></tr>
+          <tr><td>99</td><td>SPD</td><td>+1% (+20%)</td></tr>
+          <tr><td>100</td><td>PvE DMG RES</td><td>+1% (+10%)</td></tr>
+          <tr><td>101</td><td>HP</td><td>+1% (+21%)</td></tr>
+          <tr><td>102</td><td>ATK</td><td>+1% (+21%)</td></tr>
+          <tr><td>103</td><td>DEF</td><td>+1% (+21%)</td></tr>
+          <tr><td>104</td><td>SPD</td><td>+1% (+21%)</td></tr>
+          <tr><td>105</td><td>PvE DMG Boost</td><td>+1% (+11%)</td></tr>
+          <tr><td>106</td><td>HP</td><td>+1% (+22%)</td></tr>
+          <tr><td>107</td><td>ATK</td><td>+1% (+22%)</td></tr>
+          <tr><td>108</td><td>DEF</td><td>+1% (+22%)</td></tr>
+          <tr><td>109</td><td>SPD</td><td>+1% (+22%)</td></tr>
+          <tr><td>110</td><td>PvE DMG RES</td><td>+1% (+11%)</td></tr>
+          <tr><td>111</td><td>HP</td><td>+1% (+23%)</td></tr>
+          <tr><td>112</td><td>ATK</td><td>+1% (+23%)</td></tr>
+          <tr><td>113</td><td>DEF</td><td>+1% (+23%)</td></tr>
+          <tr><td>114</td><td>SPD</td><td>+1% (+23%)</td></tr>
+          <tr><td>115</td><td>PvE DMG Boost</td><td>+1% (+12%)</td></tr>
+          <tr><td>116</td><td>HP</td><td>+1% (+24%)</td></tr>
+          <tr><td>117</td><td>ATK</td><td>+1% (+24%)</td></tr>
+          <tr><td>118</td><td>DEF</td><td>+1% (+24%)</td></tr>
+          <tr><td>119</td><td>SPD</td><td>+1% (+24%)</td></tr>
+          <tr><td>120</td><td>PvE DMG RES</td><td>+1% (+12%)</td></tr>
+          <tr><td>121</td><td>HP</td><td>+1% (+25%)</td></tr>
+          <tr><td>122</td><td>ATK</td><td>+1% (+25%)</td></tr>
+          <tr><td>123</td><td>DEF</td><td>+1% (+25%)</td></tr>
+          <tr><td>124</td><td>SPD</td><td>+1% (+25%)</td></tr>
+          <tr><td>125</td><td>PvE DMG Boost</td><td>+1% (+13%)</td></tr>
+          <tr><td>126</td><td>HP</td><td>+1% (+26%)</td></tr>
+          <tr><td>127</td><td>ATK</td><td>+1% (+26%)</td></tr>
+          <tr><td>128</td><td>DEF</td><td>+1% (+26%)</td></tr>
+          <tr><td>129</td><td>SPD</td><td>+1% (+26%)</td></tr>
+          <tr><td>130</td><td>PvE DMG RES</td><td>+1% (+13%)</td></tr>
+          <tr><td>131</td><td>HP</td><td>+1% (+27%)</td></tr>
+          <tr><td>132</td><td>ATK</td><td>+1% (+27%)</td></tr>
+          <tr><td>133</td><td>DEF</td><td>+1% (+27%)</td></tr>
+          <tr><td>134</td><td>SPD</td><td>+1% (+27%)</td></tr>
+          <tr><td>135</td><td>PvE DMG Boost</td><td>+1% (+14%)</td></tr>
+          <tr><td>136</td><td>HP</td><td>+1% (+28%)</td></tr>
+          <tr><td>137</td><td>ATK</td><td>+1% (+28%)</td></tr>
+          <tr><td>138</td><td>DEF</td><td>+1% (+28%)</td></tr>
+          <tr><td>139</td><td>SPD</td><td>+1% (+28%)</td></tr>
+          <tr><td>140</td><td>PvE DMG RES</td><td>+1% (+14%)</td></tr>
+          <tr><td>141</td><td>HP</td><td>+1% (+29%)</td></tr>
+          <tr><td>142</td><td>ATK</td><td>+1% (+29%)</td></tr>
+          <tr><td>143</td><td>DEF</td><td>+1% (+29%)</td></tr>
+          <tr><td>144</td><td>SPD</td><td>+1% (+29%)</td></tr>
+          <tr><td>145</td><td>PvE DMG Boost</td><td>+1% (+15%)</td></tr>
+          <tr><td>146</td><td>HP</td><td>+1% (+30%)</td></tr>
+          <tr><td>147</td><td>ATK</td><td>+1% (+30%)</td></tr>
+          <tr><td>148</td><td>DEF</td><td>+1% (+30%)</td></tr>
+          <tr><td>149</td><td>SPD</td><td>+1% (+30%)</td></tr>
+          <tr><td>150</td><td>PvE DMG RES</td><td>+1% (+15%)</td></tr>
+          <tr><td>151</td><td>HP</td><td>+1% (+31%)</td></tr>
+          <tr><td>152</td><td>ATK</td><td>+1% (+31%)</td></tr>
+          <tr><td>153</td><td>DEF</td><td>+1% (+31%)</td></tr>
+          <tr><td>154</td><td>SPD</td><td>+1% (+31%)</td></tr>
+          <tr><td>155</td><td>PvE DMG Boost</td><td>+1% (+16%)</td></tr>
+          <tr><td>156</td><td>HP</td><td>+1% (+32%)</td></tr>
+          <tr><td>157</td><td>ATK</td><td>+1% (+32%)</td></tr>
+          <tr><td>158</td><td>DEF</td><td>+1% (+32%)</td></tr>
+          <tr><td>159</td><td>SPD</td><td>+1% (+32%)</td></tr>
+          <tr><td>160</td><td>PvE DMG RES</td><td>+1% (+16%)</td></tr>
+          <tr><td>161</td><td>HP</td><td>+1% (+33%)</td></tr>
+          <tr><td>162</td><td>ATK</td><td>+1% (+33%)</td></tr>
+          <tr><td>163</td><td>DEF</td><td>+1% (+33%)</td></tr>
+          <tr><td>164</td><td>SPD</td><td>+1% (+33%)</td></tr>
+          <tr><td>165</td><td>PvE DMG Boost</td><td>+1% (+17%)</td></tr>
+          <tr><td>166</td><td>HP</td><td>+1% (+34%)</td></tr>
+          <tr><td>167</td><td>ATK</td><td>+1% (+34%)</td></tr>
+          <tr><td>168</td><td>DEF</td><td>+1% (+34%)</td></tr>
+          <tr><td>169</td><td>SPD</td><td>+1% (+34%)</td></tr>
+          <tr><td>170</td><td>PvE DMG RES</td><td>+1% (+17%)</td></tr>
+          <tr><td>171</td><td>HP</td><td>+1% (+35%)</td></tr>
+          <tr><td>172</td><td>ATK</td><td>+1% (+35%)</td></tr>
+          <tr><td>173</td><td>DEF</td><td>+1% (+35%)</td></tr>
+          <tr><td>174</td><td>SPD</td><td>+1% (+35%)</td></tr>
+          <tr><td>175</td><td>PvE DMG Boost</td><td>+1% (+18%)</td></tr>
+          <tr><td>176</td><td>HP</td><td>+1% (+36%)</td></tr>
+          <tr><td>177</td><td>ATK</td><td>+1% (+36%)</td></tr>
+          <tr><td>178</td><td>DEF</td><td>+1% (+36%)</td></tr>
+          <tr><td>179</td><td>SPD</td><td>+1% (+36%)</td></tr>
+          <tr><td>180</td><td>PvE DMG RES</td><td>+1% (+18%)</td></tr>
+          <tr><td>181</td><td>HP</td><td>+1% (+37%)</td></tr>
+          <tr><td>182</td><td>ATK</td><td>+1% (+37%)</td></tr>
+          <tr><td>183</td><td>DEF</td><td>+1% (+37%)</td></tr>
+          <tr><td>184</td><td>SPD</td><td>+1% (+37%)</td></tr>
+          <tr><td>185</td><td>PvE DMG Boost</td><td>+1% (+19%)</td></tr>
+          <tr><td>186</td><td>HP</td><td>+1% (+38%)</td></tr>
+          <tr><td>187</td><td>ATK</td><td>+1% (+38%)</td></tr>
+          <tr><td>188</td><td>DEF</td><td>+1% (+38%)</td></tr>
+          <tr><td>189</td><td>SPD</td><td>+1% (+38%)</td></tr>
+          <tr><td>190</td><td>PvE DMG RES</td><td>+1% (+19%)</td></tr>
+          <tr><td>191</td><td>HP</td><td>+1% (+39%)</td></tr>
+          <tr><td>192</td><td>ATK</td><td>+1% (+39%)</td></tr>
+          <tr><td>193</td><td>DEF</td><td>+1% (+39%)</td></tr>
+          <tr><td>194</td><td>SPD</td><td>+1% (+39%)</td></tr>
+          <tr><td>195</td><td>PvE DMG Boost</td><td>+1% (+20%)</td></tr>
+          <tr><td>196</td><td>HP</td><td>+1% (+40%)</td></tr>
+          <tr><td>197</td><td>ATK</td><td>+1% (+40%)</td></tr>
+          <tr><td>198</td><td>DEF</td><td>+1% (+40%)</td></tr>
+          <tr><td>199</td><td>SPD</td><td>+1% (+40%)</td></tr>
+          <tr><td>200</td><td>PvE DMG RES</td><td>+1% (+20%)</td></tr>
+          <tr><td>201</td><td>HP</td><td>+1% (+41%)</td></tr>
+          <tr><td>202</td><td>ATK</td><td>+1% (+41%)</td></tr>
+          <tr><td>203</td><td>DEF</td><td>+1% (+41%)</td></tr>
+          <tr><td>204</td><td>SPD</td><td>+1% (+41%)</td></tr>
+          <tr><td>205</td><td>PvE DMG Boost</td><td>+1% (+21%)</td></tr>
+          <tr><td>206</td><td>HP</td><td>+1% (+42%)</td></tr>
+          <tr><td>207</td><td>ATK</td><td>+1% (+42%)</td></tr>
+          <tr><td>208</td><td>DEF</td><td>+1% (+42%)</td></tr>
+          <tr><td>209</td><td>SPD</td><td>+1% (+42%)</td></tr>
+          <tr><td>210</td><td>PvE DMG RES</td><td>+1% (+21%)</td></tr>
+          <tr><td>211</td><td>HP</td><td>+1% (+43%)</td></tr>
+          <tr><td>212</td><td>ATK</td><td>+1% (+43%)</td></tr>
+          <tr><td>213</td><td>DEF</td><td>+1% (+43%)</td></tr>
+          <tr><td>214</td><td>SPD</td><td>+1% (+43%)</td></tr>
+          <tr><td>215</td><td>PvE DMG Boost</td><td>+1% (+22%)</td></tr>
+          <tr><td>216</td><td>HP</td><td>+1% (+44%)</td></tr>
+          <tr><td>217</td><td>ATK</td><td>+1% (+44%)</td></tr>
+          <tr><td>218</td><td>DEF</td><td>+1% (+44%)</td></tr>
+          <tr><td>219</td><td>SPD</td><td>+1% (+44%)</td></tr>
+          <tr><td>220</td><td>PvE DMG RES</td><td>+1% (+22%)</td></tr>
+          <tr><td>221</td><td>HP</td><td>+1% (+45%)</td></tr>
+          <tr><td>222</td><td>ATK</td><td>+1% (+45%)</td></tr>
+          <tr><td>223</td><td>DEF</td><td>+1% (+45%)</td></tr>
+          <tr><td>224</td><td>SPD</td><td>+1% (+45%)</td></tr>
+          <tr><td>225</td><td>PvE DMG Boost</td><td>+1% (+23%)</td></tr>
+          <tr><td>226</td><td>HP</td><td>+1% (+46%)</td></tr>
+          <tr><td>227</td><td>ATK</td><td>+1% (+46%)</td></tr>
+          <tr><td>228</td><td>DEF</td><td>+1% (+46%)</td></tr>
+          <tr><td>229</td><td>SPD</td><td>+1% (+46%)</td></tr>
+          <tr><td>230</td><td>PvE DMG RES</td><td>+1% (+23%)</td></tr>
+          <tr><td>231</td><td>HP</td><td>+1% (+47%)</td></tr>
+          <tr><td>232</td><td>ATK</td><td>+1% (+47%)</td></tr>
+          <tr><td>233</td><td>DEF</td><td>+1% (+47%)</td></tr>
+          <tr><td>234</td><td>SPD</td><td>+1% (+47%)</td></tr>
+          <tr><td>235</td><td>PvE DMG Boost</td><td>+1% (+24%)</td></tr>
+          <tr><td>236</td><td>HP</td><td>+1% (+48%)</td></tr>
+          <tr><td>237</td><td>ATK</td><td>+1% (+48%)</td></tr>
+          <tr><td>238</td><td>DEF</td><td>+1% (+48%)</td></tr>
+          <tr><td>239</td><td>SPD</td><td>+1% (+48%)</td></tr>
+          <tr><td>240</td><td>PvE DMG RES</td><td>+1% (+24%)</td></tr>
+          <tr><td>241</td><td>HP</td><td>+1% (+49%)</td></tr>
+          <tr><td>242</td><td>ATK</td><td>+1% (+49%)</td></tr>
+          <tr><td>243</td><td>DEF</td><td>+1% (+49%)</td></tr>
+          <tr><td>244</td><td>SPD</td><td>+1% (+49%)</td></tr>
+          <tr><td>245</td><td>PvE DMG Boost</td><td>+1% (+25%)</td></tr>
+          <tr><td>246</td><td>HP</td><td>+1% (+50%)</td></tr>
+          <tr><td>247</td><td>ATK</td><td>+1% (+50%)</td></tr>
+          <tr><td>248</td><td>DEF</td><td>+1% (+50%)</td></tr>
+          <tr><td>249</td><td>SPD</td><td>+1% (+50%)</td></tr>
+          <tr><td>250</td><td>PvE DMG RES</td><td>+1% (+25%)</td></tr>
+          <tr><td>251</td><td>HP</td><td>+1% (+51%)</td></tr>
+          <tr><td>252</td><td>ATK</td><td>+1% (+51%)</td></tr>
+        </tbody>
+      </table>
+    </>
+  );
+}
