@@ -8,7 +8,7 @@ const isEmblem = (g) => /\.png$/.test(g.cover || '');
 // Màu chủ đạo của từng class (lấy theo màu icon trong game).
 const CLASS_COLOR = { duelist: '#f0635a', knight: '#f2b33d', sage: '#4fd1a5', sorcerer: '#6f9bff' };
 // Màu theo chủ đề bài viết (meta.topic).
-const TOPIC_COLOR = { season: '#a78bfa', farm: '#f2b33d', gear: '#5fd3e6', class: '#f0635a', economy: '#e8c46a', pet: '#4fd1a5', event: '#f472b6', explore: '#7ddc6a', stats: '#fb923c', data: '#94a3b8' };
+export const TOPIC_COLOR = { season: '#a78bfa', farm: '#f2b33d', gear: '#5fd3e6', class: '#f0635a', economy: '#e8c46a', pet: '#4fd1a5', event: '#f472b6', explore: '#7ddc6a', stats: '#fb923c', data: '#94a3b8' };
 const classKey = (g) => Object.keys(CLASS_COLOR).find((k) => g.slug.endsWith(k));
 export const classColor = (g) => CLASS_COLOR[classKey(g)];
 

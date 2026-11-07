@@ -1,7 +1,9 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { Routes, Route, NavLink, Link, Navigate, useLocation } from 'react-router-dom';
 import { DB_KINDS, useGuides } from './lib/site.js';
+import { asset, onImgError } from './lib/img.js';
 import { LangSwitch, useT } from './i18n/index.jsx';
+import { classColor, TOPIC_COLOR } from './components/GuideCard.jsx';
 
 const Home = lazy(() => import('./pages/Home.jsx'));
 const Guide = lazy(() => import('./pages/Guide.jsx'));
@@ -32,11 +34,13 @@ export default function App() {
   const { pathname } = useLocation();
   useEffect(() => setOpen(false), [pathname]);
 
+  const item = (g) => ({ to: '/guides/' + g.slug, label: g.short || g.title, icon: g.icon || g.cover, color: classColor(g) || TOPIC_COLOR[g.topic] });
+  const tierList = guidesIn('guide').find((g) => g.slug === 'sword-x-staff-class-tier-list');
   const menus = [
-    { label: t('nav.build'), items: guidesIn('class').map((g) => ({ to: '/guides/' + g.slug, label: g.short || g.title })) },
-    { label: t('nav.guides'), items: guidesIn('guide').map((g) => ({ to: '/guides/' + g.slug, label: g.title })) },
-    { label: t('nav.tools'), items: guidesIn('tool').map((g) => ({ to: '/guides/' + g.slug, label: g.title })) },
-    { label: t('nav.data'), items: DB_KINDS.map((d) => ({ to: '/db/' + d.key, label: t('db.' + d.key) })) },
+    { label: t('nav.build'), items: [...guidesIn('class').map(item), ...(tierList ? [item(tierList)] : [])] },
+    { label: t('nav.guides'), items: guidesIn('guide').map(item) },
+    { label: t('nav.tools'), items: guidesIn('tool').map((g) => ({ ...item(g), label: g.title })) },
+    { label: t('nav.data'), items: DB_KINDS.map((d) => ({ to: '/db/' + d.key, label: t('db.' + d.key), icon: d.icon })) },
   ];
   const inMenu = (m) => m.items.some((i) => i.to === pathname);
 
@@ -56,8 +60,13 @@ export default function App() {
             {menus.map((m, k) => (
               <div className={'nav-drop' + (inMenu(m) ? ' active' : '')} key={k}>
                 <button type='button' className='nav-drop-label'>{m.label}<span className='caret'>▾</span></button>
-                <div className='nav-drop-menu'>
-                  {m.items.map((i) => <NavLink key={i.to} to={i.to}>{i.label}</NavLink>)}
+                <div className={'nav-drop-menu' + (m.items.length > 8 ? ' cols' : '')}>
+                  {m.items.map((i) => (
+                    <NavLink key={i.to} to={i.to} style={i.color ? { '--c': i.color } : undefined}>
+                      {i.icon && <img src={asset(i.icon)} alt='' loading='lazy' onError={onImgError} />}
+                      <span>{i.label}</span>
+                    </NavLink>
+                  ))}
                 </div>
               </div>
             ))}
