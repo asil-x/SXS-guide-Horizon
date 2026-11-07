@@ -142,7 +142,6 @@ export default function Page() {
         <p>Khi sang mùa, gem của mùa cũ nên được <strong>tái chế thành <Tip>Rolla</Tip></strong> và thay bằng gem mùa mới. Vì vậy cuối mùa đừng dồn quá nhiều tài nguyên vào việc ghép gem bậc cao.</p>
       </Alert>
 
-      <p className="source">Dữ liệu gem và tỉ lệ ghép lấy từ file game, tổng hợp qua Sword x Staff Compass.</p>
     </>
   );
 }

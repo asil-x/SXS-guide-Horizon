@@ -101,7 +101,6 @@ export default function Page() {
         <li><strong>In groups</strong>: tanks (Knight) and healers (Sage) are always in demand even when ranked lower.</li>
       </ul>
 
-      <p className="source">Rankings follow the Class Tier List of Sword x Staff Compass (swordxstaff-compass.com), updated 2026-11-07. Notes compiled from Guild Horizon’s build guides (sources: Purrwikimania and Compass). Rankings may change after each update.</p>
     </>
   );
 }

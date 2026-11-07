@@ -138,7 +138,6 @@ export default function Page() {
       <h2 id="season-end">End of season: save your attempts</h2>
       <p>You can hold up to <strong>4 attempts</strong>. One day before the season ends, stop claiming dungeon rewards. The daily reset adds 2 more, so you enter the new season with <strong>6 attempts</strong>, right when new-season gear is worth the most. Rewards claimed through Reward Retrieval also benefit from both stats above.</p>
 
-      <p className="source">Drop rates and dungeon stat lines compiled from Purrwikimania.</p>
     </>
   );
 }

@@ -25,7 +25,7 @@ export default function Page() {
 
       <h2 id="rules">Nguyên tắc chung cho mọi Hieromon</h2>
       <ul>
-        <li><strong>Rank quan trọng hơn mọi chỉ số.</strong> Trong PvE, game nhân sát thương theo chênh lệch rank giữa bạn và quái, theo cả hai chiều. Theo Purrwikimania, rank Champion gây ×15.3 sát thương lên quái rank Expert và chỉ nhận ÷15.3.</li>
+        <li><strong>Rank quan trọng hơn mọi chỉ số.</strong> Trong PvE, game nhân sát thương theo chênh lệch rank giữa bạn và quái, theo cả hai chiều. Ví dụ rank Champion gây ×15.3 sát thương lên quái rank Expert và chỉ nhận ÷15.3.</li>
         <li><strong>Đánh đúng hệ yếu.</strong> Ba con Storm Griffin, Flamoenix và Yamata no Orochi nhận thêm 20% sát thương từ hệ yếu và giảm 20% từ hệ của chính nó.</li>
         <li><strong>Dưới 50% máu là cuồng nộ.</strong> Cả 6 con đều mạnh lên (thêm SPD, sát thương, có con đổi cả bộ skill) khi xuống dưới 50% HP lần đầu.</li>
         <li><strong>Càng mất máu càng trâu.</strong> Nội tại Mettle of Trial cho thêm 1 tầng tăng chỉ số mỗi 5% HP mất đi, tối đa 10 tầng. Nửa sau trận luôn khó hơn nửa đầu.</li>
@@ -95,7 +95,6 @@ export default function Page() {
         </ul>
       </Hieromon>
 
-      <p className="source">Dữ liệu Hieromon (skill, chỉ số, cấp và level) lấy từ trang Enemies của Purrwikimania (purrwikimania.com), cập nhật 07/11/2026. Skill của class từ dữ liệu web (nguồn Sword x Staff Compass). Gợi ý khắc chế do Guild Horizon tổng hợp theo cơ chế, chưa phải bộ skill đã kiểm chứng.</p>
     </>
   );
 }

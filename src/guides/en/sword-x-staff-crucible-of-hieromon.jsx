@@ -14,7 +14,7 @@ export default function Page() {
 
       <h2 id="rules">General rules for every Hieromon</h2>
       <ul>
-        <li><strong>Rank matters more than any stat.</strong> In PvE the game multiplies damage by the rank gap between you and the enemy, both ways. According to Purrwikimania, a Champion deals ×15.3 damage to an Expert-rank enemy and takes ÷15.3 from it.</li>
+        <li><strong>Rank matters more than any stat.</strong> In PvE the game multiplies damage by the rank gap between you and the enemy, both ways. For example, a Champion deals ×15.3 damage to an Expert-rank enemy and takes ÷15.3 from it.</li>
         <li><strong>Hit their weakness.</strong> Storm Griffin, Flamoenix and Yamata no Orochi take 20% more damage from their weak element and 20% less from their own.</li>
         <li><strong>Below 50% HP they rage.</strong> All 6 get stronger (more SPD and damage, some switch their whole skill set) the first time they drop below 50% HP.</li>
         <li><strong>They get tougher as they lose HP.</strong> The Mettle of Trial passive grants 1 stat boost stack for every 5% HP lost, up to 10 stacks. The second half of the fight is always harder than the first.</li>
@@ -84,7 +84,6 @@ export default function Page() {
         </ul>
       </Hieromon>
 
-      <p className="source">Hieromon data (skills, stats, ranks and levels) comes from Purrwikimania’s Enemies page (purrwikimania.com), updated 2026-11-07. Class skills come from this site’s data (source: Sword x Staff Compass). Counter suggestions are compiled by Guild Horizon from the mechanics and are not a proven skill set.</p>
     </>
   );
 }

@@ -9,6 +9,7 @@ const Home = lazy(() => import('./pages/Home.jsx'));
 const Guide = lazy(() => import('./pages/Guide.jsx'));
 const Database = lazy(() => import('./pages/Database.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound.jsx'));
+const About = lazy(() => import('./pages/About.jsx'));
 
 function ScrollTop() {
   const { pathname } = useLocation();
@@ -70,6 +71,7 @@ export default function App() {
                 </div>
               </div>
             ))}
+            <NavLink className='nav-link' to='/about'>{t('nav.about')}</NavLink>
             <NavLink className='nav-cta' to='/guides/sword-x-staff-codes'>Gift Code</NavLink>
           </nav>
         </div>
@@ -82,6 +84,7 @@ export default function App() {
             <Route path='/guides' element={<Navigate to='/' replace />} />
             <Route path='/guides/:slug' element={<Guide />} />
             <Route path='/db/:kind' element={<Database />} />
+            <Route path='/about' element={<About />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </Suspense>

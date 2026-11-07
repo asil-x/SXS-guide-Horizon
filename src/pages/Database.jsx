@@ -140,9 +140,6 @@ export default function Database() {
         ))}
       </div>
       {shown < list.length && <p style={{ textAlign: 'center' }}><button className='btn' onClick={() => setShown(shown + PAGE)}>{t('db.more')}</button></p>}
-      {['skills', 'fantomons', 'companions'].includes(kind) && (
-        <p className='source'>{t('db.credit')} <a href='https://swordxstaff-compass.com/' target='_blank' rel='noreferrer'>Sword x Staff Compass</a>.</p>
-      )}
       {sel && <Detail kind={kind} item={sel} skillsById={skillsById} onClose={() => setSel(null)} />}
     </>
   );

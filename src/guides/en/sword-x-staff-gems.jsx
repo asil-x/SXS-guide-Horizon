@@ -131,7 +131,6 @@ export default function Page() {
         <p>When a new season starts, old-season gems should be <strong>recycled into <Tip>Rolla</Tip></strong> and replaced with new-season gems. So do not sink too many resources into high-tier merges at the end of a season.</p>
       </Alert>
 
-      <p className="source">Gem data and merge rates come from the game files, compiled via Sword x Staff Compass.</p>
     </>
   );
 }

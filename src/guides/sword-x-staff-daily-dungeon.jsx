@@ -148,7 +148,6 @@ export default function Page() {
       <h2 id="season-end">Cuối mùa: để dành lượt</h2>
       <p>Bạn giữ được tối đa <strong>4 lượt</strong> nhận thưởng. Một ngày trước khi mùa kết thúc, ngừng nhận thưởng dungeon. Reset ngày cộng thêm 2, nên bạn vào mùa mới với <strong>6 lượt</strong>, đúng lúc đồ mùa mới đáng giá nhất. Phần thưởng nhận lại qua Reward Retrieval cũng được hưởng cả hai chỉ số trên.</p>
 
-      <p className="source">Số liệu tỉ lệ rơi và dòng chỉ số dungeon tổng hợp từ Purrwikimania.</p>
     </>
   );
 }

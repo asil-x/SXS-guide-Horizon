@@ -5,7 +5,7 @@ export const UI = {
   vi: {
     'site.title': 'Sword x Staff Guide tiếng Việt | Build, Gift Code, Tra cứu - Guild Horizon',
     'lang.label': 'Ngôn ngữ',
-    'nav.build': 'Build', 'nav.guides': 'Hướng dẫn', 'nav.tools': 'Tra cứu', 'nav.data': 'Dữ liệu', 'nav.menu': 'Menu',
+    'nav.build': 'Build', 'nav.guides': 'Hướng dẫn', 'nav.tools': 'Tra cứu', 'nav.data': 'Dữ liệu', 'nav.about': 'Về chúng tôi', 'nav.menu': 'Menu',
     'toTop': 'Lên đầu trang', 'loading': 'Đang tải...',
     'credit.by': 'Guide được tạo bởi', 'credit.compiled': 'Guide được tổng hợp bởi', 'credit.steal': 'trộm làm chó',
     'footer.fan': 'Trang tổng hợp guide Sword x Staff do fan thực hiện. Sword x Staff và mọi tài nguyên liên quan thuộc về chủ sở hữu.',
@@ -43,7 +43,6 @@ export const UI = {
     'cc.same': 'Giữ nguyên', 'cc.sameText': 'Cùng gốc nên skill tier này không đổi.', 'cc.group': 'Nhóm', 'cc.skillsOf': 'Skill của {x}', 'cc.canBe': 'Có thể thành ({x})', 'cc.odds': 'Tỉ lệ',
     'db.notFound': 'Không tìm thấy dữ liệu', 'db.title': 'Dữ liệu {x}', 'db.search': 'Tìm {x}...', 'db.all': '{x}: tất cả', 'db.count': '{a} / {b} mục', 'db.more': 'Xem thêm',
     'db.cooldown': 'Hồi chiêu: {n} lượt', 'db.role': 'Vai trò', 'db.gift': 'Loại quà yêu thích', 'db.unlock': 'Cách mở khoá', 'db.skillsLabel': 'Kỹ năng', 'db.setBonus': 'Bonus bộ',
-    'db.credit': 'Một phần dữ liệu được tổng hợp từ',
     'f.Class': 'Class', 'f.Type': 'Loại', 'f.Rarity': 'Độ hiếm', 'f.Gift type': 'Loại quà', 'f.Tag': 'Thẻ', 'f.Region': 'Khu vực', 'f.Element': 'Hệ',
     'role.Attacker': 'Tấn công', 'role.Tank': 'Tank', 'role.Support': 'Hỗ trợ',
   },
@@ -51,7 +50,7 @@ export const UI = {
   en: {
     'site.title': 'Sword x Staff Guide | Builds, Gift Codes, Database - Guild Horizon',
     'lang.label': 'Language',
-    'nav.build': 'Builds', 'nav.guides': 'Guides', 'nav.tools': 'Tables', 'nav.data': 'Database', 'nav.menu': 'Menu',
+    'nav.build': 'Builds', 'nav.guides': 'Guides', 'nav.tools': 'Tables', 'nav.data': 'Database', 'nav.about': 'About us', 'nav.menu': 'Menu',
     'toTop': 'Back to top', 'loading': 'Loading...',
     'credit.by': 'Guide made by', 'credit.compiled': 'Guides compiled by', 'credit.steal': 'thieves are dogs',
     'footer.fan': 'A fan-made Sword x Staff guide site. Sword x Staff and all related assets belong to their respective owners.',
@@ -89,7 +88,6 @@ export const UI = {
     'cc.same': 'Unchanged', 'cc.sameText': 'Same root class, so skills at this tier stay the same.', 'cc.group': 'Group', 'cc.skillsOf': '{x} skills', 'cc.canBe': 'Can become ({x})', 'cc.odds': 'Odds',
     'db.notFound': 'Data not found', 'db.title': '{x} database', 'db.search': 'Search {x}...', 'db.all': '{x}: all', 'db.count': '{a} / {b} entries', 'db.more': 'Show more',
     'db.cooldown': 'Cooldown: {n} turns', 'db.role': 'Role', 'db.gift': 'Favorite gift', 'db.unlock': 'How to unlock', 'db.skillsLabel': 'Skills', 'db.setBonus': 'Set bonus',
-    'db.credit': 'Part of this data is compiled from',
     'f.Class': 'Class', 'f.Type': 'Type', 'f.Rarity': 'Rarity', 'f.Gift type': 'Gift type', 'f.Tag': 'Tag', 'f.Region': 'Region', 'f.Element': 'Element',
     'role.Attacker': 'Attacker', 'role.Tank': 'Tank', 'role.Support': 'Support',
   },

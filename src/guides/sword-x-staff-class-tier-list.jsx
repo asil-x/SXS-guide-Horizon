@@ -112,7 +112,6 @@ export default function Page() {
         <li><strong>Đi đội</strong>: tank (Knight) và healer (Sage) luôn được săn đón dù hạng thấp hơn.</li>
       </ul>
 
-      <p className="source">Xếp hạng theo Class Tier List của Sword x Staff Compass (swordxstaff-compass.com), cập nhật 07/11/2026. Nhận xét tổng hợp từ các bài build của Guild Horizon (nguồn Purrwikimania và Compass). Thứ hạng có thể thay đổi sau mỗi bản cập nhật.</p>
     </>
   );
 }

@@ -79,7 +79,6 @@ export default function Page() {
       <h3 id="tier-8">Yêu cầu mở tier 8</h3>
       <p>Class tier 8 (Caelifer, Infernifer, Entropist, Omnifex) ra mắt cùng Season 6 và kingdom Aeperis. Để lên tier 8 cần <strong>level nhân vật 230, class level 480 và class tier 7 đạt level 55</strong>.</p>
 
-      <p className="source">Số liệu về quy tắc ghép, chi phí và yêu cầu tier 8 tổng hợp từ Purrwikimania và Sword x Staff Compass.</p>
     </>
   );
 }

@@ -212,7 +212,6 @@ export default function Page() {
         <li>Giữ lại một ít Auroral Badge: relic gacha thứ hai mở khoảng ngày 31, thứ ba khoảng ngày 61.</li>
       </ol>
 
-      <p className="source">Số liệu Primostar, Astral Pact, Kingdom Shop và checklist cuối mùa tổng hợp từ Purrwikimania và Sword x Staff Compass.</p>
     </>
   );
 }

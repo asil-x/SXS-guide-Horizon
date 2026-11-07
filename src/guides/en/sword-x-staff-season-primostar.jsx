@@ -201,7 +201,6 @@ export default function Page() {
         <li>Keep some Auroral Badges: the second relic gacha opens around day 31, the third around day 61.</li>
       </ol>
 
-      <p className="source">Primostar, Astral Pact, Kingdom Shop and end-of-season checklist data compiled from Purrwikimania and Sword x Staff Compass.</p>
     </>
   );
 }

@@ -68,7 +68,6 @@ export default function Page() {
       <h3 id="tier-8">Tier 8 unlock requirements</h3>
       <p>Tier 8 classes (Caelifer, Infernifer, Entropist, Omnifex) launch with Season 6 and the Aeperis kingdom. Reaching tier 8 requires <strong>character level 230, class level 480 and your tier 7 class at level 55</strong>.</p>
 
-      <p className="source">Matching rules, costs and tier 8 requirements compiled from Purrwikimania and Sword x Staff Compass.</p>
     </>
   );
 }
