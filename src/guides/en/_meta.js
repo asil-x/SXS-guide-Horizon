@@ -3,6 +3,7 @@ export default {
   'sword-x-staff-class-change': { title: 'Class change: where do your skills go?', desc: 'How skills are matched when you change class, plus a lookup tool.', short: 'Class change' },
   'sword-x-staff-class-tier-list': { title: 'Sword x Staff class tier list by tier', desc: 'The strongest classes at every tier, from Verdantglade to Aeperis, and which line to pick.', short: 'Tier list' },
   'sword-x-staff-codes': { title: 'Sword x Staff free codes', desc: 'All working gift codes, tap to copy.' },
+  'sword-x-staff-crucible-of-hieromon': { title: 'Crucible of Hieromon: the 6 Hieromons and how to counter them', desc: 'Skills and weaknesses of every Hieromon, and which techniques to bring for each line and tier.', short: 'Crucible of Hieromon' },
   'sword-x-staff-daily-dungeon': { title: 'Daily Dungeon', desc: 'S rank, rating chests and why 2× Rating Reward beats Ascension.' },
   'sword-x-staff-destiny-fruit-drop-rates': { title: 'Destiny Fruit drop rates', desc: 'Destiny Fruit drop rates by source.' },
   'sword-x-staff-destiny-fruits': { title: 'How to use Destiny Fruit', desc: 'Where Destiny Fruit is worth spending.' },

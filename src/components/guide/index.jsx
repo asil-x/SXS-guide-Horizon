@@ -333,3 +333,4 @@ export function Img({ src, alt = '' }) {
 
 export { ClassChange } from './ClassChange.jsx';
 export { TierOverview, TierRanking } from './TierList.jsx';
+export { CrucibleLadder, CrucibleCounter, Hieromon } from './Crucible.jsx';
