@@ -31,6 +31,15 @@ export default function Page() {
         <li><strong>Nhánh Knight</strong> đều đặn ở A/B và đạt S ở T7 với Vindicator.</li>
         <li><strong>Nhánh Sage</strong> yếu nhất giai đoạn đầu, có một đỉnh rõ ở T5 (Prophet) rồi lại xuống.</li>
       </ul>
+      <Alert type="green" title="Đang chơi Sage? Đừng nản">
+        <p>Hạng ở đây so <strong>sức mạnh với các class cùng tier</strong>, không phải giá trị của class trong đội. Sage có những thứ không class nào khác có:</p>
+        <ul>
+          <li><strong>Class duy nhất có nhiều nguồn hồi máu và hồi sinh</strong>, rất quan trọng khi mở các tầng dungeon khó. Đi đội, healer luôn được săn đón.</li>
+          <li><strong>Linh hoạt nhất game</strong>: hồi máu, Erosion (sát thương theo thời gian) hay triệu hồi, tuỳ nội dung.</li>
+          <li><strong>Đỉnh cao ở T5</strong>: Prophet là class hạng S của tier, trở thành healer thật sự.</li>
+        </ul>
+        <p>Sage khó chơi hơn ở giai đoạn đầu và cần chọn đúng hướng build. Xem <Link to="/guides/sword-x-staff-how-to-play-sage">hướng dẫn Sage</Link> để biết nên chơi kiểu nào ở từng tier.</p>
+      </Alert>
       <p>Vì thứ hạng xoay vòng như vậy, <Link to="/guides/sword-x-staff-class-change">đổi class</Link> (miễn phí mỗi 7 ngày, giữ nguyên rank và level skill) là công cụ quan trọng để luôn chơi class mạnh.</p>
 
       <hr />

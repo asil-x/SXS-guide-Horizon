@@ -20,6 +20,15 @@ export default function Page() {
         <li><strong>The Knight line</strong> stays steady at A/B and reaches S at T7 with Vindicator.</li>
         <li><strong>The Sage line</strong> is the weakest early on, with one clear peak at T5 (Prophet) before dropping again.</li>
       </ul>
+      <Alert type="green" title="Playing Sage? Don’t give up">
+        <p>These ranks compare <strong>strength against other classes of the same tier</strong>, not a class’s value to a team. Sage has things no other class has:</p>
+        <ul>
+          <li><strong>The only class with multiple sources of healing and revival</strong>, crucial for unlocking hard dungeon floors. In groups, healers are always in demand.</li>
+          <li><strong>The most flexible class in the game</strong>: healing, Erosion (damage over time) or summons, depending on the content.</li>
+          <li><strong>A peak at T5</strong>: Prophet is the tier’s S-rank class and becomes a true healer.</li>
+        </ul>
+        <p>Sage is harder to play early on and needs the right build direction. Check the <Link to="/guides/sword-x-staff-how-to-play-sage">Sage guide</Link> to see how to play it at each tier.</p>
+      </Alert>
       <p>Because rankings rotate like this, <Link to="/guides/sword-x-staff-class-change">changing class</Link> (free every 7 days, keeping skill rank and level) is an important tool for always playing a strong class.</p>
 
       <hr />
