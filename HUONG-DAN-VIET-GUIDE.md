@@ -137,6 +137,19 @@ Bỏ ảnh vào `public/img/...` rồi dùng đường dẫn tính từ `public/
   **Sửa bài tiếng Việt thì nhớ sửa luôn bản tiếng Anh.** Bài chưa có bản tiếng Anh sẽ hiện bản tiếng Việt kèm dòng báo.
 - Chữ trên giao diện (menu, nút…) nằm trong `src/i18n/ui.js`, có khoá cho cả `vi` và `en`.
 
+## Tier list class
+
+Thứ hạng nằm trong `src/lib/tierList.js` (theo Class Tier List của Sword x Staff Compass). Khi thứ hạng đổi,
+chỉ cần sửa `grade` (S/A/B/C…), `avoid` và ngày `TIER_LIST_UPDATED`, rồi cập nhật phần nhận xét trong
+`src/guides/sword-x-staff-class-tier-list.jsx` và bản tiếng Anh. Trong bài dùng:
+
+```jsx
+<TierOverview />          {/* bảng tổng quan 4 nhánh × 8 tier */}
+<TierRanking tier={5} />  {/* hàng S / A / B / C của một tier */}
+```
+
+Bấm vào class sẽ mở đúng tier trong bài build nhờ link dạng `/guides/<bài build>?tier=5`.
+
 ## Build class lấy từ dữ liệu
 
 ```jsx

@@ -562,3 +562,43 @@ button { font: inherit; cursor: pointer; color: inherit; }
   .tier-next { width: calc(100% - 2rem); margin: 0 1rem 1rem; }
 }
 @media (prefers-reduced-motion: reduce) { .tier-panel { animation: none; } }
+
+/* tier list class */
+.tl-matrix { width: 100%; min-width: 720px; border-collapse: separate; border-spacing: 0; font-size: .85rem; }
+.tl-matrix th, .tl-matrix td { padding: .55rem .4rem; border-bottom: 1px solid var(--line); text-align: center; }
+.tl-matrix thead th { color: var(--muted); font-weight: 500; vertical-align: bottom; }
+.tl-matrix thead th b { display: block; color: var(--gold2); font-family: 'Playfair Display', Georgia, serif; font-size: 1rem; }
+.tl-matrix thead th small { font-size: .66rem; letter-spacing: .02em; }
+.tl-matrix tbody th { text-align: left; padding-left: .8rem; border-left: 3px solid var(--c); color: var(--c); font-family: 'Playfair Display', Georgia, serif; font-size: .98rem; white-space: nowrap; }
+.tl-cell { position: relative; display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: color-mix(in srgb, var(--c) 10%, var(--bg2)); border: 1px solid color-mix(in srgb, var(--c) 25%, transparent); transition: transform .25s, border-color .25s; }
+.tl-cell:hover { transform: translateY(-3px); border-color: var(--c); text-decoration: none; }
+.tl-cell img { width: 34px; height: 34px; object-fit: contain; }
+.tl-grade { position: absolute; right: -7px; bottom: -7px; min-width: 22px; height: 22px; padding: 0 4px; display: grid; place-items: center; border-radius: 7px; font-size: .72rem; font-weight: 800; color: #10131a; box-shadow: 0 2px 6px rgba(0, 0, 0, .5); }
+.tl-empty { color: var(--muted); }
+.g-SSS, .g-SS { --g: #ff4d8d; } .g-S { --g: #ff8a4c; } .g-A { --g: #c084fc; } .g-B { --g: #60a5fa; } .g-C { --g: #94a3b8; } .g-D { --g: #64748b; }
+.tl-grade { background: var(--g, #94a3b8); }
+.tl-grade.unranked { background: var(--line2); color: var(--muted); }
+
+.tl-tier { margin: .8rem 0 1.2rem; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--bg2); }
+.tl-row { display: flex; align-items: stretch; border-bottom: 1px solid var(--line); }
+.tl-row:last-child { border-bottom: 0; }
+.tl-label { flex: 0 0 92px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .1rem; padding: .7rem .3rem; background: linear-gradient(135deg, var(--g, var(--line2)), color-mix(in srgb, var(--g, var(--line2)) 55%, #000)); color: #10131a; text-align: center; }
+.tl-label b { font-family: 'Playfair Display', Georgia, serif; font-size: 1.7rem; line-height: 1; }
+.tl-label small { font-size: .62rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; opacity: .8; }
+.tl-row.unranked .tl-label { background: var(--panel); color: var(--muted); font-weight: 700; font-size: .8rem; }
+.tl-chips { flex: 1; display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; padding: .7rem .8rem; background: linear-gradient(90deg, color-mix(in srgb, var(--g, transparent) 8%, transparent), transparent 60%); }
+.tl-item { display: inline-flex; flex-direction: column; align-items: flex-start; gap: .2rem; }
+.tl-chip { display: inline-flex; align-items: center; gap: .55rem; padding: .35rem .85rem .35rem .4rem; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--c) 40%, transparent); background: color-mix(in srgb, var(--c) 10%, var(--panel)); color: var(--text); font-weight: 600; transition: transform .25s, border-color .25s, background .25s; }
+.tl-chip img { width: 30px; height: 30px; object-fit: contain; filter: drop-shadow(0 2px 6px color-mix(in srgb, var(--c) 55%, transparent)); }
+.tl-chip.big { padding: .45rem 1rem .45rem .5rem; font-family: 'Playfair Display', Georgia, serif; font-size: 1rem; }
+.tl-chip.big img { width: 38px; height: 38px; }
+.tl-chip:hover { transform: translateY(-2px); border-color: var(--c); background: color-mix(in srgb, var(--c) 20%, var(--panel)); text-decoration: none; }
+.tl-chip.avoid { opacity: .75; border-style: dashed; }
+.tl-avoid { margin-left: .6rem; font-size: .68rem; font-style: normal; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #fca5a5; }
+@media (max-width: 560px) {
+  .tl-label { flex-basis: 64px; }
+  .tl-label b { font-size: 1.35rem; }
+  .tl-label small { font-size: .55rem; }
+  .tl-chip.big { font-size: .9rem; }
+  .tl-chip.big img { width: 30px; height: 30px; }
+}

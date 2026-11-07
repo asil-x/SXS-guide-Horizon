@@ -2,7 +2,7 @@
 // Xem HUONG-DAN-VIET-GUIDE.md để biết cách dùng.
 import { Children, isValidElement, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useData } from '../../lib/data.js';
 import { useT } from '../../i18n/index.jsx';
 import { asset, fallbackImg, onImgError, skillIcon } from '../../lib/img.js';
@@ -161,9 +161,12 @@ export function ClassBuild({ name }) {
 /** Nhóm tab. Dùng `big` cho tab lớn có icon (vd. chọn class). */
 export function Tabs({ children, big }) {
   const tabs = Children.toArray(children).filter(isValidElement);
-  const [i, setI] = useState(0);
+  // <Tabs big> mở sẵn tier theo ?tier=N trên địa chỉ (link từ tier list).
+  const { search } = useLocation();
+  const linked = big ? Number(new URLSearchParams(search).get('tier')) || 0 : 0;
+  const [i, setI] = useState(linked ? linked - 1 : 0);
   const cur = Math.min(i, tabs.length - 1);
-  if (big) return <TierTabs tabs={tabs} cur={cur} setCur={setI} />;
+  if (big) return <TierTabs tabs={tabs} cur={cur} setCur={setI} linked={linked > 0} />;
   return (
     <div className={'tabs' + (big ? ' big' : '')}>
       <div className='tab-list' role='tablist'>
@@ -180,7 +183,7 @@ export function Tabs({ children, big }) {
 }
 
 /** <Tabs big>: thanh tiến trình class theo tier + phần chi tiết có tiêu đề lớn và nút chuyển tier. */
-function TierTabs({ tabs, cur, setCur }) {
+function TierTabs({ tabs, cur, setCur, linked }) {
   const t = useT();
   const track = useRef(null);
   const panel = useRef(null);
@@ -189,6 +192,12 @@ function TierTabs({ tabs, cur, setCur }) {
     const el = track.current?.children[cur];
     if (el) track.current.scrollTo({ left: el.offsetLeft - track.current.clientWidth / 2 + el.clientWidth / 2, behavior: 'smooth' });
   }, [cur]);
+  // Mở từ link tier list: cuộn tới phần build sau khi trang hiện ra.
+  useEffect(() => {
+    if (!linked) return;
+    const id = setTimeout(() => track.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 350);
+    return () => clearTimeout(id);
+  }, [linked]);
   const go = (k, scroll) => {
     setCur(k);
     if (scroll && panel.current && panel.current.getBoundingClientRect().top < 0) panel.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -323,3 +332,4 @@ export function Img({ src, alt = '' }) {
 }
 
 export { ClassChange } from './ClassChange.jsx';
+export { TierOverview, TierRanking } from './TierList.jsx';
