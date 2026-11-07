@@ -183,6 +183,7 @@ export default function Page() {
                 techniques={[
                   'Mana Blast',
                   'Abyssal Hand',
+                  'Dark Bullet',
                   'Shadow of Termination',
                 ]}
                 charms={[
@@ -197,7 +198,7 @@ export default function Page() {
               <p><strong>Make sure <Tip>Shadow of Termination</Tip> is always used last</strong>, since you want to stack as much Erosion as possible before using it.</p>
               <p>Even at T3, <Tip>Mana Surge</Tip> is still worth using if your gear substats are not great yet.</p>
               <hr />
-              <p><strong>Single-target damage</strong>: <Tip>Dark Bullet</Tip> remains the pick until later tiers.</p>
+              <p><strong>The 4th technique slot is flexible.</strong> For single target keep <Tip>Dark Bullet</Tip> (still a good pick until later tiers).</p>
               <p><strong>AoE</strong>: You can use <Tip>Weakening Hex</Tip> or <Tip>Shadow Impact</Tip>, both are good.</p>
             </Tab>
             <Tab label="Support">

@@ -193,6 +193,7 @@ export default function Page() {
                 techniques={[
                   'Mana Blast',
                   'Abyssal Hand',
+                  'Dark Bullet',
                   'Shadow of Termination',
                 ]}
                 charms={[
@@ -207,7 +208,7 @@ export default function Page() {
               <p><strong>Hãy đảm bảo <Tip>Shadow of Termination</Tip> luôn được dùng cuối cùng</strong>, vì bạn muốn dồn càng nhiều stack Erosion càng tốt trước khi dùng nó.</p>
               <p>Kể cả ở T3, vẫn đáng dùng <Tip>Mana Surge</Tip> nếu chỉ số phụ trang bị chưa tốt.</p>
               <hr />
-              <p><strong>Sát thương đơn mục tiêu</strong>: <Tip>Dark Bullet</Tip> vẫn là lựa chọn cho tới các tier sau.</p>
+              <p><strong>Ô technique thứ 4 linh hoạt.</strong> Đánh đơn mục tiêu thì giữ <Tip>Dark Bullet</Tip> (vẫn là lựa chọn tốt cho tới các tier sau).</p>
               <p><strong>AoE</strong>: Bạn có thể dùng <Tip>Weakening Hex</Tip> hoặc <Tip>Shadow Impact</Tip>, cả hai đều tốt.</p>
             </Tab>
             <Tab label="Hỗ trợ">
