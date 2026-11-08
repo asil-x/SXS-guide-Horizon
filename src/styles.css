@@ -121,6 +121,8 @@ button { font: inherit; cursor: pointer; color: inherit; }
 .btn:hover { transform: translateY(-2px); border-color: var(--gold); text-decoration: none; }
 .btn.primary { border-color: transparent; background: linear-gradient(135deg, var(--gold2), var(--gold)); color: #1b1407; box-shadow: 0 8px 24px rgba(201, 164, 92, .3); }
 .btn.primary:hover { box-shadow: 0 12px 32px rgba(201, 164, 92, .45); }
+.btn.discord { border-color: transparent; background: linear-gradient(135deg, #7983f5, #5865f2); color: #fff; box-shadow: 0 8px 24px rgba(88, 101, 242, .35); }
+.btn.discord:hover { border-color: transparent; box-shadow: 0 12px 32px rgba(88, 101, 242, .55); }
 .search { position: relative; }
 .search .input { padding: .9rem 1.1rem .9rem 2.7rem; font-size: 1rem; border-radius: 14px; background: rgba(10, 14, 22, .78); border-color: var(--line2); backdrop-filter: blur(6px); }
 .search-icon { position: absolute; z-index: 1; left: 1rem; top: 50%; width: 18px; height: 18px; transform: translateY(-50%); color: var(--muted); pointer-events: none; }

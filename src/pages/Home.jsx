@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import GuideCard from '../components/GuideCard.jsx';
 import { CATEGORIES, DB_KINDS, useGuides } from '../lib/site.js';
@@ -12,7 +12,6 @@ export default function Home() {
   const { GUIDES, guidesIn } = useGuides();
   useEffect(() => { document.title = t('site.title'); }, [t]);
   const [q, setQ] = useState('');
-  const classRef = useRef(null);
   const nq = norm(q.trim());
   const results = nq ? GUIDES.filter((g) => norm(g.title + ' ' + (g.short || '') + ' ' + (g.desc || '') + ' ' + g.slug.replace(/-/g, ' ')).includes(nq)) : [];
   const [classes, allGuides, tools] = CATEGORIES.map((c) => guidesIn(c.key));
@@ -31,7 +30,10 @@ export default function Home() {
           <h1>Sword <em>x</em> Staff Guide</h1>
           <p>{t('home.lead')}</p>
           <div className='hero-cta'>
-            <button type='button' className='btn primary' onClick={() => classRef.current?.scrollIntoView({ behavior: 'smooth' })}>{t('home.ctaBuild')}</button>
+            <a className='btn discord' href='https://discord.gg/VRTFppZnT' target='_blank' rel='noreferrer'>
+              <svg viewBox='0 0 24 24' width='20' height='20' fill='currentColor' aria-hidden='true'><path d='M20.32 4.37A19.8 19.8 0 0 0 15.39 2.8a13.7 13.7 0 0 0-.63 1.3 18.4 18.4 0 0 0-5.52 0 13 13 0 0 0-.64-1.3 19.7 19.7 0 0 0-4.93 1.53C.53 9.05-.32 13.6.1 18.1a19.9 19.9 0 0 0 6.04 3.05c.49-.66.92-1.37 1.3-2.1a12.9 12.9 0 0 1-2.04-.98l.5-.39a14.2 14.2 0 0 0 12.2 0l.5.39c-.65.39-1.33.71-2.04.98.37.73.81 1.44 1.3 2.1a19.8 19.8 0 0 0 6.04-3.05c.5-5.2-.84-9.72-3.58-13.73ZM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42Zm7.96 0c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42Z' /></svg>
+              {t('home.ctaDiscord')}
+            </a>
             <Link className='btn' to='/guides/sword-x-staff-codes'>{t('home.ctaCodes')}</Link>
           </div>
           <div className='search'>
@@ -54,7 +56,7 @@ export default function Home() {
         </section>
       ) : (
         <>
-          <section className='block' ref={classRef}>
+          <section className='block'>
             <div className='block-head'><h2>{t('cat.' + CATEGORIES[0].key)}</h2><span className='muted'>{t('cat.' + CATEGORIES[0].key + '.desc')}</span></div>
             <div className='class-grid'>{classes.map((g) => <GuideCard key={g.slug} g={g} variant='class' />)}</div>
           </section>
