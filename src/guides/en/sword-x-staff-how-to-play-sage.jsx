@@ -22,9 +22,18 @@ export default function Page() {
       <h2 id="best-stats">Best stats</h2>
       <p>Since Sage has many ways to play, there are also many ways to pick stats and gear.</p>
       <p><strong>For support</strong>: Max HP comes first if you want to be a competitive healer. <em>ALL HEALING SCALES WITH THE CASTER’S MAX HP</em>, so you must focus on this stat first.</p>
-      <p><strong>For DoT damage</strong>: Erosion is a debuff, so you need Effect Hit Rate to always apply as many stacks as possible on enemies. Crit DMG/Rate is also great for even more damage.</p>
+      <p><strong>For DoT damage</strong>: Erosion is a debuff, so you need Effect Hit Rate to always apply as many stacks as possible on enemies. Crit DMG/Rate only boosts your direct hits, since DoT damage never crits (see the details below).</p>
       <p><strong>For summons</strong>: They inherit part of your stats, so focus on Elemental Mastery, Crit Rate/Damage, ATK and SPD.</p>
       <p><em>Erosion is also Dark damage</em>, so do not forget ATK and Elemental Mastery when picking substats to raise damage properly.</p>
+
+      <h3 id="best-stats-detail">In more detail</h3>
+      <ul>
+        <li><strong>Built-in class bonus:</strong> the Sage line gets Healing Boost and Crit RES: +10% / +5% (Sage), +15% / +7.5% (Arcanist), +20% / +10% from Dominator on. Base stats are spread evenly; from Prophet on they lean on HP.</li>
+        <li><strong>Healer:</strong> healing scales with Max HP, so keep the HP % line (up to +40%). Healing Boost already comes from the class.</li>
+        <li><strong>DoT (Erosion):</strong> damage over time never crits and is never blocked, so Crit Rate and Crit DMG only help your direct hits. Prioritize Effect Hit Rate to land stacks, then ATK and Elemental Mastery. The <em>Gains X% of Effect Hit as ATK</em> line pays twice for this build.</li>
+        <li><strong>Summons:</strong> they inherit your stats, so build like a DPS: ATK %, Crit, Elemental Mastery, SPD.</li>
+        <li><strong>Crit RES:</strong> the class's built-in 10% makes Sage harder to crit; you rarely need more, since Crit RES stops helping once it passes the enemy's Crit Rate + 5%.</li>
+      </ul>
 
       <hr />
 

@@ -42,6 +42,16 @@ export default function Page() {
         <li>Reflect Tank không cần Crit Resistance. Đòn đã bị đỡ thì không thể chí mạng, nên đầu tư vào Block hiệu quả hơn</li>
       </ul>
 
+      <h3 id="best-stats-detail">Chi tiết hơn</h3>
+      <ul>
+        <li><strong>Bonus sẵn của class:</strong> nhánh Knight được cộng Block Rate: +10% (Knight), +15% (Paladin), +20% từ Guardian trở đi. Chỉ số gốc nghiêng về HP và DEF; từ Templar trở đi DEF cao nhất trong 4 nhánh.</li>
+        <li><strong>Block hoạt động thế nào:</strong> tỉ lệ đỡ = Block Rate của bạn trừ Accuracy của địch. Đòn bị đỡ không thể chí mạng, và sát thương bị chia cho 1 + Block Efficiency (mặc định 100%, tức giảm một nửa; tối thiểu chia 1.5).</li>
+        <li><strong>Block Efficiency hay Crit RES</strong> (hai dòng cùng đi kèm Block Rate): giữ Block Efficiency nếu tỉ lệ đỡ của bạn cao (trên khoảng 61–75%, thường là khi đánh boss); giữ Crit RES nếu tỉ lệ đỡ thấp hơn, ví dụ gặp địch có nhiều Accuracy. Crit RES hết tác dụng khi đã vượt Crit Rate của địch cộng 5%.</li>
+        <li><strong>Block Rate dạng số cố định giảm mạnh theo level:</strong> Block Rate từ vũ khí phụ là số cố định (đầy đủ ở Season 2: 194% ở level 130 nhưng chỉ còn 20% ở level 200). Càng lên cao càng phải dựa vào nguồn % như relic, set, cây Fantomon, companion và dòng phụ Block Rate % (tối đa +16%).</li>
+        <li><strong>Reflect Tank:</strong> sát thương phản đòn của <Tip>Rebound</Tip> không chí mạng và không bị đỡ, nên Crit Rate/Crit DMG không giúp gì cho phần sát thương này.</li>
+        <li><strong>Dòng phụ trang bị nên giữ:</strong> Block Rate %, DEF % (tối đa +40%), dòng <em>Gains X% of Effect RES as DEF</em> cho tank; build Glass Cannon thì giữ ATK %, Crit Rate % và dòng <em>Gains X% of DEF as ATK</em>.</li>
+      </ul>
+
       <hr />
 
       <h2 id="fantomons">Fantomons</h2>

@@ -32,6 +32,16 @@ export default function Page() {
         <li>Reflect Tank does not need Crit Resistance. A blocked hit cannot crit, so investing in Block is more efficient</li>
       </ul>
 
+      <h3 id="best-stats-detail">In more detail</h3>
+      <ul>
+        <li><strong>Built-in class bonus:</strong> the Knight line gets Block Rate: +10% (Knight), +15% (Paladin), +20% from Guardian on. Base stats lean on HP and DEF; from Templar on it has the highest DEF of the four lines.</li>
+        <li><strong>How Block works:</strong> block chance = your Block Rate minus the enemy's Accuracy. A blocked hit cannot crit, and its damage is divided by 1 + Block Efficiency (100% by default, so halved; the divisor is at least 1.5).</li>
+        <li><strong>Block Efficiency or Crit RES</strong> (the two lines that come with Block Rate): keep Block Efficiency if your block chance is high (above roughly 61–75%, usually against bosses); keep Crit RES if it is lower, for example against high-Accuracy enemies. Crit RES stops helping once it passes the enemy's Crit Rate + 5%.</li>
+        <li><strong>Flat Block Rate shrinks with level:</strong> the off-hand's Block Rate is flat (fully built in Season 2: 194% at level 130 but only 20% at level 200). The higher you go, the more you rely on % sources: relics, sets, the Fantomon tree, companions and the Block Rate % line (up to +16%).</li>
+        <li><strong>Reflect Tank:</strong> <Tip>Rebound</Tip>'s reflected damage never crits and is never blocked, so Crit Rate and Crit DMG do nothing for that part of your damage.</li>
+        <li><strong>Gear lines to keep:</strong> Block Rate %, DEF % (up to +40%), and <em>Gains X% of Effect RES as DEF</em> for tanking; for Glass Cannon keep ATK %, Crit Rate % and <em>Gains X% of DEF as ATK</em>.</li>
+      </ul>
+
       <hr />
 
       <h2 id="fantomons">Fantomons</h2>

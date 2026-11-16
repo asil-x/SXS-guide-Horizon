@@ -34,6 +34,16 @@ export default function Page() {
       <p><strong>SPD and ATK</strong> (cả số cố định lẫn %) vẫn có giá trị ở bất cứ chỗ nào bạn nhét được.</p>
       <p>Ngoài ra, <strong>Effect Hit Rate</strong> và <strong>Block Rate</strong> đều nằm trong danh sách ưu tiên, chỉ số sau giúp bù lại độ mỏng manh khi vượt màn chênh lệch lực chiến cao.</p>
 
+      <h3 id="best-stats-detail">Chi tiết hơn</h3>
+      <ul>
+        <li><strong>Bonus sẵn của class:</strong> nhánh Duelist được cộng Crit Rate: +10% (Duelist), +15% (Berserker), +20% từ Conqueror trở đi. Chỉ số gốc nghiêng về ATK và SPD; từ Ravager trở đi SPD cao nhất trong 4 nhánh.</li>
+        <li><strong>Crit Rate hay Crit DMG:</strong> sát thương trung bình = 1 + tỉ lệ crit × Crit DMG (phần cộng thêm). Khi Crit DMG còn lớn hơn tỉ lệ crit thì mua Crit Rate, ngược lại mua Crit DMG; hai số xấp xỉ nhau là cân bằng. Crit RES của địch trừ vào cả hai, và tỉ lệ crit tối đa 100%, vượt nữa là phí.</li>
+        <li><strong>Ưu tiên dòng %:</strong> Crit Rate và ATK dạng số cố định mất giá trị nhanh khi lên level (cùng +1,000 Crit Rate là +11.2% ở Expert III nhưng chỉ +1.43% ở Champion I). Dòng % thì không giảm.</li>
+        <li><strong>Dòng phụ trang bị nên giữ:</strong> ATK % (tối đa +40%), Crit Rate % (tối đa +16%), và dòng <em>Gains X% of SPD as ATK</em>, rất hợp vì Duelist có SPD cao.</li>
+        <li><strong>ATK và DEF địch:</strong> sát thương tính theo ATK × ATK / (ATK + DEF địch), nên ATK càng đáng giá khi đánh mục tiêu DEF cao.</li>
+        <li><strong>Physical Mastery</strong> càng cao càng giảm hiệu quả. Khi Mastery đã nhiều, dồn sang Crit và ATK sẽ lợi hơn.</li>
+      </ul>
+
       <hr />
 
       <h2 id="fantomons">Fantomons</h2>

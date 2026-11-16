@@ -24,6 +24,16 @@ export default function Page() {
       <p><strong>SPD and ATK</strong> (both flat and %) are still valuable wherever you can fit them.</p>
       <p>Also, <strong>Effect Hit Rate</strong> and <strong>Block Rate</strong> are both on the priority list, the latter helps offset your fragility when clearing stages with a high power gap.</p>
 
+      <h3 id="best-stats-detail">In more detail</h3>
+      <ul>
+        <li><strong>Built-in class bonus:</strong> the Duelist line gets Crit Rate: +10% (Duelist), +15% (Berserker), +20% from Conqueror on. Base stats lean on ATK and SPD; from Ravager on it has the highest SPD of the four lines.</li>
+        <li><strong>Crit Rate or Crit DMG:</strong> average damage = 1 + crit chance × Crit DMG (the bonus part). While your Crit DMG is larger than your crit chance, buy Crit Rate; otherwise buy Crit DMG; they are balanced when the two are about equal. The enemy's Crit RES lowers both, and crit chance caps at 100%, so anything past that is wasted.</li>
+        <li><strong>Prefer % lines:</strong> flat Crit Rate and ATK lose value fast as you level (the same +1,000 flat Crit Rate is +11.2% at Expert III but only +1.43% at Champion I). Percentage lines do not shrink.</li>
+        <li><strong>Gear lines to keep:</strong> ATK % (up to +40%), Crit Rate % (up to +16%), and the <em>Gains X% of SPD as ATK</em> line, a great fit for Duelist's high SPD.</li>
+        <li><strong>ATK vs enemy DEF:</strong> damage scales with ATK × ATK / (ATK + enemy DEF), so ATK is worth more against high-DEF targets.</li>
+        <li><strong>Physical Mastery</strong> has diminishing returns. Once it is high, Crit and ATK give more.</li>
+      </ul>
+
       <hr />
 
       <h2 id="fantomons">Fantomons</h2>

@@ -32,9 +32,18 @@ export default function Page() {
       <h2 id="best-stats">Chỉ số tốt nhất</h2>
       <p>Vì Sage có nhiều cách chơi, nên cũng có nhiều cách chọn chỉ số và trang bị phù hợp.</p>
       <p><strong>Với hỗ trợ</strong>: Max HP được ưu tiên nếu muốn làm healer cạnh tranh. <em>MỌI LƯỢNG HỒI MÁU ĐỀU TĂNG THEO MAX HP CỦA NGƯỜI THI TRIỂN</em>, nên bắt buộc phải tập trung chỉ số này trước.</p>
-      <p><strong>Với sát thương DoT</strong>: Erosion là debuff, nên cần Effect Hit Rate để luôn áp được nhiều stack nhất có thể lên kẻ địch. Crit DMG/Rate cũng rất tốt để tăng sát thương thêm nữa.</p>
+      <p><strong>Với sát thương DoT</strong>: Erosion là debuff, nên cần Effect Hit Rate để luôn áp được nhiều stack nhất có thể lên kẻ địch. Crit DMG/Rate chỉ tăng phần sát thương trực tiếp, vì sát thương DoT không chí mạng (xem chi tiết bên dưới).</p>
       <p><strong>Với triệu hồi</strong>: Chúng thừa hưởng một phần chỉ số của bạn, nên tập trung Elemental Mastery, Crit Rate/Damage, ATK và SPD.</p>
       <p><em>Erosion cũng là sát thương Dark</em>, nên đừng quên ATK và Elemental Mastery khi chọn chỉ số phụ để tăng sát thương đúng cách.</p>
+
+      <h3 id="best-stats-detail">Chi tiết hơn</h3>
+      <ul>
+        <li><strong>Bonus sẵn của class:</strong> nhánh Sage được cộng Healing Boost và Crit RES: +10% / +5% (Sage), +15% / +7.5% (Arcanist), +20% / +10% từ Dominator trở đi. Chỉ số gốc chia đều 4 chỉ số; từ Prophet trở đi nghiêng về HP.</li>
+        <li><strong>Healer:</strong> lượng hồi máu tăng theo Max HP, nên giữ dòng phụ HP % (tối đa +40%). Healing Boost đã có sẵn từ class.</li>
+        <li><strong>DoT (Erosion):</strong> sát thương theo thời gian không chí mạng và không bị đỡ, nên Crit Rate/Crit DMG chỉ giúp phần sát thương trực tiếp. Ưu tiên Effect Hit Rate để áp stack, cộng ATK và Elemental Mastery. Dòng <em>Gains X% of Effect Hit as ATK</em> lợi gấp đôi cho build này.</li>
+        <li><strong>Triệu hồi:</strong> vật triệu hồi thừa hưởng chỉ số của bạn, nên xây giống DPS: ATK %, Crit, Elemental Mastery, SPD.</li>
+        <li><strong>Crit RES</strong> có sẵn 10% từ class giúp Sage bớt bị chí mạng; thêm nữa thì không cần, vì Crit RES hết tác dụng khi vượt Crit Rate của địch cộng 5%.</li>
+      </ul>
 
       <hr />
 

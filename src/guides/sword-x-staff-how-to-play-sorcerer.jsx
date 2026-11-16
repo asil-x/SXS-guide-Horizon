@@ -35,6 +35,16 @@ export default function Page() {
       <p>Sau 3 chỉ số đó, <strong>ATK</strong> và <strong>SPD</strong> (cả số cố định lẫn %) là mục tiêu tiếp theo để không bị tụt sát thương so với các class khác.</p>
       <p>Cuối cùng, đừng hoàn toàn quên <strong>Accuracy</strong> và <strong>Effect Hit Rate</strong>.</p>
 
+      <h3 id="best-stats-detail">Chi tiết hơn</h3>
+      <ul>
+        <li><strong>Bonus sẵn của class:</strong> nhánh Sorcerer được cộng Accuracy: +10% (Sorcerer), +15% (Archmage), +20% từ Destroyer trở đi. Chỉ số gốc nghiêng hẳn về ATK, cao nhất trong 4 nhánh ở mọi tier.</li>
+        <li><strong>Accuracy:</strong> trừ thẳng vào Block Rate của địch. Class đã cộng sẵn tới 20%, nên chỉ cần thêm Accuracy khi gặp kẻ địch Block cao.</li>
+        <li><strong>Crit Rate hay Crit DMG:</strong> sát thương trung bình = 1 + tỉ lệ crit × Crit DMG (phần cộng thêm). Khi Crit DMG còn lớn hơn tỉ lệ crit thì mua Crit Rate, ngược lại mua Crit DMG; hai số xấp xỉ nhau là cân bằng. Crit RES của địch trừ vào cả hai, và tỉ lệ crit tối đa 100%.</li>
+        <li><strong>Ưu tiên dòng %:</strong> Crit Rate và ATK dạng số cố định mất giá trị nhanh khi lên level, dòng % thì không.</li>
+        <li><strong>Elemental Mastery</strong> càng cao càng giảm hiệu quả. Khi Mastery đã nhiều, dồn sang Crit và ATK sẽ lợi hơn.</li>
+        <li><strong>Dòng phụ trang bị nên giữ:</strong> ATK % (tối đa +40%), Crit Rate % (tối đa +16%).</li>
+      </ul>
+
       <hr />
 
       <h2 id="fantomons">Fantomons</h2>

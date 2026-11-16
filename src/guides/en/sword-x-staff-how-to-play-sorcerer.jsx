@@ -25,6 +25,16 @@ export default function Page() {
       <p>After those 3 stats, <strong>ATK</strong> and <strong>SPD</strong> (both flat and %) are the next targets so your damage keeps up with other classes.</p>
       <p>Finally, do not completely forget <strong>Accuracy</strong> and <strong>Effect Hit Rate</strong>.</p>
 
+      <h3 id="best-stats-detail">In more detail</h3>
+      <ul>
+        <li><strong>Built-in class bonus:</strong> the Sorcerer line gets Accuracy: +10% (Sorcerer), +15% (Archmage), +20% from Destroyer on. Base stats lean heavily on ATK, the highest of the four lines at every tier.</li>
+        <li><strong>Accuracy:</strong> it comes straight off the enemy's Block Rate. The class already gives up to 20%, so you only need more against high-Block enemies.</li>
+        <li><strong>Crit Rate or Crit DMG:</strong> average damage = 1 + crit chance × Crit DMG (the bonus part). While your Crit DMG is larger than your crit chance, buy Crit Rate; otherwise buy Crit DMG; they are balanced when the two are about equal. The enemy's Crit RES lowers both, and crit chance caps at 100%.</li>
+        <li><strong>Prefer % lines:</strong> flat Crit Rate and ATK lose value fast as you level; percentage lines do not.</li>
+        <li><strong>Elemental Mastery</strong> has diminishing returns. Once it is high, Crit and ATK give more.</li>
+        <li><strong>Gear lines to keep:</strong> ATK % (up to +40%), Crit Rate % (up to +16%).</li>
+      </ul>
+
       <hr />
 
       <h2 id="fantomons">Fantomons</h2>
