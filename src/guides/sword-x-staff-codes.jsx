@@ -25,6 +25,8 @@ export default function Page() {
 
       <h2 id="working-codes">Code còn dùng được</h2>
       <Codes codes={[
+        'WELCOME01',
+        'WELCOME02',
         'SXSWITHYOU',
         'SXSFACEBOOK',
         'LUCKYGACHA',
