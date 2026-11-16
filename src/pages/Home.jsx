@@ -29,7 +29,7 @@ export default function Home() {
     <>
       <div className='hero-wrap'>
       <section className='hero'>
-        <img className='hero-img' src='./img/sword-x-staff-cover.webp' alt='' fetchpriority='high' />
+        <img className='hero-img' src='/img/sword-x-staff-cover.webp' alt='' fetchpriority='high' />
         <div className='hero-text'>
           <span className='eyebrow'>✦ Guild Horizon</span>
           <h1>Sword <em>x</em> Staff Guide</h1>

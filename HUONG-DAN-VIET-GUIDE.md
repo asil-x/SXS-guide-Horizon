@@ -1,7 +1,7 @@
 # Hướng dẫn viết và sửa guide
 
 Mỗi guide là **một file `.jsx`** trong `src/guides/`. Tên file chính là đường dẫn trang:
-`src/guides/sword-x-staff-codes.jsx` → `#/guides/sword-x-staff-codes`.
+`src/guides/sword-x-staff-codes.jsx` → `/guides/sword-x-staff-codes`.
 
 Trang chủ, menu, mục lục, "bài trước / bài tiếp" đều được tạo tự động, **không cần sửa file nào khác**.
 

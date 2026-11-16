@@ -50,7 +50,7 @@ export default function App() {
       <header className='topbar'>
         <div className='topbar-inner'>
           <Link to='/' className='brand'>
-            <img src='./img/logo.webp' alt='Sword x Staff Guide' />
+            <img src='/img/logo.webp' alt='Sword x Staff Guide' />
             <span className='brand-text'><span>Sword <em>x</em> Staff</span><small className='brand-by'>by Guild Horizon</small></span>
           </Link>
           <LangSwitch />
