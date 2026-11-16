@@ -4,10 +4,10 @@ export const meta = {
   title: 'Tỉ lệ rơi Destiny Fruit',
   desc: 'Tỉ lệ rơi Destiny Fruit theo nguồn.',
   order: 4,
-  category: 'tool',
+  category: 'guide',
   cover: 'tooltips/Npc_8416.png',
   icon: 'tooltips/item_115.png',
-  topic: 'data',
+  topic: 'explore',
 };
 
 export default function Page() {

@@ -334,3 +334,6 @@ export function Img({ src, alt = '' }) {
 export { ClassChange } from './ClassChange.jsx';
 export { TierOverview, TierRanking } from './TierList.jsx';
 export { CrucibleLadder, CrucibleCounter, Hieromon } from './Crucible.jsx';
+export { GthSchedule } from './GthSchedule.jsx';
+export { PrimostarCalc } from './PrimostarCalc.jsx';
+export { ExpCalc } from './ExpCalc.jsx';

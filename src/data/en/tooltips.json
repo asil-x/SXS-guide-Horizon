@@ -195,6 +195,12 @@
     ],
     "description": "When damaged by an enemy's Technique within 2 grids of the caster, there is a 50% chance to counterattack, dealing Physical DMG once to the attacker."
   },
+  "Covenite": {
+    "kind": "item",
+    "icon": "tooltips/item_118.png",
+    "rarity": "SSR",
+    "description": "Use it for Goddess Prayer to gain skills of your current class."
+  },
   "Crit Mastery": {
     "kind": "skill",
     "icon": "skills/skill_10588.png",
@@ -549,6 +555,12 @@
       "Delegate Tasks"
     ]
   },
+  "Golden Divine Tree": {
+    "kind": "item",
+    "icon": "treasures/treasure_61011.png",
+    "rarity": "rainbow",
+    "description": "Relic. Home Wood Yield Boost +14%."
+  },
   "Gravity Pull": {
     "kind": "skill",
     "icon": "skills/skill_10018.png",
@@ -679,6 +691,12 @@
     ],
     "description": "Upon taking lethal DMG for the first time, survives with 1 HP, enters the Indomitable status for 2 turns (cannot be dispelled), and heals the caster once."
   },
+  "Infinity Hourglass": {
+    "kind": "item",
+    "icon": "treasures/treasure_61110.png",
+    "rarity": "rainbow",
+    "description": "Relic. Home Chrono Sand Yield Boost +14%."
+  },
   "Insight": {
     "kind": "skill",
     "icon": "skills/skill_10559.png",
@@ -797,6 +815,12 @@
       "Attack"
     ],
     "description": "Each time the caster inflicts Erosion on an enemy, there's a 60% chance to inflict Erosion again."
+  },
+  "Lucky Statue": {
+    "kind": "item",
+    "icon": "treasures/treasure_61012.png",
+    "rarity": "rainbow",
+    "description": "Relic. Dungeon: 2× Rating Reward Rate +1,400."
   },
   "Lucky Ticket": {
     "kind": "item",
@@ -966,6 +990,12 @@
     "icon": "pets/pandarial.png",
     "rarity": "rainbow"
   },
+  "Philosopher's Stone": {
+    "kind": "item",
+    "icon": "treasures/treasure_61310.png",
+    "rarity": "rainbow",
+    "description": "Relic. Home Stone Yield Boost +14%."
+  },
   "Piercing Assault": {
     "kind": "skill",
     "icon": "skills/skill_10568.png",
@@ -975,6 +1005,12 @@
       "Charm"
     ],
     "description": "Each time the caster's Technique deals DMG to an enemy, the caster ignores a portion of the target's DEF. The DEF ignorance increases by 10% for each buff the caster has, stacking up to 3 times."
+  },
+  "Primal Gem": {
+    "kind": "item",
+    "icon": "treasures/treasure_61013.png",
+    "rarity": "rainbow",
+    "description": "Relic. Gem Drop Rate +1,400."
   },
   "Prismora": {
     "kind": "pet",
@@ -1427,6 +1463,18 @@
       "Attack"
     ],
     "description": "Deals Light DMG 3 times to 1 enemy within 5 grids of the caster. (Prioritizes large targets)"
+  },
+  "Travel Bag": {
+    "kind": "item",
+    "icon": "treasures/treasure_61216.png",
+    "rarity": "rainbow",
+    "description": "Relic. Basic Dispatch Rewards +12%."
+  },
+  "Treasure Detector": {
+    "kind": "item",
+    "icon": "treasures/treasure_61016.png",
+    "rarity": "rainbow",
+    "description": "Relic. Vista Dispatch Default Major Success +1,400."
   },
   "Unstable Aura": {
     "kind": "skill",

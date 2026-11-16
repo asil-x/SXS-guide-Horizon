@@ -14,11 +14,16 @@ export default function Home() {
   const [q, setQ] = useState('');
   const nq = norm(q.trim());
   const results = nq ? GUIDES.filter((g) => norm(g.title + ' ' + (g.short || '') + ' ' + (g.desc || '') + ' ' + g.slug.replace(/-/g, ' ')).includes(nq)) : [];
-  const [classes, allGuides, tools] = CATEGORIES.map((c) => guidesIn(c.key));
+  const [classes, allGuides] = CATEGORIES.map((c) => guidesIn(c.key));
   // Gift Code đã có nút riêng ở banner và menu nên không lặp lại trong lưới.
   const guides = allGuides.filter((g) => g.slug !== 'sword-x-staff-codes');
-  // Lưới 4 cột: thẻ đầu chiếm 2×2, vài thẻ cuối kéo rộng 2 cột để hàng cuối không bị hở.
-  const wideCount = (4 - ((guides.length - 1) % 4)) % 4;
+  // Công cụ nổi bật đầu trang (máy tính dùng nhiều trong mùa).
+  const FEATURED = ['sword-x-staff-primostar-calculator', 'sword-x-staff-exp-calculator'];
+  const featured = FEATURED.map((slug) => GUIDES.find((g) => g.slug === slug)).filter(Boolean);
+  // Hướng dẫn: mọi thẻ cùng cỡ, lọc nhanh theo chủ đề.
+  const [topic, setTopic] = useState('');
+  const topics = [...new Set(guides.map((g) => g.topic).filter(Boolean))];
+  const shownGuides = topic ? guides.filter((g) => g.topic === topic) : guides;
 
   return (
     <>
@@ -56,6 +61,21 @@ export default function Home() {
         </section>
       ) : (
         <>
+          {featured.length > 0 && (
+            <section className='block'>
+              <div className='block-head'><h2>{t('home.toolsNow')}</h2><span className='muted'>{t('home.toolsNow.desc')}</span></div>
+              <div className='tool-feature-grid'>
+                {featured.map((g) => (
+                  <Link key={g.slug} className='tool-feature' to={'/guides/' + g.slug}>
+                    <img src={asset(g.icon || g.cover)} alt='' onError={onImgError} />
+                    <span className='tf-text'><b>{g.title}</b><small>{g.desc}</small></span>
+                    <span className='tf-go'>{t('home.openTool')} →</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
           <section className='block'>
             <div className='block-head'><h2>{t('cat.' + CATEGORIES[0].key)}</h2><span className='muted'>{t('cat.' + CATEGORIES[0].key + '.desc')}</span></div>
             <div className='class-grid'>{classes.map((g) => <GuideCard key={g.slug} g={g} variant='class' />)}</div>
@@ -63,14 +83,14 @@ export default function Home() {
 
           <section className='block'>
             <div className='block-head'><h2>{t('cat.' + CATEGORIES[1].key)}</h2><span className='muted'>{t('cat.' + CATEGORIES[1].key + '.desc')}</span></div>
-            <div className='quest-grid'>{guides.map((g, i) => <GuideCard key={g.slug} g={g} index={i + 1} feature={i === 0} wide={i >= guides.length - wideCount} />)}</div>
+            <div className='chips topic-chips'>
+              <button type='button' className={'chip' + (!topic ? ' on' : '')} onClick={() => setTopic('')}>{t('home.allTopics')} ({guides.length})</button>
+              {topics.map((x) => <button key={x} type='button' className={'chip' + (topic === x ? ' on' : '')} onClick={() => setTopic(x)}>{t('topic.' + x)} ({guides.filter((g) => g.topic === x).length})</button>)}
+            </div>
+            <div className='quest-grid even'>{shownGuides.map((g, i) => <GuideCard key={g.slug} g={g} index={i + 1} />)}</div>
           </section>
 
-          <div className='two-col'>
-            <section className='block'>
-              <div className='block-head'><h2>{t('cat.' + CATEGORIES[2].key)}</h2></div>
-              <div className='rows'>{tools.map((g) => <GuideCard key={g.slug} g={g} variant='row' />)}</div>
-            </section>
+          <div>
             <section className='block'>
               <div className='block-head'><h2>{t('home.db')}</h2></div>
               <div className='db-links'>

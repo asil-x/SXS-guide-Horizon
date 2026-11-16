@@ -7,6 +7,8 @@ import { useLang } from '../i18n/index.jsx';
 
 const PURR = <a href='https://www.purrwikimania.com/' target='_blank' rel='noreferrer'>Purrwikimania</a>;
 const COMPASS = <a href='https://swordxstaff-compass.com/' target='_blank' rel='noreferrer'>Sword x Staff Compass</a>;
+const GTH = <a href='https://kakotheris.neocities.org/' target='_blank' rel='noreferrer'>bộ công cụ của kakotheris</a>;
+const GTH_EN = <a href='https://kakotheris.neocities.org/' target='_blank' rel='noreferrer'>kakotheris’s tools</a>;
 
 const LETTER = {
   vi: {
@@ -16,7 +18,7 @@ const LETTER = {
     body: [
       <>Chúng tôi là <b>Guild Horizon</b>, một guild nhỏ đóng quân ở một server nào đó giữa các vương quốc. Server nào thì đến giờ anh em trong guild vẫn còn cãi nhau, chỉ biết là nơi đó có rất nhiều Dawnium bị tiêu sai chỗ.</>,
       <>Những đêm dài cày Daily Dungeon và chờ Primostar, chúng tôi nhận ra người chơi Việt thiếu một cuốn sổ tay đầy đủ bằng tiếng mẹ đẻ. Thế là cuốn sổ này ra đời.</>,
-      <>Mọi con số trong sổ được chúng tôi tổng hợp từ hai kho tri thức lớn của cộng đồng: {PURR} và {COMPASS}. Xin gửi lời cảm ơn chân thành tới những người giữ thư viện ấy, nếu không có họ, cuốn sổ này chỉ là vài trang giấy trắng.</>,
+      <>Mọi con số trong sổ được chúng tôi tổng hợp từ hai kho tri thức lớn của cộng đồng: {PURR} và {COMPASS}, cùng số liệu game từ {GTH} (Grand Treasure Hunt, Primostar, relic, Fantomon, skill). Xin gửi lời cảm ơn chân thành tới những người giữ thư viện ấy, nếu không có họ, cuốn sổ này chỉ là vài trang giấy trắng.</>,
       <>Phần còn lại là của Horizon: dịch sang tiếng Việt, viết thêm phân tích, xếp build theo từng tier, tính toán đường đi cho Gem, Dungeon, Season, và thử nghiệm ngay trong guild trước khi ghi vào sổ.</>,
       <>Nếu bạn thấy code đã hết hạn, một con số sai lệch, hay có build hay hơn, hãy gửi lời nhắn cho guild. Cuốn sổ này sẽ còn được viết tiếp sau mỗi mùa.</>,
     ],
@@ -33,7 +35,7 @@ const LETTER = {
     body: [
       <>We are <b>Guild Horizon</b>, a small guild stationed on some server between the kingdoms. Which server exactly is still being argued over in guild chat, all we know is that it is a place where far too much Dawnium gets spent in the wrong shop.</>,
       <>Through long nights of Daily Dungeons and waiting for Primostar, we realized Vietnamese players lacked a complete handbook in their own language. And so this book was born.</>,
-      <>Every number in these pages was gathered from two great libraries of the community: {PURR} and {COMPASS}. Our heartfelt thanks to their keepers, without them this book would be nothing but blank pages.</>,
+      <>Every number in these pages was gathered from two great libraries of the community: {PURR} and {COMPASS}, along with game data from {GTH_EN} (Grand Treasure Hunt, Primostar, relics, Fantomons, skills). Our heartfelt thanks to their keepers, without them this book would be nothing but blank pages.</>,
       <>The rest is Horizon’s own work: translating into Vietnamese, writing the analysis, laying out builds tier by tier, charting the way through Gems, Dungeons and Seasons, and testing it all inside the guild before writing it down.</>,
       <>If you find an expired code, a wrong number, or a better build, send word to the guild. This book will keep being written after every season.</>,
     ],

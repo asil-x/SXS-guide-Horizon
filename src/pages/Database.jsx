@@ -4,6 +4,12 @@ import { DB_KINDS } from '../lib/site.js';
 import { iconUrl, petUrl, onImgError } from '../lib/img.js';
 import { loadData } from '../lib/data.js';
 import { useLang, useT } from '../i18n/index.jsx';
+import RelicInspector from '../components/db/RelicInspector.jsx';
+import SkillInspector from '../components/db/SkillInspector.jsx';
+import FantomonInspector from '../components/db/FantomonInspector.jsx';
+
+// Loại dữ liệu có trang tra cứu riêng (dữ liệu tự tải trong component).
+const CUSTOM = { relics: RelicInspector, skills: SkillInspector, fantomons: FantomonInspector };
 
 
 const PAGE = 120;
@@ -95,7 +101,7 @@ export default function Database() {
   const [sel, setSel] = useState(null);
 
   useEffect(() => {
-    if (!meta) return;
+    if (!meta || CUSTOM[kind]) return;
     setRows(null); setQ(''); setFilters({}); setShown(PAGE); setSel(null);
     loadData(kind, lang).then(setRows);
     if (kind === 'companions') loadData('skills', lang).then((list) => setSkillsById(Object.fromEntries(list.map((s) => [String(s.id).replace(/^skill_/, ''), s]))));
@@ -113,13 +119,20 @@ export default function Database() {
   }, [items, q, filters]);
 
   if (!meta) return <div className='empty'><h1>{t('db.notFound')}</h1></div>;
-  if (!rows) return <div className='loading'>{t('loading')}</div>;
-  return (
+  const head = (
     <>
       <h1 className='page-title'>{t('db.title', { x: t('db.' + kind) })}</h1>
       <div className='chips'>
         {DB_KINDS.map((d) => <Link key={d.key} to={'/db/' + d.key} className={'chip' + (d.key === kind ? ' on' : '')}>{t('db.' + d.key)}</Link>)}
       </div>
+    </>
+  );
+  const Custom = CUSTOM[kind];
+  if (Custom) return <>{head}<Custom key={kind} /></>;
+  if (!rows) return <div className='loading'>{t('loading')}</div>;
+  return (
+    <>
+      {head}
       <div className='toolbar'>
         <input className='input' placeholder={t('db.search', { x: t('db.' + kind).toLowerCase() })} value={q} onChange={(e) => { setQ(e.target.value); setShown(PAGE); }} />
         {Object.entries(options).map(([k, vals]) => (
