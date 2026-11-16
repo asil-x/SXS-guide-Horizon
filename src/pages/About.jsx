@@ -16,7 +16,7 @@ const LETTER = {
     kicker: 'Thư gửi lữ khách',
     hello: 'Gửi những lữ khách của Sword x Staff,',
     body: [
-      <>Chúng tôi là <b>Guild Horizon</b>, một guild nhỏ đóng quân ở một server nào đó giữa các vương quốc. Server nào thì đến giờ anh em trong guild vẫn còn cãi nhau, chỉ biết là nơi đó có rất nhiều Dawnium bị tiêu sai chỗ.</>,
+      <>Chúng tôi là <b>Guild Horizon</b>, một guild nhỏ ở server Setting Off. Gửi tới mọi người cẩm nang cho những người muốn tìm hiểu game.</>,
       <>Những đêm dài cày Daily Dungeon và chờ Primostar, chúng tôi nhận ra người chơi Việt thiếu một cuốn sổ tay đầy đủ bằng tiếng mẹ đẻ. Thế là cuốn sổ này ra đời.</>,
       <>Mọi con số trong sổ được chúng tôi tổng hợp từ hai kho tri thức lớn của cộng đồng: {PURR} và {COMPASS}, cùng số liệu game từ {GTH} (Grand Treasure Hunt, Primostar, relic, Fantomon, skill). Xin gửi lời cảm ơn chân thành tới những người giữ thư viện ấy, nếu không có họ, cuốn sổ này chỉ là vài trang giấy trắng.</>,
       <>Phần còn lại là của Horizon: dịch sang tiếng Việt, viết thêm phân tích, xếp build theo từng tier, tính toán đường đi cho Gem, Dungeon, Season, và thử nghiệm ngay trong guild trước khi ghi vào sổ.</>,
@@ -33,7 +33,7 @@ const LETTER = {
     kicker: 'A letter to travelers',
     hello: 'To the travelers of Sword x Staff,',
     body: [
-      <>We are <b>Guild Horizon</b>, a small guild stationed on some server between the kingdoms. Which server exactly is still being argued over in guild chat, all we know is that it is a place where far too much Dawnium gets spent in the wrong shop.</>,
+      <>We are <b>Guild Horizon</b>, a small guild on the Setting Off server. We offer this handbook to everyone who wants to learn the game.</>,
       <>Through long nights of Daily Dungeons and waiting for Primostar, we realized Vietnamese players lacked a complete handbook in their own language. And so this book was born.</>,
       <>Every number in these pages was gathered from two great libraries of the community: {PURR} and {COMPASS}, along with game data from {GTH_EN} (Grand Treasure Hunt, Primostar, relics, Fantomons, skills). Our heartfelt thanks to their keepers, without them this book would be nothing but blank pages.</>,
       <>The rest is Horizon’s own work: translating into Vietnamese, writing the analysis, laying out builds tier by tier, charting the way through Gems, Dungeons and Seasons, and testing it all inside the guild before writing it down.</>,
