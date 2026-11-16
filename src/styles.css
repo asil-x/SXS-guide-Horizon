@@ -435,6 +435,12 @@ button { font: inherit; cursor: pointer; color: inherit; }
   .caret { display: none; }
   .nav-drop-menu { position: static; min-width: 0; max-height: none; padding: 0; border: 0; background: none; box-shadow: none; opacity: 1; visibility: visible; transform: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
   .nav-drop-menu a { white-space: normal; }
+  /* Menu mobile đứng yên: chạm vào mục không kích hoạt hiệu ứng xổ xuống / hover của bản desktop
+     (transform -50% làm cả khối menu bị đẩy lệch, icon xoay, vạch màu trượt). */
+  .nav-drop:hover .nav-drop-menu, .nav-drop:focus-within .nav-drop-menu { transform: none; }
+  .nav-drop-menu, .nav-drop-menu a, .nav-drop-menu a img, .nav-drop-menu a::before, .nav-cta, .nav-link { transition: none; }
+  .nav-drop-menu a:hover img { transform: none; }
+  .nav-drop::after { display: none; }
   .nav-cta { margin: .8rem 0 0; text-align: center; }
   .two-col { grid-template-columns: 1fr; }
 }
