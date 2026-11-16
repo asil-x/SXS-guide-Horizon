@@ -6,7 +6,7 @@ export const meta = {
   order: 11,
   category: 'guide',
   cover: 'guides/grand-treasure-guide.webp',
-  icon: 'treasures/treasure_61008.png',
+  icon: 'guides/grand-treasure-icon.png',
   topic: 'event',
 };
 
