@@ -371,13 +371,13 @@ export default function Page() {
           </Tabs>
         </Tab>
         <Tab label="Ravager" icon="skills/classes/ravager.png">
-          <p>Ravager opens two new directions for the Duelist line: <strong>AoE Fire damage</strong> with <Tip>Solaris Storm</Tip> and <strong>knock-up combos</strong> with <Tip>Tempest Edge</Tip>.</p>
+          <p>Ravager opens two new directions for the Duelist line: <strong>AoE Fire damage</strong> with <Tip>Solaris Storm</Tip> and <strong>bonus hits on crit</strong> with <Tip>Tempest Edge</Tip>.</p>
           <p><Tip>Solaris Storm</Tip> hits 3 times with Fire around you and then once more in a 2-grid circle, and it has Zero Initial CD so it is usable on the first turn. It is the strongest mob-clearing skill Ravager gains.</p>
           <p><Tip>Shadow End</Tip> is notable in content with lots of weak enemies: it teleports to an enemy, and every time it kills a target it recasts itself, up to 4 extra times per turn.</p>
           <p><Tip>Night Curse</Tip> inflicts Blood Source on every enemy within 2 grids. Enemies with Blood Source return 3% of damage taken as HP to <strong>the attacker</strong>, so the whole team gets lifesteal.</p>
           <Alert type="red" title="Important notes">
             <p><strong>Most builds still revolve around multi-hit</strong>: <Tip>Blade of Judgment</Tip> applies Marks per damage instance, so multi-hit techniques like <Tip>Whirlwind Slash</Tip>, <Tip>Sunset Sword</Tip> and <Tip>Solaris Storm</Tip> trigger it very quickly.</p>
-            <p><Tip>Tempest Edge</Tip> only triggers when you knock an enemy <strong>from a normal state</strong> into Airborne, so you need <Tip>Hunter's Judgment</Tip> in your skill set.</p>
+            <p>Ravager’s <Tip>Tempest Edge</Tip> deals an extra instance of Wind damage every time a technique crits, so more hits and higher Crit Rate mean more value. (Arcanarch also has a charm with the same name but a different, Laceration-based effect.)</p>
             <p><Tip>Tactical Adaptation</Tip> helps either way: with few enemies around it raises your damage, and when surrounded it reduces damage taken.</p>
           </Alert>
           <Tabs>
@@ -386,17 +386,17 @@ export default function Page() {
                 techniques={['Hunter\'s Judgment', 'Solaris Storm', 'Whirlwind Slash', 'Sunset Sword']}
                 charms={['Tactical Adaptation', 'Blazing Momentum', 'Tempest Edge', 'Blade of Judgment']}
               />
-              <p><strong>Ravager’s main stage-clearing build.</strong> <Tip>Hunter's Judgment</Tip> pulls enemies in front of you and knocks them up, triggering <Tip>Tempest Edge</Tip>, then <Tip>Whirlwind Slash</Tip>, <Tip>Sunset Sword</Tip> and <Tip>Solaris Storm</Tip> hit the whole cluster.</p>
-              <p><Tip>Blazing Momentum</Tip> turns every crit into an extra instance of Fire damage spreading 1 grid, so this build needs <strong>high Crit Rate</strong>.</p>
-              <p>If you keep dying on hard stages, swap <Tip>Tactical Adaptation</Tip> for <Tip>Indomitable Will</Tip> for an extra life.</p>
+              <p><strong>Ravager’s main stage-clearing build.</strong> <Tip>Hunter's Judgment</Tip> pulls enemies in front of you and knocks them up, then <Tip>Whirlwind Slash</Tip>, <Tip>Sunset Sword</Tip> and <Tip>Solaris Storm</Tip> hit the whole cluster.</p>
+              <p><Tip>Blazing Momentum</Tip> (extra Fire damage spreading 1 grid) and <Tip>Tempest Edge</Tip> (extra Wind damage) both trigger on crits, so this build needs <strong>high Crit Rate</strong>.</p>
+              <p>If you keep dying on hard stages, swap <Tip>Tempest Edge</Tip> for <Tip>Indomitable Will</Tip> for an extra life, or <Tip>Blade of Lament</Tip> for lifesteal while farming. Keep <Tip>Tactical Adaptation</Tip>, since it already reduces damage taken when you are surrounded (more than 3 enemies within 2 grids).</p>
             </Tab>
             <Tab label="Single target">
               <Build
                 techniques={['Air Break', 'Shattering Dance', 'Eclipse Slash', 'Hunter\'s Judgment']}
-                charms={['Dominant Gaze', 'Scarlet Zeal', 'Blade of Judgment', 'Indomitable Will']}
+                charms={['Tactical Adaptation', 'Scarlet Zeal', 'Blade of Judgment', 'Indomitable Will']}
               />
               <p><strong>For bosses and minibosses.</strong> <Tip>Air Break</Tip> opens with Armor Break 2 (30% DEF reduction), then <Tip>Eclipse Slash</Tip> (6 hits) and <Tip>Shattering Dance</Tip> (3 hits, stacking Riven Heart) pile damage into one target.</p>
-              <p><Tip>Dominant Gaze</Tip> raises damage against targets above 70% HP, perfect for tanky bosses early in the fight. <Tip>Scarlet Zeal</Tip> adds ATK after every technique, and at 6 stacks greatly raises ATK for 2 turns.</p>
+              <p><Tip>Tactical Adaptation</Tip> raises damage when there are 3 or fewer enemies within 2 grids, so it is almost always active against a boss. <Tip>Dominant Gaze</Tip> only boosts damage while the target is above 70% HP, so it is only worth it in short fights or PvP burst. <Tip>Scarlet Zeal</Tip> adds ATK after every technique, and at 6 stacks greatly raises ATK for 2 turns.</p>
               <p>You can swap <Tip>Hunter's Judgment</Tip> for <Tip>Night Curse</Tip> if the team needs healing from Blood Source.</p>
             </Tab>
           </Tabs>

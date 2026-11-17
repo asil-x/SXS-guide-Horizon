@@ -460,9 +460,9 @@ export default function Page() {
             <Tab label="Bóng tối debuff">
               <Build
                 techniques={['Desperate Shadow', 'Hexed Blast', 'Soul Reap', 'Void Chant']}
-                charms={['Ring of Omen', 'Shadowy Current', 'Shadow Erosion', 'Cursed Armor']}
+                charms={['Ring of Omen', 'Shadowy Current', 'Shadow Erosion', 'Curse Resonance']}
               />
-              <p><Tip>Desperate Shadow</Tip> gây debuff trước để <Tip>Hexed Blast</Tip> đánh thêm hit; <Tip>Shadow Erosion</Tip> và <Tip>Cursed Armor</Tip> còn gây thêm Erosion, cũng tính là một loại debuff.</p>
+              <p><Tip>Desperate Shadow</Tip> gây debuff trước để <Tip>Hexed Blast</Tip> đánh thêm hit; <Tip>Shadow Erosion</Tip> còn gây thêm Erosion, cũng tính là một loại debuff. <Tip>Curse Resonance</Tip> tăng sát thương theo số Ailment/Debuff trên mục tiêu (tối đa 3 tầng), đúng với cách build này chồng debuff: debuff ngẫu nhiên, Erosion và Vulnerability từ <Tip>Ring of Omen</Tip>.</p>
               <p><Tip>Soul Reap</Tip> mạnh dần khi mục tiêu mất máu, dùng để kết liễu. <Tip>Void Chant</Tip> phạt kẻ địch mỗi lần chúng dùng technique.</p>
             </Tab>
           </Tabs>

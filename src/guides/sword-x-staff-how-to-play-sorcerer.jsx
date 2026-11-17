@@ -394,6 +394,7 @@ export default function Page() {
               <p>Build đơn mục tiêu tập trung vào boss và nội dung co-op, nơi ta có thể buff cả đội bằng <Tip>Formation Breaker</Tip>.</p>
               <p>Thay đổi thật sự duy nhất ở tier này là có thêm <Tip>Thunder of Judgment</Tip>, một technique tuyệt vời và là sát thương đơn mục tiêu mạnh nhất ở Tier 4.</p>
               <p>Mình vẫn dùng <Tip>Elemental Harmony</Tip> vì có nhiều bản trùng, nhưng bạn có thể bỏ để thêm lớp phòng thủ hoặc đơn giản là thêm sát thương với charm như <Tip>Lightning Mystery</Tip>.</p>
+              <p>Lưu ý: build này chỉ có 2 hệ gây sát thương (Lửa và Ánh sáng; <Tip>Formation Breaker</Tip> không gây sát thương), nên <Tip>Elemental Harmony</Tip> chỉ đạt 2/4 tầng. Nếu không có nhiều bản trùng, <Tip>Lightning Mystery</Tip> thường lợi hơn, vì <Tip>Divine Wrath</Tip> (tới 16 hit) và <Tip>Thunder of Judgment</Tip> (3 hit) cho rất nhiều lượt kích hoạt. Muốn thêm hit cho <Tip>Radiant Sear</Tip>, có thể đổi <Tip>Meteoric Flames</Tip> sang <Tip>Wind Blade Spiral</Tip> (3 hit).</p>
               <p>Kể cả khi chơi solo <Tip>Formation Breaker</Tip> thường vẫn là lựa chọn nên dùng, nhưng có thể thay bằng phép gió để thêm sát thương, hoặc thậm chí <Tip>Fire Blast</Tip> cho đơn mục tiêu nếu cần.</p>
             </Tab>
             <Tab label="Lửa">

@@ -384,6 +384,7 @@ export default function Page() {
               <p>A single-target build focused on bosses and co-op content, where we can buff the whole team with <Tip>Formation Breaker</Tip>.</p>
               <p>The only real change at this tier is the addition of <Tip>Thunder of Judgment</Tip>, a great technique and the strongest single-target damage at Tier 4.</p>
               <p>I still use <Tip>Elemental Harmony</Tip> since I have many duplicates, but you can drop it for a defensive layer or simply more damage with a charm like <Tip>Lightning Mystery</Tip>.</p>
+              <p>Note: this build only has 2 damaging elements (Fire and Light; <Tip>Formation Breaker</Tip> deals no damage), so <Tip>Elemental Harmony</Tip> only reaches 2 of 4 stacks. Without many duplicates, <Tip>Lightning Mystery</Tip> is usually better, since <Tip>Divine Wrath</Tip> (up to 16 hits) and <Tip>Thunder of Judgment</Tip> (3 hits) give it lots of chances to trigger. For more <Tip>Radiant Sear</Tip> procs, you can swap <Tip>Meteoric Flames</Tip> for <Tip>Wind Blade Spiral</Tip> (3 hits).</p>
               <p>Even when playing solo <Tip>Formation Breaker</Tip> is usually still worth using, but you can replace it with a wind spell for more damage, or even <Tip>Fire Blast</Tip> for single target if needed.</p>
             </Tab>
             <Tab label="Fire">

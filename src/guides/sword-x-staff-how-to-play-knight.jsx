@@ -182,7 +182,7 @@ export default function Page() {
                 techniques={[
                   'Luminous Shield',
                   'Valor Surge',
-                  'Leap Attack',
+                  'Heart of Challenge',
                   'Guardian Ring',
                 ]}
                 charms={[
@@ -192,10 +192,11 @@ export default function Page() {
                   'Iron Fortress',
                 ]}
               />
+              <p><Tip>Heart of Challenge</Tip> thi triển trước trận và Taunt mọi kẻ địch trong 3 ô, nên đòn đánh dồn về bạn ngay từ đầu và <Tip>Rebound</Tip> kích hoạt đều hơn.</p>
               <p><strong>Đổi tuỳ tình huống:</strong></p>
               <ul>
                 <li><Tip>Valor Surge</Tip>: Buff và giải hiệu ứng. Mạnh cả khi solo lẫn đánh nhóm nhưng không bắt buộc</li>
-                <li><Tip>Heart of Challenge</Tip>: Khiêu khích diện rộng, bắt buộc khi đánh nhóm, thay leap hoặc shield bằng skill này</li>
+                <li><Tip>Leap Attack</Tip>: Khi farm một mình có thể thay <Tip>Heart of Challenge</Tip> bằng skill này để lao vào cụm quái và gây Armor Break</li>
                 <li><Tip>Desperate Protection</Tip>: Khiên khẩn cấp, thay thế cho <Tip>Guardian Ring</Tip></li>
                 <li><Tip>Lunarwater Threads</Tip>: Công cụ kéo kẻ địch đánh xa</li>
                 <li><Tip>Star Shattering Slash</Tip> / <Tip>Heavy Impact</Tip>: Sát thương bùng nổ cho boss và PvP</li>
@@ -249,14 +250,24 @@ export default function Page() {
               />
               <p><strong>Build chính của Guardian.</strong> <Tip>Guardian Ring</Tip> và <Tip>Swirling Blade</Tip> duy trì khiên để <Tip>Defensive Assault</Tip> luôn có hiệu lực; khi khiên vỡ thì <Tip>Ripple Impact</Tip> phản công và gây Cold.</p>
               <p><Tip>Pursuit of Victory</Tip> tăng sát thương lên kẻ địch đang dính Ailment/Debuff, và <Tip>Block Awareness</Tip> giữ Block Rate cao để đỡ đòn ổn định như các bậc trước.</p>
+              <p>Với màn nhiều quái, xem tab <strong>Nước diện rộng</strong>. Giữ build này khi đánh boss, vì <Tip>Star Shattering Slash</Tip> dồn sát thương vào một mục tiêu.</p>
             </Tab>
             <Tab label="Tank đội">
               <Build
-                techniques={['Hamper Strike', 'Guardian Ring', 'Light Sword Array', 'Raging Maelstrom']}
+                techniques={['Heart of Challenge', 'Hamper Strike', 'Guardian Ring', 'Light Sword Array']}
                 charms={['Soul Protection', 'Oath of Vigil', 'Iron Will', 'Holy Aegis']}
               />
-              <p><strong>Dùng khi đi cùng đội và bạn là người hứng đòn.</strong> <Tip>Hamper Strike</Tip> Taunt cả cụm kẻ địch, <Tip>Iron Will</Tip> giảm sát thương từ những kẻ đang bị Taunt, còn <Tip>Raging Maelstrom</Tip> kéo kẻ địch lại gần.</p>
+              <p><strong>Dùng khi đi cùng đội và bạn là người hứng đòn.</strong> <Tip>Heart of Challenge</Tip> Taunt ngay từ trước trận nên <Tip>Iron Will</Tip> (giảm sát thương từ kẻ đang bị Taunt) có tác dụng từ lượt đầu, sau đó <Tip>Hamper Strike</Tip> Taunt lại cả cụm từ xa.</p>
               <p><Tip>Light Sword Array</Tip> được thi triển trước trận và phản đòn mỗi lần bạn bị đánh. <Tip>Soul Protection</Tip> biến 50% HP thành khiên ngay đầu trận.</p>
+            </Tab>
+            <Tab label="Nước diện rộng">
+              <Build
+                techniques={['Lunarwater Threads', 'Seismic Tide', 'Raging Maelstrom', 'Swirling Blade']}
+                charms={['Frigid Glint', 'Frigid Aura', 'Pursuit of Victory', 'Defensive Assault']}
+              />
+              <p><strong>Dùng cho màn nhiều quái và Chaos Invasion.</strong> <Tip>Lunarwater Threads</Tip> kéo mọi kẻ địch trong 5 ô về chỗ bạn, rồi <Tip>Seismic Tide</Tip> và <Tip>Raging Maelstrom</Tip> đánh cả cụm. Kẻ địch kết thúc lượt trong 2 ô quanh bạn còn dính thêm sát thương Nước từ <Tip>Frigid Aura</Tip>.</p>
+              <p><Tip>Frigid Glint</Tip> tăng Water Affinity và 100% gây Cold mỗi lần technique gây sát thương Nước, nên <Tip>Pursuit of Victory</Tip> (tăng sát thương lên kẻ địch dính Ailment/Debuff) gần như luôn có hiệu lực. <Tip>Swirling Blade</Tip> tạo khiên để giữ <Tip>Defensive Assault</Tip>.</p>
+              <p>Build không có <Tip>Block Awareness</Tip> nên hứng đòn kém hơn. Nếu hay chết, đổi <Tip>Raging Maelstrom</Tip> sang <Tip>Guardian Ring</Tip> để có thêm khiên.</p>
             </Tab>
           </Tabs>
         </Tab>
@@ -276,15 +287,16 @@ export default function Page() {
                 charms={['Healing Shift', 'Soul Protection', 'Iron Will', 'Holy Aegis']}
               />
               <p><strong>Build tank chính.</strong> <Tip>Heart of Challenge</Tip> và <Tip>Last Stand</Tip> giữ kẻ địch nhắm vào bạn, <Tip>Guardian Ring</Tip> bảo vệ bản thân, còn <Tip>Desperate Protection</Tip> tạo khiên cho đồng minh yếu máu nhất.</p>
-              <p>Charm tập trung hoàn toàn vào sống sót. Nếu đội đã đủ an toàn, có thể đổi <Tip>Soul Protection</Tip> sang <Tip>Sanctified Soul</Tip> ở ô technique để giảm sát thương cho cả đội.</p>
+              <p>Charm tập trung hoàn toàn vào sống sót. Nếu đội đã đủ an toàn, có thể đổi <Tip>Last Stand</Tip> sang <Tip>Sanctified Soul</Tip> để giảm sát thương cho cả đội. Đừng bỏ <Tip>Heart of Challenge</Tip>, vì <Tip>Iron Will</Tip> chỉ có tác dụng với kẻ địch đang bị Taunt.</p>
             </Tab>
             <Tab label="Ánh sáng phản đòn">
               <Build
-                techniques={['Dawnburst', 'Sanctified Soul', 'Guardian Ring', 'First Light']}
+                techniques={['Light Sword Array', 'Dawnburst', 'Guardian Ring', 'First Light']}
                 charms={['Rebound', 'Holy Bulwark', 'Holy Restoration', 'Holy Aegis']}
               />
               <p><strong>Dùng khi chơi một mình hoặc đội đã có tank khác.</strong> <Tip>Guardian Ring</Tip> tạo khiên, rồi <Tip>First Light</Tip> tiêu khiên đó thành sát thương Ánh sáng. <Tip>Holy Aegis</Tip> làm khiên dày hơn, nghĩa là <Tip>First Light</Tip> cũng mạnh hơn.</p>
-              <p><Tip>Holy Bulwark</Tip> tăng sát thương các skill phản đòn như <Tip>Rebound</Tip>. <Tip>Holy Restoration</Tip> hồi máu sau mỗi 6 technique Ánh sáng.</p>
+              <p><Tip>Light Sword Array</Tip> thi triển trước trận, tạo 4 kiếm phản đòn bằng sát thương Ánh sáng mỗi khi bạn bị technique đánh trúng. <Tip>Holy Bulwark</Tip> tăng sát thương phản đòn của cả kiếm lẫn <Tip>Rebound</Tip>. <Tip>Holy Restoration</Tip> hồi máu sau mỗi 6 technique Ánh sáng.</p>
+              <p>Nếu đội cần giảm sát thương, đổi <Tip>Dawnburst</Tip> sang <Tip>Sanctified Soul</Tip>.</p>
             </Tab>
           </Tabs>
         </Tab>

@@ -172,7 +172,7 @@ export default function Page() {
                 techniques={[
                   'Luminous Shield',
                   'Valor Surge',
-                  'Leap Attack',
+                  'Heart of Challenge',
                   'Guardian Ring',
                 ]}
                 charms={[
@@ -182,10 +182,11 @@ export default function Page() {
                   'Iron Fortress',
                 ]}
               />
+              <p><Tip>Heart of Challenge</Tip> is cast before battle and taunts every enemy within 3 grids, so hits land on you from the start and <Tip>Rebound</Tip> triggers more consistently.</p>
               <p><strong>Situational swaps:</strong></p>
               <ul>
                 <li><Tip>Valor Surge</Tip>: Buff and cleanse. Strong solo and in groups but not required</li>
-                <li><Tip>Heart of Challenge</Tip>: Area taunt, mandatory in groups, replace leap or shield with this skill</li>
+                <li><Tip>Leap Attack</Tip>: When farming solo you can swap <Tip>Heart of Challenge</Tip> for it to jump into packs and inflict Armor Break</li>
                 <li><Tip>Desperate Protection</Tip>: Emergency shield, an alternative to <Tip>Guardian Ring</Tip></li>
                 <li><Tip>Lunarwater Threads</Tip>: A tool for pulling ranged enemies</li>
                 <li><Tip>Star Shattering Slash</Tip> / <Tip>Heavy Impact</Tip>: Burst damage for bosses and PvP</li>
@@ -239,14 +240,24 @@ export default function Page() {
               />
               <p><strong>Guardian’s main build.</strong> <Tip>Guardian Ring</Tip> and <Tip>Swirling Blade</Tip> keep a shield up so <Tip>Defensive Assault</Tip> is always active; when the shield breaks, <Tip>Ripple Impact</Tip> counters and inflicts Cold.</p>
               <p><Tip>Pursuit of Victory</Tip> raises damage against enemies with an Ailment/Debuff, and <Tip>Block Awareness</Tip> keeps Block Rate high for consistent blocking like in earlier tiers.</p>
+              <p>For mob-heavy stages, see the <strong>Water AoE</strong> tab. Keep this build for bosses, since <Tip>Star Shattering Slash</Tip> focuses damage on one target.</p>
             </Tab>
             <Tab label="Team tank">
               <Build
-                techniques={['Hamper Strike', 'Guardian Ring', 'Light Sword Array', 'Raging Maelstrom']}
+                techniques={['Heart of Challenge', 'Hamper Strike', 'Guardian Ring', 'Light Sword Array']}
                 charms={['Soul Protection', 'Oath of Vigil', 'Iron Will', 'Holy Aegis']}
               />
-              <p><strong>Use this in a team when you are the one taking hits.</strong> <Tip>Hamper Strike</Tip> taunts a whole group of enemies, <Tip>Iron Will</Tip> reduces damage from taunted enemies, and <Tip>Raging Maelstrom</Tip> pulls enemies closer.</p>
+              <p><strong>Use this in a team when you are the one taking hits.</strong> <Tip>Heart of Challenge</Tip> taunts before battle, so <Tip>Iron Will</Tip> (less damage from taunted enemies) works from the first turn, then <Tip>Hamper Strike</Tip> re-taunts a whole group from range.</p>
               <p><Tip>Light Sword Array</Tip> is cast before battle and counters every time you are hit. <Tip>Soul Protection</Tip> turns 50% of your HP into a shield at the start of battle.</p>
+            </Tab>
+            <Tab label="Water AoE">
+              <Build
+                techniques={['Lunarwater Threads', 'Seismic Tide', 'Raging Maelstrom', 'Swirling Blade']}
+                charms={['Frigid Glint', 'Frigid Aura', 'Pursuit of Victory', 'Defensive Assault']}
+              />
+              <p><strong>For mob-heavy stages and Chaos Invasion.</strong> <Tip>Lunarwater Threads</Tip> pulls every enemy within 5 grids to you, then <Tip>Seismic Tide</Tip> and <Tip>Raging Maelstrom</Tip> hit the whole pack. Enemies that end their turn within 2 grids of you also take Water damage from <Tip>Frigid Aura</Tip>.</p>
+              <p><Tip>Frigid Glint</Tip> raises Water Affinity and has a 100% chance to inflict Cold whenever a technique deals Water damage, so <Tip>Pursuit of Victory</Tip> (more damage against enemies with an Ailment/Debuff) is almost always active. <Tip>Swirling Blade</Tip> creates a shield to keep <Tip>Defensive Assault</Tip> up.</p>
+              <p>There is no <Tip>Block Awareness</Tip>, so you take hits less well. If you keep dying, swap <Tip>Raging Maelstrom</Tip> for <Tip>Guardian Ring</Tip> for an extra shield.</p>
             </Tab>
           </Tabs>
         </Tab>
@@ -266,15 +277,16 @@ export default function Page() {
                 charms={['Healing Shift', 'Soul Protection', 'Iron Will', 'Holy Aegis']}
               />
               <p><strong>The main tank build.</strong> <Tip>Heart of Challenge</Tip> and <Tip>Last Stand</Tip> keep enemies on you, <Tip>Guardian Ring</Tip> protects yourself, and <Tip>Desperate Protection</Tip> shields the lowest-HP ally.</p>
-              <p>Charms focus entirely on survival. If the team is already safe enough, you can swap <Tip>Soul Protection</Tip> for <Tip>Sanctified Soul</Tip> in a technique slot for team-wide damage reduction.</p>
+              <p>Charms focus entirely on survival. If the team is already safe enough, you can swap <Tip>Last Stand</Tip> for <Tip>Sanctified Soul</Tip> for team-wide damage reduction. Keep <Tip>Heart of Challenge</Tip>, since <Tip>Iron Will</Tip> only works on taunted enemies.</p>
             </Tab>
             <Tab label="Light counter">
               <Build
-                techniques={['Dawnburst', 'Sanctified Soul', 'Guardian Ring', 'First Light']}
+                techniques={['Light Sword Array', 'Dawnburst', 'Guardian Ring', 'First Light']}
                 charms={['Rebound', 'Holy Bulwark', 'Holy Restoration', 'Holy Aegis']}
               />
               <p><strong>Use this solo or when the team already has another tank.</strong> <Tip>Guardian Ring</Tip> creates a shield, then <Tip>First Light</Tip> spends it as Light damage. <Tip>Holy Aegis</Tip> makes shields thicker, which means a stronger <Tip>First Light</Tip> too.</p>
-              <p><Tip>Holy Bulwark</Tip> boosts the damage of counter skills like <Tip>Rebound</Tip>. <Tip>Holy Restoration</Tip> heals after every 6 Light techniques.</p>
+              <p><Tip>Light Sword Array</Tip> is cast before battle and creates 4 swords that counter with Light damage whenever a technique hits you. <Tip>Holy Bulwark</Tip> boosts the counter damage of both the swords and <Tip>Rebound</Tip>. <Tip>Holy Restoration</Tip> heals after every 6 Light techniques.</p>
+              <p>If the team needs damage reduction, swap <Tip>Dawnburst</Tip> for <Tip>Sanctified Soul</Tip>.</p>
             </Tab>
           </Tabs>
         </Tab>

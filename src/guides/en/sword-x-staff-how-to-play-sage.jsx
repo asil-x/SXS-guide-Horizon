@@ -450,9 +450,9 @@ export default function Page() {
             <Tab label="Dark debuff">
               <Build
                 techniques={['Desperate Shadow', 'Hexed Blast', 'Soul Reap', 'Void Chant']}
-                charms={['Ring of Omen', 'Shadowy Current', 'Shadow Erosion', 'Cursed Armor']}
+                charms={['Ring of Omen', 'Shadowy Current', 'Shadow Erosion', 'Curse Resonance']}
               />
-              <p><Tip>Desperate Shadow</Tip> applies debuffs first so <Tip>Hexed Blast</Tip> gets extra hits; <Tip>Shadow Erosion</Tip> and <Tip>Cursed Armor</Tip> also apply Erosion, which counts as another debuff type.</p>
+              <p><Tip>Desperate Shadow</Tip> applies debuffs first so <Tip>Hexed Blast</Tip> gets extra hits; <Tip>Shadow Erosion</Tip> also applies Erosion, which counts as another debuff type. <Tip>Curse Resonance</Tip> raises damage for each Ailment/Debuff on the target (up to 3 stacks), which is exactly how this build stacks debuffs: the random debuff, Erosion and Vulnerability from <Tip>Ring of Omen</Tip>.</p>
               <p><Tip>Soul Reap</Tip> grows stronger as the target loses HP, used to finish enemies. <Tip>Void Chant</Tip> punishes enemies every time they use a technique.</p>
             </Tab>
           </Tabs>

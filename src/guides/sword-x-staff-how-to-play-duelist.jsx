@@ -381,13 +381,13 @@ export default function Page() {
           </Tabs>
         </Tab>
         <Tab label="Ravager" icon="skills/classes/ravager.png">
-          <p>Ravager mở ra hai hướng chơi mới cho nhánh Duelist: <strong>sát thương Lửa diện rộng</strong> với <Tip>Solaris Storm</Tip> và <strong>combo hất tung</strong> với <Tip>Tempest Edge</Tip>.</p>
+          <p>Ravager mở ra hai hướng chơi mới cho nhánh Duelist: <strong>sát thương Lửa diện rộng</strong> với <Tip>Solaris Storm</Tip> và <strong>đòn đánh thêm khi chí mạng</strong> với <Tip>Tempest Edge</Tip>.</p>
           <p><Tip>Solaris Storm</Tip> đánh 3 hit Lửa quanh bản thân rồi thêm 1 hit vùng tròn 2 ô, lại có Zero Initial CD nên dùng được ngay lượt đầu. Đây là skill dọn quái mạnh nhất mà Ravager có thêm.</p>
           <p><Tip>Shadow End</Tip> rất đáng chú ý ở nội dung nhiều quái yếu: dịch chuyển tới kẻ địch, và mỗi lần hạ được mục tiêu sẽ tự thi triển lại, tối đa thêm 4 lần mỗi lượt.</p>
           <p><Tip>Night Curse</Tip> gây Blood Source lên mọi kẻ địch trong 2 ô. Kẻ địch dính Blood Source sẽ trả lại 3% sát thương nhận vào thành HP cho <strong>người tấn công</strong>, nên cả đội đều được hút máu.</p>
           <Alert type="red" title="Lưu ý quan trọng">
             <p><strong>Đa số build vẫn xoay quanh nhiều hit</strong>: <Tip>Blade of Judgment</Tip> gắn Mark theo từng lần gây sát thương, nên các technique nhiều hit như <Tip>Whirlwind Slash</Tip>, <Tip>Sunset Sword</Tip> và <Tip>Solaris Storm</Tip> kích hoạt nó rất nhanh.</p>
-            <p><Tip>Tempest Edge</Tip> chỉ kích hoạt khi hất kẻ địch <strong>từ trạng thái bình thường</strong> lên Airborne, nên cần có <Tip>Hunter's Judgment</Tip> trong bộ skill.</p>
+            <p><Tip>Tempest Edge</Tip> của Ravager gây thêm 1 lần sát thương Gió mỗi khi technique chí mạng, nên càng nhiều hit và Crit Rate càng cao thì càng lợi. (Arcanarch cũng có một charm trùng tên nhưng hiệu ứng khác, liên quan đến Laceration.)</p>
             <p><Tip>Tactical Adaptation</Tip> có lợi trong cả hai trường hợp: ít kẻ địch quanh mình thì tăng sát thương, bị vây thì giảm sát thương nhận vào.</p>
           </Alert>
           <Tabs>
@@ -396,17 +396,17 @@ export default function Page() {
                 techniques={['Hunter\'s Judgment', 'Solaris Storm', 'Whirlwind Slash', 'Sunset Sword']}
                 charms={['Tactical Adaptation', 'Blazing Momentum', 'Tempest Edge', 'Blade of Judgment']}
               />
-              <p><strong>Build đi màn chính của Ravager.</strong> <Tip>Hunter's Judgment</Tip> kéo kẻ địch về trước mặt và hất tung chúng, kích hoạt <Tip>Tempest Edge</Tip>, sau đó <Tip>Whirlwind Slash</Tip>, <Tip>Sunset Sword</Tip> và <Tip>Solaris Storm</Tip> đánh trúng cả cụm.</p>
-              <p><Tip>Blazing Momentum</Tip> biến mỗi đòn chí mạng thành thêm 1 lần sát thương Lửa lan 1 ô, nên build này cần <strong>Crit Rate cao</strong>.</p>
-              <p>Nếu bạn hay chết ở các màn khó, đổi <Tip>Tactical Adaptation</Tip> sang <Tip>Indomitable Will</Tip> để có thêm một mạng.</p>
+              <p><strong>Build đi màn chính của Ravager.</strong> <Tip>Hunter's Judgment</Tip> kéo kẻ địch về trước mặt và hất tung chúng, sau đó <Tip>Whirlwind Slash</Tip>, <Tip>Sunset Sword</Tip> và <Tip>Solaris Storm</Tip> đánh trúng cả cụm.</p>
+              <p><Tip>Blazing Momentum</Tip> (thêm sát thương Lửa lan 1 ô) và <Tip>Tempest Edge</Tip> (thêm sát thương Gió) đều kích hoạt theo đòn chí mạng, nên build này cần <strong>Crit Rate cao</strong>.</p>
+              <p>Nếu bạn hay chết ở các màn khó, đổi <Tip>Tempest Edge</Tip> sang <Tip>Indomitable Will</Tip> để có thêm một mạng, hoặc <Tip>Blade of Lament</Tip> để hút máu khi farm. Nên giữ <Tip>Tactical Adaptation</Tip>, vì khi bị vây (hơn 3 kẻ địch trong 2 ô) nó đã giảm sát thương nhận vào.</p>
             </Tab>
             <Tab label="Đơn mục tiêu">
               <Build
                 techniques={['Air Break', 'Shattering Dance', 'Eclipse Slash', 'Hunter\'s Judgment']}
-                charms={['Dominant Gaze', 'Scarlet Zeal', 'Blade of Judgment', 'Indomitable Will']}
+                charms={['Tactical Adaptation', 'Scarlet Zeal', 'Blade of Judgment', 'Indomitable Will']}
               />
               <p><strong>Dùng cho boss và miniboss.</strong> <Tip>Air Break</Tip> mở đầu bằng Armor Break 2 (giảm 30% DEF), sau đó <Tip>Eclipse Slash</Tip> (6 hit) và <Tip>Shattering Dance</Tip> (3 hit, cộng dồn Riven Heart) dồn sát thương vào một mục tiêu.</p>
-              <p><Tip>Dominant Gaze</Tip> tăng sát thương lên mục tiêu còn trên 70% HP, rất hợp với boss máu dày ở đầu trận. <Tip>Scarlet Zeal</Tip> cộng ATK sau mỗi technique, đạt 6 tầng sẽ tăng mạnh ATK trong 2 lượt.</p>
+              <p><Tip>Tactical Adaptation</Tip> tăng sát thương khi có từ 3 kẻ địch trở xuống trong 2 ô, nên gần như luôn có hiệu lực khi đánh boss. <Tip>Dominant Gaze</Tip> chỉ tăng sát thương khi mục tiêu còn trên 70% HP, nên chỉ đáng dùng ở trận ngắn hoặc PvP cần dồn sát thương đầu trận. <Tip>Scarlet Zeal</Tip> cộng ATK sau mỗi technique, đạt 6 tầng sẽ tăng mạnh ATK trong 2 lượt.</p>
               <p>Có thể đổi <Tip>Hunter's Judgment</Tip> sang <Tip>Night Curse</Tip> nếu đội cần hồi máu nhờ Blood Source.</p>
             </Tab>
           </Tabs>
