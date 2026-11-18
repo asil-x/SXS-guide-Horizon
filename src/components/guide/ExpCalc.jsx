@@ -51,6 +51,8 @@ export function ExpCalc() {
   const curIn = Math.max(0, Number(cur) || 0);
   const done = Math.min(curIn, curMax);
   const need = curMax - done;
+  // Chỉ hiện tổng EXP sau khi đã điền cả level hiện tại và level muốn lên, tránh hiểu nhầm.
+  const showMax = from !== '' && to !== '' && curMax > 0;
 
   const r = Number(rate) || 0;
   const crystalHours = (Number(crystals) || 0) * D.BED.crystalHours;
@@ -78,9 +80,9 @@ export function ExpCalc() {
         <h3 className='ps-h'><span>2</span>{t('xp.step2')}</h3>
         <div className='ps-grid2'>
           <Num label={t('xp.from')} value={from} onChange={setFrom} min={1} max={top} hint={t('xp.fromHint')} />
-          <Num label={t('xp.cur')} value={cur} onChange={setCur} max={curMax || undefined} suffix={curMax ? '/ ' + fmt(curMax) : null}
-            hint={curMax ? (curIn > curMax ? t('xp.curOver', { m: fmt(curMax) }) : t('xp.curHint', { a, b, m: fmt(curMax) })) : t('xp.curHintMax')} />
           <Num label={t('xp.to')} value={to} onChange={setTo} min={1} max={top} hint={t('xp.toHint', { m: top })} />
+          <Num label={t('xp.cur')} value={cur} onChange={setCur} max={showMax ? curMax : undefined} suffix={showMax ? '/ ' + fmt(curMax) : null}
+            hint={!showMax ? t('xp.curNeedTo') : curIn > curMax ? t('xp.curOver', { m: fmt(curMax) }) : t('xp.curHint', { a, b, m: fmt(curMax) })} />
           {kind === 'char' && <Num label={t('xp.rate')} value={rate} onChange={setRate} hint={t('xp.rateHint')} />}
           {kind === 'char' && <Num label={t('xp.crystals')} value={crystals} onChange={setCrystals} hint={t('xp.crystalsHint', { h: D.BED.crystalHours })} />}
         </div>
