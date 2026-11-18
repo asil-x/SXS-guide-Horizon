@@ -100,7 +100,7 @@ export default function Guide() {
             <Link to='/'>{t('guide.home')}</Link><span>/</span><span>{t('cat.' + g.category)}</span>
           </nav>
           <h1>{g.title}</h1>
-          <div className='guide-credit'>{t('credit.by')} <b>Guild Horizon</b>, <span className='steal-warn'>{t('credit.steal')}</span></div>
+          <div className='guide-credit'>{t('credit.by')} <b>Guild Horizon</b></div>
         </div>
         {emblem && <img className='guide-emblem' src={asset(g.cover)} alt='' onError={onImgError} />}
       </header>

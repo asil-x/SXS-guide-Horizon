@@ -488,10 +488,6 @@ button { font: inherit; cursor: pointer; color: inherit; }
 .footer p { margin: .2rem 0; }
 .footer b { color: var(--gold2); }
 
-/* cảnh báo "trộm làm chó": đỏ, nhấp nháy */
-.steal-warn { color: #ff4d4d; font-weight: 800; text-shadow: 0 0 8px rgba(255, 77, 77, .6); animation: steal-blink 1s steps(2, start) infinite; }
-@keyframes steal-blink { to { visibility: hidden; } }
-@media (prefers-reduced-motion: reduce) { .steal-warn { animation: none; } }
 
 /* điện thoại: thẻ class 2 cột gọn, banner phủ tối hơn để chữ dễ đọc */
 @media (max-width: 560px) {

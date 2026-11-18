@@ -22,7 +22,6 @@ const LETTER = {
       <>Phần còn lại là của Horizon: dịch sang tiếng Việt, viết thêm phân tích, xếp build theo từng tier, tính toán đường đi cho Gem, Dungeon, Season, và thử nghiệm ngay trong guild trước khi ghi vào sổ.</>,
       <>Nếu bạn thấy code đã hết hạn, một con số sai lệch, hay có build hay hơn, hãy gửi lời nhắn cho guild. Cuốn sổ này sẽ còn được viết tiếp sau mỗi mùa.</>,
     ],
-    warn: <>Còn ai định chép nguyên cuốn sổ về làm của riêng, xin ghi nhớ luật của guild: <span className='steal-warn'>trộm làm chó</span>.</>,
     close: 'Thân ái,',
     sign: 'Guild Horizon',
     cta: 'Mở sổ tay',
@@ -37,7 +36,6 @@ const LETTER = {
       <>The rest is Horizon’s own work: translating into Vietnamese, writing the analysis, laying out builds tier by tier, charting the way through Gems, Dungeons and Seasons, and testing it all inside the guild before writing it down.</>,
       <>If you find an expired code, a wrong number, or a better build, send word to the guild. This book will keep being written after every season.</>,
     ],
-    warn: <>And to anyone planning to copy the whole book and call it their own, remember the guild’s law: <span className='steal-warn'>thieves are dogs</span>.</>,
     close: 'Warmly,',
     sign: 'Guild Horizon',
     cta: 'Open the handbook',
@@ -60,7 +58,6 @@ export default function About() {
         <h1 className='page-title'>{L.title}</h1>
         <p>{L.hello}</p>
         {L.body.map((p, i) => <p key={i}>{p}</p>)}
-        <p>{L.warn}</p>
         <footer className='about-sign'>
           <p className='about-close'>{L.close}</p>
           <p className='about-name'>{L.sign}</p>

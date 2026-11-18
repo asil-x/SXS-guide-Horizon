@@ -92,7 +92,7 @@ export default function App() {
       </main>
       <BackToTop />
       <footer className='footer'>
-        <p>{t('credit.compiled')} <b>Guild Horizon</b>, <span className='steal-warn'>{t('credit.steal')}</span>.</p>
+        <p>{t('credit.compiled')} <b>Guild Horizon</b>.</p>
         <p>{t('footer.fan')}</p>
       </footer>
     </div>
