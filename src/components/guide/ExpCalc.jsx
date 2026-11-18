@@ -35,6 +35,7 @@ export function ExpCalc() {
   const [cur, setCur] = useState('');
   const [to, setTo] = useState('');
   const [rate, setRate] = useState('');
+  const [bonus, setBonus] = useState('');
   const [crystals, setCrystals] = useState('');
   useEffect(() => { import('../../lib/primostar-data.js').then(setD); }, []);
   if (!D) return <div className='loading'>{t('loading')}</div>;
@@ -54,7 +55,10 @@ export function ExpCalc() {
   // Chỉ hiện tổng EXP sau khi đã điền cả level hiện tại và level muốn lên, tránh hiểu nhầm.
   const showMax = from !== '' && to !== '' && curMax > 0;
 
-  const r = Number(rate) || 0;
+  // EXP Bed thực tế mỗi giờ = EXP gốc × (1 + Production Bonus %).
+  const base = Number(rate) || 0;
+  const bonusPct = Number(bonus) || 0;
+  const r = base * (1 + bonusPct / 100);
   const crystalHours = (Number(crystals) || 0) * D.BED.crystalHours;
   const hours = r > 0 ? Math.max(0, need / r - crystalHours) : null;
   const days = hours != null ? hours / (24 + D.BED.freeHours) : null;
@@ -84,6 +88,7 @@ export function ExpCalc() {
           <Num label={t('xp.cur')} value={cur} onChange={setCur} max={showMax ? curMax : undefined} suffix={showMax ? '/ ' + fmt(curMax) : null}
             hint={!showMax ? t('xp.curNeedTo') : curIn > curMax ? t('xp.curOver', { m: fmt(curMax) }) : t('xp.curHint', { a, b, m: fmt(curMax) })} />
           {kind === 'char' && <Num label={t('xp.rate')} value={rate} onChange={setRate} hint={t('xp.rateHint')} />}
+          {kind === 'char' && <Num label={t('xp.bonus')} value={bonus} onChange={setBonus} suffix='%' hint={base > 0 && bonusPct > 0 ? t('xp.bonusEff', { x: fmt(r) }) : t('xp.bonusHint')} />}
           {kind === 'char' && <Num label={t('xp.crystals')} value={crystals} onChange={setCrystals} hint={t('xp.crystalsHint', { h: D.BED.crystalHours })} />}
         </div>
       </section>
