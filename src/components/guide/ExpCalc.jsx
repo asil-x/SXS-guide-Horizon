@@ -46,11 +46,11 @@ export function ExpCalc() {
   const b = Math.min(Math.max(a, Number(to) || Math.min(a + 1, top)), top);
   const steps = [];
   for (let L = a; L < b; L++) steps.push([L, expStep(D, sysKey, season, L)]);
-  // EXP đang có trong level hiện tại, tối đa bằng EXP cần để lên level kế tiếp.
-  const curMax = steps.length ? steps[0][1] : (a < top ? expStep(D, sysKey, season, a) : 0);
+  // EXP đang có ở level hiện tại / tổng EXP cần từ level hiện tại tới level muốn lên.
+  const curMax = steps.reduce((s, x) => s + x[1], 0);
   const curIn = Math.max(0, Number(cur) || 0);
-  const done = steps.length ? Math.min(curIn, steps[0][1]) : 0;
-  const need = Math.max(0, steps.reduce((s, x) => s + x[1], 0) - done);
+  const done = Math.min(curIn, curMax);
+  const need = curMax - done;
 
   const r = Number(rate) || 0;
   const crystalHours = (Number(crystals) || 0) * D.BED.crystalHours;
@@ -79,7 +79,7 @@ export function ExpCalc() {
         <div className='ps-grid2'>
           <Num label={t('xp.from')} value={from} onChange={setFrom} min={1} max={top} hint={t('xp.fromHint')} />
           <Num label={t('xp.cur')} value={cur} onChange={setCur} max={curMax || undefined} suffix={curMax ? '/ ' + fmt(curMax) : null}
-            hint={curMax ? (curIn > curMax ? t('xp.curOver', { m: fmt(curMax) }) : t('xp.curHint', { a, b: a + 1, m: fmt(curMax) })) : t('xp.curHintMax')} />
+            hint={curMax ? (curIn > curMax ? t('xp.curOver', { m: fmt(curMax) }) : t('xp.curHint', { a, b, m: fmt(curMax) })) : t('xp.curHintMax')} />
           <Num label={t('xp.to')} value={to} onChange={setTo} min={1} max={top} hint={t('xp.toHint', { m: top })} />
           {kind === 'char' && <Num label={t('xp.rate')} value={rate} onChange={setRate} hint={t('xp.rateHint')} />}
           {kind === 'char' && <Num label={t('xp.crystals')} value={crystals} onChange={setCrystals} hint={t('xp.crystalsHint', { h: D.BED.crystalHours })} />}
@@ -109,7 +109,7 @@ export function ExpCalc() {
                 <thead><tr><th>{t('xp.col.lv')}</th><th className='num'>{t('xp.col.exp')}</th><th className='num'>{t('xp.col.cum')}</th></tr></thead>
                 <tbody>
                   {steps.slice(0, 300).reduce((acc, [L, e]) => { const prev = acc.length ? acc[acc.length - 1][2] : -done; acc.push([L, e, prev + e]); return acc; }, []).map(([L, e, c]) => (
-                    <tr key={L}><td>{L} → {L + 1}{L >= S.floor ? <span className='tag xp-bless'>{t('xp.bless')}</span> : null}</td><td className='num'>{fmt(e)}</td><td className='num'>{fmt(c)}</td></tr>
+                    <tr key={L}><td>{L} → {L + 1}{L >= S.floor ? <span className='tag xp-bless'>{t('xp.bless')}</span> : null}</td><td className='num'>{fmt(e)}</td><td className='num'>{fmt(Math.max(0, c))}</td></tr>
                   ))}
                 </tbody>
               </table>
