@@ -736,16 +736,9 @@ button { font: inherit; cursor: pointer; color: inherit; }
 
 /* nền Fantomon chạy qua lại, mờ phía sau */
 .walk-bg { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
-.walker { position: absolute; left: 0; opacity: .13; filter: blur(.6px) saturate(.7); animation: roam linear infinite; will-change: transform; }
-.walker img { display: block; width: 100%; height: auto; animation: hop ease-in-out infinite alternate; }
-@keyframes roam {
-  0% { transform: translateX(-140px) scaleX(-1); }
-  49.9% { transform: translateX(calc(100vw + 40px)) scaleX(-1); }
-  50% { transform: translateX(calc(100vw + 40px)) scaleX(1); }
-  99.9% { transform: translateX(-140px) scaleX(1); }
-  100% { transform: translateX(-140px) scaleX(-1); }
-}
-@keyframes hop { from { transform: translateY(0) rotate(-3deg); } to { transform: translateY(-7px) rotate(3deg); } }
+.walker { position: absolute; left: 0; opacity: .14; filter: blur(.5px) saturate(.75); will-change: transform; }
+.walker img { position: relative; z-index: 1; display: block; width: 100%; height: auto; transform-origin: 50% 100%; will-change: transform; }
+.walker-shadow { display: block; width: 60%; height: 8px; margin: -6px auto 0; border-radius: 50%; background: rgba(0, 0, 0, .9); filter: blur(3px); }
 @media (max-width: 640px) { .walker { opacity: .1; } .about-name { font-size: 2.1rem; } }
 @media (prefers-reduced-motion: reduce) { .walk-bg { display: none; } }
 .nav-link { padding: .45rem .8rem; border-radius: 8px; color: var(--text); font-weight: 500; }
