@@ -14,7 +14,7 @@ export const meta = {
 export default function Page() {
   return (
     <>
-      <p>Nhập level hiện tại và level muốn lên để biết cần bao nhiêu EXP. Nếu nhập thêm các số trong Bed (EXP gốc mỗi giờ, bonus sản lượng, EXP đang chờ nhận), bảng sẽ tính luôn số giờ và số ngày. Với Fantomon, bảng quy ra số Treat cần dùng.</p>
+      <p>Nhập level hiện tại và level muốn lên để biết cần bao nhiêu EXP. Nếu nhập thêm các số trong Bed (EXP gốc mỗi giờ, bonus sản lượng), bảng sẽ tính luôn số giờ và số ngày. Với Fantomon, bảng quy ra số Treat cần dùng.</p>
       <p>Lưu ý: trong mỗi mùa, các level <strong>vượt sàn</strong> của mùa (ví dụ trên 100 ở Season 1) tốn EXP nhiều hơn hẳn, nên hãy chọn đúng mùa bạn đang chơi.</p>
       <ExpCalc />
     </>

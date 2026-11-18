@@ -818,6 +818,8 @@ button { font: inherit; cursor: pointer; color: inherit; }
 .ps-big b { font-size: 2.2rem; line-height: 1.1; color: var(--gold2); font-variant-numeric: tabular-nums; }
 .ps-big div:not(:first-child) b { font-size: 1.6rem; color: var(--text); }
 .ps-big span { font-size: .8rem; color: var(--muted); }
+.ps-big b .xp-dur { font-size: inherit; color: inherit; }
+.ps-big b small { font-size: .5em; font-weight: 500; color: var(--muted); margin-left: .15em; }
 .ps-formula { margin: .6rem 0 .8rem; font-size: .85rem; color: var(--muted); }
 .ps-bars { display: flex; flex-direction: column; gap: .35rem; }
 .ps-bar { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr) 5.5rem; gap: .6rem; align-items: center; font-size: .82rem; }

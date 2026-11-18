@@ -25,6 +25,17 @@ function Num({ label, value, onChange, hint, suffix, min = 0, max }) {
   );
 }
 
+/** Thời lượng dạng "36 giờ 12 phút 5 giây" (days: tách thêm ngày). Bỏ các đơn vị lớn bằng 0 ở đầu. */
+function Dur({ sec, days }) {
+  const t = useT();
+  let s = Math.ceil(sec - 1e-6);
+  const parts = [];
+  if (days) { parts.push([Math.floor(s / 86400), 'd']); s %= 86400; }
+  parts.push([Math.floor(s / 3600), 'h'], [Math.floor(s / 60) % 60, 'm'], [s % 60, 's']);
+  while (parts.length > 1 && parts[0][0] === 0) parts.shift();
+  return parts.map(([n, u], i) => <span key={u} className='xp-dur'>{i ? ' ' : ''}{u === 'h' && !days ? fmt(n) : n}<small>{t('xp.u.' + u)}</small></span>);
+}
+
 /** Bảng tính EXP cần để lên level. */
 export function ExpCalc() {
   const t = useT();
@@ -37,7 +48,6 @@ export function ExpCalc() {
   const [rate, setRate] = useState('');
   const [bonus, setBonus] = useState('');
   const [crystals, setCrystals] = useState('');
-  const [reserve, setReserve] = useState('');
   useEffect(() => { import('../../lib/primostar-data.js').then(setD); }, []);
   if (!D) return <div className='loading'>{t('loading')}</div>;
 
@@ -61,8 +71,7 @@ export function ExpCalc() {
   const bonusPct = Number(bonus) || 0;
   const r = Math.round(base * (1 + bonusPct / 100));
   const crystalHours = (Number(crystals) || 0) * D.BED.crystalHours;
-  // EXP Reserve đang chờ trong Bed nhận được ngay, nên trừ vào phần còn phải chờ.
-  const hours = r > 0 ? Math.max(0, (need - (Number(reserve) || 0)) / r - crystalHours) : null;
+  const hours = r > 0 ? Math.max(0, need / r - crystalHours) : null;
   const days = hours != null ? hours / (24 + D.BED.freeHours) : null;
 
   return (
@@ -91,7 +100,6 @@ export function ExpCalc() {
             hint={!showMax ? t('xp.curNeedTo') : curIn > curMax ? t('xp.curOver', { m: fmt(curMax) }) : t('xp.curHint', { a, b, m: fmt(curMax) })} />
           {kind === 'char' && <Num label={t('xp.rate')} value={rate} onChange={setRate} hint={t('xp.rateHint')} />}
           {kind === 'char' && <Num label={t('xp.bonus')} value={bonus} onChange={setBonus} suffix='%' hint={base > 0 && bonusPct > 0 ? t('xp.bonusEff', { x: fmt(r) }) : t('xp.bonusHint')} />}
-          {kind === 'char' && <Num label={t('xp.reserve')} value={reserve} onChange={setReserve} hint={t('xp.reserveHint')} />}
           {kind === 'char' && <Num label={t('xp.crystals')} value={crystals} onChange={setCrystals} hint={t('xp.crystalsHint', { h: D.BED.crystalHours })} />}
         </div>
       </section>
@@ -100,8 +108,8 @@ export function ExpCalc() {
         <h3 className='ps-h'><span>3</span>{t('xp.step3', { a: a, b: b })}</h3>
         <div className='ps-big'>
           <div><b title={fmt(need)}>{compact(need)}</b><span>{t('xp.need')} ({fmt(need)})</span></div>
-          {kind === 'char' && hours != null && <div><b>{fmt(Math.ceil(hours))}</b><span>{t('xp.hours')}</span></div>}
-          {kind === 'char' && days != null && <div><b>{days.toFixed(1)}</b><span>{t('xp.days', { h: 24 + D.BED.freeHours })}</span></div>}
+          {kind === 'char' && hours != null && <div><b><Dur sec={hours * 3600} /></b><span>{t('xp.hours')}</span></div>}
+          {kind === 'char' && days != null && <div><b><Dur sec={days * 86400} days /></b><span>{t('xp.days', { h: 24 + D.BED.freeHours })}</span></div>}
         </div>
         {kind === 'pet' && (
           <div className='ps-cost xp-treats'>
