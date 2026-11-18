@@ -20,7 +20,7 @@ export default function Page() {
       <p>In my opinion there are two ways to use <Tip>Destiny Fruit</Tip>:</p>
       <ol>
         <li><strong>Use them as you get them</strong>. Focus mainly on completing the Rare and Epic relic sets</li>
-        <li><strong>Only use what quests need and save the rest</strong>. An upcoming summer event will ask you to spend 200 <Tip>Destiny Fruit</Tip></li>
+        <li><strong>Only use what quests need and save the rest</strong>. Events like Lucky Bingo have quests that ask you to spend around 200 <Tip>Destiny Fruit</Tip> (see below)</li>
       </ol>
       <p>The second way suits both F2P and light spenders, since buying that many fruits is very expensive.</p>
 
@@ -39,6 +39,15 @@ export default function Page() {
       <p><strong>Events!</strong> Many recurring events have quests that ask you to spend <Tip>Destiny Fruit</Tip>.</p>
       <p>These events change by season, but you usually need 200 or 300 in total to finish all of those recurring quests.</p>
       <p><Img src="guides/destiny-event-saving.webp" alt="sword x staff destiny event saving up resources" /></p>
+
+      <h3 id="lucky-bingo">The Lucky Bingo event</h3>
+      <p>Lucky Bingo is a side event that runs alongside the main event. You draw on the Bingo board with <Tip>Bingo Ticket</Tip>s earned from the event quests, and completing lines on the board gives extra rewards.</p>
+      <ul>
+        <li>Those quests usually include <strong>spending Destiny Fruit</strong> in several milestones, adding up to around 200 to 300 fruits. This is the main reason to save them.</li>
+        <li>Fruit only counts when spent while the event is running, so <strong>don't burn all your fruit right before it starts</strong>.</li>
+        <li>Once the event is live, spend fruit in the regions that drop relics you are missing, so you progress the Bingo quests and your relic sets at the same time.</li>
+        <li>Milestones and rewards change from run to run, so check the event's quest list before spending.</li>
+      </ul>
     </>
   );
 }

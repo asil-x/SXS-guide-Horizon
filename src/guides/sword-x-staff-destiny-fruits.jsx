@@ -1,8 +1,8 @@
 import { Alert, Img, Tip } from '../components/guide';
 
 export const meta = {
-  title: 'Cách dùng Destiny Fruit',
-  desc: 'Destiny Fruit dùng vào đâu cho đáng.',
+  title: 'Destiny Fruit: dùng sao cho đáng',
+  desc: 'Destiny Fruit dùng vào đâu cho đáng, và vì sao nên để dành cho sự kiện Lucky Bingo.',
   order: 10,
   category: 'guide',
   cover: 'guides/destiny-exploration.webp',
@@ -30,7 +30,7 @@ export default function Page() {
       <p>Theo mình có hai cách dùng <Tip>Destiny Fruit</Tip>:</p>
       <ol>
         <li><strong>Có tới đâu dùng tới đó</strong>. Chủ yếu tập trung hoàn thành các bộ relic Rare và Epic</li>
-        <li><strong>Chỉ dùng đủ cho nhiệm vụ, phần còn lại để dành</strong>. Sắp tới sẽ có sự kiện mùa hè yêu cầu bạn tiêu 200 <Tip>Destiny Fruit</Tip></li>
+        <li><strong>Chỉ dùng đủ cho nhiệm vụ, phần còn lại để dành</strong>. Các sự kiện như Lucky Bingo có nhiệm vụ yêu cầu tiêu khoảng 200 <Tip>Destiny Fruit</Tip> (xem bên dưới)</li>
       </ol>
       <p>Cách thứ hai phù hợp cho cả F2P lẫn người nạp ít, vì mua nhiều quả như vậy rất tốn.</p>
 
@@ -49,6 +49,15 @@ export default function Page() {
       <p><strong>Vì sự kiện!</strong> Nhiều sự kiện lặp lại trong game có nhiệm vụ yêu cầu bạn tiêu <Tip>Destiny Fruit</Tip>.</p>
       <p>Các sự kiện này thay đổi theo mùa, nhưng thường bạn cần tổng cộng 200 hoặc 300 để hoàn thành hết các nhiệm vụ lặp lại đó.</p>
       <p><Img src="guides/destiny-event-saving.webp" alt="sword x staff destiny event saving up resources" /></p>
+
+      <h3 id="lucky-bingo">Sự kiện Lucky Bingo</h3>
+      <p>Lucky Bingo là sự kiện phụ chạy song song với sự kiện chính. Bạn quay bảng Bingo bằng <Tip>Bingo Ticket</Tip>, kiếm từ nhiệm vụ của sự kiện, và hoàn thành các hàng trên bảng để nhận thêm phần thưởng.</p>
+      <ul>
+        <li>Trong các nhiệm vụ đó thường có nhiệm vụ <strong>tiêu Destiny Fruit</strong> theo nhiều mốc, cộng dồn khoảng 200 đến 300 quả. Đây là lý do chính để dành quả.</li>
+        <li>Quả chỉ được tính khi tiêu lúc sự kiện đang chạy, nên <strong>đừng tiêu sạch quả ngay trước khi sự kiện mở</strong>.</li>
+        <li>Khi sự kiện mở, hãy tiêu quả ở khu vực rơi relic bạn còn thiếu, vừa làm nhiệm vụ Bingo vừa hoàn thành bộ relic.</li>
+        <li>Mốc nhiệm vụ và phần thưởng đổi theo từng đợt, nên xem bảng nhiệm vụ của sự kiện trước khi tiêu.</li>
+      </ul>
     </>
   );
 }

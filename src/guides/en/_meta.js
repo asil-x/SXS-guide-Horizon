@@ -6,7 +6,7 @@ export default {
   'sword-x-staff-crucible-of-hieromon': { title: 'Crucible of Hieromon: the 6 Hieromons and how to counter them', desc: 'Skills and weaknesses of every Hieromon, and which techniques to bring for each line and tier.', short: 'Crucible of Hieromon' },
   'sword-x-staff-daily-dungeon': { title: 'Daily Dungeon', desc: 'S rank, rating chests and why 2× Rating Reward beats Ascension.' },
   'sword-x-staff-destiny-fruit-drop-rates': { title: 'Destiny Fruit drop rates', desc: 'Destiny Fruit drop rates by source.' },
-  'sword-x-staff-destiny-fruits': { title: 'How to use Destiny Fruit', desc: 'Where Destiny Fruit is worth spending.' },
+  'sword-x-staff-destiny-fruits': { title: 'Destiny Fruit: how to spend it well', desc: 'Where Destiny Fruit is worth spending, and why to save it for the Lucky Bingo event.' },
   'sword-x-staff-fantomon-guide': { title: 'Fantomon guide', desc: 'Picking, raising and upgrading Fantomons for each role.' },
   'sword-x-staff-food-guide': { title: 'Why food matters', desc: 'Dishes that give temporary and permanent stats.' },
   'sword-x-staff-gems': { title: 'Gems: which ones, where to socket, how to merge', desc: '8 gem types, socket slots and a T1 → T15 merge table to save resources.', short: 'Gems' },
