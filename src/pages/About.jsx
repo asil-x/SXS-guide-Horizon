@@ -1,9 +1,10 @@
-// Trang "Về chúng tôi": lá thư kiểu fantasy của Guild Horizon.
+// Trang "Về chúng tôi": chữ thường, ký tên Guild Horizon ở cuối, nền Fantomon chạy qua lại.
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '@fontsource/dancing-script/600.css';
 import '@fontsource/dancing-script/700.css';
 import { useLang } from '../i18n/index.jsx';
+import WalkingBg from '../components/WalkingBg.jsx';
 
 const PURR = <a href='https://www.purrwikimania.com/' target='_blank' rel='noreferrer'>Purrwikimania</a>;
 const COMPASS = <a href='https://swordxstaff-compass.com/' target='_blank' rel='noreferrer'>Sword x Staff Compass</a>;
@@ -13,7 +14,6 @@ const GTH_EN = <a href='https://kakotheris.neocities.org/' target='_blank' rel='
 const LETTER = {
   vi: {
     title: 'Về chúng tôi',
-    kicker: 'Thư gửi lữ khách',
     hello: 'Gửi những lữ khách của Sword x Staff,',
     body: [
       <>Chúng tôi là <b>Guild Horizon</b>, một guild nhỏ ở server Setting Off. Gửi tới mọi người cẩm nang cho những người muốn tìm hiểu game.</>,
@@ -30,7 +30,6 @@ const LETTER = {
   },
   en: {
     title: 'About us',
-    kicker: 'A letter to travelers',
     hello: 'To the travelers of Sword x Staff,',
     body: [
       <>We are <b>Guild Horizon</b>, a small guild on the Setting Off server. We offer this handbook to everyone who wants to learn the game.</>,
@@ -57,30 +56,20 @@ export default function About() {
   }, [L.title]);
 
   return (
-    <div className='letter-page'>
-      <article className='letter'>
-        <span className='letter-corner tl' aria-hidden='true' />
-        <span className='letter-corner tr' aria-hidden='true' />
-        <span className='letter-corner bl' aria-hidden='true' />
-        <span className='letter-corner br' aria-hidden='true' />
-        <header className='letter-head'>
-          <span className='letter-kicker'>{L.kicker}</span>
-          <h1>{L.title}</h1>
-          <div className='letter-rule' aria-hidden='true'><span>✦</span></div>
-        </header>
-        <p className='letter-hello'>{L.hello}</p>
-        {L.body.map((p, i) => <p key={i} className={i === 0 ? 'first' : ''}>{p}</p>)}
-        <p className='letter-warn'>{L.warn}</p>
-        <footer className='letter-sign'>
-          <div>
-            <p className='letter-close'>{L.close}</p>
-            <p className='letter-name'>{L.sign}</p>
-            <p className='letter-place'>{L.place}</p>
-          </div>
-          <div className='seal' aria-hidden='true'><span>H</span></div>
+    <div className='about-page'>
+      <WalkingBg />
+      <article className='about'>
+        <h1 className='page-title'>{L.title}</h1>
+        <p>{L.hello}</p>
+        {L.body.map((p, i) => <p key={i}>{p}</p>)}
+        <p>{L.warn}</p>
+        <footer className='about-sign'>
+          <p className='about-close'>{L.close}</p>
+          <p className='about-name'>{L.sign}</p>
+          <p className='about-place'>{L.place}</p>
         </footer>
+        <p className='about-back'><Link className='btn primary' to='/'>{L.cta}</Link></p>
       </article>
-      <p className='letter-back'><Link className='btn primary' to='/'>{L.cta}</Link></p>
     </div>
   );
 }
