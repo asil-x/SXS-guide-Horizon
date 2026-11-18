@@ -2,7 +2,7 @@
 // bảng bless của mùa (giống cách game tính). Số liệu: src/lib/primostar-data.js (tải khi cần).
 import { useEffect, useState } from 'react';
 import { asset, onImgError } from '../../lib/img.js';
-import { useT } from '../../i18n/index.jsx';
+import { useLang, useT } from '../../i18n/index.jsx';
 import { useSeason } from '../../lib/season.js';
 import { expStep, seasonOf, tableMax } from '../../lib/primostar-calc.js';
 
@@ -34,6 +34,24 @@ function Dur({ sec, days }) {
   parts.push([Math.floor(s / 3600), 'h'], [Math.floor(s / 60) % 60, 'm'], [s % 60, 's']);
   while (parts.length > 1 && parts[0][0] === 0) parts.shift();
   return parts.map(([n, u], i) => <span key={u} className='xp-dur'>{i ? ' ' : ''}{u === 'h' && !days ? fmt(n) : n}<small>{t('xp.u.' + u)}</small></span>);
+}
+
+/** Đếm ngược từng giây từ lúc có kết quả; nhập số mới thì đếm lại. eta: hiện thêm giờ xong dự kiến. */
+function Countdown({ sec, days, label, eta }) {
+  const { lang, t } = useLang();
+  const [start, setStart] = useState(() => Date.now());
+  const [now, setNow] = useState(start);
+  useEffect(() => { const s = Date.now(); setStart(s); setNow(s); }, [sec]);
+  useEffect(() => { const id = setInterval(() => setNow(Date.now()), 1000); return () => clearInterval(id); }, []);
+  const left = Math.max(0, sec - Math.floor((now - start) / 1000));
+  const end = new Date(start + sec * 1000).toLocaleString(lang === 'vi' ? 'vi-VN' : 'en-US', { weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+  return (
+    <div className='xp-count'>
+      <b><Dur sec={left} days={days} /></b>
+      <span>{label}</span>
+      {eta && <span className='xp-eta'>{t('xp.eta', { x: end })}</span>}
+    </div>
+  );
 }
 
 /** Bảng tính EXP cần để lên level. */
@@ -108,8 +126,8 @@ export function ExpCalc() {
         <h3 className='ps-h'><span>3</span>{t('xp.step3', { a: a, b: b })}</h3>
         <div className='ps-big'>
           <div><b title={fmt(need)}>{compact(need)}</b><span>{t('xp.need')} ({fmt(need)})</span></div>
-          {kind === 'char' && hours != null && <div><b><Dur sec={hours * 3600} /></b><span>{t('xp.hours')}</span></div>}
-          {kind === 'char' && days != null && <div><b><Dur sec={days * 86400} days /></b><span>{t('xp.days', { h: 24 + D.BED.freeHours })}</span></div>}
+          {kind === 'char' && hours != null && <Countdown sec={hours * 3600} label={t('xp.hours')} />}
+          {kind === 'char' && days != null && <Countdown sec={days * 86400} days eta={days > 0} label={t('xp.days', { h: 24 + D.BED.freeHours })} />}
         </div>
         {kind === 'pet' && (
           <div className='ps-cost xp-treats'>

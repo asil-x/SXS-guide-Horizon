@@ -819,6 +819,7 @@ button { font: inherit; cursor: pointer; color: inherit; }
 .ps-big div:not(:first-child) b { font-size: 1.6rem; color: var(--text); }
 .ps-big span { font-size: .8rem; color: var(--muted); }
 .ps-big b .xp-dur { font-size: inherit; color: inherit; }
+.ps-big .xp-eta { color: var(--gold2); margin-top: .15rem; }
 .ps-big b small { font-size: .5em; font-weight: 500; color: var(--muted); margin-left: .15em; }
 .ps-formula { margin: .6rem 0 .8rem; font-size: .85rem; color: var(--muted); }
 .ps-bars { display: flex; flex-direction: column; gap: .35rem; }
