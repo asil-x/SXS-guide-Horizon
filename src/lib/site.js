@@ -57,4 +57,5 @@ export const DB_KINDS = [
   { key: 'companions', icon: 'companions/npc_icon_8402.png' },
   { key: 'items', icon: 'tooltips/Money_2.png' },
   { key: 'relics', icon: 'guides/relic-source.webp' },
+  { key: 'destiny-fruit', icon: 'tooltips/item_115.png' },
 ];

@@ -1,4 +1,4 @@
-import { Alert, Tip } from '../../components/guide';
+import { Alert, Tip } from '../../guide';
 
 export default function Page() {
   return (

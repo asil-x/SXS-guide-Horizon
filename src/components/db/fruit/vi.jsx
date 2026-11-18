@@ -1,14 +1,4 @@
-import { Alert, Tip } from '../components/guide';
-
-export const meta = {
-  title: 'Tỉ lệ rơi Destiny Fruit',
-  desc: 'Tỉ lệ rơi Destiny Fruit theo nguồn.',
-  order: 4,
-  category: 'guide',
-  cover: 'tooltips/Npc_8416.png',
-  icon: 'tooltips/item_115.png',
-  topic: 'explore',
-};
+import { Alert, Tip } from '../../guide';
 
 export default function Page() {
   return (

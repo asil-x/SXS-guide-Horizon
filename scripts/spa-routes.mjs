@@ -27,7 +27,8 @@ for (const f of fs.readdirSync(path.join(ROOT, 'src/guides')).filter((f) => f.en
 const site = fs.readFileSync(path.join(ROOT, 'src/lib/site.js'), 'utf8');
 const dbBlock = /DB_KINDS\s*=\s*\[([\s\S]*?)\];/.exec(site)[1];
 const DB_TITLE = { skills: 'Kỹ năng', fantomons: 'Fantomon', companions: 'Đồng hành', items: 'Vật phẩm', relics: 'Di vật' };
-for (const m of dbBlock.matchAll(/key:\s*'([^']+)'/g)) pages.push({ route: '/db/' + m[1], title: 'Dữ liệu ' + (DB_TITLE[m[1]] || m[1]) });
+const DB_FULL = { 'destiny-fruit': { title: 'Tỉ lệ rơi Destiny Fruit', desc: 'Tỉ lệ rơi Destiny Fruit theo độ hiếm và từng loại phần thưởng.' } };
+for (const m of dbBlock.matchAll(/key:\s*'([^']+)'/g)) pages.push({ route: '/db/' + m[1], ...(DB_FULL[m[1]] || { title: 'Dữ liệu ' + (DB_TITLE[m[1]] || m[1]) }) });
 pages.push({ route: '/about', title: 'Về chúng tôi' });
 
 function pageHtml({ route, title, desc }) {

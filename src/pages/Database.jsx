@@ -7,9 +7,10 @@ import { useLang, useT } from '../i18n/index.jsx';
 import RelicInspector from '../components/db/RelicInspector.jsx';
 import SkillInspector from '../components/db/SkillInspector.jsx';
 import FantomonInspector from '../components/db/FantomonInspector.jsx';
+import FruitRates from '../components/db/FruitRates.jsx';
 
 // Loại dữ liệu có trang tra cứu riêng (dữ liệu tự tải trong component).
-const CUSTOM = { relics: RelicInspector, skills: SkillInspector, fantomons: FantomonInspector };
+const CUSTOM = { relics: RelicInspector, skills: SkillInspector, fantomons: FantomonInspector, 'destiny-fruit': FruitRates };
 
 
 const PAGE = 120;
@@ -121,7 +122,7 @@ export default function Database() {
   if (!meta) return <div className='empty'><h1>{t('db.notFound')}</h1></div>;
   const head = (
     <>
-      <h1 className='page-title'>{t('db.title', { x: t('db.' + kind) })}</h1>
+      <h1 className='page-title'>{t('dbt.' + kind) !== 'dbt.' + kind ? t('dbt.' + kind) : t('db.title', { x: t('db.' + kind) })}</h1>
       <div className='chips'>
         {DB_KINDS.map((d) => <Link key={d.key} to={'/db/' + d.key} className={'chip' + (d.key === kind ? ' on' : '')}>{t('db.' + d.key)}</Link>)}
       </div>

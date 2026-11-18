@@ -82,6 +82,7 @@ export default function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/guides' element={<Navigate to='/' replace />} />
+            <Route path='/guides/sword-x-staff-destiny-fruit-drop-rates' element={<Navigate to='/db/destiny-fruit' replace />} />
             <Route path='/guides/:slug' element={<Guide />} />
             <Route path='/db/:kind' element={<Database />} />
             <Route path='/about' element={<About />} />
