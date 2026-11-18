@@ -37,6 +37,7 @@ export function ExpCalc() {
   const [rate, setRate] = useState('');
   const [bonus, setBonus] = useState('');
   const [crystals, setCrystals] = useState('');
+  const [reserve, setReserve] = useState('');
   useEffect(() => { import('../../lib/primostar-data.js').then(setD); }, []);
   if (!D) return <div className='loading'>{t('loading')}</div>;
 
@@ -55,12 +56,13 @@ export function ExpCalc() {
   // Chỉ hiện tổng EXP sau khi đã điền cả level hiện tại và level muốn lên, tránh hiểu nhầm.
   const showMax = from !== '' && to !== '' && curMax > 0;
 
-  // EXP Bed thực tế mỗi giờ = EXP gốc × (1 + Production Bonus %).
+  // EXP/Hr trong Bed = Base EXP Yield × (1 + Production Bonus %), game làm tròn.
   const base = Number(rate) || 0;
   const bonusPct = Number(bonus) || 0;
-  const r = base * (1 + bonusPct / 100);
+  const r = Math.round(base * (1 + bonusPct / 100));
   const crystalHours = (Number(crystals) || 0) * D.BED.crystalHours;
-  const hours = r > 0 ? Math.max(0, need / r - crystalHours) : null;
+  // EXP Reserve đang chờ trong Bed nhận được ngay, nên trừ vào phần còn phải chờ.
+  const hours = r > 0 ? Math.max(0, (need - (Number(reserve) || 0)) / r - crystalHours) : null;
   const days = hours != null ? hours / (24 + D.BED.freeHours) : null;
 
   return (
@@ -89,6 +91,7 @@ export function ExpCalc() {
             hint={!showMax ? t('xp.curNeedTo') : curIn > curMax ? t('xp.curOver', { m: fmt(curMax) }) : t('xp.curHint', { a, b, m: fmt(curMax) })} />
           {kind === 'char' && <Num label={t('xp.rate')} value={rate} onChange={setRate} hint={t('xp.rateHint')} />}
           {kind === 'char' && <Num label={t('xp.bonus')} value={bonus} onChange={setBonus} suffix='%' hint={base > 0 && bonusPct > 0 ? t('xp.bonusEff', { x: fmt(r) }) : t('xp.bonusHint')} />}
+          {kind === 'char' && <Num label={t('xp.reserve')} value={reserve} onChange={setReserve} hint={t('xp.reserveHint')} />}
           {kind === 'char' && <Num label={t('xp.crystals')} value={crystals} onChange={setCrystals} hint={t('xp.crystalsHint', { h: D.BED.crystalHours })} />}
         </div>
       </section>
