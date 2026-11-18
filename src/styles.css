@@ -736,7 +736,6 @@ button { font: inherit; cursor: pointer; color: inherit; }
 .about-sign p { margin: 0; }
 .about-close { color: var(--muted); }
 .about-name { font-family: 'Dancing Script', cursive; font-size: 2.5rem; font-weight: 700; line-height: 1.15; color: var(--gold2); }
-.about-place { font-size: .85rem; font-style: italic; color: var(--muted); }
 .about-back { margin-top: 2.2rem !important; }
 
 /* nền Fantomon chạy qua lại, mờ phía sau */

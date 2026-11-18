@@ -25,7 +25,6 @@ const LETTER = {
     warn: <>Còn ai định chép nguyên cuốn sổ về làm của riêng, xin ghi nhớ luật của guild: <span className='steal-warn'>trộm làm chó</span>.</>,
     close: 'Thân ái,',
     sign: 'Guild Horizon',
-    place: 'Viết tại doanh trại Horizon, dưới ánh đèn của mùa Frostfire',
     cta: 'Mở sổ tay',
   },
   en: {
@@ -41,7 +40,6 @@ const LETTER = {
     warn: <>And to anyone planning to copy the whole book and call it their own, remember the guild’s law: <span className='steal-warn'>thieves are dogs</span>.</>,
     close: 'Warmly,',
     sign: 'Guild Horizon',
-    place: 'Written at the Horizon camp, by the lamplight of the Frostfire season',
     cta: 'Open the handbook',
   },
 };
@@ -66,7 +64,6 @@ export default function About() {
         <footer className='about-sign'>
           <p className='about-close'>{L.close}</p>
           <p className='about-name'>{L.sign}</p>
-          <p className='about-place'>{L.place}</p>
         </footer>
         <p className='about-back'><Link className='btn primary' to='/'>{L.cta}</Link></p>
       </article>
